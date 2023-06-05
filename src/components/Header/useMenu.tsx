@@ -33,9 +33,14 @@ const useMenu: UseMenu = () => {
   return useMemo(() => {
     if (!chainId) return []
 
-    const menu: Menu = []
+    const menu: Menu = [ {
+        key: 'Home',
+        title: i18n._(t`Home`),
+        link: 'https://www.bitball-btb.com/',
+      },]
 
     const trade = [
+     
       {
         key: 'swap',
         title: i18n._(t`Swap`),

@@ -45,7 +45,7 @@ const Footer = () => {
               <a href="https://www.instagram.com/bitball_erc20/" target="_blank" rel="noreferrer">
                 <InstagramIcon width={16} className="text-low-emphesis" />
               </a>
-              <a href="https://medium.com/p/bitball-4a607c33ea78" target="_blank" rel="noreferrer">
+              <a href="https://bitballerc20.medium.com" target="_blank" rel="noreferrer">
                 <MediumIcon width={16} className="text-low-emphesis" />
               </a>
               <a href="https://discord.gg/f7sWmJ4" target="_blank" rel="noreferrer">
@@ -60,7 +60,8 @@ const Footer = () => {
               <a href="https://github.com/BitballErc20" target="_blank" rel="noreferrer">
                 <GithubIcon width={16} className="text-low-emphesis" />
               </a>
-              <a href="https://BallSwapper.com" target="_blank" rel="noreferrer">
+              
+              <a href="https://www.bitball-btb.com/" target="_blank" rel="noreferrer">
                 <PrinterIcon width={16} className="text-low-emphesis" />
               </a>
               <a href="https://www.reddit.com/r/BitBallEcosystem" target="_blank" rel="noreferrer">
