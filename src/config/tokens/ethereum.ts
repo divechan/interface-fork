@@ -19,6 +19,29 @@ export const DAI = new Token(
   'DAI',
   'Dai Stablecoin'
 )
+
+export const BTB = new Token(
+  ChainId.ETHEREUM,
+  '0x06e0feB0D74106c7adA8497754074D222Ec6BCDf',
+  18,
+  'BTB',
+  'BitBall'
+)
+export const BART = new Token(
+  ChainId.ETHEREUM,
+  '0x21fb4dd8c500be1a9ba27f827217e477217d6225',
+  18,
+  'BART',
+  'Ballswapper Accelerator Reflection Token'
+)
+export const PELO = new Token(
+  ChainId.ETHEREUM,
+  '0xb5cE43fE2fcFfFfb2EeCE95EC413d08Def28046F',
+  18,
+  'PELO',
+  'PepElon'
+)
+
 export const DOUGH = new Token(
   ChainId.ETHEREUM,
   '0xad32A8e6220741182940c5aBF610bDE99E737b2D',

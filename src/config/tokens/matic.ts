@@ -21,6 +21,21 @@ export const BCT = new Token(
   'Toucan Protocol: Base Carbon Tonne',
   'BCT'
 )
+
+export const MEMELON = new Token(
+  ChainId.MATIC,
+  '0x21C787C0D881Fd1b8018b6335cE18632b64f35b0',
+  18,
+  'MEMELON',
+  'MEME ELON DOGE FLOKI'
+)
+export const BART = new Token(
+  ChainId.MATIC,
+  '0x00c7bfc4fc822629ee60b62b9b41fa8df4d4715a',
+  18,
+  'BART',
+  'Ballswapper Accelerator Reflection Token'
+)
 export const MIM = new Token(
   ChainId.MATIC,
   '0x49a0400587A7F65072c87c4910449fDcC5c47242',

@@ -13,6 +13,20 @@ export const MIM = new Token(
   'MIM',
   'Magic Internet Money'
 )
+export const BTB = new Token(
+  ChainId.BSC,
+  '0x374c1135911602a13ee041e6e6e848a14fa62320',
+  18,
+  'BTB',
+  'BitBall'
+)
+export const BART = new Token(
+  ChainId.BSC,
+  '0x721692d13fb70f499e8678ede56bb45e4e320f48',
+  18,
+  'BART',
+  'Ballswapper Accelerator Reflection Token'
+)
 export const ICE = new Token(ChainId.BSC, '0xf16e81dce15B08F326220742020379B855B87DF9', 18, 'ICE', 'IceToken')
 export const SPELL = new Token(ChainId.BSC, '0x9Fe28D11ce29E340B7124C493F59607cbAB9ce48', 18, 'SPELL', 'SpellToken')
 export const FRAX = new Token(ChainId.BSC, '0x90C97F71E18723b0Cf0dfa30ee176Ab653E89F40', 18, 'FRAX', 'Frax')

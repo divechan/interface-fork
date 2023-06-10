@@ -95,6 +95,12 @@ export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
     ETHEREUM.DAI,
     // @ts-ignore TYPE NEEDS FIXING
     ETHEREUM.USDC,
+       // @ts-ignore TYPE NEEDS FIXING
+       ETHEREUM.BART,
+          // @ts-ignore TYPE NEEDS FIXING
+    ETHEREUM.BTB,
+       // @ts-ignore TYPE NEEDS FIXING
+       ETHEREUM.PELO,
     // @ts-ignore TYPE NEEDS FIXING
     ETHEREUM.USDT,
     // @ts-ignore TYPE NEEDS FIXING
@@ -124,6 +130,8 @@ export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
     MATIC.WBTC,
     MATIC.DAI,
     MATIC.WETH,
+    MATIC.BART,
+    MATIC.MEMELON,
     MATIC.USDT,
     MATIC.MIM,
     MATIC.SUSHI,
@@ -151,6 +159,8 @@ export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
   [ChainId.BSC]: [
     ...WRAPPED_NATIVE_ONLY[ChainId.BSC],
     BSC.DAI,
+    BSC.BTB,
+    BSC.BART,
     BSC.USD,
     BSC.USDC,
     BSC.USDT,
@@ -277,6 +287,8 @@ export const ADDITIONAL_BASES: {
     [ETHEREUM.PWING.address]: [ETHEREUM.PONT],
     [ETHEREUM.PLAY.address]: [ETHEREUM.DOUGH],
     [ETHEREUM.DOUGH.address]: [ETHEREUM.PLAY],
+    [ETHEREUM.PELO.address]: [ETHEREUM.BTB],
+    [ETHEREUM.BTB.address]: [ETHEREUM.ALPHA],
     [ETHEREUM.IBETH.address]: [ETHEREUM.ALPHA],
     [ETHEREUM.ALPHA.address]: [ETHEREUM.IBETH],
     [ETHEREUM.HBTC.address]: [ETHEREUM.CREAM],
@@ -293,6 +305,7 @@ export const ADDITIONAL_BASES: {
     [ETHEREUM.SPANK.address]: [ETHEREUM.RAI],
     [ETHEREUM.DOLA.address]: [ETHEREUM.INV],
     [ETHEREUM.AGEUR.address]: [ETHEREUM.ANGLE],
+    [ETHEREUM.BART.address]: [ETHEREUM.ANGLE],
   },
   [ChainId.MATIC]: {
     [MATIC.FRAX.address]: [MATIC.FXS],
@@ -300,7 +313,9 @@ export const ADDITIONAL_BASES: {
     [MATIC.DRAX.address]: [MATIC.DMAGIC],
     [MATIC.AXMATIC.address]: [MATIC.DMAGIC],
     [MATIC.BCT.address]: [MATIC.KLIMA],
+    [MATIC.MEMELON.address]: [MATIC.KLIMA],
     [MATIC.KLIMA.address]: [MATIC.BCT],
+    [MATIC.BART.address]: [MATIC.BCT],
     //[MATIC.DMAGIC.address]: [MATIC.DRAX, MATIC.AXMATIC],
   },
   [ChainId.ARBITRUM]: {
@@ -327,6 +342,9 @@ export const ADDITIONAL_BASES: {
   [ChainId.BSC]: {
     [BSC.FRAX.address]: [BSC.FXS],
     [BSC.FXS.address]: [BSC.FRAX],
+    [BSC.BART.address]: [BSC.FRAX],
+    [BSC.BTB.address]: [BSC.FXS],
+
   },
   [ChainId.AVALANCHE]: {
     [AVALANCHE.FRAX.address]: [AVALANCHE.FXS],
@@ -361,7 +379,11 @@ export const COMMON_BASES: ChainTokenList = {
     // @ts-ignore TYPE NEEDS FIXING
     ETHEREUM.WBTC,
     // @ts-ignore TYPE NEEDS FIXING
-    ETHEREUM.MIM,
+    ETHEREUM.PELO,
+    // @ts-ignore TYPE NEEDS FIXING
+    ETHEREUM.BTB,
+    // @ts-ignore TYPE NEEDS FIXING
+    ETHEREUM.BART,
     // @ts-ignore TYPE NEEDS FIXING
     ETHEREUM.SPELL,
     // @ts-ignore TYPE NEEDS FIXING
@@ -386,6 +408,10 @@ export const COMMON_BASES: ChainTokenList = {
     SUSHI[ChainId.MATIC],
     // @ts-ignore TYPE NEEDS FIXING
     MATIC.WETH,
+    // @ts-ignore TYPE NEEDS FIXING
+    MATIC.BART,
+    // @ts-ignore TYPE NEEDS FIXING
+    MATIC.MEMELON,
     // @ts-ignore TYPE NEEDS FIXING
     MATIC.WBTC,
     // @ts-ignore TYPE NEEDS FIXING
@@ -434,6 +460,10 @@ export const COMMON_BASES: ChainTokenList = {
     SUSHI[ChainId.BSC],
     // @ts-ignore TYPE NEEDS FIXING
     BSC.WETH,
+    // @ts-ignore TYPE NEEDS FIXING
+    BSC.BART,
+    // @ts-ignore TYPE NEEDS FIXING
+    BSC.BTB,
     // @ts-ignore TYPE NEEDS FIXING
     BSC.BTCB,
     // @ts-ignore TYPE NEEDS FIXING
