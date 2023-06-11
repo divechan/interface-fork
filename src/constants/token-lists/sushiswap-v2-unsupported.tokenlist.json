@@ -15,7 +15,64 @@
             "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x4922a015c4407F87432B179bb209e125432E4a2A/logo.png",
             "name": "Gold Tether",
             "symbol": "XAUt"
+        },
+        {
+            "address": "0x21fb4dd8c500be1a9ba27f827217e477217d6225",
+            "chainId": 1,
+            "decimals": 6,
+            "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x4922a015c4407F87432B179bb209e125432E4a2A/logo.png",
+            "name": "Ballswapper Accelerator Reflection Token",
+            "symbol": "BART"
+        },
+        {
+            "address": "0xb5cE43fE2fcFfFfb2EeCE95EC413d08Def28046F",
+            "chainId": 1,
+            "decimals": 6,
+            "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x4922a015c4407F87432B179bb209e125432E4a2A/logo.png",
+            "name": "PepElon",
+            "symbol": "PELO"
+        },
+        {
+            "address": "0x721692d13fb70f499e8678ede56bb45e4e320f48",
+            "chainId": 56,
+            "decimals": 6,
+            "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x4922a015c4407F87432B179bb209e125432E4a2A/logo.png",
+            "name": "Ballswapper Accelerator Reflection Token",
+            "symbol": "BART"
+        },
+        {
+            "address": "0xfE19F0B51438fd612f6FD59C1dbB3eA319f433Ba",
+            "chainId": 56,
+            "decimals": 6,
+            "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x4922a015c4407F87432B179bb209e125432E4a2A/logo.png",
+            "name": "Magic Internet Money",
+            "symbol": "MIM"
+        },
+        {
+            "address": "0x21C787C0D881Fd1b8018b6335cE18632b64f35b0",
+            "chainId": 137,
+            "decimals": 6,
+            "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x4922a015c4407F87432B179bb209e125432E4a2A/logo.png",
+            "name": "MEME ELON DOGE FLOKI",
+            "symbol": "MEMELON"
+        },
+        {
+            "address": "0x00c7bfc4fc822629ee60b62b9b41fa8df4d4715a",
+            "chainId": 137,
+            "decimals": 6,
+            "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x4922a015c4407F87432B179bb209e125432E4a2A/logo.png",
+            "name": "Ballswapper Accelerator Reflection Token",
+            "symbol": "BART"
+        },
+        {
+            "address": "0x49a0400587A7F65072c87c4910449fDcC5c47242",
+            "chainId": 137,
+            "decimals": 6,
+            "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x4922a015c4407F87432B179bb209e125432E4a2A/logo.png",
+            "name": "Magic Internet Money",
+            "symbol": "MIM"
         }
+        
     ],
     "version": {
         "major": 1,

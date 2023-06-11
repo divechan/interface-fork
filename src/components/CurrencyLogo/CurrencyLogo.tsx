@@ -57,6 +57,9 @@ export const getCurrencyLogoUrls = (currency: Currency): string[] => {
 }
 
 const AvaxLogo = 'https://raw.githubusercontent.com/sushiswap/list/master/logos/native-currency-logos/avax.svg'
+const PeloLogo = 'https://i.imgur.com/6A2slSh.png'
+const BartLogo = 'https://i.imgur.com/7oFiXmg.png'
+const MemelonLogo = 'https://i.imgur.com/Nshz237.png'
 const BnbLogo = 'https://raw.githubusercontent.com/sushiswap/list/master/logos/native-currency-logos/bnb.svg'
 const EthereumLogo = 'https://raw.githubusercontent.com/sushiswap/list/master/logos/native-currency-logos/ethereum.svg'
 const FtmLogo = 'https://raw.githubusercontent.com/sushiswap/list/master/logos/native-currency-logos/ftm.svg'
@@ -137,12 +140,25 @@ const CurrencyLogo: FunctionComponent<CurrencyLogoProps> = ({ currency, size = '
       if (currency instanceof WrappedTokenInfo) {
         return [...uriLocations, ...defaultUrls, UNKNOWN_ICON]
       }
+      if(currency.symbol == "BART"){
+        return ["https://i.imgur.com/7oFiXmg.png"]
+      }
+      if(currency?.symbol == "MIM"){
+        return ["https://i.imgur.com/7oFiXmg.png"]
+      }
+      if(currency?.symbol == "PELO"){
+        return ["https://i.imgur.com/6A2slSh.png"]
+      }
+      if(currency?.symbol == "MEMELON"){
+        return ["https://i.imgur.com/Nshz237.png"]
+      }
       return defaultUrls
     }
-
+   
     return [UNKNOWN_ICON]
   }, [currency, uriLocations])
 
+  
   return <Logo srcs={srcs} width={size} height={size} alt={currency?.symbol} className={className} style={style} />
 }
 

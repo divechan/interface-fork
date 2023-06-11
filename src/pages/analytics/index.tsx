@@ -74,7 +74,7 @@ function _Analytics(): JSX.Element {
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             <ChartCard
               header="TVL"
-              subheader="SUSHI AMM"
+              subheader="BallSwapper AMM"
               figure={data?.liquidity.value ?? 0}
               change={data?.liquidity.change ?? 0}
               chart={chartDataWithDates.liquidity}
@@ -83,7 +83,7 @@ function _Analytics(): JSX.Element {
             />
             <ChartCard
               header="Volume"
-              subheader="SUSHI AMM"
+              subheader="BallSwapper AMM"
               figure={data?.volume.value ?? 0}
               change={data?.volume.change ?? 0}
               chart={chartDataWithDates.volume}

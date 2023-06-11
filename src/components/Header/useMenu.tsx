@@ -37,7 +37,18 @@ const useMenu: UseMenu = () => {
         key: 'Home',
         title: i18n._(t`Home`),
         link: 'https://www.bitball-btb.com/',
-      },]
+      },
+      {
+        key: 'Ecosystem',
+        title: i18n._(t`Ecosystem`),
+        link: 'https://www.bitball-btb.com',
+      },
+      {
+        key: 'Analytics',
+        title: i18n._(t`Analytics`),
+        link: '/analytics',
+      }
+    ]
 
     const trade = [
      
