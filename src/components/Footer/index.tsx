@@ -101,7 +101,7 @@ const Footer = () => {
               </Typography>
             </a>
           
-            <a href="https://medium.com/p/bitball-4a607c33ea78" target="_blank" rel="noreferrer">
+            <a href="https://medium.com/@bitballerc20/" target="_blank" rel="noreferrer">
               <Typography variant="xs" className="text-low-emphesis hover:text-high-emphesis">
                 {i18n._(t`Ask on Forum`)}
               </Typography>
