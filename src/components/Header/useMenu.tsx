@@ -36,7 +36,7 @@ const useMenu: UseMenu = () => {
     const menu: Menu = [ {
         key: 'Home',
         title: i18n._(t`Home`),
-        link: 'https://www.bitball-btb.com/',
+        link: 'https://ballswapper.com',
       },
       {
         key: 'Ecosystem',
