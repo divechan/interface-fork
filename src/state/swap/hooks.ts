@@ -50,8 +50,7 @@ export function useSwapActionHandlers(): {
   const router = useRouter()
 
   const inputCurrencyId = router.query.inputCurrency || 'ETH'
-  const outputCurrencyId =
-    router.query.outputCurrency || (chainId && chainId in SUSHI_ADDRESS ? SUSHI_ADDRESS[chainId] : undefined)
+  const outputCurrencyId = 'BTB'
 
   const onCurrencySelection = useCallback(
     (field: Field, currency: Currency) => {
@@ -317,7 +316,7 @@ export function queryParametersToSwapState(parsedQs: ParsedQs, chainId: ChainId 
   const sushi = chainId === ChainId.BOBA_AVAX ? '0x4200000000000000000000000000000000000023' : SUSHI_ADDRESS[chainId]
   if (inputCurrency === '' && outputCurrency === '') {
     inputCurrency = eth
-    outputCurrency = sushi
+    outputCurrency = '0x06e0feB0D74106c7adA8497754074D222Ec6BCDf'
   } else if (inputCurrency === '') {
     inputCurrency = outputCurrency === eth ? sushi : eth
   } else if (outputCurrency === '' || inputCurrency === outputCurrency) {
