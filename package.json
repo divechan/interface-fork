@@ -13,7 +13,6 @@
     "inspect": "NODE_OPTIONS='--inspect' next dev",
     "postinstall": "yarn lingui",
     "lingui": "lingui extract --clean --overwrite && lingui compile",
-    "lint": "npx next lint --fix",
     "ngrok": "ngrok http 3000",
     "prepare": "husky install",
     "prettier": "prettier --write 'src/**/*.{ts,tsx}'",
@@ -22,7 +21,7 @@
     "test:ci": "jest -modulePathIgnorePatterns=e2e --ci --collectCoverage",
     "test:watch": "jest -modulePathIgnorePatterns=e2e --watch",
     "unused": "next-unused",
-    "export":"next export"
+    "export": "next export"
   },
   "lint-staged": {
     "*.{js,jsx,ts,tsx}": [
@@ -254,6 +253,8 @@
     "showDetails": true
   },
   "dependencies": {
-    "multiformats": "^11.0.2"
+    "multiformats": "^11.0.2",
+    "next-language-detector": "^1.0.2",
+    "next-locales": "^0.2.2"
   }
 }
