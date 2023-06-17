@@ -29,7 +29,14 @@ export function useV2Pairs(currencies: [Currency | undefined, Currency | undefin
           !tokenA.equals(tokenB) &&
           FACTORY_ADDRESS[tokenA.chainId]
             ? computePairAddress({
-                factoryAddress: FACTORY_ADDRESS[tokenA.chainId],
+                factoryAddress:
+                  tokenA.chainId == 1
+                    ? '0x7cf1d51C25E9bcD023ebF318B99824121941eBcf'
+                    : tokenA.chainId == 137
+                    ? '0xFa0eBaaE53Edc865963dcf7A4273F62161e50aec'
+                    : tokenA.chainId == 56
+                    ? '0x1378f34FBcdd736D3B1Ec07d34Bc8Df7152104BF'
+                    : FACTORY_ADDRESS[tokenA.chainId],
                 tokenA,
                 tokenB,
               })

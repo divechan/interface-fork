@@ -168,6 +168,7 @@ export function useURLWarningToggle(): () => void {
  * @param tokenA one of the two tokens
  * @param tokenB the other token
  */
+
 export function toV2LiquidityToken([tokenA, tokenB]: [Token, Token]): Token {
   if (tokenA.chainId !== tokenB.chainId) throw new Error('Not matching chain IDs')
   if (tokenA.equals(tokenB)) throw new Error('Tokens cannot be equal')
@@ -175,9 +176,20 @@ export function toV2LiquidityToken([tokenA, tokenB]: [Token, Token]): Token {
 
   return new Token(
     tokenA.chainId,
-    computePairAddress({ factoryAddress: FACTORY_ADDRESS[tokenA.chainId], tokenA, tokenB }),
+    computePairAddress({
+      factoryAddress:
+        tokenA.chainId == 1
+          ? '0x7cf1d51C25E9bcD023ebF318B99824121941eBcf'
+          : tokenA.chainId == 137
+          ? '0xFa0eBaaE53Edc865963dcf7A4273F62161e50aec'
+          : tokenA.chainId == 56
+          ? '0x1378f34FBcdd736D3B1Ec07d34Bc8Df7152104BF'
+          : FACTORY_ADDRESS[tokenA.chainId],
+      tokenA,
+      tokenB,
+    }),
     18,
-    'UNI-V2',
+    'x',
     'Uniswap V2'
   )
 }

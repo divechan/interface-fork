@@ -15,7 +15,6 @@
     "lingui": "lingui extract --clean --overwrite && lingui compile",
     "lint": "npx next lint --fix",
     "ngrok": "ngrok http 3000",
-    "pre-commit": "lint-staged",
     "prepare": "husky install",
     "prettier": "prettier --write 'src/**/*.{ts,tsx}'",
     "start": "next start",

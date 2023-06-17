@@ -30,7 +30,13 @@ export function getRouterAddress(chainId?: ChainId) {
   if (!chainId) {
     throw Error(`Undefined 'chainId' parameter '${chainId}'.`)
   }
-  return ROUTER_ADDRESS[chainId]
+  return chainId == 1
+    ? '0x1ba8775147a8EB7DF194a4d169c1D26e61aaeB5E'
+    : chainId == 137
+    ? '0xc684e9b1Bf80955822BC1B4512049e4897a95631'
+    : chainId == 56
+    ? '0x7Af7353a67aCAE37ED0e41A5D1afDFF855cC3932'
+    : ROUTER_ADDRESS[chainId]
 }
 
 // account is optional

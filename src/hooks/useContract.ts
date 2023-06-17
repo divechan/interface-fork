@@ -220,13 +220,35 @@ export function useMiniChefContract(withSignerIfPossible?: boolean): Contract | 
 
 export function useFactoryContract(): Contract | null {
   const { chainId } = useActiveWeb3React()
-  return useContract(chainId ? FACTORY_ADDRESS[chainId] : undefined, FACTORY_ABI, false)
+  return useContract(
+    chainId
+      ? chainId == 1
+        ? '0x7cf1d51C25E9bcD023ebF318B99824121941eBcf'
+        : chainId == 137
+        ? '0xFa0eBaaE53Edc865963dcf7A4273F62161e50aec'
+        : chainId == 56
+        ? '0x1378f34FBcdd736D3B1Ec07d34Bc8Df7152104BF'
+        : FACTORY_ADDRESS[chainId]
+      : undefined,
+    FACTORY_ABI,
+    false
+  )
 }
 
 export function useRouterContract(withSignerIfPossible?: boolean): Contract | null {
   const { chainId } = useActiveWeb3React()
   // @ts-ignore TYPE NEEDS FIXING
-  return useContract(ROUTER_ADDRESS[chainId], ROUTER_ABI, withSignerIfPossible)
+  return useContract(
+    chainId == 1
+      ? '0x1ba8775147a8EB7DF194a4d169c1D26e61aaeB5E'
+      : chainId == 137
+      ? '0xc684e9b1Bf80955822BC1B4512049e4897a95631'
+      : chainId == 56
+      ? '0x7Af7353a67aCAE37ED0e41A5D1afDFF855cC3932'
+      : ROUTER_ADDRESS[chainId],
+    ROUTER_ABI,
+    withSignerIfPossible
+  )
 }
 
 export function useSushiBarContract(withSignerIfPossible?: boolean): Contract | null {
