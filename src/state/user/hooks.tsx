@@ -1,11 +1,10 @@
 import { defaultAbiCoder } from '@ethersproject/abi'
 import { getCreate2Address } from '@ethersproject/address'
 import { AddressZero } from '@ethersproject/constants'
-import { keccak256 } from '@ethersproject/solidity'
+import { keccak256, pack } from '@ethersproject/solidity'
 import {
   BENTOBOX_ADDRESS,
   CHAINLINK_ORACLE_ADDRESS,
-  computePairAddress,
   Currency,
   FACTORY_ADDRESS,
   KASHI_ADDRESS,
@@ -168,7 +167,22 @@ export function useURLWarningToggle(): () => void {
  * @param tokenA one of the two tokens
  * @param tokenB the other token
  */
-
+export function computePairAddress({
+  factoryAddress,
+  tokenA,
+  tokenB,
+}: {
+  factoryAddress: string
+  tokenA: Token
+  tokenB: Token
+}): string {
+  const [token0, token1] = tokenA.sortsBefore(tokenB) ? [tokenA, tokenB] : [tokenB, tokenA] // does safety checks
+  return getCreate2Address(
+    factoryAddress,
+    keccak256(['bytes'], [pack(['address', 'address'], [token0.address, token1.address])]),
+    token0.chainId == 1 ? "0x284105c50b630ba152d66c7cc0721c3729f56026a8d71617578311e869c253bf" : "0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303"
+  )
+}
 export function toV2LiquidityToken([tokenA, tokenB]: [Token, Token]): Token {
   if (tokenA.chainId !== tokenB.chainId) throw new Error('Not matching chain IDs')
   if (tokenA.equals(tokenB)) throw new Error('Tokens cannot be equal')
