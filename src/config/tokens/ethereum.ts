@@ -20,6 +20,14 @@ export const DAI = new Token(
   'Dai Stablecoin'
 )
 
+export const BSP = new Token(
+  ChainId.ETHEREUM,
+  '0xE51b8Ab09008285a0380Dd2680cD9Dd5e13924D3',
+  18,
+  'BSP',
+  'BallSwap'
+)
+
 export const BTB = new Token(
   ChainId.ETHEREUM,
   '0x06e0feB0D74106c7adA8497754074D222Ec6BCDf',

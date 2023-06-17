@@ -97,6 +97,8 @@ export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
     ETHEREUM.USDC,
        // @ts-ignore TYPE NEEDS FIXING
        ETHEREUM.BART,
+            // @ts-ignore TYPE NEEDS FIXING
+            ETHEREUM.BSP,
           // @ts-ignore TYPE NEEDS FIXING
     ETHEREUM.BTB,
        // @ts-ignore TYPE NEEDS FIXING
@@ -288,6 +290,7 @@ export const ADDITIONAL_BASES: {
     [ETHEREUM.PLAY.address]: [ETHEREUM.DOUGH],
     [ETHEREUM.DOUGH.address]: [ETHEREUM.PLAY],
     [ETHEREUM.PELO.address]: [ETHEREUM.BTB],
+    [ETHEREUM.PELO.address]: [ETHEREUM.BSP],
     [ETHEREUM.BTB.address]: [ETHEREUM.ALPHA],
     [ETHEREUM.IBETH.address]: [ETHEREUM.ALPHA],
     [ETHEREUM.ALPHA.address]: [ETHEREUM.IBETH],
@@ -382,6 +385,8 @@ export const COMMON_BASES: ChainTokenList = {
     ETHEREUM.PELO,
     // @ts-ignore TYPE NEEDS FIXING
     ETHEREUM.BTB,
+       // @ts-ignore TYPE NEEDS FIXING
+       ETHEREUM.BSP,
     // @ts-ignore TYPE NEEDS FIXING
     ETHEREUM.BART,
     // @ts-ignore TYPE NEEDS FIXING

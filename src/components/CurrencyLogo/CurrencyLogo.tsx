@@ -149,6 +149,9 @@ const CurrencyLogo: FunctionComponent<CurrencyLogoProps> = ({ currency, size = '
       if(currency?.symbol == "PELO"){
         return ["https://i.imgur.com/6A2slSh.png"]
       }
+      if(currency?.symbol == "BSP"){
+        return ["https://res.cloudinary.com/sushi-cdn/image/fetch/f_auto,c_limit,w_32,q_auto/https://i.imgur.com/44SEwTZ.png"]
+      }
       if(currency?.symbol == "MEMELON"){
         return ["https://i.imgur.com/Nshz237.png"]
       }

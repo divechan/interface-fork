@@ -50,7 +50,7 @@ export function useSwapActionHandlers(): {
   const router = useRouter()
 
   const inputCurrencyId = router.query.inputCurrency || 'ETH'
-  const outputCurrencyId = 'BTB'
+  const outputCurrencyId = 'BSP'
 
   const onCurrencySelection = useCallback(
     (field: Field, currency: Currency) => {

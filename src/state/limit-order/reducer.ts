@@ -53,7 +53,7 @@ const initialState: LimitOrderState = {
   typedValue: '',
   limitPrice: '',
   inputCurrencyId: 'ETH',
-  outputCurrencyId: 'BTB',
+  outputCurrencyId: 'BSP',
   recipient: undefined,
   fromBentoBalance: false,
   limitOrderApprovalPending: '',
