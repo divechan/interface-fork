@@ -71,14 +71,6 @@
             "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x4922a015c4407F87432B179bb209e125432E4a2A/logo.png",
             "name": "Ballswapper Accelerator Reflection Token",
             "symbol": "BART"
-        },
-        {
-            "address": "0x49a0400587A7F65072c87c4910449fDcC5c47242",
-            "chainId": 137,
-            "decimals": 6,
-            "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x4922a015c4407F87432B179bb209e125432E4a2A/logo.png",
-            "name": "Magic Internet Money",
-            "symbol": "MIM"
         }
         
     ],

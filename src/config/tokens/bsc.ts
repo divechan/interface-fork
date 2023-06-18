@@ -20,6 +20,13 @@ export const BTB = new Token(
   'BTB',
   'BitBall'
 )
+export const BTRS = new Token(
+  ChainId.BSC,
+  '0xA7748F52273E11C0Cb2EdFa5128385453740ce20',
+  18,
+  'BTRS',
+  'BitBall Treasure'
+)
 export const BART = new Token(
   ChainId.BSC,
   '0x721692d13fb70f499e8678ede56bb45e4e320f48',

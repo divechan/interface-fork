@@ -143,9 +143,7 @@ const CurrencyLogo: FunctionComponent<CurrencyLogoProps> = ({ currency, size = '
       if(currency.symbol == "BART"){
         return ["https://i.imgur.com/7oFiXmg.png"]
       }
-      if(currency?.symbol == "MIM"){
-        return ["https://i.imgur.com/7oFiXmg.png"]
-      }
+     
       if(currency?.symbol == "PELO"){
         return ["https://i.imgur.com/6A2slSh.png"]
       }
@@ -154,6 +152,13 @@ const CurrencyLogo: FunctionComponent<CurrencyLogoProps> = ({ currency, size = '
       }
       if(currency?.symbol == "MEMELON"){
         return ["https://i.imgur.com/Nshz237.png"]
+      }
+      if(currency?.symbol == "BTB"){
+        return ["https://i.ibb.co/vPmV0dV/229-CA986-2-E7-D-46-C4-A5-AF-D86-A88-E0207-F.png"]
+      }
+
+      if(currency?.symbol == "BTRS"){
+        return ["https://etherscan.io/token/images/bitballtreasure_32.png"]
       }
       return defaultUrls
     }

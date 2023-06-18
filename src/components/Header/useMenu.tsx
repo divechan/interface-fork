@@ -133,12 +133,7 @@ const useMenu: UseMenu = () => {
       menu.push(tridentLiquidity)
 
       if (featureEnabled(Feature.AMM, chainId)) {
-        menu.push({
-          key: 'Legacy',
-          title: i18n._(t`Legacy`),
-          icon: <SwitchVerticalIcon width={20} />,
-          items: liquidity.filter((item) => !item?.disabled),
-        })
+     
       }
     } else {
       menu.push({

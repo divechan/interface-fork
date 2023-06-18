@@ -28,6 +28,14 @@ export const BSP = new Token(
   'BallSwap'
 )
 
+export const BTRS = new Token(
+  ChainId.ETHEREUM,
+  '0x73C9275c3a2Dd84b5741fD59AEbF102C91Eb033F',
+  18,
+  'BTRS',
+  'BitBall Treasure'
+)
+
 export const BTB = new Token(
   ChainId.ETHEREUM,
   '0x06e0feB0D74106c7adA8497754074D222Ec6BCDf',

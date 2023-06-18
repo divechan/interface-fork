@@ -70,15 +70,7 @@ const UnsupportedCurrencyFooter: FC<UnsupportedCurrencyFooter> = ({ currencies }
           </HeadlessUiModal.BorderedContent>
         </div>
       </HeadlessUiModal.Controlled>
-      <Typography
-        role="button"
-        onClick={() => setShowDetails(true)}
-        variant="xs"
-        weight={700}
-        className="text-blue/80 hover:text-blue text-center"
-      >
-        {i18n._(t`What does this mean?`)}
-      </Typography>
+  
     </>
   )
 }

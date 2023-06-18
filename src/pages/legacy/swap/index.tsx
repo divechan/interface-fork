@@ -416,7 +416,7 @@ console.log("output",loadedUrlParams?.outputCurrencyId)
             </Typography>
           )}
 
-          {swapIsUnsupported ? (
+          {false ? (
             <Button color="red" disabled fullWidth className="rounded-2xl md:rounded">
               {i18n._(t`Unsupported Asset`)}
             </Button>
