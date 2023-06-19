@@ -33,6 +33,7 @@ import {
   updateUserSingleHopOnly,
   updateUserUseSushiGuard,
 } from './actions'
+import ChainId from 'pages/api/analytics/bentobox/[chainId]'
 
 function serializeToken(token: Token): SerializedToken {
   return {
@@ -180,7 +181,7 @@ export function computePairAddress({
   return getCreate2Address(
     factoryAddress,
     keccak256(['bytes'], [pack(['address', 'address'], [token0.address, token1.address])]),
-    token0.chainId == 1 ? "0x284105c50b630ba152d66c7cc0721c3729f56026a8d71617578311e869c253bf" : "0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303"
+    token0.chainId == 1 ? "0x284105c50b630ba152d66c7cc0721c3729f56026a8d71617578311e869c253bf" : token0.chainId == 56 ? "0x284105c50b630ba152d66c7cc0721c3729f56026a8d71617578311e869c253bf": "0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303"
   )
 }
 export function toV2LiquidityToken([tokenA, tokenB]: [Token, Token]): Token {
