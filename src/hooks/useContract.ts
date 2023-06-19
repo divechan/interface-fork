@@ -244,7 +244,7 @@ export function useRouterContract(withSignerIfPossible?: boolean): Contract | nu
       : chainId == 137
       ? '0xc684e9b1Bf80955822BC1B4512049e4897a95631'
       : chainId == 56
-      ? '0xD2f5b0A53e15c9E550A094dC4B648B324A153A6B'
+      ? '0x6ddBd89cCe180ECe35DE7727FB9527a3492d344d'
       //@ts-ignore
       : ROUTER_ADDRESS[chainId],
     ROUTER_ABI,
