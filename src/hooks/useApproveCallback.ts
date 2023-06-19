@@ -114,7 +114,7 @@ export function useApproveCallbackFromTrade(
           : chainId == 137
           ? '0xc684e9b1Bf80955822BC1B4512049e4897a95631'
           : chainId == 56
-          ? '0x6ddBd89cCe180ECe35DE7727FB9527a3492d344d'
+          ? '0x526f6E8ada6d0ec42Bd9dd985c2c171d3EB97f84'
       //@ts-ignore
           : ROUTER_ADDRESS[chainId]
         : undefined
