@@ -41,6 +41,14 @@
             "symbol": "BSP"
         },
         {
+            "address": "0xA7748F52273E11C0Cb2EdFa5128385453740ce20",
+            "chainId": 56,
+            "decimals": 6,
+            "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x4922a015c4407F87432B179bb209e125432E4a2A/logo.png",
+            "name": "Ball Swap",
+            "symbol": "BSP"
+        },
+        {
             "address": "0x721692d13fb70f499e8678ede56bb45e4e320f48",
             "chainId": 56,
             "decimals": 6,
@@ -72,6 +80,7 @@
             "name": "Ballswapper Accelerator Reflection Token",
             "symbol": "BART"
         }
+   
         
     ],
     "version": {

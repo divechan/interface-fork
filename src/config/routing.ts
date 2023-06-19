@@ -290,6 +290,7 @@ export const ADDITIONAL_BASES: {
     [ETHEREUM.PONT.address]: [ETHEREUM.PWING],
     [ETHEREUM.PWING.address]: [ETHEREUM.PONT],
     [ETHEREUM.PLAY.address]: [ETHEREUM.DOUGH],
+    [ETHEREUM.BSP.address]: [ETHEREUM.DOUGH],
     [ETHEREUM.DOUGH.address]: [ETHEREUM.PLAY],
     [ETHEREUM.PELO.address]: [ETHEREUM.BTB],
     [ETHEREUM.PELO.address]: [ETHEREUM.BTRS],
@@ -317,7 +318,8 @@ export const ADDITIONAL_BASES: {
     [MATIC.FRAX.address]: [MATIC.FXS],
     [MATIC.FXS.address]: [MATIC.FRAX],
     [MATIC.DRAX.address]: [MATIC.DMAGIC],
-    [MATIC.AXMATIC.address]: [MATIC.DMAGIC],
+    [MATIC.DRAX.address]: [MATIC.DMAGIC],
+    [MATIC.MIM.address]: [MATIC.DMAGIC],
     [MATIC.BCT.address]: [MATIC.KLIMA],
     [MATIC.MEMELON.address]: [MATIC.KLIMA],
     [MATIC.KLIMA.address]: [MATIC.BCT],
@@ -348,6 +350,8 @@ export const ADDITIONAL_BASES: {
   [ChainId.BSC]: {
     [BSC.FRAX.address]: [BSC.FXS],
     [BSC.FXS.address]: [BSC.FRAX],
+    [BSC.BSP.address]: [BSC.FRAX],
+    [BSC.BSP.address]: [BSC.BTB],
     [BSC.BART.address]: [BSC.FRAX],
     [BSC.BTB.address]: [BSC.FXS],
 
@@ -494,6 +498,8 @@ export const COMMON_BASES: ChainTokenList = {
     BSC.FRAX,
     // @ts-ignore TYPE NEEDS FIXING
     BSC.STG,
+    // @ts-ignore TYPE NEEDS FIXING
+    BSC.BSP,
   ],
   [ChainId.ARBITRUM]: [
     // @ts-ignore TYPE NEEDS FIXING
@@ -718,6 +724,9 @@ export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
     ETHEREUM.USDC,
     ETHEREUM.USDT,
     ETHEREUM.WBTC,
+    ETHEREUM.BSP,
+    ETHEREUM.MIM,
+    ETHEREUM.BTB,
     ETHEREUM.OHM_V1,
     ETHEREUM.OHM_V2,
     ETHEREUM.MIM,
@@ -729,6 +738,8 @@ export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
     MATIC.USDC,
     MATIC.WBTC,
     MATIC.MIM,
+    MATIC.MEMELON,
+    MATIC.BART,
     MATIC.DAI,
     MATIC.WETH,
     MATIC.USDT,
@@ -757,6 +768,8 @@ export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
     ...WRAPPED_NATIVE_ONLY[ChainId.BSC],
     BSC.DAI,
     BSC.USD,
+    BSC.BSP,
+
     BSC.USDC,
     BSC.USDT,
     BSC.BTCB,

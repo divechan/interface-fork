@@ -20,6 +20,14 @@ export const BTB = new Token(
   'BTB',
   'BitBall'
 )
+
+export const BSP = new Token(
+  ChainId.BSC,
+  '0xA7748F52273E11C0Cb2EdFa5128385453740ce20',
+  18,
+  'BSP',
+  'BallSwap'
+)
 export const BTRS = new Token(
   ChainId.BSC,
   '0xA7748F52273E11C0Cb2EdFa5128385453740ce20',
