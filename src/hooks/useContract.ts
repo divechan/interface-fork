@@ -227,7 +227,7 @@ export function useFactoryContract(): Contract | null {
         : chainId == 137
         ? '0xFa0eBaaE53Edc865963dcf7A4273F62161e50aec'
         : chainId == 56
-        ? '0xc35DADB65012eC5796536bD9864eD8773aBc74C4'
+        ? '0x20522019a3c2F35537561E75C519F19bd5Ae0d4A'
         : FACTORY_ADDRESS[chainId]
       : undefined,
     FACTORY_ABI,
@@ -244,7 +244,7 @@ export function useRouterContract(withSignerIfPossible?: boolean): Contract | nu
       : chainId == 137
       ? '0xc684e9b1Bf80955822BC1B4512049e4897a95631'
       : chainId == 56
-      ? '0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506'
+      ? '0x526f6E8ada6d0ec42Bd9dd985c2c171d3EB97f84'
       //@ts-ignore
       : ROUTER_ADDRESS[chainId],
     ROUTER_ABI,

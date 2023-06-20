@@ -168,14 +168,14 @@ const BSC_CHAINLINK_MAPPING = {
     toDecimals: 8,
   },
   '0x45f86CA2A8BC9EBD757225B19a1A0D7051bE46Db': {
-    from: '0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506',
+    from: '0x526f6E8ada6d0ec42Bd9dd985c2c171d3EB97f84',
     to: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c',
     decimals: 18,
     fromDecimals: 18,
     toDecimals: 18,
   },
   '0x51597f405303C4377E36123cBc172b13269EA163': {
-    from: '0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506',
+    from: '0x526f6E8ada6d0ec42Bd9dd985c2c171d3EB97f84',
     to: '0x0000000000000000000000000000000000000001',
     decimals: 8,
     fromDecimals: 18,

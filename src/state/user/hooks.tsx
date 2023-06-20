@@ -181,7 +181,7 @@ export function computePairAddress({
   return getCreate2Address(
     factoryAddress,
     keccak256(['bytes'], [pack(['address', 'address'], [token0.address, token1.address])]),
-    token0.chainId == 1 ? "0x284105c50b630ba152d66c7cc0721c3729f56026a8d71617578311e869c253bf" : token0.chainId == 56 ? "0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303": "0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303"
+    token0.chainId == 1 ? "0x284105c50b630ba152d66c7cc0721c3729f56026a8d71617578311e869c253bf" : token0.chainId == 56 ? "0x284105c50b630ba152d66c7cc0721c3729f56026a8d71617578311e869c253bf": "0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303"
   )
 }
 export function toV2LiquidityToken([tokenA, tokenB]: [Token, Token]): Token {
@@ -198,7 +198,7 @@ export function toV2LiquidityToken([tokenA, tokenB]: [Token, Token]): Token {
           : tokenA.chainId == 137
           ? '0xFa0eBaaE53Edc865963dcf7A4273F62161e50aec'
           : tokenA.chainId == 56
-          ? '0xc35DADB65012eC5796536bD9864eD8773aBc74C4'
+          ? '0x20522019a3c2F35537561E75C519F19bd5Ae0d4A'
           : FACTORY_ADDRESS[tokenA.chainId],
       tokenA,
       tokenB,
