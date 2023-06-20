@@ -36,7 +36,7 @@ export function useV2Pairs(currencies: [Currency | undefined, Currency | undefin
                     : tokenA.chainId == 137
                     ? '0xFa0eBaaE53Edc865963dcf7A4273F62161e50aec'
                     : tokenA.chainId == 56
-                    ? '0xc35DADB65012eC5796536bD9864eD8773aBc74C4'
+                    ? '0x20522019a3c2F35537561E75C519F19bd5Ae0d4A'
                     : FACTORY_ADDRESS[tokenA.chainId],
                 tokenA,
                 tokenB,

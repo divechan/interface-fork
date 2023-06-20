@@ -35,7 +35,7 @@ export function getRouterAddress(chainId?: ChainId) {
     : chainId == 137
     ? '0xc684e9b1Bf80955822BC1B4512049e4897a95631'
     : chainId == 56
-    ? '0x1b02dA8Cb0d097eB8D57A175b88c7D8b47997506'
+    ? '0xD2f5b0A53e15c9E550A094dC4B648B324A153A6B'
       //@ts-ignore
     : ROUTER_ADDRESS[chainId]
 }
