@@ -39,6 +39,8 @@ const Desktop: FC = () => {
               </div>
 
               <div className="flex items-center justify-end w-auto shadow select-none whitespace-nowrap">
+          <div className="flex items-center">{<Web3Network />}</div>
+
                 {account && chainId && (
                   <Typography weight={700} variant="sm" className="px-2 py-5 font-bold">
                     {userEthBalance ? (
@@ -49,11 +51,11 @@ const Desktop: FC = () => {
                   </Typography>
                 )}
 
-                {library && (library.provider.isMetaMask || isCoinbaseWallet) && (
+                {/* {library && (library.provider.isMetaMask || isCoinbaseWallet) && (
                   <div className="hidden sm:inline-block">
                     <Web3Network />
                   </div>
-                )}
+                )} */}
 
                 <Web3Status />
 

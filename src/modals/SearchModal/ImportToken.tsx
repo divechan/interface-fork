@@ -31,11 +31,11 @@ export const ImportToken: FC<ImportProps> = ({ tokens, onBack }) => {
 
   return chainId === queryChainId ? (
     <div className="flex flex-col gap-4">
-      <HeadlessUiModal.Header header={i18n._(t`Import token`)} onClose={onDismiss} onBack={onBack} />
+      <HeadlessUiModal.Header header={i18n._(t`Trade token`)} onClose={onDismiss} onBack={onBack} />
       <HeadlessUiModal.BorderedContent className="flex flex-col gap-4 divide-y divide-gray-700 !border-yellow/40">
         <Typography variant="sm" weight={700} className="text-yellow">
           {i18n._(
-            t`This token doesn't appear on the active token list(s). Make sure this is the token that you want to trade.`
+            t`This token is the main Token of this Chain on BallSwapper. Do you want to trade?`
           )}
         </Typography>
         {tokens.map((token) => {
@@ -53,8 +53,8 @@ export const ImportToken: FC<ImportProps> = ({ tokens, onBack }) => {
                     {importList !== undefined ? (
                       <Chip icon={importList.logoURI} color="green" size="sm" label={importList.name} />
                     ) : (
-                      <Chip color="yellow" size="sm" label={i18n._(t`Unknown Source`)}>
-                        {i18n._(t`Unknown Source`)}
+                      <Chip color="green" size="sm" label={i18n._(t`Main Token`)}>
+                        {i18n._(t`Main Token`)}
                       </Chip>
                     )}
                   </div>
@@ -79,7 +79,7 @@ export const ImportToken: FC<ImportProps> = ({ tokens, onBack }) => {
         }}
         className=".token-dismiss-button"
       >
-        {i18n._(t`Import`)}
+        {i18n._(t`Trade`)}
       </Button>
     </div>
   ) : null
