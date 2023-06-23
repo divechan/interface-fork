@@ -292,7 +292,6 @@ export const ADDITIONAL_BASES: {
     [ETHEREUM.PLAY.address]: [ETHEREUM.DOUGH],
     [ETHEREUM.BSP.address]: [ETHEREUM.DOUGH],
     [ETHEREUM.DOUGH.address]: [ETHEREUM.PLAY],
-    [ETHEREUM.PELO.address]: [ETHEREUM.BTB],
     [ETHEREUM.PELO.address]: [ETHEREUM.BTRS],
     [ETHEREUM.PELO.address]: [ETHEREUM.BSP],
     [ETHEREUM.BTB.address]: [ETHEREUM.ALPHA],
