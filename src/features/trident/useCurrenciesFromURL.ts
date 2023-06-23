@@ -2,7 +2,7 @@ import { ChainId, Currency, NATIVE, SUSHI } from '@sushiswap/core-sdk'
 import { Fee } from '@sushiswap/trident-sdk'
 import { BSP } from 'app/config/tokens/bsc'
 import { BSP as BSP1 } from 'app/config/tokens/ethereum'
-import { MIM } from 'app/config/tokens/matic'
+import { MEMELON, MIM } from 'app/config/tokens/matic'
 import { useCurrency } from 'app/hooks/Tokens'
 import { useActiveWeb3React } from 'app/services/web3'
 import { useRouter } from 'next/router'
@@ -29,7 +29,7 @@ const useCurrenciesFromURL = (): {
     useCurrency(getToken(router.query.tokens?.[0], chainId)) || (chainId && NATIVE[chainId]) || undefined
   const currencyB =
   //@ts-ignore
-    useCurrency(getToken(router.query.tokens?.[1], chainId)) || (chainId && ChainId == 1 ? BSP1 : chainId == 137 ? MIM : chainId==56 ? BSP:SUSHI[chainId]) || undefined
+    useCurrency(getToken(router.query.tokens?.[1], chainId)) || (chainId && ChainId == 1 ? BSP1 : chainId == 137 ? MEMELON : chainId==56 ? BSP:SUSHI[chainId]) || undefined
 
   const fee = Number(router.query.fee ?? Fee.DEFAULT)
   const twap = router.query.twap !== 'false'
