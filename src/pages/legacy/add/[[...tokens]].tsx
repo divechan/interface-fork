@@ -332,7 +332,7 @@ export default function Add() {
           />
         )}
 
-        {addIsUnsupported ? (
+        {false ? (
           <Button color="red" disabled fullWidth className="rounded-2xl md:rounded">
             {i18n._(t`Unsupported Asset`)}
           </Button>

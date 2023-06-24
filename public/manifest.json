@@ -1,7 +1,7 @@
 {
-  "name": "SushiSwap",
+  "name": "BallSwapper",
   "description": "Be a DeFi Chef with BallSwapper. Swap, earn, stack yields, lend, borrow, leverage all on one decentralized, community driven platform",
-  "short_name": "SushiSwap",
+  "short_name": "BallSwapper",
   "display": "standalone",
   "orientation": "portrait",
   "theme_color": "#0D0415",
