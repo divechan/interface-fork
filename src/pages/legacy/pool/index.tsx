@@ -47,7 +47,7 @@ const Pool = () => {
                   <FullPositionCard
                     key={v2Pair.liquidityToken.address}
                     pair={v2Pair}
-                    stakedBalance={CurrencyAmount.fromRawAmount(v2Pair.liquidityToken, '0')}
+                    stakedBalance={CurrencyAmount?.fromRawAmount(v2Pair.liquidityToken, '0')}
                   />
                 ))
               ) : (

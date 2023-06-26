@@ -28,6 +28,15 @@ export const BSP = new Token(
   'BSP',
   'BallSwap'
 )
+
+export const MEMELON = new Token(
+  ChainId.BSC,
+  '0x6deCAbebBA8682bBbBA42418b486E890CA099A1d',
+  18,
+  'MEMELON',
+  'MEME ELON DOGE FLOKI'
+)
+
 export const BTRS = new Token(
   ChainId.BSC,
   '0xc8f531700971fd1da43a52912ea53fc8da3b1b00',

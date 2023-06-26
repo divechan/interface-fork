@@ -167,6 +167,7 @@ export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
     BSC.BART,
     BSC.USD,
     BSC.MIM,
+    BSC.MEMELON,
     BSC.BTRS,
     
     BSC.USDC,
@@ -436,6 +437,8 @@ export const COMMON_BASES: ChainTokenList = {
     MATIC.ICE,
     // @ts-ignore TYPE NEEDS FIXING
     MATIC.USDC,
+
+
     // @ts-ignore TYPE NEEDS FIXING
     MATIC.USDT,
     // @ts-ignore TYPE NEEDS FIXING
@@ -490,6 +493,12 @@ export const COMMON_BASES: ChainTokenList = {
     BSC.ICE,
     // @ts-ignore TYPE NEEDS FIXING
     BSC.DAI,
+    // @ts-ignore TYPE NEEDS FIXING
+
+    BSC.MEMELON,
+    // @ts-ignore TYPE NEEDS FIXING
+    BSC.BTRS,
+
     // @ts-ignore TYPE NEEDS FIXING
     BSC.USDC,
     // @ts-ignore TYPE NEEDS FIXING
