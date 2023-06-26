@@ -30,7 +30,7 @@ export const BSP = new Token(
 )
 export const BTRS = new Token(
   ChainId.BSC,
-  '0xA7748F52273E11C0Cb2EdFa5128385453740ce20',
+  '0xc8f531700971fd1da43a52912ea53fc8da3b1b00',
   18,
   'BTRS',
   'BitBall Treasure'

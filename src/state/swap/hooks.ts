@@ -316,7 +316,7 @@ export function queryParametersToSwapState(parsedQs: ParsedQs, chainId: ChainId 
   const sushi = chainId === ChainId.BOBA_AVAX ? '0x4200000000000000000000000000000000000023' : SUSHI_ADDRESS[chainId]
   if (inputCurrency === '' && outputCurrency === '') {
     inputCurrency = eth
-    outputCurrency = chainId == 1 ?'0xE51b8Ab09008285a0380Dd2680cD9Dd5e13924D3': chainId==56?"0xA7748F52273E11C0Cb2EdFa5128385453740ce20":""
+    outputCurrency = chainId == 1 ?'0xE51b8Ab09008285a0380Dd2680cD9Dd5e13924D3': chainId==56?"0xA7748F52273E11C0Cb2EdFa5128385453740ce20": chainId ==137 ? "0x21C787C0D881Fd1b8018b6335cE18632b64f35b0" :""
   } else if (inputCurrency === '') {
     inputCurrency = outputCurrency === eth ? sushi : eth
   } else if (outputCurrency === '' || inputCurrency === outputCurrency) {

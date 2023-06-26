@@ -166,6 +166,9 @@ export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
     BSC.BTB,
     BSC.BART,
     BSC.USD,
+    BSC.MIM,
+    BSC.BTRS,
+    
     BSC.USDC,
     BSC.USDT,
     BSC.BTCB,
