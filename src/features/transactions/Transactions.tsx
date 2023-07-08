@@ -84,7 +84,7 @@ const _Transactions: FC<TransactionFetcherState> = ({ chainId = ChainId.ETHEREUM
         <table {...getTableProps()} className={TABLE_TABLE_CLASSNAME}>
           <thead>
             {headerGroups.map((headerGroup, i) => (
-              <tr {...headerGroup.getHeaderGroupProps()} key={i}>
+                <tr {...headerGroup.getHeaderGroupProps()} key={i}>
                 {headerGroup.headers.map((column, i) => (
                   <th
                     // @ts-ignore TYPE NEEDS FIXING
