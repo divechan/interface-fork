@@ -1,6 +1,7 @@
 import { createSelector, createSlice, PayloadAction } from '@reduxjs/toolkit'
-import { Pair } from '@sushiswap/core-sdk'
+
 import { AvailablePoolConfig } from 'app/components/Migrate/migrate-utils'
+import { Pair } from 'app/hooks/Pair'
 import { StandardSignatureData } from 'app/hooks/useERC20Permit'
 import { TridentPool } from 'app/services/graph'
 import { AppState } from 'app/state'
