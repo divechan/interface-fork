@@ -4,7 +4,6 @@ import {
   Currency,
   CurrencyAmount,
   JSBI,
-  Pair,
   Trade as LegacyTrade,
   TradeType,
   WNATIVE,
@@ -17,6 +16,7 @@ import {
   findSingleRouteExactIn,
   findSingleRouteExactOut,
   MultiRoute,
+  Pool,
   PoolState,
   RouteStatus,
   Trade,
@@ -34,6 +34,7 @@ import { useEffect, useMemo, useState } from 'react'
 
 import { useAllCurrencyCombinations } from './useAllCurrencyCombinations'
 import { useGetAllExistedPools } from './useConstantProductPools'
+import { Pair } from './Pair'
 
 export function useAllCommonPools(currencyA?: Currency, currencyB?: Currency): (PoolUnion | Pair)[] {
   const currencyCombinations = useAllCurrencyCombinations(currencyA, currencyB)
@@ -133,7 +134,7 @@ export function useBestTridentTrade(
         toShareCurrencyAmount(currencyInRebase, amountSpecified.wrapped).quotient.toString()
       )
       const tridentPools = allowedPools.filter((pool) => pool instanceof ConstantProductPool) as ConstantProductPool[]
-      const legacyPools = allowedPools.filter((pair) => pair instanceof Pair) as Pair[]
+      const legacyPools = allowedPools.filter((pair) => pair instanceof Pair) as (Pair | Pool)[]
 
       if (tradeType === TradeType.EXACT_INPUT) {
         const tridentRoute = findMultiRouteExactIn(
@@ -149,6 +150,7 @@ export function useBestTridentTrade(
           currencyIn.wrapped,
           currencyOut.wrapped,
           BigNumber.from(amountSpecified.quotient.toString()),
+          //@ts-ignore
           legacyPools,
           WNATIVE[amountSpecified.currency.chainId],
           gasPrice
@@ -175,6 +177,7 @@ export function useBestTridentTrade(
             const priceImpact = legacyRoute.priceImpact
             dispatch(setRouteInfo({ info: { chainId, allowedPools: legacyPools, route: legacyRoute, mode: 'single' } }))
             // setRoutingInfo({ chainId, allowedPools: legacyPools, route: legacyRoute, mode: 'single' })
+          //@ts-ignore
             const route = convertTinesSingleRouteToLegacyRoute(legacyRoute, legacyPools, currencyIn, currencyOut)
 
             try {
@@ -201,6 +204,7 @@ export function useBestTridentTrade(
           currencyIn.wrapped,
           currencyOut.wrapped,
           BigNumber.from(amountSpecified.quotient.toString()),
+          //@ts-ignore
           legacyPools,
           WNATIVE[amountSpecified.currency.chainId],
           gasPrice
@@ -227,6 +231,7 @@ export function useBestTridentTrade(
             const priceImpact = legacyRoute.priceImpact
             dispatch(setRouteInfo({ info: { chainId, allowedPools: legacyPools, route: legacyRoute, mode: 'single' } }))
             // setRoutingInfo({ chainId, allowedPools: legacyPools, route: legacyRoute, mode: 'single' })
+          //@ts-ignore
             const route = convertTinesSingleRouteToLegacyRoute(legacyRoute, legacyPools, currencyIn, currencyOut)
             try {
               return {

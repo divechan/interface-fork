@@ -1,6 +1,6 @@
 import { t } from '@lingui/macro'
 import { useLingui } from '@lingui/react'
-import { Currency, CurrencyAmount, JSBI, Pair, Percent, Token, ZERO } from '@sushiswap/core-sdk'
+import { Currency, CurrencyAmount, JSBI, Percent, Token, ZERO } from '@sushiswap/core-sdk'
 import { tryParseAmount } from 'app/functions/parse'
 import { useTotalSupply } from 'app/hooks/useTotalSupply'
 import { useV2Pair } from 'app/hooks/useV2Pairs'
@@ -11,6 +11,7 @@ import { useTokenBalances } from 'app/state/wallet/hooks'
 import { useCallback } from 'react'
 
 import { Field, typeInput } from './actions'
+import { Pair } from 'app/hooks/Pair'
 
 export function useBurnState(): AppState['burn'] {
   return useAppSelector((state) => state.burn)

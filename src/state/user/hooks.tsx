@@ -8,7 +8,6 @@ import {
   Currency,
   FACTORY_ADDRESS,
   KASHI_ADDRESS,
-  Pair,
   Token,
 } from '@sushiswap/core-sdk'
 import { CHAINLINK_PRICE_FEED_MAP } from 'app/config/oracles/chainlink'
@@ -34,6 +33,7 @@ import {
   updateUserUseSushiGuard,
 } from './actions'
 import ChainId from 'pages/api/analytics/bentobox/[chainId]'
+import { Pair } from 'app/hooks/Pair'
 
 function serializeToken(token: Token): SerializedToken {
   return {

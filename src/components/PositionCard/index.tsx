@@ -3,7 +3,7 @@ import { ChevronDownIcon } from '@heroicons/react/outline'
 import { PlusIcon } from '@heroicons/react/solid'
 import { t } from '@lingui/macro'
 import { useLingui } from '@lingui/react'
-import { CurrencyAmount, JSBI, Pair, Percent, Token } from '@sushiswap/core-sdk'
+import { CurrencyAmount, JSBI, Percent, Token } from '@sushiswap/core-sdk'
 import ListPanel from 'app/components/ListPanel'
 import Typography from 'app/components/Typography'
 import { BIG_INT_ZERO } from 'app/constants'
@@ -18,6 +18,7 @@ import React, { Fragment } from 'react'
 
 import Button from '../Button'
 import { CurrencyLogoArray } from '../CurrencyLogo'
+import { Pair } from 'app/hooks/Pair'
 
 interface PositionCardProps {
   pair: Pair
