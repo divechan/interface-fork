@@ -15,7 +15,7 @@ const MyDeposits: FC = () => {
         {i18n._(t`My Deposits`)}
       </Typography>
       <ListPanel
-        header={<ListPanel.Header title={i18n._(t`Assets`)} value="$16,720.00" subValue="54.32134 SLP" />}
+        header={<ListPanel.Header title={i18n._(t`Assets`)} value="$16,720.00" subValue="54.32134 BSP" />}
         items={[poolWithState?.pool?.reserve0, poolWithState?.pool?.reserve1].map((amount, index) => (
           <ListPanel.CurrencyAmountItem amount={amount} key={index} />
         ))}

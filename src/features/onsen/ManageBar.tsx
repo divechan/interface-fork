@@ -56,7 +56,7 @@ const ManageBar = ({ farm }) => {
     chainId || 1,
     getAddress(farm.pair.id),
     farm.pair.type === PairType.KASHI ? Number(farm.pair.asset.decimals) : 18,
-    farm.pair.type === PairType.KASHI ? 'KMP' : 'SLP'
+    farm.pair.type === PairType.KASHI ? 'KMP' : 'BSP'
   )
   const balance = useCurrencyBalance(account ?? undefined, liquidityToken)
   const stakedAmount = useUserInfo(farm, liquidityToken)
@@ -157,7 +157,7 @@ const ManageBar = ({ farm }) => {
             color={!isDepositValid && !!parsedDepositValue ? 'red' : 'blue'}
             onClick={async () => {
               try {
-                // KMP decimals depend on asset, SLP is always 18
+                // KMP decimals depend on asset, BSP is always 18
                 // @ts-ignore TYPE NEEDS FIXING
                 const tx = await deposit(farm.id, BigNumber.from(parsedDepositValue?.quotient.toString()))
                 if (tx?.hash) {
@@ -190,7 +190,7 @@ const ManageBar = ({ farm }) => {
           color={!isWithdrawValid && !!parsedWithdrawValue ? 'red' : 'blue'}
           onClick={async () => {
             try {
-              // KMP decimals depend on asset, SLP is always 18
+              // KMP decimals depend on asset, BSP is always 18
               // @ts-ignore TYPE NEEDS FIXING
               const tx = await withdraw(farm.id, BigNumber.from(parsedWithdrawValue?.quotient.toString()))
               if (tx?.hash) {

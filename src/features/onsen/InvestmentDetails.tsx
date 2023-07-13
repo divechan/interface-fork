@@ -54,7 +54,7 @@ const InvestmentDetails = ({ farm }) => {
             farm.pair.symbol ?? farm.pair.type === PairType.KASHI
               ? 'KMP'
               : farm.pair.type === PairType.SWAP
-              ? 'SLP'
+              ? 'BSP'
               : 'SCPLP',
             farm.pair.name
           )

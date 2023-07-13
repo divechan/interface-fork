@@ -1,9 +1,10 @@
 import { Interface } from '@ethersproject/abi'
 import IUniswapV2PairABI from '@sushiswap/core/abi/IUniswapV2Pair.json'
-import { Currency, CurrencyAmount, FACTORY_ADDRESS, Pair } from '@sushiswap/core-sdk'
+import { Currency, CurrencyAmount, FACTORY_ADDRESS, Token } from '@sushiswap/core-sdk'
 import { useMultipleContractSingleData } from 'app/lib/hooks/multicall'
 import { useMemo } from 'react'
 import { computePairAddress } from 'app/state/user/hooks'
+import {Pair} from './Pair'
 
 const PAIR_INTERFACE = new Interface(IUniswapV2PairABI)
 
@@ -13,6 +14,7 @@ export enum PairState {
   EXISTS,
   INVALID,
 }
+
 
 export function useV2Pairs(currencies: [Currency | undefined, Currency | undefined][]): [PairState, Pair | null][] {
   const tokens = useMemo(
@@ -48,9 +50,9 @@ export function useV2Pairs(currencies: [Currency | undefined, Currency | undefin
       }, []),
     [tokens]
   )
-
+console.log("pair",pairAddresses)
   const results = useMultipleContractSingleData(pairAddresses, PAIR_INTERFACE, 'getReserves')
-
+console.log("result",results)
   return useMemo(() => {
     return results.map((result, i) => {
       const { result: reserves, loading } = result

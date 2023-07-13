@@ -188,7 +188,18 @@ export function toV2LiquidityToken([tokenA, tokenB]: [Token, Token]): Token {
   if (tokenA.chainId !== tokenB.chainId) throw new Error('Not matching chain IDs')
   if (tokenA.equals(tokenB)) throw new Error('Tokens cannot be equal')
   if (!FACTORY_ADDRESS[tokenA.chainId]) throw new Error('No V2 factory address on this chain')
-
+console.log("pairs ",tokenA.chainId,tokenB.name,tokenA.name,computePairAddress({
+  factoryAddress:
+    tokenA.chainId == 1
+      ? '0x7cf1d51C25E9bcD023ebF318B99824121941eBcf'
+      : tokenA.chainId == 137
+      ? '0x6FF6ef9450e5cA711B037Bc23F109FCBaA03d2D3'
+      : tokenA.chainId == 56
+      ? '0x20522019a3c2F35537561E75C519F19bd5Ae0d4A'
+      : FACTORY_ADDRESS[tokenA.chainId],
+  tokenA,
+  tokenB,
+}))
   return new Token(
     tokenA.chainId,
     computePairAddress({

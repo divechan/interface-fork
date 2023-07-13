@@ -18,7 +18,8 @@ const Pool = () => {
   const { i18n } = useLingui()
   const { account } = useActiveWeb3React()
   const { loading, pairs } = useV2PairsWithLiquidity()
-
+  
+console.log("pairs",pairs)
   return (
     <>
       <NextSeo title="Pool" />

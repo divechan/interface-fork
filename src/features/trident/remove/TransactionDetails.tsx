@@ -49,12 +49,12 @@ const TransactionDetails: FC = () => {
             {poolBalance?.greaterThan(0) ? poolBalance?.toSignificant(6) : '0.000'}
             {slpAmountToRemove?.greaterThan(0) && (
               <>
-                {' SLP '}→{' '}
+                {' BSP '}→{' '}
                 <span className="text-green">
                   {poolBalance && slpAmountToRemove
                     ? poolBalance.subtract(slpAmountToRemove)?.toSignificant(6)
                     : '0.000'}{' '}
-                  SLP
+                  BSP
                 </span>
               </>
             )}
