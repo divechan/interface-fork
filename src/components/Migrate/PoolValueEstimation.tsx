@@ -1,6 +1,7 @@
-import { JSBI, Pair } from '@sushiswap/core-sdk'
+import { JSBI } from '@sushiswap/core-sdk'
 import SumUSDCValues from 'app/features/trident/SumUSDCValues'
 import { classNames } from 'app/functions'
+import { Pair } from 'app/hooks/Pair'
 import { useTotalSupply } from 'app/hooks/useTotalSupply'
 import { useActiveWeb3React } from 'app/services/web3'
 import { useTokenBalance } from 'app/state/wallet/hooks'
