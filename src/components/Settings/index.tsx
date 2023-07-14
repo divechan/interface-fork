@@ -102,25 +102,7 @@ const SettingsTab: FC<SettingsTabProps> = ({ placeholderSlippage, className, tri
                 </div>
               )}
               {/* // @ts-ignore TYPE NEEDS FIXING*/}
-              {featureEnabled(Feature.SUSHIGUARD, chainId ?? -1) && walletSupportsSushiGuard && (
-                <div className="flex items-center justify-between">
-                  <div className="flex items-center">
-                    <Typography variant="xs" className="text-high-emphesis" weight={700}>
-                      {i18n._(t`SushiGuard Protector`)}
-                    </Typography>
-                    <QuestionHelper text={i18n._(t`SushiGuard protects your trades from MEV, like frontrunning.`)} />
-                  </div>
-                  <Switch
-                    size="sm"
-                    id="toggle-use-sushiguard"
-                    checked={userUseSushiGuard}
-                    onChange={() => (userUseSushiGuard ? setUserUseSushiGuard(false) : setUserUseSushiGuard(true))}
-                    checkedIcon={<CheckIcon className="text-dark-700" />}
-                    uncheckedIcon={<CloseIcon />}
-                    color="gradient"
-                  />
-                </div>
-              )}
+             
             </div>
           </div>
         }
