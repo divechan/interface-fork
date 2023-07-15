@@ -76,7 +76,6 @@ export const SUPPORTED_WALLETS: { [key: string]: WalletInfo } = {
     color: '#E8831D',
     mobile: true,
     mobileOnly: true,
-
   },
   WALLET_CONNECT: {
     connector: async () => {
