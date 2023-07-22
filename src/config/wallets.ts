@@ -131,7 +131,7 @@ export const SUPPORTED_WALLETS: { [key: string]: WalletInfo } = {
       return new WalletLinkConnector({
         url: RPC[ChainId.ETHEREUM],
         appName: 'Ballswapper',
-        appLogoUrl: 'https://res.cloudinary.com/sushi-cdn/image/fetch/f_auto,c_limit,w_48,q_auto/https://i.imgur.com/44SEwTZ.png',
+        appLogoUrl: 'https://i.ibb.co/7Ks717m/favicon.png',
         darkMode: true,
       })
     },
