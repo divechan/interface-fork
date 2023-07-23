@@ -50,9 +50,7 @@ export function useV2Pairs(currencies: [Currency | undefined, Currency | undefin
       }, []),
     [tokens]
   )
-console.log("pair",pairAddresses)
   const results = useMultipleContractSingleData(pairAddresses, PAIR_INTERFACE, 'getReserves')
-console.log("result",results)
   return useMemo(() => {
     return results.map((result, i) => {
       const { result: reserves, loading } = result

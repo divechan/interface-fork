@@ -72,7 +72,7 @@ export const SUPPORTED_WALLETS: { [key: string]: WalletInfo } = {
     name: 'MetaMask',
     iconName: 'metamask.png',
     description: 'Open in MetaMask app.',
-    href: 'https://metamask.app.link/dapp/app.ballswapper.com',
+    href: 'https://metamask.app.link/dapp/swap.ballswapper.com',
     color: '#E8831D',
     mobile: true,
     mobileOnly: true,
