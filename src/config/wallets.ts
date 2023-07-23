@@ -139,6 +139,7 @@ export const SUPPORTED_WALLETS: { [key: string]: WalletInfo } = {
     iconName: 'coinbase.svg',
     description: 'Use Coinbase Wallet app on mobile device',
     href: null,
+    color: '#315CF5',
   },
   COINBASE_LINK: {
     name: 'Open in Coinbase Wallet',
