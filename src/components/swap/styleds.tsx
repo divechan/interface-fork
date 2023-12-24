@@ -25,20 +25,21 @@ export const PageWrapper = styled.div`
 // Mostly copied from `AppBody` but it was getting too hard to maintain backwards compatibility.
 export const SwapWrapper = styled.main`
   position: relative;
-  background: ${({ theme }) => theme.backgroundSurface};
-  border-radius: 16px;
-  border: 1px solid ${({ theme }) => theme.backgroundOutline};
-  padding: 8px;
+  background: #1f4a7d;
+  border-radius: 5px;
+
+  padding: 25px;
   z-index: ${Z_INDEX.deprecated_content};
   transition: transform 250ms ease;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6); /* Add box shadow for the floating effect */
 
   &:hover {
-    border: 1px solid ${({ theme }) => theme.backgroundOutline};
+    box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.9);
   }
 `
 
 export const ArrowWrapper = styled.div<{ clickable: boolean }>`
-  border-radius: 12px;
+  border-radius: 20px;
   height: 40px;
   width: 40px;
   position: relative;
@@ -46,17 +47,24 @@ export const ArrowWrapper = styled.div<{ clickable: boolean }>`
   margin-bottom: -18px;
   margin-left: auto;
   margin-right: auto;
-  background-color: ${({ theme }) => theme.backgroundInteractive};
+  background-color: #fafafa;
   border: 4px solid;
-  border-color: ${({ theme }) => theme.backgroundSurface};
-
+  border-color: #1f4a7d;
   z-index: 2;
+
+  transition: all 0.3s ease; /* Add a smooth transition for the hover effect */
+
   ${({ clickable }) =>
     clickable
       ? css`
           :hover {
             cursor: pointer;
-            opacity: 0.8;
+            background-color: #fafafa;
+            transform: rotate(180deg); /* Rotate 180 degrees on hover */
+            border: 4px solid;
+            border-color: #d28a1e;
+            box-shadow: 0px 4px 8px rgba(210, 138, 30, 0.5); /* Use the glow color for box-shadow */
+            color: #fff;
           }
         `
       : null}

@@ -5,7 +5,6 @@ import { Z_INDEX } from 'theme/zIndex'
 import { useModalIsOpen } from '../../state/application/hooks'
 import { ApplicationModal } from '../../state/application/reducer'
 import DefaultMenu from './DefaultMenu'
-import LanguageMenu from './LanguageMenu'
 import { TransactionHistoryMenu } from './TransactionMenu'
 
 const WalletWrapper = styled.div`
@@ -58,7 +57,7 @@ const WalletDropdown = () => {
         <WalletDropdownWrapper>
           <WalletWrapper>
             {menu === MenuState.TRANSACTIONS && <TransactionHistoryMenu onClose={() => setMenu(MenuState.DEFAULT)} />}
-            {menu === MenuState.LANGUAGE && <LanguageMenu onClose={() => setMenu(MenuState.DEFAULT)} />}
+
             {menu === MenuState.DEFAULT && <DefaultMenu setMenu={setMenu} />}
           </WalletWrapper>
         </WalletDropdownWrapper>

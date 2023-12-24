@@ -76,7 +76,7 @@ export function AdvancedSwapDetails({
               }
               disableHover={hideInfoTooltips}
             >
-              <ThemedText.DeprecatedSubHeader color={theme.textPrimary}>
+              <ThemedText.DeprecatedSubHeader color="#000">
                 <Trans>Expected Output</Trans>
               </ThemedText.DeprecatedSubHeader>
             </MouseoverTooltip>

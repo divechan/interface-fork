@@ -23,11 +23,18 @@ import Toggle from '../Toggle'
 import TransactionSettings from '../TransactionSettings'
 
 const StyledMenuIcon = styled(Settings)`
-  height: 20px;
-  width: 20px;
+  path {
+    stroke: #fafafa; /* Default color (white) */
+    transition: stroke 0.2s ease; /* Smooth transition for color change */
+  }
 
-  > * {
-    stroke: ${({ theme }) => theme.textSecondary};
+  &:hover {
+    path {
+      stroke: #d28a1e; /* Color on hover */
+    }
+
+    transform: rotate(360deg); /* Rotate 360 degrees on hover */
+    transition: transform 0.8s ease; /* Smooth rotation transition */
   }
 `
 

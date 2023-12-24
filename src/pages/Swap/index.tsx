@@ -88,12 +88,13 @@ const ArrowContainer = styled.div`
 const SwapSection = styled.div`
   position: relative;
   background-color: ${({ theme }) => theme.backgroundModule};
-  border-radius: 12px;
+  border-radius: 5px;
   padding: 16px;
   color: ${({ theme }) => theme.textSecondary};
   font-size: 14px;
   line-height: 20px;
   font-weight: 500;
+  margin-bottom: 30px;
 
   &:before {
     box-sizing: border-box;
@@ -124,6 +125,7 @@ const OutputSwapSection = styled(SwapSection)<{ showDetailsDropdown: boolean }>`
   border-bottom: ${({ theme }) => `1px solid ${theme.backgroundSurface}`};
   border-bottom-left-radius: ${({ showDetailsDropdown }) => showDetailsDropdown && '0'};
   border-bottom-right-radius: ${({ showDetailsDropdown }) => showDetailsDropdown && '0'};
+  margin-top: 30px;
 `
 
 const DetailsSwapSection = styled(SwapSection)`
@@ -722,7 +724,7 @@ export default function Swap({ className }: { className?: string }) {
                   ) : routeNotFound && userHasSpecifiedInputOutput && !routeIsLoading && !routeIsSyncing ? (
                     <GrayCard style={{ textAlign: 'center' }}>
                       <ThemedText.DeprecatedMain mb="4px">
-                        <Trans>Insufficient liquidity for this trade.</Trans>
+                        <Trans>Insufficient balance for this trade.</Trans>
                       </ThemedText.DeprecatedMain>
                     </GrayCard>
                   ) : showApproveFlow ? (
@@ -742,12 +744,12 @@ export default function Swap({ className }: { className?: string }) {
                             {/* we need to shorten this string on mobile */}
                             {approvalState === ApprovalState.APPROVED ||
                             signatureState === UseERC20PermitState.SIGNED ? (
-                              <ThemedText.SubHeader width="100%" textAlign="center" color="textSecondary">
+                              <ThemedText.SubHeader width="100%" textAlign="center" color="black">
                                 <Trans>You can now trade {currencies[Field.INPUT]?.symbol}</Trans>
                               </ThemedText.SubHeader>
                             ) : (
-                              <ThemedText.SubHeader width="100%" textAlign="center" color="white">
-                                <Trans>Allow the Uniswap Protocol to use your {currencies[Field.INPUT]?.symbol}</Trans>
+                              <ThemedText.SubHeader width="100%" textAlign="center" color="black">
+                                <Trans>Allow the SteamX Protocol to use your {currencies[Field.INPUT]?.symbol}</Trans>
                               </ThemedText.SubHeader>
                             )}
 
@@ -760,7 +762,7 @@ export default function Swap({ className }: { className?: string }) {
                               <MouseoverTooltip
                                 text={
                                   <Trans>
-                                    You must give the Uniswap smart contracts permission to use your{' '}
+                                    You must give the Rails Network smart contracts permission to use your{' '}
                                     {currencies[Field.INPUT]?.symbol}. You only have to do this once per token.
                                   </Trans>
                                 }
@@ -830,8 +832,8 @@ export default function Swap({ className }: { className?: string }) {
                             <MouseoverTooltip
                               text={
                                 <Trans>
-                                  Permission is required for Uniswap to swap each token. This will expire after one
-                                  month for your security.
+                                  Permission is required for Rails Network to swap each token. This will expire after
+                                  one month for your security.
                                 </Trans>
                               }
                             >

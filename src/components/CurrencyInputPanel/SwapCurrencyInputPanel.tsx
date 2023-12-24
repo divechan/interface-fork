@@ -28,7 +28,7 @@ import { FiatValue } from './FiatValue'
 const InputPanel = styled.div<{ hideInput?: boolean }>`
   ${flexColumnNoWrap};
   position: relative;
-  border-radius: ${({ hideInput }) => (hideInput ? '16px' : '20px')};
+  border-radius: ${({ hideInput }) => (hideInput ? '16px' : '5px')};
   z-index: 1;
   width: ${({ hideInput }) => (hideInput ? '100%' : 'initial')};
   transition: height 1s ease;
@@ -299,7 +299,7 @@ export default function SwapCurrencyInputPanel({
                       ? currency.symbol.slice(0, 4) +
                         '...' +
                         currency.symbol.slice(currency.symbol.length - 5, currency.symbol.length)
-                      : currency?.symbol) || <Trans>Select token</Trans>}
+                      : currency?.symbol) || <Trans>Choose a Token</Trans>}
                   </StyledTokenName>
                 )}
               </RowFixed>

@@ -164,7 +164,7 @@ export default function SwapDetailsDropdown({ trade, syncing, loading, allowedSl
                 </LoadingOpacityContainer>
               ) : loading || syncing ? (
                 <ThemedText.DeprecatedMain fontSize={14}>
-                  <Trans>Fetching best price...</Trans>
+                  <Trans>Checking for best route</Trans>
                 </ThemedText.DeprecatedMain>
               ) : null}
             </RowFixed>

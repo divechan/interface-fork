@@ -27,7 +27,8 @@ export const colors = {
   pink100: '#FFD9E4',
   pink200: '#FBA4C0',
   pink300: '#FF6FA3',
-  pink400: '#FB118E',
+  pink400: '#d28a1e',
+  sxorange: '#d28a1e',
   pink500: '#C41969',
   pink600: '#8C0F49',
   pink700: '#55072A',
@@ -82,7 +83,8 @@ export const colors = {
   blue900: '#040E34',
   blueVibrant: '#587BFF',
   // TODO: add magenta 50-900
-  magentaVibrant: '#FC72FF',
+  steamxBlue: '#0c1d31',
+  steamxLBlue: '#1f4a7d',
   purple300: '#8440F2',
   purple900: '#1C0337',
   // TODO: add all other vibrant variations
@@ -101,20 +103,20 @@ const commonTheme = {
   white: colors.white,
   black: colors.black,
 
-  chain_1: colors.networkEthereum,
-  chain_3: colors.yellow400,
-  chain_4: colors.pink400,
+  chain_1: colors.sxorange,
+  chain_3: colors.sxorange,
+  chain_4: colors.sxorange,
   chain_5: colors.green400,
-  chain_10: colors.networkOptimism,
-  chain_137: colors.networkPolygon,
-  chain_42: colors.networkArbitrum,
-  chain_420: colors.networkOptimism,
-  chain_42161: colors.networkEthereum,
-  chain_421611: colors.networkEthereum,
-  chain_80001: colors.networkPolygon,
-  chain_137_background: colors.purple900,
-  chain_10_background: colors.red900,
-  chain_42161_background: colors.blue900,
+  chain_10: colors.sxorange,
+  chain_137: colors.sxorange,
+  chain_42: colors.sxorange,
+  chain_420: colors.sxorange,
+  chain_42161: colors.sxorange,
+  chain_421611: colors.sxorange,
+  chain_80001: colors.sxorange,
+  chain_137_background: colors.sxorange,
+  chain_10_background: colors.sxorange,
+  chain_42161_background: colors.sxorange,
 
   hoverState: opacify(24, colors.blue200),
   hoverDefault: opacify(8, colors.gray200),
@@ -123,7 +125,7 @@ const commonTheme = {
 export const darkTheme = {
   ...commonTheme,
 
-  userThemeColor: colors.magentaVibrant,
+  userThemeColor: colors.steamxBlue,
 
   background: colors.gray800,
   backgroundBackdrop: colors.gray950,
@@ -135,9 +137,9 @@ export const darkTheme = {
   backgroundScrim: opacify(72, colors.gray900),
   backgroundScrolledSurface: opacify(72, colors.gray900),
 
-  textPrimary: colors.white,
+  textPrimary: colors.black,
   textSecondary: colors.gray300,
-  textTertiary: colors.gray500,
+  textTertiary: colors.black,
 
   accentAction: colors.blue400,
   accentActive: colors.blue400,
@@ -175,30 +177,30 @@ export const darkTheme = {
 export const lightTheme: Theme = {
   ...commonTheme,
 
-  userThemeColor: colors.magentaVibrant,
+  userThemeColor: colors.steamxBlue,
 
   background: '#faf9fa', //INTENTIONALLY OFF THEME TO GIVE WHITE BG A SOFTER VISUAL
   backgroundBackdrop: colors.white,
-  backgroundSurface: colors.white,
+  backgroundSurface: '#0c1d31',
   backgroundModule: colors.gray50,
   backgroundInteractive: colors.gray100,
   backgroundFloating: opacify(8, colors.gray700),
-  backgroundOutline: colors.gray150,
+  backgroundOutline: colors.steamxLBlue,
   backgroundScrim: opacify(60, colors.gray900),
   backgroundScrolledSurface: opacify(72, colors.white),
 
-  textPrimary: colors.gray900,
+  textPrimary: colors.black,
   textSecondary: colors.gray400,
-  textTertiary: colors.gray300,
+  textTertiary: colors.black,
 
-  accentAction: colors.pink400,
+  accentAction: colors.sxorange,
   accentActive: colors.blue400,
   accentSuccess: colors.green300,
   accentWarning: colors.gold200,
   accentFailure: colors.red400,
   accentCritical: colors.red400,
 
-  accentActionSoft: opacify(24, colors.pink400),
+  accentActionSoft: opacify(24, colors.sxorange),
   accentActiveSoft: opacify(24, colors.blue400),
   accentSuccessSoft: opacify(24, colors.green300),
   accentWarningSoft: opacify(24, colors.gold200),
@@ -217,11 +219,11 @@ export const lightTheme: Theme = {
   shallowShadow:
     '6px 6px 10px rgba(51, 53, 72, 0.01), 2px 2px 6px rgba(51, 53, 72, 0.02), 1px 2px 2px rgba(51, 53, 72, 0.02);',
 
-  networkDefaultShadow: `0px 40px 120px ${opacify(12, colors.pink400)}`,
+  networkDefaultShadow: `0px 40px 120px ${opacify(12, colors.sxorange)}`,
 
   stateOverlayHover: opacify(8, colors.gray300),
   stateOverlayPressed: opacify(24, colors.gray200),
 
-  searchBackground: opacify(4, colors.white),
-  searchOutline: opacify(1, colors.black),
+  searchBackground: `rgba(255,255,255,0.07)`,
+  searchOutline: `rgba(255,255,255,0.07)`,
 }

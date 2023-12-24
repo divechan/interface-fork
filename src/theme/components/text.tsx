@@ -8,7 +8,7 @@ import styled from 'styled-components/macro'
 const TextWrapper = styled(Text).withConfig({
   shouldForwardProp: (prop) => prop !== 'color',
 })<{ color: keyof string }>`
-  color: ${({ color, theme }) => (theme as any)[color]};
+  color: #fff;
 `
 
 type TextProps = Omit<TextPropsOriginal, 'css'>

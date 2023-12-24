@@ -12,7 +12,7 @@ const InfoCard = styled.button<{ isActive?: boolean }>`
   padding: 1rem;
   outline: none;
   border: 1px solid;
-  border-radius: 12px;
+  border-radius: 5px;
   width: 100% !important;
   &:focus {
     background-color: ${({ theme }) => theme.hoverState};

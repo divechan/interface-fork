@@ -75,7 +75,7 @@ export const searchBarContainerNft = style([
 export const searchBar = style([
   baseSearchStyle,
   sprinkles({
-    color: 'textSecondary',
+    color: 'textTertiary',
     paddingX: '16',
   }),
 ])
@@ -96,7 +96,7 @@ export const searchBarInput = style([
     padding: '0',
     fontWeight: 'normal',
     fontSize: '16',
-    color: { default: 'textPrimary', placeholder: 'textSecondary' },
+    color: { default: 'black', placeholder: 'gray' },
     border: 'none',
     background: 'none',
     lineHeight: '24',
@@ -163,7 +163,7 @@ export const primaryText = style([
     overflow: 'hidden',
     whiteSpace: 'nowrap',
     textOverflow: 'ellipsis',
-    color: 'textPrimary',
+    color: 'textTertiary',
   }),
   {
     lineHeight: '24px',
@@ -173,7 +173,7 @@ export const primaryText = style([
 export const secondaryText = style([
   buttonTextSmall,
   sprinkles({
-    color: 'textSecondary',
+    color: 'textTertiary',
   }),
   {
     lineHeight: '20px',

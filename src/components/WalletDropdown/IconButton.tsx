@@ -2,7 +2,7 @@ import { Icon } from 'react-feather'
 import styled, { css } from 'styled-components/macro'
 
 export const IconHoverText = styled.span`
-  color: ${({ theme }) => theme.textPrimary};
+  color: ${({ theme }) => theme.textSecondary};
   position: absolute;
   top: 28px;
   border-radius: 8px;
@@ -15,7 +15,7 @@ export const IconHoverText = styled.span`
 
 const IconStyles = css`
   background-color: ${({ theme }) => theme.backgroundInteractive};
-  border-radius: 12px;
+  border-radius: 5px;
   display: inline-block;
   cursor: pointer;
   position: relative;

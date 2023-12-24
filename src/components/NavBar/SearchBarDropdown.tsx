@@ -217,7 +217,7 @@ export const SearchBarDropdown = ({
           />
         ) : (
           <Box className={styles.notFoundContainer}>
-            <Trans>No tokens found.</Trans>
+            <Trans>Oops... We can't seem to find that token!</Trans>
           </Box>
         )
 
@@ -285,7 +285,7 @@ export const SearchBarDropdown = ({
                   suggestion_type: NavBarSearchTypes.TOKEN_TRENDING,
                   ...eventProperties,
                 }}
-                header={<Trans>Popular tokens</Trans>}
+                header={<Trans>Top tokens</Trans>}
                 headerIcon={<TrendingArrow />}
                 isLoading={!trendingTokenData}
               />
@@ -301,7 +301,7 @@ export const SearchBarDropdown = ({
                   suggestion_type: NavBarSearchTypes.COLLECTION_TRENDING,
                   ...eventProperties,
                 }}
-                header={<Trans>Popular NFT collections</Trans>}
+                header={<Trans>Top NFT collections</Trans>}
                 headerIcon={<TrendingArrow />}
                 isLoading={trendingCollectionsAreLoading}
               />
@@ -323,7 +323,7 @@ export const SearchBarDropdown = ({
     toggleOpen,
     shortenedHistory,
     hasInput,
-    isNFTPage,
+
     isTokenPage,
     showCollectionsFirst,
     queryText,

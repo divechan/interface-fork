@@ -4,7 +4,7 @@ import { TransactionSummary } from 'components/AccountDetailsV2'
 import { ButtonPrimary } from 'components/Button'
 import { useActiveLocale } from 'hooks/useActiveLocale'
 import { useMemo } from 'react'
-import { ChevronRight, Moon, Sun } from 'react-feather'
+import { ChevronRight } from 'react-feather'
 import { useToggleWalletModal } from 'state/application/hooks'
 import { useDarkModeManager } from 'state/user/hooks'
 import styled from 'styled-components/macro'
@@ -157,23 +157,6 @@ const WalletDropdown = ({ setMenu }: { setMenu: (state: MenuState) => void }) =>
           )}
         </>
       )}
-      <ToggleMenuItem data-testid="wallet-select-language" onClick={() => setMenu(MenuState.LANGUAGE)}>
-        <DefaultText>
-          <Trans>Language</Trans>
-        </DefaultText>
-        <FlexContainer>
-          <CenterVertically>
-            <DefaultText>{ISO}</DefaultText>
-          </CenterVertically>
-          <IconWrap>
-            <ChevronRight size={16} strokeWidth={3} />
-          </IconWrap>
-        </FlexContainer>
-      </ToggleMenuItem>
-      <ToggleMenuItem data-testid="wallet-select-theme" onClick={toggleDarkMode}>
-        <DefaultText>{darkMode ? <Trans> Light theme</Trans> : <Trans>Dark theme</Trans>}</DefaultText>
-        <IconWrap>{darkMode ? <Sun size={16} /> : <Moon size={16} />}</IconWrap>
-      </ToggleMenuItem>
     </DefaultMenuWrap>
   )
 }

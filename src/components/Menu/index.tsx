@@ -15,7 +15,17 @@ export enum FlyoutAlignment {
 
 const StyledMenuIcon = styled(MenuIcon)`
   path {
-    stroke: ${({ theme }) => theme.textPrimary};
+    stroke: ${({ theme }) => theme.textPrimary}; /* Default color (white) */
+    transition: stroke 0.2s ease; /* Smooth transition for color change */
+  }
+
+  &:hover {
+    path {
+      stroke: #d28a1e; /* Color on hover */
+    }
+
+    transform: rotate(360deg); /* Rotate 360 degrees on hover */
+    transition: transform 0.2s ease; /* Smooth rotation transition */
   }
 `
 

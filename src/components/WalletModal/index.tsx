@@ -55,9 +55,9 @@ const CloseColor = styled(Close)`
 
 const Wrapper = styled.div`
   ${flexColumnNoWrap};
-  background-color: ${({ theme }) => theme.backgroundSurface};
+  background-color: #FAFAFA;
   outline: ${({ theme }) => `1px solid ${theme.backgroundOutline}`};
-  box-shadow: ${({ theme }) => theme.deepShadow};
+  box-shadow: box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   margin: 0;
   padding: 0;
   width: 100%;
@@ -77,8 +77,8 @@ const HeaderRow = styled.div`
 const ContentWrapper = styled.div`
   background-color: ${({ theme }) => theme.backgroundSurface};
   padding: 0 1rem 1rem 1rem;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
   ${({ theme }) => theme.deprecated_mediaWidth.deprecated_upToMedium`padding: 0 1rem 1rem 1rem`};
 `
 
@@ -318,7 +318,7 @@ export default function WalletModal({
       headerRow = (
         <HeaderRow>
           <HoverText>
-            <Trans>Connect a wallet</Trans>
+            <Trans>Select a Wallet:</Trans>
           </HoverText>
         </HeaderRow>
       )
@@ -329,9 +329,9 @@ export default function WalletModal({
 
       const content = (
         <Trans>
-          By connecting a wallet, you agree to Uniswap Labs’{' '}
-          <ExternalLink href="https://uniswap.org/terms-of-service/">Terms of Service</ExternalLink> and consent to its{' '}
-          <ExternalLink href="https://uniswap.org/privacy-policy">Privacy Policy</ExternalLink>.
+          By connecting a wallet, you agree to the Rails Network&reg; &amp; Steam Exchange&reg;{' '}
+          <ExternalLink href="https://steamexchange.io/terms.html">Terms of Service</ExternalLink> and consent to its{' '}
+          <ExternalLink href="https://steamexchange.io/privacy.html">Privacy Policy</ExternalLink>.
         </Trans>
       )
       return (

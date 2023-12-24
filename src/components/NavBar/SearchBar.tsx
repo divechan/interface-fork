@@ -25,12 +25,12 @@ import * as styles from './SearchBar.css'
 import { SearchBarDropdown } from './SearchBarDropdown'
 
 const KeyShortCut = styled.div`
-  background-color: ${({ theme }) => theme.hoverState};
-  color: ${({ theme }) => theme.textSecondary};
+  background-color: #d28a1e;
+  color: #fff;
   padding: 0px 8px;
   width: 20px;
   height: 20px;
-  border-radius: 4px;
+  border-radius: 2px;
   font-size: 12px;
   font-weight: 800;
   line-height: 16px;
@@ -110,7 +110,7 @@ export const SearchBar = () => {
     ...trace,
   }
   const placeholderText = useMemo(() => {
-    return isMobileOrTablet ? t`Search` : t`Search tokens and NFT collections`
+    return isMobileOrTablet ? t`Search` : t`Search for a token...`
   }, [isMobileOrTablet])
 
   const handleKeyPress = useCallback(
@@ -154,9 +154,9 @@ export const SearchBar = () => {
             !isOpen && !isMobile && magicalGradientOnHover,
             isMobileOrTablet && (isOpen ? styles.visible : styles.hidden)
           )}
-          borderRadius={isOpen || isMobileOrTablet ? undefined : '12'}
-          borderTopRightRadius={isOpen && !isMobile ? '12' : undefined}
-          borderTopLeftRadius={isOpen && !isMobile ? '12' : undefined}
+          borderRadius={isOpen || isMobileOrTablet ? undefined : '4'}
+          borderTopRightRadius={isOpen && !isMobile ? '4' : undefined}
+          borderTopLeftRadius={isOpen && !isMobile ? '4' : undefined}
           borderBottomWidth={isOpen || isMobileOrTablet ? '0px' : '1px'}
           backgroundColor={isOpen ? 'backgroundSurface' : 'searchBackground'}
           onClick={() => !isOpen && toggleOpen()}

@@ -46,7 +46,7 @@ const ChevronWrapper = styled.button`
   padding: 10px 16px 10px 4px;
 
   :hover {
-    color: ${({ theme }) => theme.accentActionSoft};
+    color: #fff;
   }
   :hover,
   :active,
@@ -60,7 +60,7 @@ const Web3StatusGeneric = styled(ButtonSecondary)`
   width: 100%;
   align-items: center;
   padding: 0.5rem;
-  border-radius: ${FULL_BORDER_RADIUS}px;
+  border-radius: 5px;
   cursor: pointer;
   user-select: none;
   height: 36px;
@@ -85,7 +85,7 @@ const Web3StatusConnectWrapper = styled.div<{ faded?: boolean }>`
   ${flexRowNoWrap};
   align-items: center;
   background-color: ${({ theme }) => theme.accentActionSoft};
-  border-radius: ${FULL_BORDER_RADIUS}px;
+  border-radius: 5px;
   border: none;
   padding: 0;
   height: 40px;
@@ -148,8 +148,8 @@ const Text = styled.p`
 const NetworkIcon = styled(AlertTriangle)`
   margin-left: 0.25rem;
   margin-right: 0.5rem;
-  width: 16px;
-  height: 16px;
+  width: 20px;
+  height: 20px;
 `
 
 // we want the latest one to come first, so return negative if a is after b
@@ -282,7 +282,7 @@ function Web3StatusInner() {
       >
         <Web3StatusConnectWrapper faded={!account}>
           <StyledConnectButton data-testid="navbar-connect-wallet" onClick={toggleWalletModal}>
-            <Trans>Connect</Trans>
+            <Trans>Connect Wallet</Trans>
           </StyledConnectButton>
           <VerticalDivider />
           <ChevronWrapper onClick={handleWalletDropdownClick} data-testid="navbar-toggle-dropdown">

@@ -163,11 +163,14 @@ export const vars = createGlobalTheme(':root', {
     transparent: 'transparent',
     none: 'none',
     white: '#FFF',
-
+    //steamx colors:
+    sxorange: '#d28a1e',
+    sxdblue: '#0c1d31',
+    sxlblue: '#1f4a7d',
     // new uniswap colors:
     blue400: '#4C82FB',
     blue200: '#ADBCFF30',
-    pink400: '#FB118E',
+    pink400: '#d28a1e',
     red700: '#530f10',
     red400: '#FA2C38',
     red300: '#FD766B',

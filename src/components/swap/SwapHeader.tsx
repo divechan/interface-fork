@@ -19,7 +19,7 @@ export default function SwapHeader({ allowedSlippage }: { allowedSlippage: Perce
       <RowBetween>
         <RowFixed>
           <ThemedText.DeprecatedBlack fontWeight={500} fontSize={16} style={{ marginRight: '8px' }}>
-            <Trans>Swap</Trans>
+            <Trans>Rails Network&reg; Swap</Trans>
           </ThemedText.DeprecatedBlack>
         </RowFixed>
         <RowFixed>
