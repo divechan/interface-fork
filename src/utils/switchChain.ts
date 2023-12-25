@@ -8,6 +8,8 @@ function getRpcUrl(chainId: SupportedChainId): string {
   switch (chainId) {
     case SupportedChainId.MAINNET:
     case SupportedChainId.RINKEBY:
+    case SupportedChainId.RAILS:
+    case SupportedChainId.RAILS_TESTNET:
     case SupportedChainId.ROPSTEN:
     case SupportedChainId.KOVAN:
     case SupportedChainId.GOERLI:

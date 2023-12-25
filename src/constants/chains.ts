@@ -7,7 +7,8 @@ export enum SupportedChainId {
   RINKEBY = 4,
   GOERLI = 5,
   KOVAN = 42,
-
+  RAILS = 6278,
+  RAILS_TESTNET=24116,
   ARBITRUM_ONE = 42161,
   ARBITRUM_RINKEBY = 421611,
 
@@ -24,6 +25,8 @@ export enum SupportedChainId {
 export const CHAIN_IDS_TO_NAMES = {
   [SupportedChainId.MAINNET]: 'mainnet',
   [SupportedChainId.ROPSTEN]: 'ropsten',
+  [SupportedChainId.RAILS]: 'rails',
+  [SupportedChainId.RAILS_TESTNET]: 'rails-testnet',
   [SupportedChainId.RINKEBY]: 'rinkeby',
   [SupportedChainId.GOERLI]: 'goerli',
   [SupportedChainId.KOVAN]: 'kovan',
@@ -51,6 +54,7 @@ export function isSupportedChain(chainId: number | null | undefined): chainId is
 export const SUPPORTED_GAS_ESTIMATE_CHAIN_IDS = [
   SupportedChainId.MAINNET,
   SupportedChainId.POLYGON,
+  SupportedChainId.RAILS,
   SupportedChainId.CELO,
   SupportedChainId.OPTIMISM,
   SupportedChainId.ARBITRUM_ONE,
@@ -63,11 +67,14 @@ export const UNSUPPORTED_V2POOL_CHAIN_IDS = [
   SupportedChainId.POLYGON,
   SupportedChainId.OPTIMISM,
   SupportedChainId.ARBITRUM_ONE,
+  SupportedChainId.RAILS,
+  SupportedChainId.RAILS_TESTNET,
 ]
 
 export const TESTNET_CHAIN_IDS = [
   SupportedChainId.ROPSTEN,
   SupportedChainId.RINKEBY,
+  SupportedChainId.RAILS_TESTNET,
   SupportedChainId.GOERLI,
   SupportedChainId.KOVAN,
   SupportedChainId.POLYGON_MUMBAI,
@@ -84,6 +91,8 @@ export const L1_CHAIN_IDS = [
   SupportedChainId.MAINNET,
   SupportedChainId.ROPSTEN,
   SupportedChainId.RINKEBY,
+  SupportedChainId.RAILS,
+  SupportedChainId.RAILS_TESTNET,
   SupportedChainId.GOERLI,
   SupportedChainId.KOVAN,
   SupportedChainId.POLYGON,

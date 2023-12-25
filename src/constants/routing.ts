@@ -29,6 +29,8 @@ import {
   USDC_MAINNET,
   USDC_OPTIMISM,
   USDC_POLYGON,
+  USDC_RAILS,
+  USDC_RAILS_TESTNET,
   USDT,
   USDT_ARBITRUM_ONE,
   USDT_OPTIMISM,
@@ -39,6 +41,8 @@ import {
   WBTC_POLYGON,
   WETH_POLYGON,
   WETH_POLYGON_MUMBAI,
+  WETH_RAILS,
+  WETH_RAILS_TESTNET,
   WRAPPED_NATIVE_CURRENCY,
 } from './tokens'
 
@@ -184,6 +188,16 @@ export const COMMON_BASES: ChainCurrencyList = {
     nativeOnChain(SupportedChainId.CELO_ALFAJORES),
     CUSD_CELO_ALFAJORES,
     CEUR_CELO_ALFAJORES,
+  ],
+  [SupportedChainId.RAILS]: [
+    nativeOnChain(SupportedChainId.RAILS),
+    USDC_RAILS,
+    WETH_RAILS,
+  ],
+  [SupportedChainId.RAILS_TESTNET]: [
+    nativeOnChain(SupportedChainId.RAILS_TESTNET),
+    USDC_RAILS_TESTNET,
+    WETH_RAILS_TESTNET,
   ],
 }
 

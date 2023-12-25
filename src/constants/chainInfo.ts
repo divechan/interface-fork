@@ -1,5 +1,7 @@
 import celoCircleLogoUrl from 'assets/images/celoCircle.png'
 import ethereumLogoUrl from 'assets/images/ethereum-logo.png'
+import rails from 'assets/svg/mainnet.svg'
+import railstest from 'assets/svg/testnet.svg'
 import polygonCircleLogoUrl from 'assets/images/polygonCircle.png'
 import { default as arbitrumCircleLogoUrl, default as arbitrumLogoUrl } from 'assets/svg/arbitrum_logo.svg'
 import celoLogo from 'assets/svg/celo_logo.svg'
@@ -57,11 +59,31 @@ const CHAIN_INFO: ChainInfoMap = {
   [SupportedChainId.MAINNET]: {
     networkType: NetworkType.L1,
     docs: 'https://docs.uniswap.org/',
-    explorer: 'https://etherscan.io/',
-    infoLink: 'https://info.uniswap.org/#/',
+    explorer: 'https://explore.steamexchange.io',
+    infoLink: 'https://explore.steamexchange.io',
     label: 'Ethereum',
     logoUrl: ethereumLogoUrl,
     nativeCurrency: { name: 'Ether', symbol: 'ETH', decimals: 18 },
+    color: darkTheme.chain_1,
+  },
+  [SupportedChainId.RAILS]: {
+    networkType: NetworkType.L1,
+    docs: 'https://docs.uniswap.org/',
+    explorer: 'https://etherscan.io/',
+    infoLink: 'https://info.uniswap.org/#/',
+    label: 'Rails',
+    logoUrl: rails,
+    nativeCurrency: { name: 'Steamx', symbol: 'STMX', decimals: 18 },
+    color: darkTheme.chain_1,
+  },
+  [SupportedChainId.RAILS_TESTNET]: {
+    networkType: NetworkType.L1,
+    docs: 'https://docs.uniswap.org/',
+    explorer: 'https://etherscan.io/',
+    infoLink: 'https://info.uniswap.org/#/',
+    label: 'Rails',
+    logoUrl: railstest,
+    nativeCurrency: { name: 'Steamx', symbol: 'STMX', decimals: 18 },
     color: darkTheme.chain_1,
   },
   [SupportedChainId.RINKEBY]: {

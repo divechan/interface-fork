@@ -18,6 +18,21 @@ export const USDC_MAINNET = new Token(
   'USDC',
   'USD//C'
 )
+
+export const USDC_RAILS = new Token(
+  SupportedChainId.RAILS,
+  '0x0000000000000000000000000000000000627801',
+  6,
+  'USDC',
+  'USD//C'
+)
+export const USDC_RAILS_TESTNET = new Token(
+  SupportedChainId.RAILS_TESTNET,
+  '0x0000000000000000000000000000000000627801',
+  6,
+  'USDC',
+  'USD//C'
+)
 const USDC_ROPSTEN = new Token(
   SupportedChainId.ROPSTEN,
   '0x07865c6e87b9f70255377e024ace6630c1eaa37f',
@@ -258,6 +273,20 @@ export const WETH_POLYGON = new Token(
   'WETH',
   'Wrapped Ether'
 )
+export const WETH_RAILS = new Token(
+  SupportedChainId.RAILS,
+  '0x0000000000000000000000000000000000627800',
+  18,
+  'WSTMX',
+  'Wrapped STMX'
+)
+export const WETH_RAILS_TESTNET = new Token(
+  SupportedChainId.RAILS_TESTNET,
+  '0x0000000000000000000000000000000000627800',
+  18,
+  'WSTMX',
+  'Wrapped STMX'
+)
 const CELO_CELO = new Token(SupportedChainId.CELO, '0x471EcE3750Da237f93B8E339c536989b8978a438', 18, 'CELO', 'Celo')
 export const CUSD_CELO = new Token(
   SupportedChainId.CELO,
@@ -325,6 +354,13 @@ export const WRAPPED_NATIVE_CURRENCY: { [chainId: number]: Token | undefined } =
     18,
     'WETH',
     'Wrapped Ether'
+  ),
+  [SupportedChainId.RAILS_TESTNET]: new Token(
+    SupportedChainId.RAILS_TESTNET,
+    '0x0000000000000000000000000000000000627800',
+    18,
+    'WSTMX',
+    'Wrapped STMX'
   ),
   [SupportedChainId.OPTIMISM_GOERLI]: new Token(
     SupportedChainId.OPTIMISM_GOERLI,
@@ -395,6 +431,9 @@ function getCeloNativeCurrency(chainId: number) {
 function isMatic(chainId: number): chainId is SupportedChainId.POLYGON | SupportedChainId.POLYGON_MUMBAI {
   return chainId === SupportedChainId.POLYGON_MUMBAI || chainId === SupportedChainId.POLYGON
 }
+function isRails(chainId: number): chainId is SupportedChainId.POLYGON | SupportedChainId.POLYGON_MUMBAI {
+  return chainId === SupportedChainId.RAILS_TESTNET || chainId === SupportedChainId.POLYGON
+}
 
 class MaticNativeCurrency extends NativeCurrency {
   equals(other: Currency): boolean {
@@ -411,6 +450,24 @@ class MaticNativeCurrency extends NativeCurrency {
   public constructor(chainId: number) {
     if (!isMatic(chainId)) throw new Error('Not matic')
     super(chainId, 18, 'MATIC', 'Polygon Matic')
+  }
+}
+
+class RailsNativeCurrency extends NativeCurrency {
+  equals(other: Currency): boolean {
+    return other.isNative && other.chainId === this.chainId
+  }
+
+  get wrapped(): Token {
+    if (!isRails(this.chainId)) throw new Error('Not steamx')
+    const wrapped = WRAPPED_NATIVE_CURRENCY[this.chainId]
+    invariant(wrapped instanceof Token)
+    return wrapped
+  }
+
+  public constructor(chainId: number) {
+    if (!isRails(chainId)) throw new Error('Not matic')
+    super(chainId, 18, 'STMX', 'STMX')
   }
 }
 
@@ -436,7 +493,9 @@ export function nativeOnChain(chainId: number): NativeCurrency | Token {
     nativeCurrency = new MaticNativeCurrency(chainId)
   } else if (isCelo(chainId)) {
     nativeCurrency = getCeloNativeCurrency(chainId)
-  } else {
+  } else if (isRails(chainId)) {
+    nativeCurrency = new RailsNativeCurrency(chainId)
+  }else {
     nativeCurrency = ExtendedEther.onChain(chainId)
   }
   return (cachedNativeCurrency[chainId] = nativeCurrency)
@@ -446,6 +505,8 @@ export const TOKEN_SHORTHANDS: { [shorthand: string]: { [chainId in SupportedCha
   USDC: {
     [SupportedChainId.MAINNET]: USDC_MAINNET.address,
     [SupportedChainId.ARBITRUM_ONE]: USDC_ARBITRUM.address,
+    [SupportedChainId.RAILS_TESTNET]: USDC_RAILS_TESTNET.address,
+    [SupportedChainId.RAILS]: USDC_RAILS.address,
     [SupportedChainId.OPTIMISM]: USDC_OPTIMISM.address,
     [SupportedChainId.ARBITRUM_RINKEBY]: USDC_ARBITRUM_RINKEBY.address,
     [SupportedChainId.OPTIMISM_GOERLI]: USDC_OPTIMISM_GOERLI.address,

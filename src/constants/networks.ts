@@ -87,6 +87,14 @@ export const FALLBACK_URLS: { [key in SupportedChainId]: string[] } = {
     // "Safe" URLs
     `https://alfajores-forno.celo-testnet.org`,
   ],
+  [SupportedChainId.RAILS]: [
+    // "Safe" URLs
+    `https://mainnet.steamexchange.io`,
+  ],
+  [SupportedChainId.RAILS_TESTNET]: [
+    // "Safe" URLs
+    `https://testnet.steamexchange.io`,
+  ],
 }
 
 /**
@@ -97,6 +105,12 @@ export const RPC_URLS: { [key in SupportedChainId]: string[] } = {
   [SupportedChainId.MAINNET]: [
     `https://mainnet.infura.io/v3/${INFURA_KEY}`,
     ...FALLBACK_URLS[SupportedChainId.MAINNET],
+  ],
+  [SupportedChainId.RAILS_TESTNET]: [
+    ...FALLBACK_URLS[SupportedChainId.RAILS_TESTNET],
+  ],
+  [SupportedChainId.RAILS]: [
+    ...FALLBACK_URLS[SupportedChainId.RAILS],
   ],
   [SupportedChainId.RINKEBY]: [
     `https://rinkeby.infura.io/v3/${INFURA_KEY}`,
