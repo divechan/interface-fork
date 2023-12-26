@@ -14,7 +14,7 @@ import styled, { useTheme } from 'styled-components/macro'
 import { ButtonOutlined, ButtonPrimary, ButtonSecondary } from '../../components/Button'
 import Card from '../../components/Card'
 import { AutoColumn } from '../../components/Column'
-import { CardBGImage, CardNoise, CardSection, DataCard } from '../../components/earn/styled'
+import { CardNoise, CardSection, DataCard } from '../../components/earn/styled'
 import FullPositionCard from '../../components/PositionCard'
 import { RowBetween, RowFixed } from '../../components/Row'
 import { Dots } from '../../components/swap/styleds'
@@ -36,7 +36,7 @@ const PageWrapper = styled(AutoColumn)`
 `
 
 const VoteCard = styled(DataCard)`
-  background: radial-gradient(76.02% 75.41% at 1.84% 0%, #27ae60 0%, #000000 100%);
+  background: #1f4a7d; /* Set the background color */
   overflow: hidden;
 `
 
@@ -144,35 +144,26 @@ export default function Pool() {
       <>
         <PageWrapper>
           <VoteCard>
-            <CardBGImage />
             <CardNoise />
             <CardSection>
               <AutoColumn gap="md">
                 <RowBetween>
                   <ThemedText.DeprecatedWhite fontWeight={600}>
-                    <Trans>Liquidity provider rewards</Trans>
+                    <Trans>Get rewarded for providing liquidity!</Trans>
                   </ThemedText.DeprecatedWhite>
                 </RowBetween>
                 <RowBetween>
                   <ThemedText.DeprecatedWhite fontSize={14}>
                     <Trans>
-                      Liquidity providers earn a 0.3% fee on all trades proportional to their share of the pool. Fees
-                      are added to the pool, accrue in real time and can be claimed by withdrawing your liquidity.
+                      Liquidity providers receive a 0.3% fee for each trade in proportion to their stake in the pool.
+                      These fees are deposited into the pool, accumulate in real-time, and can be retrieved when you
+                      withdraw your liquidity.
                     </Trans>
                   </ThemedText.DeprecatedWhite>
                 </RowBetween>
-                <ExternalLink
-                  style={{ color: theme.white, textDecoration: 'underline' }}
-                  target="_blank"
-                  href="https://docs.uniswap.org/protocol/V2/concepts/core-concepts/pools"
-                >
-                  <ThemedText.DeprecatedWhite fontSize={14}>
-                    <Trans>Read more about providing liquidity</Trans>
-                  </ThemedText.DeprecatedWhite>
-                </ExternalLink>
               </AutoColumn>
             </CardSection>
-            <CardBGImage />
+
             <CardNoise />
           </VoteCard>
 
@@ -180,8 +171,8 @@ export default function Pool() {
             <AutoColumn gap="lg" justify="center">
               <AutoColumn gap="md" style={{ width: '100%' }}>
                 <Layer2Prompt>
-                  <ThemedText.DeprecatedBody color={theme.textTertiary} textAlign="center">
-                    <Trans>V2 Pool is not available on Layer 2. Switch to Layer 1 Ethereum.</Trans>
+                  <ThemedText.DeprecatedBody color="#FAFAFA" textAlign="center">
+                    <Trans>V2 Pool is not available on Layer 2. Switch to a Layer 1 network.</Trans>
                   </ThemedText.DeprecatedBody>
                 </Layer2Prompt>
               </AutoColumn>

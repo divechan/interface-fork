@@ -79,6 +79,7 @@ const Label = styled(({ end, ...props }) => <ThemedText.DeprecatedLabel {...prop
   font-size: 16px;
   justify-content: ${({ end }) => (end ? 'flex-end' : 'flex-start')};
   align-items: center;
+  color: #fafafa;
 `
 
 const ExtentsText = styled.span`
@@ -93,13 +94,13 @@ const HoverText = styled(ThemedText.DeprecatedMain)`
   text-decoration: none;
   color: ${({ theme }) => theme.textTertiary};
   :hover {
-    color: ${({ theme }) => theme.textPrimary};
+    color: #fafafa;
     text-decoration: none;
   }
 `
 
 const DoubleArrow = styled.span`
-  color: ${({ theme }) => theme.textTertiary};
+  color: #d28a1e;
   margin: 0 1rem;
 `
 const ResponsiveRow = styled(RowBetween)`
@@ -665,6 +666,7 @@ export function PositionPage() {
                     height="100%"
                     style={{
                       display: 'flex',
+                      color: '#FAFAFA',
                       alignItems: 'center',
                       flexDirection: 'column',
                       justifyContent: 'space-around',
@@ -702,7 +704,7 @@ export function PositionPage() {
                           <Trans>${fiatValueOfLiquidity.toFixed(2, { groupSeparator: ',' })}</Trans>
                         </ThemedText.DeprecatedLargeHeader>
                       ) : (
-                        <ThemedText.DeprecatedLargeHeader color={theme.textPrimary} fontSize="36px" fontWeight={500}>
+                        <ThemedText.DeprecatedLargeHeader color="#FAFAFA" fontSize="36px" fontWeight={500}>
                           <Trans>$-</Trans>
                         </ThemedText.DeprecatedLargeHeader>
                       )}
@@ -760,11 +762,7 @@ export function PositionPage() {
                               <Trans>${fiatValueOfFees.toFixed(2, { groupSeparator: ',' })}</Trans>
                             </ThemedText.DeprecatedLargeHeader>
                           ) : (
-                            <ThemedText.DeprecatedLargeHeader
-                              color={theme.textPrimary}
-                              fontSize="36px"
-                              fontWeight={500}
-                            >
+                            <ThemedText.DeprecatedLargeHeader color="#FAFAFA" fontSize="36px" fontWeight={500}>
                               <Trans>$-</Trans>
                             </ThemedText.DeprecatedLargeHeader>
                           )}

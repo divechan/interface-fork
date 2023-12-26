@@ -22,12 +22,13 @@ import { shortenAddress } from '../../utils'
 import { TransactionState } from './index'
 
 const HighlightText = styled.span`
-  color: ${({ theme }) => theme.textPrimary};
+  color: #fafafa;
   font-weight: 600;
 `
 
 const BodyWrap = styled.div`
   line-height: 20px;
+  color: #fafafa;
 `
 
 interface ActionProps {

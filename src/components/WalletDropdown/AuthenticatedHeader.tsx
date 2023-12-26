@@ -5,11 +5,9 @@ import { formatUSDPrice } from '@uniswap/conedison/format'
 import { CurrencyAmount, Token } from '@uniswap/sdk-core'
 import { useWeb3React } from '@web3-react/core'
 import { ButtonEmphasis, ButtonSize, LoadingButtonSpinner, ThemeButton } from 'components/Button'
-import Tooltip from 'components/Tooltip'
 import { getConnection } from 'connection/utils'
 import { getChainInfoOrDefault } from 'constants/chainInfo'
 import { SupportedChainId } from 'constants/chains'
-import { BaseVariant } from 'featureFlags'
 import { useFiatOnrampFlag } from 'featureFlags/flags/fiatOnramp'
 import useCopyClipboard from 'hooks/useCopyClipboard'
 import useStablecoinPrice from 'hooks/useStablecoinPrice'
@@ -19,7 +17,7 @@ import { useProfilePageState, useSellAsset, useWalletCollections } from 'nft/hoo
 import { useIsNftClaimAvailable } from 'nft/hooks/useIsNftClaimAvailable'
 import { ProfilePageStateType } from 'nft/types'
 import { useCallback, useEffect, useMemo, useState } from 'react'
-import { Copy, CreditCard, ExternalLink as ExternalLinkIcon, Info, Power } from 'react-feather'
+import { Copy, ExternalLink as ExternalLinkIcon, Info, Power } from 'react-feather'
 import { useNavigate } from 'react-router-dom'
 import { useCurrencyBalanceString } from 'state/connection/hooks'
 import { useAppDispatch } from 'state/hooks'
@@ -302,7 +300,7 @@ const AuthenticatedHeader = () => {
       </HeaderWrapper>
       <Column>
         <BalanceWrapper>
-          <ThemedText.SubHeaderSmall>ETH Balance</ThemedText.SubHeaderSmall>
+          <ThemedText.SubHeaderSmall>Coin Balance</ThemedText.SubHeaderSmall>
           <ThemedText.HeadlineLarge fontSize={36} fontWeight={400}>
             {balanceString} {nativeCurrencySymbol}
           </ThemedText.HeadlineLarge>
@@ -314,50 +312,8 @@ const AuthenticatedHeader = () => {
           size={ButtonSize.medium}
           emphasis={ButtonEmphasis.medium}
         >
-          <Trans>View and sell NFTs</Trans>
+          <Trans>View and sell Digital Assets</Trans>
         </ProfileButton>
-        {fiatOnrampFlag === BaseVariant.Enabled && (
-          <>
-            <BuyCryptoButton
-              $animateBorder={animateBuyCryptoButtonBorder}
-              size={ButtonSize.medium}
-              emphasis={ButtonEmphasis.medium}
-              onClick={handleBuyCryptoClick}
-              disabled={disableBuyCryptoButton}
-            >
-              {error ? (
-                <ThemedText.BodyPrimary>{error}</ThemedText.BodyPrimary>
-              ) : (
-                <>
-                  {fiatOnrampAvailabilityLoading ? (
-                    <StyledLoadingButtonSpinner />
-                  ) : (
-                    <CreditCard height="20px" width="20px" />
-                  )}{' '}
-                  <Trans>Buy crypto</Trans>
-                </>
-              )}
-            </BuyCryptoButton>
-            {Boolean(!fiatOnrampAvailable && fiatOnrampAvailabilityChecked) && (
-              <FiatOnrampNotAvailableText marginTop="8px">
-                <Trans>Not available in your region</Trans>
-                <Tooltip
-                  show={showFiatOnrampUnavailableTooltip}
-                  text={<Trans>Moonpay is not available in some regions. Click to learn more.</Trans>}
-                >
-                  <FiatOnrampAvailabilityExternalLink
-                    onMouseEnter={openFiatOnrampUnavailableTooltip}
-                    onMouseLeave={closeFiatOnrampUnavailableTooltip}
-                    style={{ color: 'inherit' }}
-                    href="https://support.uniswap.org/hc/en-us/articles/11306664890381-Why-isn-t-MoonPay-available-in-my-region-"
-                  >
-                    <StyledInfoIcon />
-                  </FiatOnrampAvailabilityExternalLink>
-                </Tooltip>
-              </FiatOnrampNotAvailableText>
-            )}
-          </>
-        )}
         {isUnclaimed && (
           <UNIButton onClick={openClaimModal} size={ButtonSize.medium} emphasis={ButtonEmphasis.medium}>
             <Trans>Claim</Trans> {unclaimedAmount?.toFixed(0, { groupSeparator: ',' } ?? '-')} <Trans>reward</Trans>

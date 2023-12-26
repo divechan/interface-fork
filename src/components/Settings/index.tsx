@@ -207,11 +207,11 @@ export default function SettingsTab({ placeholderSlippage }: { placeholderSlippa
       {open && (
         <MenuFlyout>
           <AutoColumn gap="md" style={{ padding: '1rem' }}>
-            <Text fontWeight={600} fontSize={14}>
+            <Text fontWeight={600} fontSize={14} color="#FAFAFA">
               <Trans>Settings</Trans>
             </Text>
             <TransactionSettings placeholderSlippage={placeholderSlippage} />
-            <Text fontWeight={600} fontSize={14}>
+            <Text fontWeight={600} fontSize={14} color="#FAFAFA">
               <Trans>Interface Settings</Trans>
             </Text>
             {isSupportedChainId(chainId) && (

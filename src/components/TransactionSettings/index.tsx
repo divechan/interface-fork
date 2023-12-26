@@ -266,7 +266,7 @@ export default function TransactionSettings({ placeholderSlippage }: Transaction
                 color={deadlineError ? 'red' : ''}
               />
             </OptionCustom>
-            <ThemedText.DeprecatedBody style={{ paddingLeft: '8px' }} fontSize={14}>
+            <ThemedText.DeprecatedBody style={{ paddingLeft: '8px' }} fontSize={14} color="#FAFAFA">
               <Trans>minutes</Trans>
             </ThemedText.DeprecatedBody>
           </RowFixed>

@@ -34,7 +34,7 @@ export const BaseButton = styled(RebassButton)<BaseButtonProps>`
   width: ${({ width }) => width ?? '100%'};
   font-weight: 500;
   text-align: center;
-  border-radius: ${({ $borderRadius }) => $borderRadius ?? '20px'};
+  border-radius: 5px;
   outline: none;
   border: 1px solid transparent;
   color: ${({ theme }) => theme.textPrimary};
@@ -149,6 +149,7 @@ export const ButtonGray = styled(BaseButton)`
   color: #fafafa;
   font-size: 16px;
   font-weight: 500;
+  border-radius: 5px;
 
   &:hover {
     background-color: ${({ theme, disabled }) => !disabled && darken(0.05, theme.backgroundInteractive)};
@@ -189,7 +190,7 @@ export const ButtonSecondary = styled(BaseButton)`
 export const ButtonOutlined = styled(BaseButton)`
   border: 1px solid ${({ theme }) => theme.backgroundOutline};
   background-color: transparent;
-  color: ${({ theme }) => theme.textPrimary};
+  color: #fafafa;
   &:focus {
     box-shadow: 0 0 0 1px ${({ theme }) => theme.deprecated_bg4};
   }

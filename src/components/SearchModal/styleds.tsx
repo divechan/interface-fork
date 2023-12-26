@@ -36,27 +36,30 @@ export const SearchInput = styled.input`
   align-items: center;
   width: 100%;
   white-space: nowrap;
-  background-color: ${({ theme }) => theme.backgroundModule};
+  background-color: #0c1d31; /* Default background color */
   border: none;
   outline: none;
   border-radius: 5px;
-  color: ${({ theme }) => theme.textPrimary};
+  color: #fafafa; /* Font color */
   border-style: solid;
   border: 1px solid ${({ theme }) => theme.backgroundOutline};
   -webkit-appearance: none;
-
   font-size: 16px;
 
   ::placeholder {
-    color: ${({ theme }) => theme.textTertiary};
+    color: #d28a1e;
     font-size: 16px;
   }
+  
   transition: border 100ms;
+  
   :focus {
     border: 1px solid ${({ theme }) => theme.accentActiveSoft};
-    background-color: ${({ theme }) => theme.backgroundSurface};
+    background-color: #0c1d31; /* Background color remains the same when active */
     outline: none;
   }
+}
+
 `
 export const Separator = styled.div`
   width: 100%;

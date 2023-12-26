@@ -35,7 +35,7 @@ const TransactionTitle = styled.span`
   padding-left: 12px;
   padding-right: 12px;
   font-weight: 600;
-  color: ${({ theme }) => theme.textTertiary};
+  color: #fafafa;
 `
 
 const TransactionList = ({ transactionInformation }: { transactionInformation: TransactionInformation }) => {
@@ -121,7 +121,7 @@ const EmptyTransaction = styled.div`
   font-size: 14px;
   padding-left: 12px;
   padding-right: 12px;
-  color: ${({ theme }) => theme.textSecondary};
+  color: #fafafa;
 `
 
 export const TransactionHistoryMenu = ({ onClose }: { onClose: () => void }) => {

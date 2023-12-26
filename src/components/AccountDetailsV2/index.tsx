@@ -72,7 +72,7 @@ export const TransactionSummary = ({
     return transactionState
   }, [receipt, tx])
 
-  const link = `${explorer}tx/${hash}`
+  const link = `${explorer}/tx/${hash}`
 
   return chainId ? (
     <Grid href={link} target="_blank" isLastTransactionInList={isLastTransactionInList}>

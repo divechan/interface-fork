@@ -55,6 +55,7 @@ const LinkRow = styled(Link)`
 const BadgeText = styled.div`
   font-weight: 500;
   font-size: 14px;
+  color: #fafafa;
   ${({ theme }) => theme.deprecated_mediaWidth.deprecated_upToSmall`
     font-size: 12px;
   `};
@@ -74,16 +75,17 @@ const RangeLineItem = styled(DataLineItem)`
 
 const DoubleArrow = styled.span`
   margin: 0 2px;
-  color: ${({ theme }) => theme.textTertiary};
+  color: #d28a1e;
 `
 
 const RangeText = styled.span`
   padding: 0.25rem 0.25rem;
   border-radius: 8px;
+  color: #fafafa;
 `
 
 const ExtentsText = styled.span`
-  color: ${({ theme }) => theme.textTertiary};
+  color: #d28a1e;
   font-size: 14px;
   margin-right: 4px;
   ${({ theme }) => theme.deprecated_mediaWidth.deprecated_upToSmall`
@@ -103,6 +105,7 @@ const PrimaryPositionIdData = styled.div`
 const DataText = styled.div`
   font-weight: 600;
   font-size: 18px;
+  color: #d28a1e;
 
   ${({ theme }) => theme.deprecated_mediaWidth.deprecated_upToSmall`
     font-size: 18px;

@@ -751,6 +751,7 @@ export default function AddLiquidity() {
                                 flexDirection: 'row',
                                 alignItems: 'center',
                                 padding: '1rem 1rem',
+                                color: '#FAFAFA',
                               }}
                             >
                               <ThemedText.DeprecatedBody
@@ -774,6 +775,7 @@ export default function AddLiquidity() {
                               className="start-price-input"
                               value={startPriceTypedValue}
                               onUserInput={onStartPriceInput}
+                              style={{ color: '#FAFAFA' }}
                             />
                           </OutlineCard>
                           <RowBetween

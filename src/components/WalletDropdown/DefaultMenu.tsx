@@ -134,7 +134,7 @@ const WalletDropdown = ({ setMenu }: { setMenu: (state: MenuState) => void }) =>
       {isAuthenticated && (
         <>
           <ToggleMenuItem data-testid="wallet-transactions" onClick={() => setMenu(MenuState.TRANSACTIONS)}>
-            <DefaultText>
+            <DefaultText style={{ color: '#FAFAFA' }}>
               <Trans>Transactions</Trans>{' '}
               {pendingTransactions.length > 0 && (
                 <PendingBadge>

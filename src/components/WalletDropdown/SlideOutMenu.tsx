@@ -20,6 +20,7 @@ const Header = styled.span`
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  color: #fafafa;
 `
 
 const ClearAll = styled.div`

@@ -38,6 +38,7 @@ const StyledBalanceText = styled(Text)`
   overflow: hidden;
   max-width: 5rem;
   text-overflow: ellipsis;
+  color: #fafafa;
 `
 
 const CurrencyName = styled(Text)`
@@ -45,11 +46,12 @@ const CurrencyName = styled(Text)`
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  color: #fafafa;
 `
 
 const Tag = styled.div`
   background-color: ${({ theme }) => theme.deprecated_bg3};
-  color: ${({ theme }) => theme.textSecondary};
+  color: #fafafa;
   font-size: 14px;
   border-radius: 4px;
   padding: 0.25rem 0.3rem 0.25rem 0.3rem;
@@ -160,7 +162,7 @@ export function CurrencyRow({
               <TokenSafetyIcon warning={warning} />
             </WarningContainer>
           </Row>
-          <ThemedText.DeprecatedDarkGray ml="0px" fontSize="12px" fontWeight={300}>
+          <ThemedText.DeprecatedDarkGray ml="0px" fontSize="12px" fontWeight={300} color="#FAFAFA">
             {currency.symbol}
           </ThemedText.DeprecatedDarkGray>
         </AutoColumn>

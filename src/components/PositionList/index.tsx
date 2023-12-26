@@ -7,6 +7,7 @@ import { PositionDetails } from 'types/position'
 
 const DesktopHeader = styled.div`
   display: none;
+  color: #fafafa;
   font-size: 14px;
   font-weight: 500;
   padding: 16px;
@@ -27,6 +28,7 @@ const MobileHeader = styled.div`
   font-weight: medium;
   padding: 8px;
   font-weight: 500;
+  color: #fafafa;
   padding: 16px;
   display: flex;
   justify-content: space-between;
