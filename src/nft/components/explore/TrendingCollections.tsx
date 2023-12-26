@@ -58,7 +58,7 @@ const Filter = styled.div`
 
 const Selector = styled.div<{ active: boolean }>`
   padding: 8px 12px;
-  border-radius: 12px;
+  border-radius: 5px;
   background: ${({ active, theme }) => (active ? theme.backgroundInteractive : 'none')};
   cursor: pointer;
 

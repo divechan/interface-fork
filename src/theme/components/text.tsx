@@ -5,10 +5,14 @@
 import { Text, TextProps as TextPropsOriginal } from 'rebass'
 import styled from 'styled-components/macro'
 
+type TextWrapperProps = {
+  color: 'white' | 'black' | string // Allow 'white' and 'black', and any other valid color value
+}
+
 const TextWrapper = styled(Text).withConfig({
   shouldForwardProp: (prop) => prop !== 'color',
-})<{ color: keyof string }>`
-  color: #fff;
+})<TextWrapperProps>`
+  color: ${(props) => (props.color === 'white' ? '#fff' : props.color === 'black' ? '#000' : props.color)};
 `
 
 type TextProps = Omit<TextPropsOriginal, 'css'>

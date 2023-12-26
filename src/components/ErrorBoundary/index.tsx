@@ -27,7 +27,7 @@ const BodyWrapper = styled.div<{ margin?: string }>`
 const SmallButtonLight = styled(ButtonLight)`
   font-size: 16px;
   padding: 10px 16px;
-  border-radius: 12px;
+  border-radius: 5px;
 `
 
 const StretchedRow = styled.div`

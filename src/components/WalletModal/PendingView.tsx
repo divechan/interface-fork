@@ -44,7 +44,7 @@ const LoadingMessage = styled.div`
   ${flexRowNoWrap};
   align-items: center;
   justify-content: center;
-  border-radius: 12px;
+  border-radius: 5px;
 
   & > * {
     padding: 1rem;

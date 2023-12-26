@@ -18,7 +18,7 @@ const FilterItemWrapper = styled(Row)`
   justify-content: space-between;
   padding: 10px 16px 10px 12px;
   cursor: pointer;
-  border-radius: 12px;
+  border-radius: 5px;
   &:hover {
     background: ${({ theme }) => theme.backgroundInteractive};
   }

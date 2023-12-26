@@ -99,7 +99,7 @@ export const SmallButtonPrimary = styled(ButtonPrimary)`
   font-size: 16px;
   padding: ${({ padding }) => padding ?? '8px 12px'};
 
-  border-radius: 12px;
+  border-radius: 5px;
 `
 
 const BaseButtonLight = styled(BaseButton)`
@@ -145,8 +145,8 @@ const BaseButtonLight = styled(BaseButton)`
 `
 
 export const ButtonGray = styled(BaseButton)`
-  background-color: ${({ theme }) => theme.deprecated_bg1};
-  color: ${({ theme }) => theme.textSecondary};
+  background-color: #d28a1e;
+  color: #fafafa;
   font-size: 16px;
   font-weight: 500;
 
@@ -159,11 +159,11 @@ export const ButtonGray = styled(BaseButton)`
 `
 
 export const ButtonSecondary = styled(BaseButton)`
-  border: 1px solid ${({ theme }) => theme.deprecated_primary4};
-  color: ${({ theme }) => theme.accentAction};
+  border: 1px solid #d28a1e;
+  color: #fff;
   background-color: transparent;
   font-size: 16px;
-  border-radius: 12px;
+  border-radius: 5px;
   padding: ${({ padding }) => (padding ? padding : '10px')};
 
   &:focus {
@@ -493,10 +493,10 @@ function pickThemeButtonTextColor({ theme, emphasis }: { theme: DefaultTheme; em
 
 const BaseThemeButton = styled.button<BaseThemeButtonProps>`
   align-items: center;
-  background-color: ${pickThemeButtonBackgroundColor};
-  border-radius: 16px;
+  background-color: #d28a1e;
+  border-radius: 5px;
   border: 0;
-  color: ${pickThemeButtonTextColor};
+  color: #fafafa;
   cursor: pointer;
   display: flex;
   flex-direction: row;
@@ -512,17 +512,17 @@ const BaseThemeButton = styled.button<BaseThemeButtonProps>`
 
   :active {
     ${ButtonOverlay} {
-      background-color: ${({ theme }) => theme.stateOverlayPressed};
+      background-color: #1f4a7d;
     }
   }
   :focus {
     ${ButtonOverlay} {
-      background-color: ${({ theme }) => theme.stateOverlayPressed};
+      background-color: #1f4a7dS;
     }
   }
   :hover {
     ${ButtonOverlay} {
-      background-color: ${({ theme }) => theme.stateOverlayHover};
+      background-color: #1f4a7d;
     }
   }
   :disabled {

@@ -43,7 +43,7 @@ const FancyButton = styled.button`
 
 const Option = styled(FancyButton)<{ active: boolean }>`
   margin-right: 8px;
-  border-radius: 12px;
+  border-radius: 5px;
   :hover {
     cursor: pointer;
   }
@@ -54,7 +54,7 @@ const Option = styled(FancyButton)<{ active: boolean }>`
 const Input = styled.input`
   background: ${({ theme }) => theme.deprecated_bg1};
   font-size: 16px;
-  border-radius: 12px;
+  border-radius: 5px;
   width: auto;
   outline: none;
   &::-webkit-outer-spin-button,
@@ -73,7 +73,7 @@ const OptionCustom = styled(FancyButton)<{ active?: boolean; warning?: boolean }
   height: 2rem;
   position: relative;
   padding: 0 0.75rem;
-  border-radius: 12px;
+  border-radius: 5px;
   flex: 1;
   border: ${({ theme, active, warning }) =>
     active

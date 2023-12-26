@@ -13,7 +13,7 @@ export const BodyWrapper = styled.main<BodyWrapperProps>`
   max-width: ${({ $maxWidth }) => $maxWidth ?? '420px'};
   width: 100%;
   background: ${({ theme }) => theme.backgroundSurface};
-  border-radius: 16px;
+  border-radius: 5px;
   border: 1px solid ${({ theme }) => theme.backgroundOutline};
   margin-top: 1rem;
   margin-left: auto;

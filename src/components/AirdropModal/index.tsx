@@ -33,7 +33,7 @@ const Body = styled.div`
 const ClaimButton = styled(ThemeButton)`
   width: 100%;
   background-color: ${({ theme }) => theme.accentAction};
-  border-radius: 12px;
+  border-radius: 5px;
   color: ${({ theme }) => theme.white};
 `
 

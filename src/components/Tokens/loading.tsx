@@ -3,7 +3,7 @@ import styled from 'styled-components/macro'
 
 /* Loading state bubbles (animation style from: src/components/Loader/styled.tsx) */
 export const LoadingBubble = styled.div`
-  border-radius: 12px;
+  border-radius: 5px;
   height: 24px;
   width: 50%;
   animation: ${loadingAnimation} 1.5s infinite;

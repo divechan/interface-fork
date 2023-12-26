@@ -59,7 +59,7 @@ const Center = styled.div`
 const ConnectWalletButton = styled(ButtonPrimary)`
   width: min-content;
   white-space: nowrap;
-  border-radius: 12px;
+  border-radius: 5px;
   padding: 14px 18px;
   border: none;
 `

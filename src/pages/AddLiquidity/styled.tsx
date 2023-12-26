@@ -63,6 +63,7 @@ export const StyledInput = styled(Input)`
   text-align: left;
   font-size: 18px;
   width: 100%;
+  color: #fafafa;
 `
 
 /* two-column layout where DepositAmount is moved at the very end on mobile. */

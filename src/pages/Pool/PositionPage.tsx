@@ -125,7 +125,7 @@ const ActionButtonResponsiveRow = styled(ResponsiveRow)`
 `
 
 const ResponsiveButtonConfirmed = styled(ButtonConfirmed)`
-  border-radius: 12px;
+  border-radius: 5px;
   padding: 6px 8px;
   width: fit-content;
   font-size: 16px;

@@ -37,7 +37,7 @@ const AccountDetailsSkeletonWrapper = styled(SkeletonRowWrapper)`
 const ProfileDetailsSkeleton = styled.div`
   width: 180px;
   height: 36px;
-  border-radius: 12px;
+  border-radius: 5px;
 `
 
 const FilterBarSkeletonWrapper = styled(SkeletonRowWrapper)`
@@ -47,13 +47,13 @@ const FilterBarSkeletonWrapper = styled(SkeletonRowWrapper)`
 const FilterButtonSkeleton = styled.div`
   width: 92px;
   height: 44px;
-  border-radius: 12px;
+  border-radius: 5px;
 `
 
 const SellButtonSkeleton = styled.div`
   width: 80px;
   height: 44px;
-  border-radius: 12px;
+  border-radius: 5px;
 `
 
 const ProfileAssetCardSkeleton = styled.div`

@@ -18,7 +18,7 @@ import { TitleRow } from '../shared'
 
 const SuccessImage = styled.img<{ numImages: number }>`
   width: calc(${({ numImages }) => (numImages > 1 ? (numImages > 2 ? '33%' : '50%') : '100%')} - 12px);
-  border-radius: 12px;
+  border-radius: 5px;
 `
 
 const SuccessImageWrapper = styled(Row)`
@@ -42,7 +42,7 @@ const buttonStyle = css`
   font-weight: 600;
   font-size: 16px;
   line-height: 20px;
-  border-radius: 12px;
+  border-radius: 5px;
   border: none;
 
   &:hover {

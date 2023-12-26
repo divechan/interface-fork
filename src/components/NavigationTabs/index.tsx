@@ -97,7 +97,7 @@ export function AddRemoveTabs({
         <ThemedText.DeprecatedMediumHeader
           fontWeight={500}
           fontSize={20}
-          style={{ flex: '1', margin: 'auto', textAlign: children ? 'start' : 'center' }}
+          style={{ color: '#FAFAFA', flex: '1', margin: 'auto', textAlign: children ? 'start' : 'center' }}
         >
           {creating ? (
             <Trans>Create a pair</Trans>

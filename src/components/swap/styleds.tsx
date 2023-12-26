@@ -21,20 +21,40 @@ export const PageWrapper = styled.div`
     padding-top: 20px;
   }
 `
-
-// Mostly copied from `AppBody` but it was getting too hard to maintain backwards compatibility.
 export const SwapWrapper = styled.main`
   position: relative;
-  background: #1f4a7d;
+  background: rgba(31, 74, 125, 0.6); /* Adjust the alpha (0.8) for the desired opacity */
   border-radius: 5px;
-
   padding: 25px;
   z-index: ${Z_INDEX.deprecated_content};
   transition: transform 250ms ease;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6); /* Add box shadow for the floating effect */
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
 
   &:hover {
     box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.9);
+  }
+`
+
+// Create a new styled component for the larger wrapper with a background image
+export const LargerWrapperWithBackground = styled(SwapWrapper)`
+  background-image: url('https://github.com/divechan/brandkit/blob/main/09.jpg?raw=true');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  padding: 25px;
+  box-shadow: none;
+  z-index: ${Z_INDEX.deprecated_content - 1};
+
+  @media screen and (min-width: 768px) {
+    /* Apply these styles for screens with a width of 768px or larger */
+    transform: scale(1.25);
+  }
+
+  @media screen and (max-width: 767px) {
+    /* Apply these styles for screens with a width of 767px or smaller */
+    /* Adjust properties for smaller screens if needed */
+    transform: none; /* Reset the transformation for smaller screens */
+    padding: 15px; /* Adjust padding for smaller screens */
   }
 `
 
@@ -134,7 +154,7 @@ const SwapCallbackErrorInnerAlertTriangle = styled.div`
   align-items: center;
   justify-content: center;
   margin-right: 12px;
-  border-radius: 12px;
+  border-radius: 5px;
   min-width: 48px;
   height: 48px;
 `
@@ -154,7 +174,7 @@ export const SwapShowAcceptChanges = styled(AutoColumn)`
   background-color: ${({ theme }) => transparentize(0.95, theme.deprecated_primary3)};
   color: ${({ theme }) => theme.accentAction};
   padding: 0.5rem;
-  border-radius: 12px;
+  border-radius: 5px;
   margin-top: 8px;
 `
 

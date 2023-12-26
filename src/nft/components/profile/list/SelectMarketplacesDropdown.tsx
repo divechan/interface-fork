@@ -22,7 +22,7 @@ const MarketplaceRowWrapper = styled(Row)`
   &:hover {
     background-color: ${({ theme }) => theme.backgroundInteractive};
   }
-  border-radius: 12px;
+  border-radius: 5px;
 `
 
 const MarketplaceDropdownIcon = styled.img`
@@ -76,7 +76,7 @@ const MarketplaceRow = ({ market, setSelectedMarkets, selectedMarkets }: Marketp
 
 const HeaderButtonWrap = styled(Row)`
   padding: 12px;
-  border-radius: 12px;
+  border-radius: 5px;
   width: 180px;
   justify-content: space-between;
   background: ${({ theme }) => theme.backgroundInteractive};
@@ -129,7 +129,7 @@ const DropdownWrapper = styled(Column)<{ isOpen: boolean }>`
   position: absolute;
   top: 52px;
   width: 100%;
-  border-radius: 12px;
+  border-radius: 5px;
   gap: 12px;
   z-index: ${Z_INDEX.modalBackdrop};
 `

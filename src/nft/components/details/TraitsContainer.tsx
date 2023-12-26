@@ -22,7 +22,7 @@ const Grid = styled.div`
 
 const GridItemContainer = styled(Link)`
   background-color: ${({ theme }) => theme.backgroundInteractive};
-  border-radius: 12px;
+  border-radius: 5px;
   cursor: pointer;
   padding: 12px;
   text-decoration: none;

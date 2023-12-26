@@ -10,7 +10,7 @@ const DropdownWrapper = styled(Column)<{ $width: number }>`
   background: ${({ theme }) => theme.backgroundSurface};
   padding: 8px;
   width: ${({ $width }) => $width}px;
-  border-radius: 12px;
+  border-radius: 5px;
   box-shadow: ${({ theme }) => theme.deepShadow};
   border: 1px solid ${({ theme }) => theme.backgroundOutline};
 `
@@ -19,7 +19,7 @@ const DropdownRow = styled(Row)`
   justify-content: space-between;
   padding: 8px;
   cursor: pointer;
-  border-radius: 12px;
+  border-radius: 5px;
 
   &:hover {
     background: ${({ theme }) => theme.backgroundInteractive};

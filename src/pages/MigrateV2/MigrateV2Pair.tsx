@@ -531,7 +531,7 @@ function V2PairMigration({
           ) : null}
 
           <RowBetween>
-            <ThemedText.DeprecatedLabel>
+            <ThemedText.DeprecatedLabel color="#FAFAFA">
               <Trans>Set Price Range</Trans>
             </ThemedText.DeprecatedLabel>
             <RateToggle

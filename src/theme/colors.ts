@@ -183,7 +183,7 @@ export const lightTheme: Theme = {
   backgroundBackdrop: colors.white,
   backgroundSurface: '#0c1d31',
   backgroundModule: colors.gray50,
-  backgroundInteractive: colors.gray100,
+  backgroundInteractive: colors.sxorange,
   backgroundFloating: opacify(8, colors.gray700),
   backgroundOutline: colors.steamxLBlue,
   backgroundScrim: opacify(60, colors.gray900),

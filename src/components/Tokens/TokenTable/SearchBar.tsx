@@ -22,7 +22,7 @@ const SearchInput = styled.input`
   background-size: 20px 20px;
   background-position: 12px center;
   background-color: ${({ theme }) => theme.backgroundModule};
-  border-radius: 12px;
+  border-radius: 5px;
   border: 1.5px solid ${({ theme }) => theme.backgroundOutline};
   height: 100%;
   width: min(200px, 100%);

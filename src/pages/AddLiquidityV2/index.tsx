@@ -363,7 +363,7 @@ export default function AddLiquidity() {
                 <ColumnCenter>
                   <BlueCard>
                     <AutoColumn gap="10px">
-                      <ThemedText.DeprecatedLink fontWeight={400} color="accentAction">
+                      <ThemedText.DeprecatedLink fontWeight={400} color="#FAFAFA">
                         <Trans>
                           <b>
                             <Trans>Tip:</Trans>

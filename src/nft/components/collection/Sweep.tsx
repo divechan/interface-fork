@@ -16,7 +16,7 @@ const SweepContainer = styled.div`
   gap: 60px;
   margin-top: 12px;
   padding: 16px;
-  border-radius: 12px;
+  border-radius: 5px;
   background-color: ${({ theme }) => theme.backgroundSurface};
   justify-content: space-between;
   background: linear-gradient(${({ theme }) => theme.backgroundSurface}, ${({ theme }) => theme.backgroundSurface})
@@ -89,7 +89,7 @@ const ToggleContainer = styled.div`
   display: flex;
   border: 1px solid ${({ theme }) => theme.backgroundOutline};
   background: none;
-  border-radius: 12px;
+  border-radius: 5px;
   padding: 4px;
   cursor: pointer;
 `

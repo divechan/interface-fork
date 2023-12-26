@@ -12,14 +12,14 @@ import { opacify } from 'theme/utils'
 
 const ContentColumn = styled(Column)<{ failed: boolean }>`
   background-color: ${({ theme, failed }) => failed && opacify(12, theme.accentCritical)};
-  border-radius: 12px;
+  border-radius: 5px;
   padding-bottom: ${({ failed }) => failed && '16px'};
 `
 
 const ContentRowWrapper = styled(Row)<{ active: boolean; failed: boolean }>`
   padding: 16px;
   border: ${({ failed, theme }) => !failed && `1px solid ${theme.backgroundOutline}`};
-  border-radius: 12px;
+  border-radius: 5px;
   opacity: ${({ active, failed }) => (active || failed ? '1' : '0.6')};
 `
 
@@ -93,7 +93,7 @@ const failedButtonStyle = css`
   font-weight: 600;
   font-size: 14px;
   line-height: 16px;
-  border-radius: 12px;
+  border-radius: 5px;
   border: none;
 
   &:hover {

@@ -14,7 +14,7 @@ import AuthenticatedHeader from './AuthenticatedHeader'
 import { MenuState } from './index'
 
 const ConnectButton = styled(ButtonPrimary)`
-  border-radius: 12px;
+  border-radius: 5px;
   height: 44px;
   width: 288px;
   font-weight: 600;
@@ -40,7 +40,7 @@ const ToggleMenuItem = styled.button`
   cursor: pointer;
   display: flex;
   flex: 1;
-  border-radius: 12px;
+  border-radius: 5px;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
@@ -66,7 +66,7 @@ const FlexContainer = styled.div`
 
 const LatestPendingTxnBox = styled(FlexContainer)`
   display: flex;
-  border-radius: 12px;
+  border-radius: 5px;
   background-color: ${({ theme }) => theme.backgroundModule};
   align-items: center;
   gap: 8px;

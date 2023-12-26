@@ -39,7 +39,7 @@ export const SearchInput = styled.input`
   background-color: ${({ theme }) => theme.backgroundModule};
   border: none;
   outline: none;
-  border-radius: 12px;
+  border-radius: 5px;
   color: ${({ theme }) => theme.textPrimary};
   border-style: solid;
   border: 1px solid ${({ theme }) => theme.backgroundOutline};

@@ -35,7 +35,7 @@ const TimeButton = styled.button<{ active: boolean }>`
   font-weight: 600;
   font-size: 16px;
   padding: 6px 12px;
-  border-radius: 12px;
+  border-radius: 5px;
   line-height: 20px;
   border: none;
   cursor: pointer;

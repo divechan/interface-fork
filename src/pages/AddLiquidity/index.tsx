@@ -552,7 +552,7 @@ export default function AddLiquidity() {
               <Row justifyContent="flex-end" style={{ width: 'fit-content', minWidth: 'fit-content' }}>
                 <MediumOnly>
                   <ButtonText onClick={clearAll} margin="0 15px 0 0">
-                    <ThemedText.DeprecatedBlue fontSize="12px">
+                    <ThemedText.DeprecatedBlue fontSize="12px" color="#FAFAFA">
                       <Trans>Clear All</Trans>
                     </ThemedText.DeprecatedBlue>
                   </ButtonText>
@@ -583,7 +583,7 @@ export default function AddLiquidity() {
                   <>
                     <AutoColumn gap="md">
                       <RowBetween paddingBottom="20px">
-                        <ThemedText.DeprecatedLabel>
+                        <ThemedText.DeprecatedLabel color="#FAFAFA">
                           <Trans>Select Pair</Trans>
                         </ThemedText.DeprecatedLabel>
                       </RowBetween>
@@ -643,7 +643,7 @@ export default function AddLiquidity() {
                   disabled={tickLower === undefined || tickUpper === undefined || invalidPool || invalidRange}
                 >
                   <AutoColumn gap="md">
-                    <ThemedText.DeprecatedLabel>
+                    <ThemedText.DeprecatedLabel color="#FAFAFA">
                       {hasExistingPosition ? <Trans>Add more liquidity</Trans> : <Trans>Deposit Amounts</Trans>}
                     </ThemedText.DeprecatedLabel>
 
@@ -688,7 +688,7 @@ export default function AddLiquidity() {
                       {!noLiquidity ? (
                         <>
                           <RowBetween>
-                            <ThemedText.DeprecatedLabel>
+                            <ThemedText.DeprecatedLabel color="#FAFAFA">
                               <Trans>Set Price Range</Trans>
                             </ThemedText.DeprecatedLabel>
                           </RowBetween>
@@ -740,7 +740,7 @@ export default function AddLiquidity() {
                       ) : (
                         <AutoColumn gap="md">
                           <RowBetween>
-                            <ThemedText.DeprecatedLabel>
+                            <ThemedText.DeprecatedLabel color="#FAFAFA">
                               <Trans>Set Starting Price</Trans>
                             </ThemedText.DeprecatedLabel>
                           </RowBetween>
@@ -757,12 +757,14 @@ export default function AddLiquidity() {
                                 fontSize={14}
                                 style={{ fontWeight: 500 }}
                                 textAlign="left"
-                                color={theme.accentAction}
+                                color="#FAFAFA"
                               >
                                 <Trans>
-                                  This pool must be initialized before you can add liquidity. To initialize, select a
-                                  starting price for the pool. Then, enter your liquidity price range and deposit
-                                  amount. Gas fees will be higher than usual due to the initialization transaction.
+                                  Before you can add liquidity to this pool, it is necessary to perform an
+                                  initialization process. During this initialization, you will need to choose an initial
+                                  price for the pool, specify your desired price range for liquidity, and deposit the
+                                  required amount. Please be aware that the gas fees for the initialization transaction
+                                  will be higher than usual.
                                 </Trans>
                               </ThemedText.DeprecatedBody>
                             </BlueCard>
@@ -775,7 +777,12 @@ export default function AddLiquidity() {
                             />
                           </OutlineCard>
                           <RowBetween
-                            style={{ backgroundColor: theme.deprecated_bg1, padding: '12px', borderRadius: '12px' }}
+                            style={{
+                              backgroundColor: '#0c1d31',
+                              padding: '12px',
+                              borderRadius: '5px',
+                              color: '#FAFAFA',
+                            }}
                           >
                             <ThemedText.DeprecatedMain>
                               <Trans>Current {baseCurrency?.symbol} Price:</Trans>
@@ -809,7 +816,7 @@ export default function AddLiquidity() {
                           <AutoColumn gap="md">
                             {noLiquidity && (
                               <RowBetween>
-                                <ThemedText.DeprecatedLabel>
+                                <ThemedText.DeprecatedLabel color="#FAFAFA">
                                   <Trans>Set Price Range</Trans>
                                 </ThemedText.DeprecatedLabel>
                               </RowBetween>

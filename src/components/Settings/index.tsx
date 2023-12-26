@@ -24,13 +24,15 @@ import TransactionSettings from '../TransactionSettings'
 
 const StyledMenuIcon = styled(Settings)`
   path {
-    stroke: #fafafa; /* Default color (white) */
+    stroke: ${({ theme }) => theme.textSecondary}; /* Default color (white) */
     transition: stroke 0.2s ease; /* Smooth transition for color change */
   }
 
   &:hover {
     path {
       stroke: #d28a1e; /* Color on hover */
+      box-shadow: 0 0 10px rgba(209, 138, 30, 0.7); /* Glow effect */
+      transition: stroke 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
     }
 
     transform: rotate(360deg); /* Rotate 360 degrees on hover */

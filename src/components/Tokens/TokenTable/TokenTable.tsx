@@ -18,7 +18,7 @@ const GridContainer = styled.div`
     0px 24px 32px rgba(0, 0, 0, 0.01);
   margin-left: auto;
   margin-right: auto;
-  border-radius: 12px;
+  border-radius: 5px;
   justify-content: center;
   align-items: center;
   border: 1px solid ${({ theme }) => theme.backgroundOutline};

@@ -21,17 +21,17 @@ export const FEE_AMOUNT_DETAIL: Record<
   },
   [FeeAmount.LOW]: {
     label: '0.05',
-    description: <Trans>Best for stable pairs.</Trans>,
+    description: <Trans>Great for beginners!</Trans>,
     supportedChains: ALL_SUPPORTED_CHAIN_IDS,
   },
   [FeeAmount.MEDIUM]: {
     label: '0.3',
-    description: <Trans>Best for most pairs.</Trans>,
+    description: <Trans>Great for the initiated!</Trans>,
     supportedChains: ALL_SUPPORTED_CHAIN_IDS,
   },
   [FeeAmount.HIGH]: {
     label: '1',
-    description: <Trans>Best for exotic pairs.</Trans>,
+    description: <Trans>Great for the wizards!</Trans>,
     supportedChains: ALL_SUPPORTED_CHAIN_IDS,
   },
 }

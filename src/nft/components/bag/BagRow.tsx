@@ -26,14 +26,14 @@ import styled from 'styled-components/macro'
 import * as styles from './BagRow.css'
 
 export const RemoveButton = styled(ThemeButton)`
-  border-radius: 12px;
+  border-radius: 5px;
   font-size: 14px;
   line-height: 16px;
   margin-left: 16px;
   padding: 12px 14px;
 `
 const ReviewButton = styled(ThemeButton)`
-  border-radius: 12px;
+  border-radius: 5px;
   flex: 1 1 auto;
   font-size: 14px;
   padding: 8px;

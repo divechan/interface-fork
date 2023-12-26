@@ -8,7 +8,7 @@ const Container = styled.div`
   justify-content: center;
   width: 100%;
   max-height: 75vh;
-  padding-top: 20px;
+  padding-top: 75px;
   overflow: hidden;
 `
 

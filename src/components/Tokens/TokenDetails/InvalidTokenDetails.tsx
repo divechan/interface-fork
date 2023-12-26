@@ -25,7 +25,7 @@ const InvalidDetailsText = styled.span`
 
 const TokenExploreButton = styled.button`
   border: none;
-  border-radius: 12px;
+  border-radius: 5px;
   background-color: ${({ theme }) => theme.accentAction};
   padding: 12px 16px;
 

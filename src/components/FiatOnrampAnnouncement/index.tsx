@@ -58,7 +58,7 @@ const Wrapper = styled.button`
   background: radial-gradient(105% 250% at 100% 5%, hsla(318, 95%, 85%) 1%, hsla(331, 80%, 75%, 0.1) 84%),
     linear-gradient(180deg, hsla(296, 92%, 67%, 0.5) 0%, hsla(313, 96%, 60%, 0.5) 130%);
   background-color: hsla(297, 93%, 68%, 1);
-  border-radius: 12px;
+  border-radius: 5px;
   border: none;
   cursor: pointer;
   outline: none;

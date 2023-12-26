@@ -8,7 +8,7 @@ import DefaultMenu from './DefaultMenu'
 import { TransactionHistoryMenu } from './TransactionMenu'
 
 const WalletWrapper = styled.div`
-  border-radius: 12px;
+  border-radius: 5px;
   width: 320px;
   display: flex;
   flex-direction: column;

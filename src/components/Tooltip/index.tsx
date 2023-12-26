@@ -16,7 +16,7 @@ export const TooltipContainer = styled.div`
   word-break: break-word;
 
   background: ${({ theme }) => theme.backgroundSurface};
-  border-radius: 12px;
+  border-radius: 5px;
   border: 1px solid ${({ theme }) => theme.backgroundInteractive};
   box-shadow: 0 4px 8px 0 ${({ theme }) => transparentize(0.9, theme.shadow1)};
 `

@@ -17,7 +17,7 @@ const QuestionWrapper = styled.div`
   cursor: default;
   border-radius: 36px;
   font-size: 12px;
-  border-radius: 12px;
+  border-radius: 5px;
 
   :hover,
   :focus {

@@ -52,7 +52,7 @@ const BuyCryptoButtonBorderKeyframes = keyframes`
 
 const BuyCryptoButton = styled(ThemeButton)<{ $animateBorder: boolean }>`
   border-color: transparent;
-  border-radius: 12px;
+  border-radius: 5px;
   border-style: solid;
   border-width: 1px;
   height: 40px;
@@ -66,7 +66,7 @@ const BuyCryptoButton = styled(ThemeButton)<{ $animateBorder: boolean }>`
   animation-timing-function: ${({ theme }) => theme.transition.timing.inOut};
 `
 const WalletButton = styled(ThemeButton)`
-  border-radius: 12px;
+  border-radius: 5px;
   padding-top: 10px;
   padding-bottom: 10px;
   margin-top: 4px;

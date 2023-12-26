@@ -60,7 +60,7 @@ const ButtonRow = styled(RowFixed)`
 
 const ResponsiveButtonPrimary = styled(ButtonPrimary)`
   width: fit-content;
-  border-radius: 12px;
+  border-radius: 5px;
   ${({ theme }) => theme.deprecated_mediaWidth.deprecated_upToSmall`
     width: 48%;
   `};
@@ -76,7 +76,7 @@ const ResponsiveButtonSecondary = styled(ButtonSecondary)`
 const EmptyProposals = styled.div`
   border: 1px solid ${({ theme }) => theme.deprecated_text4};
   padding: 16px 12px;
-  border-radius: 12px;
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
   justify-content: center;

@@ -277,15 +277,15 @@ export const WETH_RAILS = new Token(
   SupportedChainId.RAILS,
   '0x0000000000000000000000000000000000627800',
   18,
-  'WSTMX',
-  'Wrapped STMX'
+  'WSTEAMX',
+  'Wrapped STEAMX'
 )
 export const WETH_RAILS_TESTNET = new Token(
   SupportedChainId.RAILS_TESTNET,
   '0x0000000000000000000000000000000000627800',
   18,
-  'WSTMX',
-  'Wrapped STMX'
+  'WSTEAMX',
+  'Wrapped STEAMX'
 )
 const CELO_CELO = new Token(SupportedChainId.CELO, '0x471EcE3750Da237f93B8E339c536989b8978a438', 18, 'CELO', 'Celo')
 export const CUSD_CELO = new Token(
@@ -359,8 +359,8 @@ export const WRAPPED_NATIVE_CURRENCY: { [chainId: number]: Token | undefined } =
     SupportedChainId.RAILS_TESTNET,
     '0x0000000000000000000000000000000000627800',
     18,
-    'WSTMX',
-    'Wrapped STMX'
+    'WSTEAMX',
+    'Wrapped STEAMX'
   ),
   [SupportedChainId.OPTIMISM_GOERLI]: new Token(
     SupportedChainId.OPTIMISM_GOERLI,
@@ -467,7 +467,7 @@ class RailsNativeCurrency extends NativeCurrency {
 
   public constructor(chainId: number) {
     if (!isRails(chainId)) throw new Error('Not matic')
-    super(chainId, 18, 'STMX', 'STMX')
+    super(chainId, 18, 'STEAMX', 'STEAMX')
   }
 }
 
@@ -495,7 +495,7 @@ export function nativeOnChain(chainId: number): NativeCurrency | Token {
     nativeCurrency = getCeloNativeCurrency(chainId)
   } else if (isRails(chainId)) {
     nativeCurrency = new RailsNativeCurrency(chainId)
-  }else {
+  } else {
     nativeCurrency = ExtendedEther.onChain(chainId)
   }
   return (cachedNativeCurrency[chainId] = nativeCurrency)

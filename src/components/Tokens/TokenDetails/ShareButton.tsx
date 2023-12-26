@@ -46,7 +46,7 @@ const ShareActions = styled.div`
   background-color: ${({ theme }) => theme.backgroundSurface};
   border: 0.5px solid ${({ theme }) => theme.backgroundOutline};
   box-shadow: ${({ theme }) => theme.deepShadow};
-  border-radius: 12px;
+  border-radius: 5px;
 `
 const ShareAction = styled.div`
   display: flex;

@@ -13,7 +13,7 @@ export const lightTheme: Theme = {
     backgroundFloating: '#00000000',
     backgroundInteractive: 'vars.color.gray50',
     backgroundModule: 'vars.color.gray500',
-    backgroundOutline: vars.color.gray100,
+    backgroundOutline: vars.color.sxorange,
     backgroundSurface: '#FFFFFF',
     backgroundBackdrop: '#FFF',
 

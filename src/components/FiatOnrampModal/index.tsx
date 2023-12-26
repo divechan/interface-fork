@@ -30,7 +30,7 @@ const ErrorText = styled(ThemedText.BodyPrimary)`
 `
 const StyledIframe = styled.iframe`
   background-color: ${({ theme }) => theme.white};
-  border-radius: 12px;
+  border-radius: 5px;
   bottom: 0;
   left: 0;
   height: calc(100% - 16px);

@@ -47,6 +47,7 @@ const StyledInput = styled(NumericalInput)<{ usePercent?: boolean }>`
   width: 100%;
   font-weight: 500;
   padding: 0 10px;
+  color: #fafafa;
 
   ${({ theme }) => theme.deprecated_mediaWidth.deprecated_upToSmall`
     font-size: 16px;

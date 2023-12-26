@@ -149,16 +149,16 @@ export default function FeeSelector({
             <AutoColumn id="add-liquidity-selected-fee">
               {!feeAmount ? (
                 <>
-                  <ThemedText.DeprecatedLabel>
+                  <ThemedText.DeprecatedLabel color="#FAFAFA">
                     <Trans>Fee tier</Trans>
                   </ThemedText.DeprecatedLabel>
-                  <ThemedText.DeprecatedMain fontWeight={400} fontSize="12px" textAlign="left">
+                  <ThemedText.DeprecatedMain fontWeight={400} fontSize="12px" textAlign="left" color="#FAFAFA">
                     <Trans>The % you will earn in fees.</Trans>
                   </ThemedText.DeprecatedMain>
                 </>
               ) : (
                 <>
-                  <ThemedText.DeprecatedLabel className="selected-fee-label">
+                  <ThemedText.DeprecatedLabel className="selected-fee-label" color="#FAFAFA">
                     <Trans>{FEE_AMOUNT_DETAIL[feeAmount].label}% fee tier</Trans>
                   </ThemedText.DeprecatedLabel>
                   <Box style={{ width: 'fit-content', marginTop: '8px' }} className="selected-fee-percentage">
@@ -174,7 +174,14 @@ export default function FeeSelector({
               )}
             </AutoColumn>
 
-            <ButtonGray onClick={() => setShowOptions(!showOptions)} width="auto" padding="4px" $borderRadius="6px">
+            <ButtonGray
+              onClick={() => setShowOptions(!showOptions)}
+              width="auto"
+              padding="4px"
+              $borderRadius="5px"
+              color="#FAFAFA"
+              background-color="#d28a1e"
+            >
               {showOptions ? <Trans>Hide</Trans> : <Trans>Edit</Trans>}
             </ButtonGray>
           </RowBetween>

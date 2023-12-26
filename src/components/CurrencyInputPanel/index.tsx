@@ -146,7 +146,7 @@ const StyledBalanceMax = styled.button<{ disabled?: boolean }>`
   background-color: transparent;
   background-color: ${({ theme }) => theme.deprecated_primary5};
   border: none;
-  border-radius: 12px;
+  border-radius: 5px;
   color: ${({ theme }) => theme.textPrimary};
   cursor: pointer;
   font-size: 11px;

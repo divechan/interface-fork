@@ -20,7 +20,6 @@ import { HideSmall, ThemedText } from 'theme'
 import { PositionDetails } from 'types/position'
 
 import { V2_FACTORY_ADDRESSES } from '../../constants/addresses'
-import CTACards from './CTACards'
 import { LoadingRows } from './styleds'
 
 const PageWrapper = styled(AutoColumn)`
@@ -84,7 +83,7 @@ const PoolMenuItem = styled.div`
   font-weight: 500;
 `
 const MoreOptionsButton = styled(ButtonGray)`
-  border-radius: 12px;
+  border-radius: 5px;
   flex: 1 1 auto;
   padding: 6px 8px;
   width: 100%;
@@ -122,7 +121,7 @@ const InboxIcon = styled(Inbox)`
 `
 
 const ResponsiveButtonPrimary = styled(ButtonPrimary)`
-  border-radius: 12px;
+  border-radius: 5px;
   font-size: 16px;
   padding: 6px 8px;
   width: fit-content;
@@ -136,7 +135,7 @@ const MainContentWrapper = styled.main`
   background-color: ${({ theme }) => theme.backgroundSurface};
   border: 1px solid ${({ theme }) => theme.backgroundOutline};
   padding: 0;
-  border-radius: 16px;
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
   box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.01), 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 16px 24px rgba(0, 0, 0, 0.04),
@@ -171,7 +170,7 @@ function WrongNetworkCard() {
         <AutoColumn gap="lg" justify="center">
           <AutoColumn gap="lg" style={{ width: '100%' }}>
             <TitleRow padding="0">
-              <ThemedText.LargeHeader>
+              <ThemedText.LargeHeader color="#FAFAFA">
                 <Trans>Pools</Trans>
               </ThemedText.LargeHeader>
             </TitleRow>
@@ -272,7 +271,7 @@ export default function Pool() {
         <AutoColumn gap="lg" justify="center">
           <AutoColumn gap="lg" style={{ width: '100%' }}>
             <TitleRow padding="0">
-              <ThemedText.LargeHeader>
+              <ThemedText.LargeHeader color="#FAFAFA">
                 <Trans>Pools</Trans>
               </ThemedText.LargeHeader>
               <ButtonRow>
@@ -307,8 +306,8 @@ export default function Pool() {
                 />
               ) : (
                 <ErrorContainer>
-                  <ThemedText.DeprecatedBody color={theme.textTertiary} textAlign="center">
-                    <InboxIcon strokeWidth={1} style={{ marginTop: '2em' }} />
+                  <ThemedText.DeprecatedBody color="#FAFAFA" textAlign="center">
+                    <InboxIcon strokeWidth={1} style={{ marginTop: '2em', color: '#FAFAFA' }} />
                     <div>
                       <Trans>Your active V3 liquidity positions will appear here.</Trans>
                     </div>
@@ -339,9 +338,7 @@ export default function Pool() {
                 </ErrorContainer>
               )}
             </MainContentWrapper>
-            <HideSmall>
-              <CTACards />
-            </HideSmall>
+            <HideSmall></HideSmall>
           </AutoColumn>
         </AutoColumn>
       </PageWrapper>

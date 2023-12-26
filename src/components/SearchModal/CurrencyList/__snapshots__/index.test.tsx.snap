@@ -358,7 +358,7 @@ exports[`renders loading rows when isLoading is true 1`] = `
   animation-fill-mode: both;
   background: linear-gradient( to left,#F5F6FC 25%,#E8ECFB 50%,#F5F6FC 75% );
   background-size: 400%;
-  border-radius: 12px;
+  border-radius: 5px;
   height: 2.4em;
   will-change: background-position;
 }

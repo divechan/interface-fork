@@ -37,7 +37,7 @@ export const YellowCard = styled(Card)`
 `
 
 export const BlueCard = styled(Card)`
-  background-color: ${({ theme }) => theme.deprecated_primary5};
-  color: ${({ theme }) => theme.accentAction};
-  border-radius: 12px;
+  background-color: #1f4a7d;
+  color: #fff;
+  border-radius: 5px;
 `

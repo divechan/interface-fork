@@ -18,7 +18,7 @@ const Container = styled.button`
   justify-content: space-between;
   padding: 10px 8px;
   cursor: pointer;
-  border-radius: 12px;
+  border-radius: 5px;
   color: ${({ theme }) => theme.textPrimary};
   width: 240px;
   transition: ${({ theme }) => theme.transition.duration.medium} ${({ theme }) => theme.transition.timing.ease}
