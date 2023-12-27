@@ -7,6 +7,7 @@ export enum SupportedChainId {
   RINKEBY = 4,
   GOERLI = 5,
   KOVAN = 42,
+  BNB = 56,
   RAILS = 6278,
   RAILS_TESTNET = 24116,
   ARBITRUM_ONE = 42161,
@@ -25,6 +26,7 @@ export enum SupportedChainId {
 export const CHAIN_IDS_TO_NAMES = {
   [SupportedChainId.MAINNET]: 'mainnet',
   [SupportedChainId.ROPSTEN]: 'ropsten',
+  [SupportedChainId.BNB]: 'bnb',
   [SupportedChainId.RAILS]: 'rails',
   [SupportedChainId.RAILS_TESTNET]: 'rails-testnet',
   [SupportedChainId.RINKEBY]: 'rinkeby',
