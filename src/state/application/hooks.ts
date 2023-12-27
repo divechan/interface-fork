@@ -36,9 +36,7 @@ async function getMoonpayAvailability(): Promise<boolean> {
   if (!moonpayApiURI) {
     throw new Error('Must provide an api endpoint for moonpay.')
   }
-  const res = await fetch(`${moonpayApiURI}/v4/ip_address?apiKey=${moonpayPublishableKey}`)
-  const data = await (res.json() as Promise<MoonpayIPAddressesResponse>)
-  return data.isBuyAllowed ?? false
+  return false
 }
 
 export function useFiatOnrampAvailability(shouldCheck: boolean, callback?: () => void) {
@@ -55,7 +53,7 @@ export function useFiatOnrampAvailability(shouldCheck: boolean, callback?: () =>
         const result = await getMoonpayAvailability()
         sendAnalyticsEvent(MoonpayEventName.MOONPAY_GEOCHECK_COMPLETED, { success: result })
         if (stale) return
-        dispatch(setFiatOnrampAvailability(result))
+        dispatch(setFiatOnrampAvailability(false))
         if (result && callback) {
           callback()
         }

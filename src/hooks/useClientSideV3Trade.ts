@@ -15,6 +15,7 @@ const QUOTE_GAS_OVERRIDES: { [chainId: number]: number } = {
   [SupportedChainId.ARBITRUM_ONE]: 25_000_000,
   [SupportedChainId.ARBITRUM_RINKEBY]: 25_000_000,
   [SupportedChainId.RAILS]: 25_000_000,
+  [SupportedChainId.BNB]: 25_000_000,
   [SupportedChainId.RAILS_TESTNET]: 25_000_000,
   [SupportedChainId.CELO]: 50_000_000,
   [SupportedChainId.CELO_ALFAJORES]: 50_000_000,

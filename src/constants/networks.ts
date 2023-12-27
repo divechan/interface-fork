@@ -95,6 +95,10 @@ export const FALLBACK_URLS: { [key in SupportedChainId]: string[] } = {
     // "Safe" URLs
     `https://testnet.steamexchange.io`,
   ],
+  [SupportedChainId.BNB]: [
+    // "Safe" URLs
+    `https://bsc.meowrpc.com`,
+  ],
 }
 
 /**
@@ -104,6 +108,9 @@ export const FALLBACK_URLS: { [key in SupportedChainId]: string[] } = {
 export const RPC_URLS: { [key in SupportedChainId]: string[] } = {
   [SupportedChainId.MAINNET]: [
     `https://mainnet.infura.io/v3/${INFURA_KEY}`,
+    ...FALLBACK_URLS[SupportedChainId.MAINNET],
+  ],
+  [SupportedChainId.BNB]: [
     ...FALLBACK_URLS[SupportedChainId.MAINNET],
   ],
   [SupportedChainId.RAILS_TESTNET]: [
