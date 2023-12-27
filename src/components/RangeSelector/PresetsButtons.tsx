@@ -26,7 +26,7 @@ export default function PresetsButtons({ setFullRange }: { setFullRange: () => v
           })
         }}
       >
-        <ThemedText.DeprecatedBody fontSize={12}>
+        <ThemedText.DeprecatedBody fontSize={12} color="#FAFAFA">
           <Trans>Full Range</Trans>
         </ThemedText.DeprecatedBody>
       </Button>

@@ -15,6 +15,7 @@ import styled from 'styled-components/macro'
 
 import { Bag } from './Bag'
 import { ChainSelector } from './ChainSelector'
+import OnramperWidgetModal from './OnramperWidget'
 import { SearchBar } from './SearchBar'
 import * as styles from './style.css'
 
@@ -69,6 +70,13 @@ export const PageTabs = () => {
       <MenuItem href="/pool" id="pool-nav-link" isActive={isPoolActive}>
         <Trans>Pool</Trans>
       </MenuItem>
+      <OnramperWidgetModal
+        href="https://buy.onramper.com/?apiKey=pk_prod_01H5AXWF5H767QV1SA4Z3RRPWE"
+        className="menuItem"
+        id="onramper-link"
+      >
+        <Trans>Onramper</Trans>
+      </OnramperWidgetModal>
     </>
   )
 }
