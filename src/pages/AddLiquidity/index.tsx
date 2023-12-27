@@ -700,7 +700,7 @@ export default function AddLiquidity() {
                                   fontWeight={500}
                                   textAlign="center"
                                   fontSize={12}
-                                  color="text1"
+                                  color="#FAFAFA"
                                 >
                                   Current Price:
                                 </ThemedText.DeprecatedMain>
@@ -708,14 +708,14 @@ export default function AddLiquidity() {
                                   fontWeight={500}
                                   textAlign="center"
                                   fontSize={12}
-                                  color="text1"
+                                  color="#FAFAFA"
                                 >
                                   <HoverInlineText
                                     maxCharacters={20}
                                     text={invertPrice ? price.invert().toSignificant(6) : price.toSignificant(6)}
                                   />
                                 </ThemedText.DeprecatedBody>
-                                <ThemedText.DeprecatedBody color="text2" fontSize={12}>
+                                <ThemedText.DeprecatedBody color="#FAFAFA" fontSize={12}>
                                   {quoteCurrency?.symbol} per {baseCurrency.symbol}
                                 </ThemedText.DeprecatedBody>
                               </Trans>
