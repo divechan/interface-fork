@@ -10,8 +10,22 @@ export const UNI_ADDRESS: AddressMap = constructSameAddressMap('0x1f9840a85d5aF5
 
 export const UNISWAP_NFT_AIRDROP_CLAIM_ADDRESS = '0x8B799381ac40b838BBA4131ffB26197C432AFe78'
 
-export const V2_FACTORY_ADDRESSES: AddressMap = constructSameAddressMap(V2_FACTORY_ADDRESS)
-export const V2_ROUTER_ADDRESS: AddressMap = constructSameAddressMap('0x7a250d5630B4cF539739dF2C5dAcb4c659F2488D')
+export const V2_FACTORY_ADDRESSES: AddressMap = {
+  [SupportedChainId.ARBITRUM_ONE]: '0xbfd8137f7d1516D3ea5cA83523914859ec47F573',
+  [SupportedChainId.ARBITRUM_RINKEBY]: '0xbfd8137f7d1516D3ea5cA83523914859ec47F573',
+  [SupportedChainId.RAILS_TESTNET]: "0xB54792d0ee279e46fB9e9Da79896bb7C50dA380F",
+}
+export const V2_ROUTER_ADDRESS: AddressMap = {
+  [SupportedChainId.ARBITRUM_ONE]: '0xbfd8137f7d1516D3ea5cA83523914859ec47F573',
+  [SupportedChainId.ARBITRUM_RINKEBY]: '0xbfd8137f7d1516D3ea5cA83523914859ec47F573',
+ 
+  [SupportedChainId.RAILS_TESTNET]: "0x3d2e0c27F76809D408e8d141dfA1667Ce7ad0dd2",
+}
+export const INIT_CODE: AddressMap = {
+  
+ 
+  [SupportedChainId.RAILS_TESTNET]: "0xcce6ba97e169e0e08114fcba4fc865adfd3b3819c3db1d3938017938fd4cd1c6",
+} 
 
 // celo v3 addresses
 const CELO_V3_CORE_FACTORY_ADDRESSES = '0xAfE208a311B21f13EF87E33A90049fC17A7acDEc'
