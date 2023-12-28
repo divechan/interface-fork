@@ -149,7 +149,6 @@ export const ButtonGray = styled(BaseButton)`
   color: #fafafa;
   font-size: 16px;
   font-weight: 500;
-  border-radius: 5px;
 
   &:hover {
     background-color: ${({ theme, disabled }) => !disabled && darken(0.05, theme.backgroundInteractive)};
@@ -284,6 +283,7 @@ const ButtonConfirmedStyle = styled(BaseButton)`
 const ButtonErrorStyle = styled(BaseButton)`
   background-color: ${({ theme }) => theme.accentFailure};
   border: 1px solid ${({ theme }) => theme.accentFailure};
+  color: #fafafa;
 
   &:focus {
     box-shadow: 0 0 0 1pt ${({ theme }) => darken(0.05, theme.accentFailure)};

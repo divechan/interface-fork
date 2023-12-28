@@ -172,11 +172,14 @@ export default function TransactionSettings({ placeholderSlippage }: Transaction
       <AutoColumn gap="sm">
         <RowFixed>
           <ThemedText.DeprecatedBlack fontWeight={400} fontSize={14} color={theme.textSecondary}>
-            <Trans>Slippage tolerance</Trans>
+            <Trans>Slippage</Trans>
           </ThemedText.DeprecatedBlack>
           <QuestionHelper
             text={
-              <Trans>Your transaction will revert if the price changes unfavorably by more than this percentage.</Trans>
+              <Trans>
+                If the price moves in an unfavorable direction by a percentage greater than this, your transaction will
+                revert.
+              </Trans>
             }
           />
         </RowFixed>

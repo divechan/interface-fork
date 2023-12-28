@@ -306,14 +306,7 @@ const AuthenticatedHeader = () => {
           </ThemedText.HeadlineLarge>
           {amountUSD !== undefined && <USDText>{formatUSDPrice(amountUSD)} USD</USDText>}
         </BalanceWrapper>
-        <ProfileButton
-          data-testid="nft-view-self-nfts"
-          onClick={navigateToProfile}
-          size={ButtonSize.medium}
-          emphasis={ButtonEmphasis.medium}
-        >
-          <Trans>View and sell Digital Assets</Trans>
-        </ProfileButton>
+
         {isUnclaimed && (
           <UNIButton onClick={openClaimModal} size={ButtonSize.medium} emphasis={ButtonEmphasis.medium}>
             <Trans>Claim</Trans> {unclaimedAmount?.toFixed(0, { groupSeparator: ',' } ?? '-')} <Trans>reward</Trans>

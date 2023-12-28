@@ -25,10 +25,11 @@ import AnimatedConfirmation from './AnimatedConfirmation'
 
 const Wrapper = styled.div`
   background-color: ${({ theme }) => theme.backgroundSurface};
-  border-radius: 20px;
+  border-radius: 5px;
   outline: 1px solid ${({ theme }) => theme.backgroundOutline};
   width: 100%;
   padding: 1rem;
+  color: #fafafa;
 `
 const Section = styled(AutoColumn)<{ inline?: boolean }>`
   padding: ${({ inline }) => (inline ? '0' : '0')};

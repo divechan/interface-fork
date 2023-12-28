@@ -182,19 +182,25 @@ export default function Pool() {
               <AutoColumn gap="md" style={{ width: '100%' }}>
                 <TitleRow style={{ marginTop: '1rem' }} padding="0">
                   <HideSmall>
-                    <ThemedText.DeprecatedMediumHeader style={{ marginTop: '0.5rem', justifySelf: 'flex-start' }}>
+                    <ThemedText.DeprecatedMediumHeader
+                      style={{ marginTop: '0.5rem', justifySelf: 'flex-start', color: '#FAFAFA' }}
+                    >
                       <Trans>Your V2 liquidity</Trans>
                     </ThemedText.DeprecatedMediumHeader>
                   </HideSmall>
                   <ButtonRow>
-                    <ResponsiveButtonSecondary as={Link} padding="6px 8px" to="/add/v2/ETH">
-                      <Trans>Create a pair</Trans>
-                    </ResponsiveButtonSecondary>
+                    <ResponsiveButtonPrimary id="join-pool-button" as={Link} to="/add/v2/ETH" padding="6px 8px">
+                      <Text fontWeight={500} fontSize={16}>
+                        <Trans>Create a pair</Trans>
+                      </Text>
+                    </ResponsiveButtonPrimary>
+
                     <ResponsiveButtonPrimary id="find-pool-button" as={Link} to="/pool/v2/find" padding="6px 8px">
                       <Text fontWeight={500} fontSize={16}>
                         <Trans>Import Pool</Trans>
                       </Text>
                     </ResponsiveButtonPrimary>
+
                     <ResponsiveButtonPrimary id="join-pool-button" as={Link} to="/add/v2/ETH" padding="6px 8px">
                       <Text fontWeight={500} fontSize={16}>
                         <Trans>Add V2 Liquidity</Trans>
@@ -205,13 +211,13 @@ export default function Pool() {
 
                 {!account ? (
                   <Card padding="40px">
-                    <ThemedText.DeprecatedBody color={theme.textTertiary} textAlign="center">
+                    <ThemedText.DeprecatedBody color="#FAFAFA" textAlign="center">
                       <Trans>Connect to a wallet to view your liquidity.</Trans>
                     </ThemedText.DeprecatedBody>
                   </Card>
                 ) : v2IsLoading ? (
                   <EmptyProposals>
-                    <ThemedText.DeprecatedBody color={theme.textTertiary} textAlign="center">
+                    <ThemedText.DeprecatedBody color="#FAFAFA" textAlign="center">
                       <Dots>
                         <Trans>Loading</Trans>
                       </Dots>
@@ -262,7 +268,7 @@ export default function Pool() {
                   </>
                 ) : (
                   <EmptyProposals>
-                    <ThemedText.DeprecatedBody color={theme.textTertiary} textAlign="center">
+                    <ThemedText.DeprecatedBody color="#FAFAFA" textAlign="center">
                       <Trans>No liquidity found.</Trans>
                     </ThemedText.DeprecatedBody>
                   </EmptyProposals>

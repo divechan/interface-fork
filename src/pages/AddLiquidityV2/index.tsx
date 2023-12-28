@@ -15,7 +15,7 @@ import { Text } from 'rebass'
 import { useTheme } from 'styled-components/macro'
 
 import { ButtonError, ButtonLight, ButtonPrimary } from '../../components/Button'
-import { BlueCard, LightCard } from '../../components/Card'
+import { BlueCard, DarkCard, LightCard } from '../../components/Card'
 import { AutoColumn, ColumnCenter } from '../../components/Column'
 import CurrencyInputPanel from '../../components/CurrencyInputPanel'
 import DoubleCurrencyLogo from '../../components/DoubleLogo'
@@ -219,9 +219,9 @@ export default function AddLiquidity() {
   const modalHeader = () => {
     return noLiquidity ? (
       <AutoColumn gap="20px">
-        <LightCard mt="20px" $borderRadius="20px">
+        <DarkCard mt="20px" $borderRadius="5px">
           <RowFlat>
-            <Text fontSize="48px" fontWeight={500} lineHeight="42px" marginRight={10}>
+            <Text fontSize="30px" fontWeight={500} lineHeight="30px" marginRight={10}>
               {currencies[Field.CURRENCY_A]?.symbol + '/' + currencies[Field.CURRENCY_B]?.symbol}
             </Text>
             <DoubleCurrencyLogo
@@ -230,12 +230,12 @@ export default function AddLiquidity() {
               size={30}
             />
           </RowFlat>
-        </LightCard>
+        </DarkCard>
       </AutoColumn>
     ) : (
       <AutoColumn gap="20px">
         <RowFlat style={{ marginTop: '20px' }}>
-          <Text fontSize="48px" fontWeight={500} lineHeight="42px" marginRight={10}>
+          <Text fontSize="30px" fontWeight={500} lineHeight="42px" marginRight={10}>
             {liquidityMinted?.toSignificant(6)}
           </Text>
           <DoubleCurrencyLogo
@@ -406,7 +406,7 @@ export default function AddLiquidity() {
             />
             {currencies[Field.CURRENCY_A] && currencies[Field.CURRENCY_B] && pairState !== PairState.INVALID && (
               <>
-                <LightCard padding="0px" $borderRadius="20px">
+                <LightCard padding="0px" $borderRadius="5px">
                   <RowBetween padding="1rem">
                     <ThemedText.DeprecatedSubHeader fontWeight={500} fontSize={14}>
                       {noLiquidity ? (
@@ -416,7 +416,7 @@ export default function AddLiquidity() {
                       )}
                     </ThemedText.DeprecatedSubHeader>
                   </RowBetween>{' '}
-                  <LightCard padding="1rem" $borderRadius="20px">
+                  <LightCard padding="1rem" $borderRadius="5px">
                     <PoolPriceBar
                       currencies={currencies}
                       poolTokenPercentage={poolTokenPercentage}

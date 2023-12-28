@@ -97,7 +97,7 @@ const MenuFlyout = styled.span`
   border: 1px solid ${({ theme }) => theme.backgroundOutline};
   box-shadow: 0px 0px 1px rgba(0, 0, 0, 0.01), 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 16px 24px rgba(0, 0, 0, 0.04),
     0px 24px 32px rgba(0, 0, 0, 0.01);
-  border-radius: 12px;
+  border-radius: 5px;
   display: flex;
   flex-direction: column;
   font-size: 1rem;
@@ -105,7 +105,6 @@ const MenuFlyout = styled.span`
   top: 2rem;
   right: 0rem;
   z-index: 100;
-  color: ${({ theme }) => theme.textPrimary};
 
   ${({ theme }) => theme.deprecated_mediaWidth.deprecated_upToMedium`
     min-width: 18.125rem;
@@ -117,7 +116,7 @@ const MenuFlyout = styled.span`
 const Break = styled.div`
   width: 100%;
   height: 1px;
-  background-color: ${({ theme }) => theme.deprecated_bg3};
+  background-color: #1f4a7d;
 `
 
 const ModalContentWrapper = styled.div`
@@ -125,7 +124,8 @@ const ModalContentWrapper = styled.div`
   align-items: center;
   justify-content: center;
   padding: 2rem 0;
-  background-color: ${({ theme }) => theme.backgroundInteractive};
+  background-color: #0c1d31;
+  color: #fafafa;
   border-radius: 20px;
 `
 
@@ -155,7 +155,7 @@ export default function SettingsTab({ placeholderSlippage }: { placeholderSlippa
             <RowBetween style={{ padding: '0 2rem' }}>
               <div />
               <Text fontWeight={500} fontSize={20}>
-                <Trans>Are you sure?</Trans>
+                <Trans>Are you a Wizard?</Trans>
               </Text>
               <StyledCloseIcon onClick={() => setShowConfirmation(false)} />
             </RowBetween>
@@ -163,26 +163,30 @@ export default function SettingsTab({ placeholderSlippage }: { placeholderSlippa
             <AutoColumn gap="lg" style={{ padding: '0 2rem' }}>
               <Text fontWeight={500} fontSize={20}>
                 <Trans>
-                  Expert mode turns off the confirm transaction prompt and allows high slippage trades that often result
-                  in bad rates and lost funds.
+                  Enabling wizard mode disables the confirmation prompt for transactions and permits high slippage
+                  trades, which can often lead to unfavorable exchange rates and potential loss of funds.
                 </Trans>
               </Text>
               <Text fontWeight={600} fontSize={20}>
-                <Trans>ONLY USE THIS MODE IF YOU KNOW WHAT YOU ARE DOING.</Trans>
+                <Trans>THIS FEATURE IS FOR ADVANCED TRADERS. USE WITH CAUTION!</Trans>
               </Text>
               <ButtonError
                 error={true}
-                padding="12px"
+                padding="5px"
                 onClick={() => {
-                  const confirmWord = t`confirm`
-                  if (window.prompt(t`Please type the word "${confirmWord}" to enable expert mode.`) === confirmWord) {
+                  const confirmWord = t`wizard`
+                  if (
+                    window.prompt(
+                      t`You are about to enter a new world. Please type the word "${confirmWord}" to initialize Wizard mode.`
+                    ) === confirmWord
+                  ) {
                     toggleExpertMode()
                     setShowConfirmation(false)
                   }
                 }}
               >
                 <Text fontSize={20} fontWeight={500} id="confirm-expert-mode">
-                  <Trans>Turn On Expert Mode</Trans>
+                  <Trans>Turn On Wizard Mode</Trans>
                 </Text>
               </ButtonError>
             </AutoColumn>
@@ -218,9 +222,11 @@ export default function SettingsTab({ placeholderSlippage }: { placeholderSlippa
               <RowBetween>
                 <RowFixed>
                   <ThemedText.DeprecatedBlack fontWeight={400} fontSize={14} color={theme.textSecondary}>
-                    <Trans>Auto Router API</Trans>
+                    <Trans>API Router</Trans>
                   </ThemedText.DeprecatedBlack>
-                  <QuestionHelper text={<Trans>Use the Uniswap Labs API to get faster quotes.</Trans>} />
+                  <QuestionHelper
+                    text={<Trans>Utilize the Rails Network&reg; API for obtaining quicker quotes.</Trans>}
+                  />
                 </RowFixed>
                 <Toggle
                   id="toggle-optimized-router-button"
@@ -238,11 +244,14 @@ export default function SettingsTab({ placeholderSlippage }: { placeholderSlippa
             <RowBetween>
               <RowFixed>
                 <ThemedText.DeprecatedBlack fontWeight={400} fontSize={14} color={theme.textSecondary}>
-                  <Trans>Expert Mode</Trans>
+                  <Trans>Wizard Mode</Trans>
                 </ThemedText.DeprecatedBlack>
                 <QuestionHelper
                   text={
-                    <Trans>Allow high price impact trades and skip the confirm screen. Use at your own risk.</Trans>
+                    <Trans>
+                      Enable high-price impact trades and bypass the confirmation screen. Proceed with caution; this
+                      feature is meant for wizards!
+                    </Trans>
                   }
                 />
               </RowFixed>
@@ -261,6 +270,24 @@ export default function SettingsTab({ placeholderSlippage }: { placeholderSlippa
                       }
                 }
               />
+            </RowBetween>
+            <RowBetween>
+              <RowFixed>
+                <ThemedText.DeprecatedBlack fontWeight={400} fontSize={14} color={theme.textSecondary}>
+                  <Trans>Limit Orders - Coming Soon</Trans>
+                </ThemedText.DeprecatedBlack>
+                <QuestionHelper
+                  text={
+                    <Trans>
+                      Set limit orders to execute at specific prices. Exercise caution and ensure accuracy when
+                      configuring.
+                    </Trans>
+                  }
+                />
+              </RowFixed>
+              <div style={{ pointerEvents: 'none', opacity: 0.2, cursor: 'not-allowed' }}>
+                <Toggle id="toggle-limit-orders" isActive={false} toggle={() => {}} />
+              </div>
             </RowBetween>
           </AutoColumn>
         </MenuFlyout>

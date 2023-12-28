@@ -67,9 +67,10 @@ export const PageTabs = () => {
         <Trans>Swap</Trans>
       </MenuItem>
 
-      <MenuItem href="/pool" id="pool-nav-link" isActive={isPoolActive}>
+      <MenuItem href="/pool/v2" id="pool-nav-link" isActive={isPoolActive}>
         <Trans>Pool</Trans>
       </MenuItem>
+
       <OnramperWidgetModal
         href="https://buy.onramper.com/?apiKey=pk_prod_01H5AXWF5H767QV1SA4Z3RRPWE"
         className="menuItem"
