@@ -49,9 +49,9 @@ const FixedContainer = styled.div`
 `
 
 const Container = styled.div<{ hideInput: boolean; disabled: boolean }>`
-  border-radius: ${({ hideInput }) => (hideInput ? '16px' : '20px')};
   border: 1px solid ${({ theme }) => theme.backgroundSurface};
-  background-color: ${({ theme }) => theme.deprecated_bg1};
+  background-color: #d28a1e;
+  padding: 5px;
   width: ${({ hideInput }) => (hideInput ? '100%' : 'initial')};
   ${({ theme, hideInput, disabled }) =>
     !disabled &&
@@ -168,6 +168,10 @@ const StyledBalanceMax = styled.button<{ disabled?: boolean }>`
 const StyledNumericalInput = styled(NumericalInput)<{ $loading: boolean }>`
   ${loadingOpacityMixin};
   text-align: left;
+  color: #fafafa;
+  &::placeholder {
+    color: #000000;
+  
 `
 
 interface CurrencyInputPanelProps {
@@ -299,7 +303,7 @@ export default function CurrencyInputPanel({
                 <RowFixed style={{ height: '17px' }}>
                   <ThemedText.DeprecatedBody
                     onClick={onMax}
-                    color={theme.textTertiary}
+                    color={theme.white}
                     fontWeight={500}
                     fontSize={14}
                     style={{ display: 'inline', cursor: 'pointer' }}

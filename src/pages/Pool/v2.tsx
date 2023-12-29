@@ -6,15 +6,14 @@ import { useWeb3React } from '@web3-react/core'
 import { UNSUPPORTED_V2POOL_CHAIN_IDS } from 'constants/chains'
 import JSBI from 'jsbi'
 import { useMemo } from 'react'
-import { ChevronsRight } from 'react-feather'
 import { Link } from 'react-router-dom'
 import { Text } from 'rebass'
 import styled, { useTheme } from 'styled-components/macro'
 
-import { ButtonOutlined, ButtonPrimary, ButtonSecondary } from '../../components/Button'
+import { ButtonPrimary, ButtonSecondary } from '../../components/Button'
 import Card from '../../components/Card'
 import { AutoColumn } from '../../components/Column'
-import { CardNoise, CardSection, DataCard } from '../../components/earn/styled'
+import { CardSection, DataCard } from '../../components/earn/styled'
 import FullPositionCard from '../../components/PositionCard'
 import { RowBetween, RowFixed } from '../../components/Row'
 import { Dots } from '../../components/swap/styleds'
@@ -24,7 +23,7 @@ import { useV2Pairs } from '../../hooks/useV2Pairs'
 import { useTokenBalancesWithLoadingIndicator } from '../../state/connection/hooks'
 import { useStakingInfo } from '../../state/stake/hooks'
 import { toV2LiquidityToken, useTrackedTokenPairs } from '../../state/user/hooks'
-import { ExternalLink, HideSmall, ThemedText } from '../../theme'
+import { HideSmall, ThemedText } from '../../theme'
 
 const PageWrapper = styled(AutoColumn)`
   max-width: 640px;
@@ -144,7 +143,6 @@ export default function Pool() {
       <>
         <PageWrapper>
           <VoteCard>
-            <CardNoise />
             <CardSection>
               <AutoColumn gap="md">
                 <RowBetween>
@@ -163,8 +161,6 @@ export default function Pool() {
                 </RowBetween>
               </AutoColumn>
             </CardSection>
-
-            <CardNoise />
           </VoteCard>
 
           {unsupportedV2Network ? (
@@ -225,16 +221,6 @@ export default function Pool() {
                   </EmptyProposals>
                 ) : allV2PairsWithLiquidity?.length > 0 || stakingPairs?.length > 0 ? (
                   <>
-                    <ButtonSecondary>
-                      <RowBetween>
-                        <Trans>
-                          <ExternalLink href={'https://v2.info.uniswap.org/account/' + account}>
-                            Account analytics and accrued fees
-                          </ExternalLink>
-                          <span> ↗ </span>
-                        </Trans>
-                      </RowBetween>
-                    </ButtonSecondary>
                     {v2PairsWithoutStakedAmount.map((v2Pair) => (
                       <FullPositionCard key={v2Pair.liquidityToken.address} pair={v2Pair} />
                     ))}
@@ -248,23 +234,6 @@ export default function Pool() {
                           />
                         )
                     )}
-                    <RowFixed justify="center" style={{ width: '100%' }}>
-                      <ButtonOutlined
-                        as={Link}
-                        to="/migrate/v2"
-                        id="import-pool-link"
-                        style={{
-                          padding: '8px 16px',
-                          margin: '0 4px',
-                          borderRadius: '12px',
-                          width: 'fit-content',
-                          fontSize: '14px',
-                        }}
-                      >
-                        <ChevronsRight size={16} style={{ marginRight: '8px' }} />
-                        <Trans>Migrate Liquidity to V3</Trans>
-                      </ButtonOutlined>
-                    </RowFixed>
                   </>
                 ) : (
                   <EmptyProposals>

@@ -15,7 +15,7 @@ const WarningIconStyle = css<{ size?: string }>`
 
 const WarningIcon = styled(AlertTriangle)`
   ${WarningIconStyle};
-  color: ${({ theme }) => theme.textTertiary};
+  color: 'sxorange';
 `
 
 export const BlockedIcon = styled(Slash)`

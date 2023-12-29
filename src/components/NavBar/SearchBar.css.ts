@@ -15,7 +15,7 @@ const baseSearchStyle = style([
     width: { sm: 'viewWidth' },
     borderStyle: 'solid',
     borderWidth: '1px',
-    borderColor: 'searchOutline',
+    borderColor: 'sxlblue',
   }),
   {
     backdropFilter: 'blur(60px)',
@@ -107,10 +107,10 @@ export const searchBarInput = style([
 export const searchBarDropdownNft = style([
   baseSearchNftStyle,
   sprinkles({
-    borderBottomLeftRadius: '12',
-    borderBottomRightRadius: '12',
+    borderBottomLeftRadius: '4',
+    borderBottomRightRadius: '4',
     height: { sm: 'viewHeight', md: 'auto' },
-    backgroundColor: 'backgroundSurface',
+    backgroundColor: 'sxdblue',
   }),
   {
     backdropFilter: 'blur(60px)',
@@ -163,7 +163,7 @@ export const primaryText = style([
     overflow: 'hidden',
     whiteSpace: 'nowrap',
     textOverflow: 'ellipsis',
-    color: 'textTertiary',
+    color: 'white',
   }),
   {
     lineHeight: '24px',
@@ -173,7 +173,7 @@ export const primaryText = style([
 export const secondaryText = style([
   buttonTextSmall,
   sprinkles({
-    color: 'textTertiary',
+    color: 'textSecondary',
   }),
   {
     lineHeight: '20px',

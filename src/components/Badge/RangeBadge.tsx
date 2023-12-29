@@ -14,6 +14,7 @@ const BadgeWrapper = styled.div`
 const BadgeText = styled.div`
   font-weight: 500;
   font-size: 14px;
+  color: #fafafa;
 `
 
 const ActiveDot = styled.span`
@@ -36,7 +37,7 @@ export default function RangeBadge({
       {removed ? (
         <MouseoverTooltip text={<Trans>Your position has 0 liquidity, and is not earning fees.</Trans>}>
           <Badge variant={BadgeVariant.DEFAULT}>
-            <AlertCircle width={14} height={14} />
+            <AlertCircle width={14} height={14} color="#FAFAFA" />
             &nbsp;
             <BadgeText>
               <Trans>Closed</Trans>

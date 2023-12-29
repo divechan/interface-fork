@@ -75,13 +75,13 @@ function ConfirmationPendingContent({
           <CustomLightSpinner src={Circle} alt="loader" size={inline ? '40px' : '90px'} />
         </ConfirmedIcon>
         <AutoColumn gap="md" justify="center">
-          <Text fontWeight={500} fontSize={20} color={theme.textPrimary} textAlign="center">
+          <Text fontWeight={500} fontSize={20} color="#FAFAFA" textAlign="center">
             <Trans>Waiting for confirmation</Trans>
           </Text>
-          <Text fontWeight={600} fontSize={16} color={theme.textPrimary} textAlign="center">
+          <Text fontWeight={600} fontSize={16} color={theme.textSecondary} textAlign="center">
             {pendingText}
           </Text>
-          <Text fontWeight={400} fontSize={12} color={theme.textSecondary} textAlign="center" marginBottom="12px">
+          <Text fontWeight={400} fontSize={12} color="#d28a1e" textAlign="center" marginBottom="12px">
             <Trans>Confirm this transaction in your wallet</Trans>
           </Text>
         </AutoColumn>
@@ -162,7 +162,7 @@ function TransactionSubmittedContent({
           {chainId && hash && (
             <ExternalLink href={getExplorerLink(chainId, hash, ExplorerDataType.TRANSACTION)}>
               <Text fontWeight={600} fontSize={14} color={theme.accentAction}>
-                <Trans>View on Etherscan</Trans>
+                <Trans>View on Block Explorer</Trans>
               </Text>
             </ExternalLink>
           )}

@@ -25,7 +25,7 @@ import TradePrice from './TradePrice'
 const Wrapper = styled(Row)`
   width: 100%;
   justify-content: center;
-  border-radius: inherit;
+  border-radius: 5px;
   padding: 8px 12px;
   margin-top: 0;
   min-height: 32px;
@@ -164,7 +164,7 @@ export default function SwapDetailsDropdown({ trade, syncing, loading, allowedSl
                 </LoadingOpacityContainer>
               ) : loading || syncing ? (
                 <ThemedText.DeprecatedMain fontSize={14}>
-                  <Trans>Checking for best route</Trans>
+                  <Trans>Checking for best route & price</Trans>
                 </ThemedText.DeprecatedMain>
               ) : null}
             </RowFixed>

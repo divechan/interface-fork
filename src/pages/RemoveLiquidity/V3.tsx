@@ -7,7 +7,7 @@ import { useWeb3React } from '@web3-react/core'
 import { sendEvent } from 'components/analytics'
 import RangeBadge from 'components/Badge/RangeBadge'
 import { ButtonConfirmed, ButtonPrimary } from 'components/Button'
-import { LightCard } from 'components/Card'
+import { DarkCard } from 'components/Card'
 import { AutoColumn } from 'components/Column'
 import DoubleCurrencyLogo from 'components/DoubleLogo'
 import { Break } from 'components/earn/styled'
@@ -306,17 +306,18 @@ function Remove({ tokenId }: { tokenId: BigNumber }) {
                   <ThemedText.DeprecatedLabel
                     ml="10px"
                     fontSize="20px"
+                    color="#FAFAFA"
                   >{`${feeValue0?.currency?.symbol}/${feeValue1?.currency?.symbol}`}</ThemedText.DeprecatedLabel>
                 </RowFixed>
                 <RangeBadge removed={removed} inRange={!outOfRange} />
               </RowBetween>
-              <LightCard>
+              <DarkCard>
                 <AutoColumn gap="md">
-                  <ThemedText.DeprecatedMain fontWeight={400}>
+                  <ThemedText.DeprecatedMain color="#FAFAFA" fontWeight={400}>
                     <Trans>Amount</Trans>
                   </ThemedText.DeprecatedMain>
                   <RowBetween>
-                    <ResponsiveHeaderText>
+                    <ResponsiveHeaderText color="#FAFAFA">
                       <Trans>{percentForSlider}%</Trans>
                     </ResponsiveHeaderText>
                     <AutoRow gap="4px" justify="flex-end">
@@ -336,26 +337,26 @@ function Remove({ tokenId }: { tokenId: BigNumber }) {
                   </RowBetween>
                   <Slider value={percentForSlider} onChange={onPercentSelectForSlider} />
                 </AutoColumn>
-              </LightCard>
-              <LightCard>
+              </DarkCard>
+              <DarkCard>
                 <AutoColumn gap="md">
                   <RowBetween>
-                    <Text fontSize={16} fontWeight={500}>
+                    <Text color="#FAFAFA" fontSize={16} fontWeight={500}>
                       <Trans>Pooled {liquidityValue0?.currency?.symbol}:</Trans>
                     </Text>
                     <RowFixed>
-                      <Text fontSize={16} fontWeight={500} marginLeft="6px">
+                      <Text color="#FAFAFA" fontSize={16} fontWeight={500} marginLeft="6px">
                         {liquidityValue0 && <FormattedCurrencyAmount currencyAmount={liquidityValue0} />}
                       </Text>
                       <CurrencyLogo size="20px" style={{ marginLeft: '8px' }} currency={liquidityValue0?.currency} />
                     </RowFixed>
                   </RowBetween>
                   <RowBetween>
-                    <Text fontSize={16} fontWeight={500}>
+                    <Text color="#FAFAFA" fontSize={16} fontWeight={500}>
                       <Trans>Pooled {liquidityValue1?.currency?.symbol}:</Trans>
                     </Text>
                     <RowFixed>
-                      <Text fontSize={16} fontWeight={500} marginLeft="6px">
+                      <Text color="#FAFAFA" fontSize={16} fontWeight={500} marginLeft="6px">
                         {liquidityValue1 && <FormattedCurrencyAmount currencyAmount={liquidityValue1} />}
                       </Text>
                       <CurrencyLogo size="20px" style={{ marginLeft: '8px' }} currency={liquidityValue1?.currency} />
@@ -389,11 +390,11 @@ function Remove({ tokenId }: { tokenId: BigNumber }) {
                     </>
                   ) : null}
                 </AutoColumn>
-              </LightCard>
+              </DarkCard>
 
               {showCollectAsWeth && (
                 <RowBetween>
-                  <ThemedText.DeprecatedMain>
+                  <ThemedText.DeprecatedMain color="#FAFAFA">
                     <Trans>Collect as {nativeWrappedSymbol}</Trans>
                   </ThemedText.DeprecatedMain>
                   <Toggle

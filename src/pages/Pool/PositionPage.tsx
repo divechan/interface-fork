@@ -69,6 +69,7 @@ const PageWrapper = styled.div`
 const BadgeText = styled.div`
   font-weight: 500;
   font-size: 14px;
+  color: #fafafa;
 `
 
 // responsive text
@@ -92,9 +93,9 @@ const ExtentsText = styled.span`
 
 const HoverText = styled(ThemedText.DeprecatedMain)`
   text-decoration: none;
-  color: ${({ theme }) => theme.textTertiary};
+  color: #fafafa;
   :hover {
-    color: #fafafa;
+    color: #d28a1e;
     text-decoration: none;
   }
 `
@@ -604,7 +605,12 @@ export function PositionPage() {
             <AutoColumn gap="sm">
               <Link
                 data-cy="visit-pool"
-                style={{ textDecoration: 'none', width: 'fit-content', marginBottom: '0.5rem' }}
+                style={{
+                  textDecoration: 'none',
+                  width: 'fit-content',
+                  marginBottom: '0.5rem',
+                  color: '#FAFAFA', // Set the text color to #FAFAFA
+                }}
                 to="/pool"
               >
                 <HoverText>
@@ -614,7 +620,7 @@ export function PositionPage() {
               <ResponsiveRow>
                 <RowFixed>
                   <DoubleCurrencyLogo currency0={currencyBase} currency1={currencyQuote} size={24} margin={true} />
-                  <ThemedText.DeprecatedLabel fontSize="24px" mr="10px">
+                  <ThemedText.DeprecatedLabel color="#FAFAFA" fontSize="24px" mr="15px">
                     &nbsp;{currencyQuote?.symbol}&nbsp;/&nbsp;{currencyBase?.symbol}
                   </ThemedText.DeprecatedLabel>
                   <Badge style={{ marginRight: '8px' }}>

@@ -9,7 +9,7 @@ const LOGO_SIZE = 20
 
 const Container = styled.button`
   display: grid;
-  background: none;
+  background-color: #0c1d31;
   grid-template-columns: min-content 1fr min-content;
   align-items: center;
   text-align: left;
@@ -19,7 +19,7 @@ const Container = styled.button`
   padding: 10px 8px;
   cursor: pointer;
   border-radius: 5px;
-  color: ${({ theme }) => theme.textPrimary};
+  color: #fafafa;
   width: 240px;
   transition: ${({ theme }) => theme.transition.duration.medium} ${({ theme }) => theme.transition.timing.ease}
     background-color;

@@ -11,7 +11,7 @@ import { SwitchLocaleLink } from 'components/SwitchLocaleLink'
 import { isSupportedChain } from 'constants/chains'
 import { useV3Positions } from 'hooks/useV3Positions'
 import { useMemo } from 'react'
-import { AlertTriangle, BookOpen, ChevronDown, ChevronsRight, Inbox, Layers, PlusCircle } from 'react-feather'
+import { AlertTriangle, ChevronDown, ChevronsRight, Inbox, Layers, PlusCircle } from 'react-feather'
 import { Link } from 'react-router-dom'
 import { useToggleWalletModal } from 'state/application/hooks'
 import { useUserHideClosedPositions } from 'state/user/hooks'
@@ -253,16 +253,6 @@ export default function Pool() {
       link: '/pool/v2',
       external: false,
     },
-    {
-      content: (
-        <PoolMenuItem>
-          <Trans>Learn</Trans>
-          <BookOpen size={16} />
-        </PoolMenuItem>
-      ),
-      link: 'https://docs.uniswap.org/',
-      external: true,
-    },
   ]
 
   return (
@@ -282,7 +272,7 @@ export default function Pool() {
                     ToggleUI={(props: any) => (
                       <MoreOptionsButton {...props}>
                         <MoreOptionsText>
-                          <Trans>More</Trans>
+                          <Trans>More Options</Trans>
                           <ChevronDown size={15} />
                         </MoreOptionsText>
                       </MoreOptionsButton>
@@ -314,7 +304,7 @@ export default function Pool() {
                   </ThemedText.DeprecatedBody>
                   {!showConnectAWallet && closedPositions.length > 0 && (
                     <ButtonText
-                      style={{ marginTop: '.5rem' }}
+                      style={{ marginTop: '.5rem', color: '#d28a1e' }}
                       onClick={() => setUserHideClosedPositions(!userHideClosedPositions)}
                     >
                       <Trans>Show closed positions</Trans>

@@ -46,7 +46,7 @@ const magicalGradient = style({
       content: '',
       position: 'absolute',
       inset: '-1px',
-      background: 'linear-gradient(91.46deg, #4673FA 0%, #9646FA 100.13%) border-box',
+      background: 'linear-gradient(91.46deg, #1f4a7d 0%, #d28a1e 100.13%) border-box', // Change the gradient colors
       borderColor: 'transparent',
       WebkitMask: 'linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);',
       WebkitMaskComposite: 'xor;',

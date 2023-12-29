@@ -3,7 +3,6 @@ import { CurrencyAmount, Percent, Token } from '@uniswap/sdk-core'
 import { Pair } from '@uniswap/v2-sdk'
 import { useWeb3React } from '@web3-react/core'
 import JSBI from 'jsbi'
-import { transparentize } from 'polished'
 import { useState } from 'react'
 import { ChevronDown, ChevronUp } from 'react-feather'
 import { Link } from 'react-router-dom'
@@ -20,16 +19,14 @@ import { ButtonEmpty, ButtonPrimary, ButtonSecondary } from '../Button'
 import { DarkCard } from '../Card'
 import { AutoColumn } from '../Column'
 import DoubleCurrencyLogo from '../DoubleLogo'
-import { CardNoise } from '../earn/styled'
 import CurrencyLogo from '../Logo/CurrencyLogo'
 import { AutoRow, RowBetween, RowFixed } from '../Row'
 import { Dots } from '../swap/styleds'
 import { FixedHeightRow } from '.'
 
-const StyledPositionCard = styled(DarkCard)<{ bgColor: any }>`
+const StyledPositionCard = styled(DarkCard)<{ bgColor: '#0c1d31' }>`
   border: none;
-  background: ${({ theme, bgColor }) =>
-    `radial-gradient(91.85% 100% at 1.84% 0%, ${transparentize(0.8, bgColor)} 0%, ${theme.deprecated_bg3} 100%) `};
+  background: '#FAFAFA';
   position: relative;
   overflow: hidden;
 `
@@ -77,8 +74,7 @@ export default function V2PositionCard({ pair, border, stakedBalance }: Position
   const backgroundColor = useColor(pair?.token0)
 
   return (
-    <StyledPositionCard border={border} bgColor={backgroundColor}>
-      <CardNoise />
+    <StyledPositionCard border={border} bgColor="#0c1d31">
       <AutoColumn gap="md">
         <FixedHeightRow>
           <AutoRow gap="8px">
