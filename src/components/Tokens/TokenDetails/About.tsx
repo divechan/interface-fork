@@ -1,5 +1,4 @@
 import { Trans } from '@lingui/macro'
-import { SupportedChainId } from '@uniswap/sdk-core'
 import { getChainInfo } from 'constants/chainInfo'
 import { darken } from 'polished'
 import { useState } from 'react'
@@ -8,6 +7,7 @@ import { ThemedText } from 'theme'
 import { textFadeIn } from 'theme/styles'
 
 import Resource from './Resource'
+import { SupportedChainId } from 'constants/chains'
 
 const NoInfoAvailable = styled.span`
   color: ${({ theme }) => theme.textTertiary};
