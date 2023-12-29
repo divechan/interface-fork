@@ -13,9 +13,9 @@ import { ReactNode } from 'react'
 import { NavLink, NavLinkProps, useLocation, useNavigate } from 'react-router-dom'
 import styled from 'styled-components/macro'
 
+import FiatOnrampModal from '../FiatOnrampModal'
 import { Bag } from './Bag'
 import { ChainSelector } from './ChainSelector'
-import OnramperWidgetModal from './OnramperWidget'
 import { SearchBar } from './SearchBar'
 import * as styles from './style.css'
 
@@ -25,7 +25,18 @@ const Nav = styled.nav`
   height: ${({ theme }) => theme.navHeight}px;
   z-index: 2;
 `
-
+const Wrapper = styled.div`
+  background-color: ${({ theme }) => theme.white};
+  border-radius: 20px;
+  box-shadow: ${({ theme }) => theme.deepShadow};
+  display: flex;
+  flex-flow: column nowrap;
+  margin: 0;
+  min-height: 720px;
+  min-width: 375px;
+  position: relative;
+  width: 100%;
+`
 interface MenuItemProps {
   href: string
   id?: NavLinkProps['id']
@@ -71,13 +82,8 @@ export const PageTabs = () => {
         <Trans>Pool</Trans>
       </MenuItem>
 
-      <OnramperWidgetModal
-        href="https://buy.onramper.com/?apiKey=pk_prod_01H5AXWF5H767QV1SA4Z3RRPWE"
-        className="menuItem"
-        id="onramper-link"
-      >
-        <Trans>Onramper</Trans>
-      </OnramperWidgetModal>
+      {/* Add the FiatOnrampModal component */}
+      <FiatOnrampModal />
     </>
   )
 }
