@@ -3,7 +3,7 @@ import { TraceEvent } from '@uniswap/analytics'
 import { BrowserEvent, InterfaceElementName, SwapEventName } from '@uniswap/analytics-events'
 import { Protocol } from '@uniswap/router-sdk'
 import { Currency, Percent, TradeType } from '@uniswap/sdk-core'
-import { Pair } from '@uniswap/v2-sdk'
+import { Pair } from 'hooks/pair'
 import { FeeAmount } from '@uniswap/v3-sdk'
 import { useWeb3React } from '@web3-react/core'
 import AnimatedDropdown from 'components/AnimatedDropdown'
@@ -144,6 +144,7 @@ export function getTokenPath(trade: InterfaceTrade<Currency, Currency, TradeType
       const entry: RoutingDiagramEntry['path'][0] = [
         tokenIn,
         tokenOut,
+        //@ts-ignore
         nextPool instanceof Pair ? V2_DEFAULT_FEE_TIER : nextPool.fee,
       ]
       path.push(entry)

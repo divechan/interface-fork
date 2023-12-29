@@ -23,6 +23,7 @@ const NETWORK_SELECTOR_CHAINS = [
   SupportedChainId.RAILS,
   SupportedChainId.RAILS_TESTNET,
   SupportedChainId.MAINNET,
+  SupportedChainId.BNB,
 
 ]
 

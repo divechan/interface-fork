@@ -10,6 +10,7 @@ function getRpcUrl(chainId: SupportedChainId): string {
     case SupportedChainId.RINKEBY:
     case SupportedChainId.RAILS:
     case SupportedChainId.RAILS_TESTNET:
+    case SupportedChainId.BNB:
     case SupportedChainId.ROPSTEN:
     case SupportedChainId.KOVAN:
     case SupportedChainId.GOERLI:

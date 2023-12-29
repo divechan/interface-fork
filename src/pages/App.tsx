@@ -241,6 +241,7 @@ export default function App() {
                 </Route>
 
                 <Route path="remove/v2/:currencyIdA/:currencyIdB" element={<RemoveLiquidity />} />
+                <Route path="remove/v2" element={<RemoveLiquidity />} />
                 <Route path="remove/:tokenId" element={<RemoveLiquidityV3 />} />
 
                 <Route path="migrate/v2" element={<MigrateV2 />} />

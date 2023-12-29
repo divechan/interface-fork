@@ -33,6 +33,13 @@ export const USDC_RAILS_TESTNET = new Token(
   'USDC',
   'USD//C'
 )
+export const SAL_BSC_TESTNET = new Token(
+  SupportedChainId.BNB,
+  '0x935Bf4D9f716F0660c2093E32ED67e5eCBb8C1da',
+  6,
+  'USDC',
+  'USD//C'
+)
 const USDC_ROPSTEN = new Token(
   SupportedChainId.ROPSTEN,
   '0x07865c6e87b9f70255377e024ace6630c1eaa37f',
@@ -362,6 +369,13 @@ export const WRAPPED_NATIVE_CURRENCY: { [chainId: number]: Token | undefined } =
     'WSTEAMX',
     'Wrapped STEAMX'
   ),
+  [SupportedChainId.BNB]: new Token(
+    SupportedChainId.BNB,
+    '0xae13d989daC2f0dEbFf460aC112a837C89BAa7cd',
+    18,
+    'WBNB',
+    'Wrapped BNB'
+  ),
   [SupportedChainId.OPTIMISM_GOERLI]: new Token(
     SupportedChainId.OPTIMISM_GOERLI,
     '0x4200000000000000000000000000000000000006',
@@ -431,8 +445,11 @@ function getCeloNativeCurrency(chainId: number) {
 function isMatic(chainId: number): chainId is SupportedChainId.POLYGON | SupportedChainId.POLYGON_MUMBAI {
   return chainId === SupportedChainId.POLYGON_MUMBAI || chainId === SupportedChainId.POLYGON
 }
-function isRails(chainId: number): chainId is SupportedChainId.POLYGON | SupportedChainId.POLYGON_MUMBAI {
-  return chainId === SupportedChainId.RAILS_TESTNET || chainId === SupportedChainId.POLYGON
+function isRails(chainId: number): chainId is SupportedChainId.RAILS_TESTNET | SupportedChainId.RAILS {
+  return chainId === SupportedChainId.RAILS_TESTNET || chainId === SupportedChainId.RAILS
+}
+function isBNB(chainId: number): chainId is SupportedChainId.BNB | SupportedChainId.BNB {
+  return chainId === SupportedChainId.BNB || chainId === SupportedChainId.BNB
 }
 
 class MaticNativeCurrency extends NativeCurrency {
@@ -470,7 +487,23 @@ class RailsNativeCurrency extends NativeCurrency {
     super(chainId, 18, 'STEAMX', 'STEAMX')
   }
 }
+class BnbNativeCurrency extends NativeCurrency {
+  equals(other: Currency): boolean {
+    return other.isNative && other.chainId === this.chainId
+  }
 
+  get wrapped(): Token {
+    if (!isBNB(this.chainId)) throw new Error('Not bnb')
+    const wrapped = WRAPPED_NATIVE_CURRENCY[this.chainId]
+    invariant(wrapped instanceof Token)
+    return wrapped
+  }
+
+  public constructor(chainId: number) {
+    if (!isBNB(chainId)) throw new Error('Not bnb')
+    super(chainId, 18, 'BNB', 'BNB')
+  }
+}
 class ExtendedEther extends Ether {
   public get wrapped(): Token {
     const wrapped = WRAPPED_NATIVE_CURRENCY[this.chainId]
@@ -495,6 +528,9 @@ export function nativeOnChain(chainId: number): NativeCurrency | Token {
     nativeCurrency = getCeloNativeCurrency(chainId)
   } else if (isRails(chainId)) {
     nativeCurrency = new RailsNativeCurrency(chainId)
+  }
+  else if (isBNB(chainId)) {
+    nativeCurrency = new BnbNativeCurrency(chainId)
   } else {
     nativeCurrency = ExtendedEther.onChain(chainId)
   }
@@ -506,6 +542,7 @@ export const TOKEN_SHORTHANDS: { [shorthand: string]: { [chainId in SupportedCha
     [SupportedChainId.MAINNET]: USDC_MAINNET.address,
     [SupportedChainId.ARBITRUM_ONE]: USDC_ARBITRUM.address,
     [SupportedChainId.RAILS_TESTNET]: USDC_RAILS_TESTNET.address,
+    [SupportedChainId.BNB]: SAL_BSC_TESTNET.address,
     [SupportedChainId.RAILS]: USDC_RAILS.address,
     [SupportedChainId.OPTIMISM]: USDC_OPTIMISM.address,
     [SupportedChainId.ARBITRUM_RINKEBY]: USDC_ARBITRUM_RINKEBY.address,

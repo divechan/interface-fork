@@ -10,15 +10,7 @@ export function usePermit2Flag(): BaseVariant {
 export function usePermit2Enabled(): boolean {
   const flagEnabled = usePermit2Flag() === BaseVariant.Enabled
   const { chainId } = useWeb3React()
-  try {
-    // Detect if the Universal Router is not yet deployed to chainId.
-    // This is necessary so that we can fallback correctly on chains without a Universal Router deployment.
-    // It will be removed once Universal Router is deployed on all supported chains.
-    chainId && UNIVERSAL_ROUTER_ADDRESS(chainId)
-    return flagEnabled
-  } catch {
-    return false
-  }
+ return false
 }
 
 export { BaseVariant as Permit2Variant }

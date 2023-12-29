@@ -7,6 +7,7 @@ import ms from 'ms.macro'
 import qs from 'qs'
 
 import { GetQuoteResult } from './types'
+import { SupportedChainId } from 'constants/chains'
 
 export enum RouterPreference {
   API = 'api',
@@ -14,16 +15,17 @@ export enum RouterPreference {
   PRICE = 'price',
 }
 
-const routers = new Map<ChainId, AlphaRouter>()
-function getRouter(chainId: ChainId): AlphaRouter {
+const routers = new Map<SupportedChainId, AlphaRouter>()
+function getRouter(chainId: SupportedChainId): AlphaRouter {
   const router = routers.get(chainId)
   if (router) return router
 
   const supportedChainId = toSupportedChainId(chainId)
   if (supportedChainId) {
     const provider = RPC_PROVIDERS[supportedChainId]
-    const router = new AlphaRouter({ chainId, provider })
-    routers.set(chainId, router)
+    
+    const router = null as any
+
     return router
   }
 
@@ -32,10 +34,10 @@ function getRouter(chainId: ChainId): AlphaRouter {
 
 // routing API quote params: https://github.com/Uniswap/routing-api/blob/main/lib/handlers/quote/schema/quote-schema.ts
 const API_QUERY_PARAMS = {
-  protocols: 'v2,v3,mixed',
+  protocols: 'v3,mixed',
 }
 const CLIENT_PARAMS = {
-  protocols: [Protocol.V2, Protocol.V3, Protocol.MIXED],
+  protocols: [ Protocol.V3, Protocol.MIXED],
 }
 // Price queries are tuned down to minimize the required RPCs to respond to them.
 // TODO(zzmp): This will be used after testing router caching.
@@ -74,7 +76,7 @@ export const routingApi = createApi({
       GetQuoteResult,
       {
         tokenInAddress: string
-        tokenInChainId: ChainId
+        tokenInChainId: SupportedChainId
         tokenInDecimals: number
         tokenInSymbol?: string
         tokenOutAddress: string
@@ -107,6 +109,7 @@ export const routingApi = createApi({
           } else {
             const router = getRouter(args.tokenInChainId)
             result = await getClientSideQuote(
+              //@ts-ignore
               args,
               router,
               // TODO(zzmp): Use PRICE_PARAMS for RouterPreference.PRICE.
@@ -119,6 +122,7 @@ export const routingApi = createApi({
         } catch (e) {
           // TODO: fall back to client-side quoter when auto router fails.
           // deprecate 'legacy' v2/v3 routers first.
+          console.log("bogogog")
           return { error: e as FetchBaseQueryError }
         }
       },
