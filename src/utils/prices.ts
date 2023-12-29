@@ -1,6 +1,5 @@
 import { Trade } from '@uniswap/router-sdk'
 import { Currency, CurrencyAmount, Fraction, Percent, TradeType } from '@uniswap/sdk-core'
-import { Pair } from '@uniswap/v2-sdk'
 import { FeeAmount } from '@uniswap/v3-sdk'
 import JSBI from 'jsbi'
 
@@ -12,6 +11,7 @@ import {
   ONE_HUNDRED_PERCENT,
   ZERO_PERCENT,
 } from '../constants/misc'
+import { Pair } from '@uniswap/v2-sdk'
 
 const THIRTY_BIPS_FEE = new Percent(JSBI.BigInt(30), JSBI.BigInt(10000))
 const INPUT_FRACTION_AFTER_FEE = ONE_HUNDRED_PERCENT.subtract(THIRTY_BIPS_FEE)

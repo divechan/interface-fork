@@ -86,6 +86,16 @@ const CHAIN_INFO: ChainInfoMap = {
     nativeCurrency: { name: 'Steamx', symbol: 'STEAMX', decimals: 18 },
     color: darkTheme.chain_1,
   },
+  [SupportedChainId.BNB]: {
+    networkType: NetworkType.L1,
+    docs: 'https://doc.bscscan.io',
+    explorer: 'https://testnet.bscscan.com/',
+    infoLink: 'https://doc.bscscan.io',
+    label: 'BNB Testnet',
+    logoUrl: railstest,
+    nativeCurrency: { name: 'BNB', symbol: 'BNB', decimals: 18 },
+    color: darkTheme.chain_1,
+  },
   [SupportedChainId.RINKEBY]: {
     networkType: NetworkType.L1,
     docs: 'https://docs.uniswap.org/',

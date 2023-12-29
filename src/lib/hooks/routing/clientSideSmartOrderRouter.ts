@@ -7,13 +7,13 @@ import JSBI from 'jsbi'
 import { GetQuoteResult } from 'state/routing/types'
 import { transformSwapRouteToGetQuoteResult } from 'utils/transformSwapRouteToGetQuoteResult'
 
-export function toSupportedChainId(chainId: ChainId): SupportedChainId | undefined {
+export function toSupportedChainId(chainId: SupportedChainId): SupportedChainId | undefined {
   const numericChainId: number = chainId
   if (SupportedChainId[numericChainId]) return numericChainId
   return undefined
 }
-export function isSupportedChainId(chainId: ChainId | undefined): boolean {
-  if (chainId === undefined) return false
+export function isSupportedChainId(chainId: SupportedChainId | undefined): boolean {
+  if (chainId === undefined || chainId == SupportedChainId.RAILS_TESTNET || chainId == SupportedChainId.BNB) return false
   return toSupportedChainId(chainId) !== undefined
 }
 

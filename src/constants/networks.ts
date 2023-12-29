@@ -97,7 +97,7 @@ export const FALLBACK_URLS: { [key in SupportedChainId]: string[] } = {
   ],
   [SupportedChainId.BNB]: [
     // "Safe" URLs
-    `https://bsc.meowrpc.com`,
+    `https://bsc-testnet.publicnode.com`,
   ],
 }
 
@@ -111,7 +111,7 @@ export const RPC_URLS: { [key in SupportedChainId]: string[] } = {
     ...FALLBACK_URLS[SupportedChainId.MAINNET],
   ],
   [SupportedChainId.BNB]: [
-    ...FALLBACK_URLS[SupportedChainId.MAINNET],
+    ...FALLBACK_URLS[SupportedChainId.BNB],
   ],
   [SupportedChainId.RAILS_TESTNET]: [
     ...FALLBACK_URLS[SupportedChainId.RAILS_TESTNET],
