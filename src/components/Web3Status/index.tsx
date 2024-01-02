@@ -58,6 +58,8 @@ const ChevronWrapper = styled.button`
 const Web3StatusGeneric = styled(ButtonSecondary)`
   ${flexRowNoWrap};
   width: 100%;
+  background-color: #0c1d31;
+  color: #fafafa;
   align-items: center;
   padding: 0.5rem;
   border-radius: 5px;
@@ -101,19 +103,17 @@ const Web3StatusConnected = styled(Web3StatusGeneric)<{
   pending?: boolean
   isClaimAvailable?: boolean
 }>`
-  background-color: ${({ pending, theme }) => (pending ? theme.accentAction : theme.deprecated_bg1)};
-  border: 1px solid ${({ pending, theme }) => (pending ? theme.accentAction : theme.deprecated_bg1)};
-  color: ${({ pending, theme }) => (pending ? theme.white : theme.textPrimary)};
+  background-color: #0c1d31;
+  border: 1px solid #d28a1e;
+  color: #fafafa;
   font-weight: 500;
   border: ${({ isClaimAvailable }) => isClaimAvailable && `1px solid ${colors.purple300}`};
   :hover,
   :focus {
-    border: 1px solid ${({ theme }) => darken(0.05, theme.deprecated_bg3)};
+    border: 1px solid ${({ theme }) => darken(0.05, '#d28a1e')};
 
     :focus {
-      border: 1px solid
-        ${({ pending, theme }) =>
-          pending ? darken(0.1, theme.accentAction) : darken(0.1, theme.backgroundInteractive)};
+      border: 1px solid ${({ pending, theme }) => (pending ? darken(0.1, theme.accentAction) : darken(0.1, '#d28a1e'))};
     }
   }
 

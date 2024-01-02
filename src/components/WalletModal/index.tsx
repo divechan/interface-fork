@@ -41,6 +41,7 @@ const CloseIcon = styled.div`
   position: absolute;
   right: 1rem;
   top: 14px;
+  color: #fafafa;
   &:hover {
     cursor: pointer;
     opacity: ${({ theme }) => theme.opacity.hover};
@@ -49,13 +50,14 @@ const CloseIcon = styled.div`
 
 const CloseColor = styled(Close)`
   path {
-    stroke: ${({ theme }) => theme.deprecated_text4};
+    color: #fafafa;
   }
 `
 
 const Wrapper = styled.div`
   ${flexColumnNoWrap};
   background-color: #FAFAFA;
+  color: #FAFAFA
   outline: ${({ theme }) => `1px solid ${theme.backgroundOutline}`};
   box-shadow: box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
   margin: 0;
@@ -66,16 +68,16 @@ const Wrapper = styled.div`
 const HeaderRow = styled.div`
   ${flexRowNoWrap};
   padding: 1rem 1rem;
+  background-color: #0c1d31;
+  padding-bottom: 15px;
   font-weight: 600;
   size: 16px;
-  color: ${(props) => (props.color === 'blue' ? ({ theme }) => theme.accentAction : 'inherit')};
-  ${({ theme }) => theme.deprecated_mediaWidth.deprecated_upToMedium`
-    padding: 1rem;
-  `};
+  color: #fafafa;
 `
 
 const ContentWrapper = styled.div`
   background-color: ${({ theme }) => theme.backgroundSurface};
+  color: #fafafa;
   padding: 0 1rem 1rem 1rem;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
@@ -89,6 +91,7 @@ const UpperSection = styled.div`
     margin-bottom: 0.5rem;
     font-size: 1rem;
     font-weight: 400;
+    color: #fafafa;
   }
   h5:last-child {
     margin-bottom: 0px;
@@ -110,7 +113,7 @@ const OptionGrid = styled.div`
 
 const HoverText = styled.div`
   text-decoration: none;
-  color: ${({ theme }) => theme.textPrimary};
+  color: #fafafa;
   display: flex;
   align-items: center;
 

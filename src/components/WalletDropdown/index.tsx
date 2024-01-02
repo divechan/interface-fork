@@ -8,7 +8,7 @@ import DefaultMenu from './DefaultMenu'
 import { TransactionHistoryMenu } from './TransactionMenu'
 
 const WalletWrapper = styled.div`
-  border-radius: 5px;
+  border-radius: 12px;
   width: 320px;
   display: flex;
   flex-direction: column;
@@ -16,7 +16,6 @@ const WalletWrapper = styled.div`
   top: 60px;
   right: 70px;
   background-color: ${({ theme }) => theme.backgroundSurface};
-  color: #fafafa;
   border: ${({ theme }) => `1px solid ${theme.backgroundOutline}`};
   box-shadow: ${({ theme }) => theme.deepShadow};
   padding: 16px;
@@ -39,6 +38,7 @@ const WalletDropdownWrapper = styled.div`
   position: fixed;
   top: 72px;
   right: 20px;
+  color: #fafafa;
   z-index: ${Z_INDEX.dropdown};
 
   @media only screen and (max-width: ${({ theme }) => `${theme.breakpoint.sm}px`}) {

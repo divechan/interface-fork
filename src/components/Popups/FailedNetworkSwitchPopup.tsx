@@ -21,15 +21,18 @@ export default function FailedNetworkSwitchPopup({ chainId }: { chainId: Support
       <AutoColumn gap="sm">
         <RowNoFlex style={{ alignItems: 'center' }}>
           <div style={{ paddingRight: 13 }}>
-            <AlertTriangle color={theme.accentWarning} size={24} display="flex" />
+            <AlertTriangle color="#d28a1e" size={24} display="flex" />
           </div>
-          <ThemedText.SubHeader>
-            <Trans>Failed to switch networks</Trans>
+          <ThemedText.SubHeader color="#FAFAFA">
+            <Trans>Network change failed</Trans>
           </ThemedText.SubHeader>
         </RowNoFlex>
 
-        <ThemedText.BodySmall>
-          <Trans>To use Uniswap on {chainInfo.label}, switch the network in your wallet’s settings.</Trans>
+        <ThemedText.BodySmall color="#FAFAFA">
+          <Trans>
+            To use Rails Network&reg; Swap on {chainInfo.label}, use your wallet's settings to change to the correct
+            network.
+          </Trans>
         </ThemedText.BodySmall>
       </AutoColumn>
     </RowNoFlex>

@@ -13,9 +13,9 @@ import { ReactNode } from 'react'
 import { NavLink, NavLinkProps, useLocation, useNavigate } from 'react-router-dom'
 import styled from 'styled-components/macro'
 
-import FiatOnrampModal from '../FiatOnrampModal'
 import { Bag } from './Bag'
 import { ChainSelector } from './ChainSelector'
+import OnramperWidget from './OnramperWidget'
 import { SearchBar } from './SearchBar'
 import * as styles from './style.css'
 
@@ -82,8 +82,14 @@ export const PageTabs = () => {
         <Trans>Pool</Trans>
       </MenuItem>
 
-      {/* Add the FiatOnrampModal component */}
-      <FiatOnrampModal />
+      {/* Add the modal link next to the "Pools" link */}
+      <OnramperWidget
+        href="#" // You can set this to the desired link
+        className={styles.menuItem} // Apply the same className as your other menu items
+        id="onramper-widget-link" // Apply the same id as your other menu items
+      >
+        Buy Crypto
+      </OnramperWidget>
     </>
   )
 }
