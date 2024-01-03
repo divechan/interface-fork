@@ -36,7 +36,7 @@ const ActiveText = styled.div`
 `
 
 const StyledArrowLeft = styled(ArrowLeft)`
-  color: ${({ theme }) => theme.textPrimary};
+  color: #fafafa;
 `
 
 export function FindPoolTabs({ origin }: { origin: string }) {
@@ -46,7 +46,7 @@ export function FindPoolTabs({ origin }: { origin: string }) {
         <HistoryLink to={origin}>
           <StyledArrowLeft />
         </HistoryLink>
-        <ActiveText style={{ position: 'absolute', left: '50%', transform: 'translateX(-50%)' }}>
+        <ActiveText style={{ position: 'absolute', left: '50%', transform: 'translateX(-50%)', color: '#FAFAFA' }}>
           <Trans>Import V2 Pool</Trans>
         </ActiveText>
       </RowBetween>

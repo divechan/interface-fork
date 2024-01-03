@@ -23,21 +23,21 @@ export const PageWrapper = styled.div`
 `
 export const SwapWrapper = styled.main`
   position: relative;
-  background: rgba(31, 74, 125, 0.6); /* Adjust the alpha (0.8) for the desired opacity */
+  background: rgba(31, 74, 125, 0.6); /* Adjust the alpha (0.6) for the desired opacity */
   border-radius: 5px;
   padding: 25px;
   z-index: ${Z_INDEX.deprecated_content};
-  transition: transform 250ms ease;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.6);
+  transition: box-shadow 500ms ease; /* Increase the transition duration for a slower effect */
+  box-shadow: 0px 4px 8px rgba(31, 74, 125, 0.6); /* Set the box shadow color to #1f4a7d */
 
   &:hover {
-    box-shadow: 0px 16px 24px rgba(0, 0, 0, 0.9);
+    box-shadow: 0px 16px 24px rgba(31, 74, 125, 0.9); /* Adjust the hover box shadow color */
   }
 `
 
 // Create a new styled component for the larger wrapper with a background image
 export const LargerWrapperWithBackground = styled(SwapWrapper)`
-  background-image: url('https://github.com/divechan/brandkit/blob/main/09.jpg?raw=true');
+  background-image: url('https://github.com/divechan/brandkit/blob/main/10.jpg?raw=true');
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;

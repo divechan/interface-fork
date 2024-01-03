@@ -8,7 +8,7 @@ const Container = styled.div`
   justify-content: center;
   width: 100%;
   max-height: 75vh;
-  padding-top: 75px;
+  padding-top: 105px;
   overflow: hidden;
 `
 
@@ -20,6 +20,12 @@ const Ads = styled.div`
 
 const Image = styled.img`
   width: 70%; /* Default width for desktop */
+  transition: box-shadow 500ms ease; /* Increase the transition duration for a slower effect */
+  box-shadow: 0px 4px 8px rgba(31, 74, 125, 0.6); /* Set the box shadow color to #1f4a7d */
+
+  &:hover {
+    box-shadow: 0px 16px 24px rgba(31, 74, 125, 0.9); /* Adjust the hover box shadow color */
+  }
 
   /* Media query for mobile screens */
   @media (max-width: 768px) {

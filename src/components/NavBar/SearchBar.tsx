@@ -158,7 +158,7 @@ export const SearchBar = () => {
           borderTopRightRadius={isOpen && !isMobile ? '4' : undefined}
           borderTopLeftRadius={isOpen && !isMobile ? '4' : undefined}
           borderBottomWidth={isOpen || isMobileOrTablet ? '0px' : '1px'}
-          backgroundColor={isOpen ? 'backgroundSurface' : 'searchBackground'}
+          backgroundColor={isOpen ? 'transparent' : 'searchBackground'}
           onClick={() => !isOpen && toggleOpen()}
           gap="12"
         >

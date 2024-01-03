@@ -10,7 +10,7 @@ import { useLocation } from 'react-router'
 import { Text } from 'rebass'
 
 import { ButtonDropdownLight } from '../../components/Button'
-import { LightCard } from '../../components/Card'
+import { DarkCard } from '../../components/Card'
 import { BlueCard } from '../../components/Card'
 import { AutoColumn, ColumnCenter } from '../../components/Column'
 import CurrencyLogo from '../../components/Logo/CurrencyLogo'
@@ -85,15 +85,15 @@ export default function PoolFinder() {
   }, [setShowSearch])
 
   const prerequisiteMessage = (
-    <LightCard padding="45px 10px">
-      <Text textAlign="center">
+    <DarkCard padding="45px 10px">
+      <Text textAlign="center" color="#FAFAFA">
         {!account ? (
           <Trans>Connect to a wallet to find pools</Trans>
         ) : (
           <Trans>Select a token to find your v2 liquidity.</Trans>
         )}
       </Text>
-    </LightCard>
+    </DarkCard>
   )
 
   return (
@@ -175,9 +175,9 @@ export default function PoolFinder() {
                 hasPosition && pair ? (
                   <MinimalPositionCard pair={pair} border="1px solid #CED0D9" />
                 ) : (
-                  <LightCard padding="45px 10px">
+                  <DarkCard padding="45px 10px">
                     <AutoColumn gap="sm" justify="center">
-                      <Text textAlign="center">
+                      <Text textAlign="center" color="#FAFAFA">
                         <Trans>You don’t have liquidity in this pool yet.</Trans>
                       </Text>
                       <StyledInternalLink to={`/add/${currencyId(currency0)}/${currencyId(currency1)}`}>
@@ -186,36 +186,36 @@ export default function PoolFinder() {
                         </Text>
                       </StyledInternalLink>
                     </AutoColumn>
-                  </LightCard>
+                  </DarkCard>
                 )
               ) : validPairNoLiquidity ? (
-                <LightCard padding="45px 10px">
+                <DarkCard padding="45px 10px">
                   <AutoColumn gap="sm" justify="center">
-                    <Text textAlign="center">
+                    <Text textAlign="center" color="#FAFAFA">
                       <Trans>No pool found.</Trans>
                     </Text>
                     <StyledInternalLink to={`/add/${currencyId(currency0)}/${currencyId(currency1)}`}>
                       <Trans>Create pool.</Trans>
                     </StyledInternalLink>
                   </AutoColumn>
-                </LightCard>
+                </DarkCard>
               ) : pairState === PairState.INVALID ? (
-                <LightCard padding="45px 10px">
+                <DarkCard padding="45px 10px">
                   <AutoColumn gap="sm" justify="center">
-                    <Text textAlign="center" fontWeight={500}>
+                    <Text textAlign="center" fontWeight={500} color="#FAFAFA">
                       <Trans>Invalid pair.</Trans>
                     </Text>
                   </AutoColumn>
-                </LightCard>
+                </DarkCard>
               ) : pairState === PairState.LOADING ? (
-                <LightCard padding="45px 10px">
+                <DarkCard padding="45px 10px">
                   <AutoColumn gap="sm" justify="center">
-                    <Text textAlign="center">
+                    <Text textAlign="center" color="#FAFAFA">
                       <Trans>Loading</Trans>
                       <Dots />
                     </Text>
                   </AutoColumn>
-                </LightCard>
+                </DarkCard>
               ) : null
             ) : (
               prerequisiteMessage

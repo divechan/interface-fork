@@ -32,6 +32,10 @@ const PriceChangeText = styled.span<{ isNegative: boolean }>`
   font-size: 14px;
   line-height: 20px;
   color: ${({ theme, isNegative }) => (isNegative ? theme.accentFailure : theme.accentSuccess)};
+  white-space: nowrap; /* Prevent text from wrapping to the next line */
+  overflow: hidden; /* Hide any content that overflows the container */
+  text-overflow: ellipsis; /* Display an ellipsis (...) for overflowed text */
+  max-width: 8ch; /* Limit the displayed characters to the first 8 characters */
 `
 
 const ArrowCell = styled.span`
