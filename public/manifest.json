@@ -1,10 +1,10 @@
 {
-  "background_color": "#fff",
+  "background_color": "#000",
   "display": "standalone",
-  "homepage_url": "https://app.uniswap.org",
+  "homepage_url": "https://swap.steamexchange.io/swap",
   "providedBy": {
-    "name": "Uniswap",
-    "url": "https://uniswap.org"
+    "name": "Rails Network Swap",
+    "url": "https://steamexchange.io"
   },
   "icons": [
     {
@@ -21,10 +21,10 @@
     }
   ],
   "orientation": "portrait",
-  "name": "Uniswap",
-  "description": "Swap or provide liquidity on the Uniswap Protocol",
+  "name": "Rails Network Swap",
+  "description": "Rails Network Swap and Liquidity Management",
   "iconPath": "./images/256x256_App_Icon_Pink.svg",
-  "short_name": "Uniswap",
+  "short_name": "Rails Network Swap",
   "start_url": ".",
   "theme_color": "#FC72FF"
 }

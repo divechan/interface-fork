@@ -27,12 +27,6 @@ export const SwapWrapper = styled.main`
   border-radius: 5px;
   padding: 25px;
   z-index: ${Z_INDEX.deprecated_content};
-  transition: box-shadow 500ms ease; /* Increase the transition duration for a slower effect */
-  box-shadow: 0px 4px 8px rgba(31, 74, 125, 0.6); /* Set the box shadow color to #1f4a7d */
-
-  &:hover {
-    box-shadow: 0px 16px 24px rgba(31, 74, 125, 0.9); /* Adjust the hover box shadow color */
-  }
 `
 
 // Create a new styled component for the larger wrapper with a background image
@@ -44,6 +38,12 @@ export const LargerWrapperWithBackground = styled(SwapWrapper)`
   padding: 25px;
   box-shadow: none;
   z-index: ${Z_INDEX.deprecated_content - 1};
+  transition: box-shadow 500ms ease; /* Increase the transition duration for a slower effect */
+  box-shadow: 0px 4px 8px rgba(31, 74, 125, 0.6); /* Set the box shadow color to #1f4a7d */
+
+  &:hover {
+    box-shadow: 0px 16px 24px rgba(31, 74, 125, 0.9); /* Adjust the hover box shadow color */
+  }
 
   @media screen and (min-width: 768px) {
     /* Apply these styles for screens with a width of 768px or larger */

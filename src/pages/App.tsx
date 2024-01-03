@@ -80,7 +80,7 @@ const MobileBottomBar = styled.div`
   padding: 4px 8px;
   height: ${({ theme }) => theme.mobileBottomBarHeight}px;
   background: #1f4a7d;
-  border-top: 1px solid #d28a1e;
+  border-top: 2px solid #d28a1e;
 
   @media screen and (min-width: ${({ theme }) => theme.breakpoint.md}px) {
     display: none;
@@ -241,7 +241,6 @@ export default function App() {
                 </Route>
 
                 <Route path="remove/v2/:currencyIdA/:currencyIdB" element={<RemoveLiquidity />} />
-                <Route path="remove/v2" element={<RemoveLiquidity />} />
                 <Route path="remove/:tokenId" element={<RemoveLiquidityV3 />} />
 
                 <Route path="migrate/v2" element={<MigrateV2 />} />

@@ -15,13 +15,8 @@ export const LoadingRows = styled.div`
   & > div {
     animation: ${loadingAnimation} 1.5s infinite;
     animation-fill-mode: both;
-    background: linear-gradient(
-      to left,
-      ${({ theme }) => theme.deprecated_bg1} 25%,
-      ${({ theme }) => theme.backgroundInteractive} 50%,
-      ${({ theme }) => theme.deprecated_bg1} 75%
-    );
-    background-size: 400%;
+    background: radial-gradient(circle, #d28a1e 0%, #0c1d31 100%);
+    background-size: 300% 100%;
     border-radius: 5px;
     height: 2.4em;
     will-change: background-position;
