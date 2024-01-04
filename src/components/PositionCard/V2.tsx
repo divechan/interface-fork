@@ -1,7 +1,7 @@
 import { Trans } from '@lingui/macro'
 import { CurrencyAmount, Percent, Token } from '@uniswap/sdk-core'
-import { Pair } from 'hooks/pair'
 import { useWeb3React } from '@web3-react/core'
+import { Pair } from 'hooks/pair'
 import JSBI from 'jsbi'
 import { useState } from 'react'
 import { ChevronDown, ChevronUp } from 'react-feather'
@@ -27,6 +27,7 @@ import { FixedHeightRow } from '.'
 const StyledPositionCard = styled(DarkCard)<{ bgColor: '#0c1d31' }>`
   border: none;
   background: '#FAFAFA';
+  color: '#FAFAFA';
   position: relative;
   overflow: hidden;
 `
