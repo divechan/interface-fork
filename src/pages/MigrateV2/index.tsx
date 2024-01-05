@@ -2,17 +2,17 @@ import { getCreate2Address } from '@ethersproject/address'
 import { keccak256, pack } from '@ethersproject/solidity'
 import { Trans } from '@lingui/macro'
 import { Token } from '@uniswap/sdk-core'
-import { Pair } from 'hooks/pair'
 import { useWeb3React } from '@web3-react/core'
 import MigrateSushiPositionCard from 'components/PositionCard/Sushi'
 import MigrateV2PositionCard from 'components/PositionCard/V2'
 import { SwitchLocaleLink } from 'components/SwitchLocaleLink'
+import { Pair } from 'hooks/pair'
 import { PairState, useV2Pairs } from 'hooks/useV2Pairs'
 import { ReactNode, useMemo } from 'react'
 import { Text } from 'rebass'
 import { useTheme } from 'styled-components/macro'
 
-import { LightCard } from '../../components/Card'
+import { DarkCard, LightCard } from '../../components/Card'
 import { AutoColumn } from '../../components/Column'
 import QuestionHelper from '../../components/QuestionHelper'
 import { AutoRow } from '../../components/Row'
@@ -115,29 +115,29 @@ export default function MigrateV2() {
     <>
       <BodyWrapper style={{ padding: 24 }}>
         <AutoColumn gap="16px">
-          <AutoRow style={{ alignItems: 'center', justifyContent: 'space-between' }} gap="8px">
+          <AutoRow style={{ alignItems: 'center', justifyContent: 'space-between', color: '#FAFAFA' }} gap="8px">
             <BackArrow to="/pool/v2" />
-            <ThemedText.DeprecatedMediumHeader>
+            <ThemedText.DeprecatedMediumHeader color="#FAFAFA">
               <Trans>Migrate V2 Liquidity</Trans>
             </ThemedText.DeprecatedMediumHeader>
             <div>
-              <QuestionHelper text={<Trans>Migrate your liquidity tokens from Uniswap V2 to Uniswap V3.</Trans>} />
+              <QuestionHelper text={<Trans>Migrate your liquidity tokens from STEAMX-V2 to STEAMX-V3.</Trans>} />
             </div>
           </AutoRow>
 
-          <ThemedText.DeprecatedBody style={{ marginBottom: 8, fontWeight: 400 }}>
+          <ThemedText.DeprecatedBody style={{ marginBottom: 8, fontWeight: 400, color: '#fafafa' }}>
             <Trans>
-              For each pool shown below, click migrate to remove your liquidity from Uniswap V2 and deposit it into
-              Uniswap V3.
+              For each pool shown below, click migrate to remove your liquidity from STEAMX-V2 and deposit it into
+              STEAMX-V3.
             </Trans>
           </ThemedText.DeprecatedBody>
 
           {!account ? (
-            <LightCard padding="40px">
-              <ThemedText.DeprecatedBody color={theme.textTertiary} textAlign="center">
+            <DarkCard padding="40px">
+              <ThemedText.DeprecatedBody color="#FAFAFA" textAlign="center">
                 <Trans>Connect to a wallet to view your V2 liquidity.</Trans>
               </ThemedText.DeprecatedBody>
-            </LightCard>
+            </DarkCard>
           ) : v2IsLoading ? (
             <LightCard padding="40px">
               <ThemedText.DeprecatedBody color={theme.textTertiary} textAlign="center">
@@ -170,7 +170,7 @@ export default function MigrateV2() {
           )}
 
           <AutoColumn justify="center" gap="md">
-            <Text textAlign="center" fontSize={14} style={{ padding: '.5rem 0 .5rem 0' }}>
+            <Text textAlign="center" fontSize={14} style={{ padding: '.5rem 0 .5rem 0', color: '#FAFAFA' }}>
               <Trans>
                 Don’t see one of your v2 positions?{' '}
                 <StyledInternalLink id="import-pool-link" to="/pool/v2/find">

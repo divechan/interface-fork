@@ -225,7 +225,7 @@ export default function FullPositionCard({ pair, border, stakedBalance }: Positi
         {showMore && (
           <AutoColumn gap="sm">
             <FixedHeightRow>
-              <Text fontSize={16} fontWeight={500}>
+              <Text fontSize={16} fontWeight={500} color="#FAFAFA">
                 <Trans>Your total pool tokens:</Trans>
               </Text>
               <Text fontSize={16} fontWeight={500}>
