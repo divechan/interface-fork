@@ -2,7 +2,7 @@ import { Trans } from '@lingui/macro'
 import { Currency } from '@uniswap/sdk-core'
 import { Position } from '@uniswap/v3-sdk'
 import RangeBadge from 'components/Badge/RangeBadge'
-import { LightCard } from 'components/Card'
+import { DarkCard } from 'components/Card'
 import { AutoColumn } from 'components/Column'
 import DoubleCurrencyLogo from 'components/DoubleLogo'
 import { Break } from 'components/earn/styled'
@@ -77,7 +77,7 @@ export const PositionPreview = ({
         <RangeBadge removed={removed} inRange={inRange} />
       </RowBetween>
 
-      <LightCard>
+      <DarkCard>
         <AutoColumn gap="md">
           <RowBetween>
             <RowFixed>
@@ -107,7 +107,7 @@ export const PositionPreview = ({
             </ThemedText.DeprecatedLabel>
           </RowBetween>
         </AutoColumn>
-      </LightCard>
+      </DarkCard>
 
       <AutoColumn gap="md">
         <RowBetween>
@@ -120,7 +120,7 @@ export const PositionPreview = ({
         </RowBetween>
 
         <RowBetween>
-          <LightCard width="48%" padding="8px">
+          <DarkCard width="48%" padding="8px">
             <AutoColumn gap="4px" justify="center">
               <ThemedText.DeprecatedMain fontSize="12px" color="#FAFAFA">
                 <Trans>Min Price</Trans>
@@ -141,9 +141,9 @@ export const PositionPreview = ({
                 <Trans>Your position will be 100% composed of {baseCurrency?.symbol} at this price</Trans>
               </ThemedText.DeprecatedSmall>
             </AutoColumn>
-          </LightCard>
+          </DarkCard>
 
-          <LightCard width="48%" padding="8px">
+          <DarkCard width="48%" padding="8px">
             <AutoColumn gap="4px" justify="center">
               <ThemedText.DeprecatedMain fontSize="12px" color="#FAFAFA">
                 <Trans>Max Price</Trans>
@@ -164,9 +164,9 @@ export const PositionPreview = ({
                 <Trans>Your position will be 100% composed of {quoteCurrency?.symbol} at this price</Trans>
               </ThemedText.DeprecatedSmall>
             </AutoColumn>
-          </LightCard>
+          </DarkCard>
         </RowBetween>
-        <LightCard padding="12px ">
+        <DarkCard padding="12px ">
           <AutoColumn gap="4px" justify="center">
             <ThemedText.DeprecatedMain fontSize="12px" color="#FAFAFA">
               <Trans>Current price</Trans>
@@ -178,7 +178,7 @@ export const PositionPreview = ({
               </Trans>
             </ThemedText.DeprecatedMain>
           </AutoColumn>
-        </LightCard>
+        </DarkCard>
       </AutoColumn>
     </AutoColumn>
   )

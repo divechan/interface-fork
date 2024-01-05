@@ -17,7 +17,7 @@ import { ThemedText } from '../../theme'
 import { currencyId } from '../../utils/currencyId'
 import { unwrappedToken } from '../../utils/unwrappedToken'
 import { ButtonEmpty, ButtonPrimary } from '../Button'
-import { DarkCard, LightCard } from '../Card'
+import { DarkCard } from '../Card'
 import { AutoColumn } from '../Column'
 import DoubleCurrencyLogo from '../DoubleLogo'
 import CurrencyLogo from '../Logo/CurrencyLogo'
@@ -138,7 +138,7 @@ export function MinimalPositionCard({ pair, showUnwrapped = false, border }: Pos
           </AutoColumn>
         </DarkCard>
       ) : (
-        <LightCard>
+        <DarkCard>
           <ThemedText.DeprecatedSubHeader style={{ textAlign: 'center' }}>
             <span role="img" aria-label="wizard-icon">
               ⭐️
@@ -148,7 +148,7 @@ export function MinimalPositionCard({ pair, showUnwrapped = false, border }: Pos
               pool. Fees are added to the pool, accrue in real time and can be claimed by withdrawing your liquidity.
             </Trans>{' '}
           </ThemedText.DeprecatedSubHeader>
-        </LightCard>
+        </DarkCard>
       )}
     </>
   )
