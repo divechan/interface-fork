@@ -22,7 +22,7 @@ export const DAI = new Token(
 
 export const BSP = new Token(
   ChainId.ETHEREUM,
-  '0xE51b8Ab09008285a0380Dd2680cD9Dd5e13924D3',
+  '0x33e18a092a93ff21aD04746c7Da12e35D34DC7C4',
   18,
   'BSP',
   'BallSwap'

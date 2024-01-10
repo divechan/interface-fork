@@ -1,4 +1,5 @@
 import { ChainId } from '@sushiswap/core-sdk'
+import { RAILS, RAILS_TESTNET } from 'app/constants'
 
 const RPC = {
   [ChainId.ETHEREUM]: 'https://api.sushirelay.com/v1',
@@ -36,6 +37,8 @@ const RPC = {
   [ChainId.METIS]: 'https://andromeda.metis.io/?owner=1088',
   [ChainId.ARBITRUM_NOVA]: 'https://a4ba.arbitrum.io/rpc',
   [ChainId.BOBA_AVAX]: 'https://avax.boba.network',
+  [RAILS]: 'https://mainnet.steamexchange.io',
+  [RAILS_TESTNET]: 'https://testnet.steamexchange.io',
 }
 
 export default RPC

@@ -68,6 +68,7 @@ import { getContract } from 'app/functions'
 import { useActiveWeb3React } from 'app/services/web3'
 import { useMemo } from 'react'
 import * as RAIL from 'app/config/tokens/rails'
+import { RAILS, RAILS_TESTNET } from 'app/constants'
 
 
 const UNI_FACTORY_ADDRESS = '0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f'
@@ -165,13 +166,18 @@ export function useBoringHelperContract(): Contract | null {
 
 export function useMulticall2Contract() {
   const { chainId } = useActiveWeb3React()
-  return useContract(chainId ? MULTICALL2_ADDRESS[chainId] : undefined, MULTICALL2_ABI, false)
+  return useContract( chainId == 24116
+    ? '0xc532c0A65A1d8a040df1a6C4319F60Cb2782C791'
+    : chainId == 6278
+    ? '0xc532c0A65A1d8a040df1a6C4319F60Cb2782C791' :chainId ? MULTICALL2_ADDRESS[chainId] : undefined, MULTICALL2_ABI, false)
 }
 
 const MULTICALL_ADDRESS = {
   [ChainId.ETHEREUM]: '0x1F98415757620B543A52E61c46B32eB19261F984',
   [ChainId.ROPSTEN]: '0x1F98415757620B543A52E61c46B32eB19261F984',
   [ChainId.RINKEBY]: '0x1F98415757620B543A52E61c46B32eB19261F984',
+  [RAILS]: '0xc532c0A65A1d8a040df1a6C4319F60Cb2782C791',
+  [RAILS_TESTNET]: '0xF004afF5F55129051A63A5E192221aEDe0EEAF6F',
   [ChainId.GÖRLI]: '0x1F98415757620B543A52E61c46B32eB19261F984',
   [ChainId.KOVAN]: '0x1F98415757620B543A52E61c46B32eB19261F984',
   [ChainId.MATIC]: '0x1F98415757620B543A52E61c46B32eB19261F984',

@@ -10,7 +10,11 @@ import { InjectedConnector } from 'web3-react-injected-connector'
 
 import RPC from './rpc'
 
-const supportedChainIds = Object.values(ChainId) as number[]
+const supportedChainIds = [
+  ...Object.values(ChainId) as number[],
+  24116,
+  6278
+];
 
 // export const network = new NetworkConnector({
 //   defaultChainId: 1,

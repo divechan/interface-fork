@@ -29,14 +29,6 @@
             "chainId": 1,
             "decimals": 6,
             "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x4922a015c4407F87432B179bb209e125432E4a2A/logo.png",
-            "name": "PepElon",
-            "symbol": "PELO"
-        },
-        {
-            "address": "0xb5cE43fE2fcFfFfb2EeCE95EC413d08Def28046F",
-            "chainId": 1,
-            "decimals": 6,
-            "logoURI": "https://raw.githubusercontent.com/trustwallet/assets/master/blockchains/ethereum/assets/0x4922a015c4407F87432B179bb209e125432E4a2A/logo.png",
             "name": "Ball Swap",
             "symbol": "BSP"
         },

@@ -104,7 +104,7 @@ export const SUPPORTED_NETWORKS: Record<
     blockExplorerUrls: ['https://bscscan.com'],
   },
   [RAILS_TESTNET]: {
-    chainId: '24116',
+    chainId: '0x5E34',
     chainName: 'RAIL TESTNET',
     nativeCurrency: {
       name: 'STEAMX',
@@ -115,7 +115,7 @@ export const SUPPORTED_NETWORKS: Record<
     blockExplorerUrls: ['https://build.steamexchange.io'],
   },
   [RAILS]: {
-    chainId: '6278',
+    chainId: '0x1886',
     chainName: 'RAILS',
     nativeCurrency: {
       name: 'STEAMX',
