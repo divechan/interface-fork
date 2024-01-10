@@ -25,10 +25,10 @@ const useSushiRoll = (dex: LPToken['dex']) => {
           gasLimit: gasLimit.mul(120).div(100),
         })
 
-        gtag('event', `${from}->Ballswapper`, {
+        gtag('event', `${from}->SteamX`, {
           event_category: 'Migrate',
           event_label: 'migrate',
-          event_action: `${from}->Ballswapper`,
+          event_action: `${from}->SteamX`,
         })
 
         return tx

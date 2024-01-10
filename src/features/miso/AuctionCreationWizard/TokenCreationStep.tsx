@@ -134,7 +134,7 @@ const TokenCreationStep: FC<{ children(isValid: boolean): ReactNode }> = ({ chil
       value: TokenType.SUSHI,
       label: templateIdToLabel(TokenType.SUSHI),
       description: i18n._(
-        t`BallSwapper tokens function similar to mintable tokens but with additional capabilities built into the token. Creators will have to assign an owner address for token functions during minting.`
+        t`SteamX tokens function similar to mintable tokens but with additional capabilities built into the token. Creators will have to assign an owner address for token functions during minting.`
       ),
     },
   ]

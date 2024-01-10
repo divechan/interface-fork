@@ -46,8 +46,8 @@ export default function AnalyticsContainer({ children }): JSX.Element {
   return (
     <div className="relative w-full">
       <Head>
-        <title>BallSwapper Analytics | BallSwapper</title>
-        <meta name="description" content="SushiSwap Liquidity Pair (BSP) Analytics by BallSwapper" />
+        <title>SteamX Analytics | SteamX</title>
+        <meta name="description" content="SushiSwap Liquidity Pair (BSP) Analytics by SteamX" />
       </Head>
       <Container id="analytics" maxWidth="7xl" className="mx-auto">
         <div className="w-full border-dark-700">{children}</div>

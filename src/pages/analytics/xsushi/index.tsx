@@ -132,9 +132,9 @@ function _XSushi() {
             <InfoCard text="APY 1y" number={formatPercent(data?.apy1y)} />
           </div>
           <div className="grid grid-flow-col gap-4 overflow-auto grid-col-4">
-            <InfoCard text="BallSwapper Served 1m" number={formatNumber(fees1m, false)} />
-            <InfoCard text="BallSwapper Served 3m" number={formatNumber(fees3m, false)} />
-            <InfoCard text="BallSwapper Served 6m" number={formatNumber(fees6m, false)} />
+            <InfoCard text="SteamX Served 1m" number={formatNumber(fees1m, false)} />
+            <InfoCard text="SteamX Served 3m" number={formatNumber(fees3m, false)} />
+            <InfoCard text="SteamX Served 6m" number={formatNumber(fees6m, false)} />
           </div>
           <div className="space-y-4">
             {graphs.map((graph, i) => (

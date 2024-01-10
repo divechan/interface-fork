@@ -23,7 +23,7 @@ const LiquidityPosition = () => {
       </TridentHeader>
       <TridentBody>
         <Typography variant="lg" className="text-high-emphesis" weight={700}>
-          {i18n._(t`BallSwapper Liquidity Positions`)}
+          {i18n._(t`SteamX Liquidity Positions`)}
         </Typography>
         <div className="flex flex-col justify-between gap-8">
           <AllLiquidityPositionsBalances account={account} chainId={chainId} />

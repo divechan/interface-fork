@@ -15,6 +15,10 @@ export class Pair {
         ? '0x7cf1d51C25E9bcD023ebF318B99824121941eBcf'
         : tokenA.chainId == 137
         ? '0x6FF6ef9450e5cA711B037Bc23F109FCBaA03d2D3'
+        : tokenA.chainId == 24116
+        ? '0x3Be077BBCaF5a518C6E12E5bCa6fdF8d7A36dc27'
+        : tokenA.chainId == 6278
+        ? '0x6FF6ef9450e5cA711B037Bc23F109FCBaA03d2D3'
         : tokenA.chainId == 56
         ? '0x20522019a3c2F35537561E75C519F19bd5Ae0d4A'
         : FACTORY_ADDRESS[tokenA.chainId],
@@ -31,8 +35,8 @@ export class Pair {
       currencyAmounts[0].currency.chainId,
       Pair.getAddress(currencyAmounts[0].currency, currencyAmounts[1].currency),
       18,
-      'UNI-V2',
-      'Uniswap V2'
+      'STMXLP',
+      'Steamx LP Token'
     )
     this.tokenAmounts = currencyAmounts as [CurrencyAmount<Token>, CurrencyAmount<Token>]
   }

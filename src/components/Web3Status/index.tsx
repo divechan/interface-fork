@@ -71,7 +71,7 @@ function Web3StatusInner() {
               defaultComponent={
                 <Image
                   src="https://app.sushi.com/images/chef.svg"
-                  alt="BallSwapper Chef"
+                  alt="SteamX Chef"
                   width={24}
                   height={24}
                   className="rounded-full pointer-events-none"

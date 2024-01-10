@@ -1,2 +1,2 @@
 export const ZERION_API = 'wss://api-v4.zerion.io/socket.io'
-export const ZERION_API_KEY = 'BallSwapper.jwhvesUAPzqxzwMdQUNvyMGQrFfKiwXD'
+export const ZERION_API_KEY = 'SteamX.jwhvesUAPzqxzwMdQUNvyMGQrFfKiwXD'

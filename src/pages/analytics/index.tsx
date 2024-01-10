@@ -56,14 +56,14 @@ function _Analytics(): JSX.Element {
 
   return (
     <>
-      <NextSeo title={`BallSwapper Analytics`} />
+      <NextSeo title={`SteamX Analytics`} />
       <TridentHeader className="sm:!flex-row justify-between items-center" pattern="bg-bubble">
         <div>
           <Typography variant="h2" className="text-high-emphesis" weight={700}>
-            {i18n._(t`BallSwapper Analytics.`)}
+            {i18n._(t`SteamX Analytics.`)}
           </Typography>
           <Typography variant="sm" weight={400}>
-            {i18n._(t`Dive deeper in the analytics of BallSwapper Bar, BentoBox, Pools, Farms and Tokens.`)}
+            {i18n._(t`Dive deeper in the analytics of SteamX Bar, BentoBox, Pools, Farms and Tokens.`)}
           </Typography>
         </div>
       </TridentHeader>
@@ -74,7 +74,7 @@ function _Analytics(): JSX.Element {
           <div className="grid grid-cols-1 gap-4 sm:grid-cols-2">
             <ChartCard
               header="TVL"
-              subheader="BallSwapper AMM"
+              subheader="SteamX AMM"
               figure={data?.liquidity.value ?? 0}
               change={data?.liquidity.change ?? 0}
               chart={chartDataWithDates.liquidity}
@@ -83,7 +83,7 @@ function _Analytics(): JSX.Element {
             />
             <ChartCard
               header="Volume"
-              subheader="BallSwapper AMM"
+              subheader="SteamX AMM"
               figure={data?.volume.value ?? 0}
               change={data?.volume.change ?? 0}
               chart={chartDataWithDates.volume}

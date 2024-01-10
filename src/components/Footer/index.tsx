@@ -25,10 +25,10 @@ const Footer = () => {
           <div className="flex flex-col gap-3">
             <div className="flex items-center justify-start gap-2">
               <div className="">
-                <Image src="https://i.imgur.com/44SEwTZ.png" alt="BallSwapper logo" width="28px" height="28px" />
+                <Image src="https://i.imgur.com/44SEwTZ.png" alt="SteamX logo" width="28px" height="28px" />
               </div>
               <Typography variant="h2" weight={700} className="tracking-[0.02em] scale-y-90 hover:text-high-emphesis">
-                BallSwapper
+                SteamX
               </Typography>
             </div>
             <Typography variant="xs" className="text-low-emphesis">

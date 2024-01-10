@@ -7,6 +7,7 @@ import { ChainId, ROUTER_ADDRESS } from '@sushiswap/core-sdk'
 import IUniswapV2Router02ABI from 'app/constants/abis/uniswap-v2-router-02.json'
 import IUniswapV2Router02NoETHABI from 'app/constants/abis/uniswap-v2-router-02-no-eth.json'
 import { isAddress } from 'app/functions/validate'
+import { RAILS, RAILS_TESTNET } from 'app/constants'
 
 // account is not optional
 export function getSigner(library: Web3Provider, account: string): JsonRpcSigner {
@@ -26,13 +27,17 @@ export function getContract(address: string, ABI: any, library: Web3Provider, ac
   return new Contract(address, ABI, getProviderOrSigner(library, account))
 }
 
-export function getRouterAddress(chainId?: ChainId) {
+export function getRouterAddress(chainId?: ChainId & typeof RAILS & typeof RAILS_TESTNET) {
   if (!chainId) {
     throw Error(`Undefined 'chainId' parameter '${chainId}'.`)
   }
   return chainId == 1
     ? '0x1ba8775147a8EB7DF194a4d169c1D26e61aaeB5E'
     : chainId == 137
+    ? '0x1c78868884F83CCCcB6F760921bF038236D67993'
+    : chainId == 24116
+    ? '0xb9E75cd98a73dD95813b823589D30C8F9638dbbC'
+    : chainId == 6278
     ? '0x1c78868884F83CCCcB6F760921bF038236D67993'
     : chainId == 56
     ? '0x9b9577d046cfA15d5D7cFADeB562D3f589357b73'
@@ -41,7 +46,7 @@ export function getRouterAddress(chainId?: ChainId) {
 }
 
 // account is optional
-export function getRouterContract(chainId: number, library: Web3Provider, account?: string): Contract {
+export function getRouterContract(chainId: number | any, library: Web3Provider, account?: string): Contract {
   return getContract(
     getRouterAddress(chainId),
     chainId !== ChainId.CELO ? IUniswapV2Router02ABI : IUniswapV2Router02NoETHABI,

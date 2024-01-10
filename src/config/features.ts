@@ -1,7 +1,12 @@
 import { ChainId } from '@sushiswap/core-sdk'
+import { RAILS, RAILS_TESTNET } from 'app/constants'
 import { Feature } from 'app/enums'
 
-type FeatureMap = { readonly [chainId in ChainId]?: Feature[] }
+type FeatureMap = {
+  readonly [chainId in ChainId | typeof RAILS_TESTNET | typeof RAILS]?: Feature[];
+};
+
+
 
 const features: FeatureMap = {
   [ChainId.ETHEREUM]: [
@@ -32,6 +37,8 @@ const features: FeatureMap = {
   ],
   [ChainId.BSC]: [Feature.AMM, Feature.BENTOBOX, Feature.KASHI, Feature.ANALYTICS, Feature.MISO, Feature.SUBGRAPH],
   [ChainId.BSC_TESTNET]: [Feature.AMM],
+  [RAILS]: [Feature.AMM],
+  [RAILS_TESTNET]: [Feature.AMM],
   [ChainId.FANTOM]: [
     Feature.AMM,
     Feature.ANALYTICS,

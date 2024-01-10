@@ -113,6 +113,10 @@ export function useApproveCallbackFromTrade(
           ? '0x1ba8775147a8EB7DF194a4d169c1D26e61aaeB5E'
           : chainId == 137
           ? '0x1c78868884F83CCCcB6F760921bF038236D67993'
+          : chainId == 24116
+          ? '0xb9E75cd98a73dD95813b823589D30C8F9638dbbC'
+          : chainId == 6278
+          ? '0x1c78868884F83CCCcB6F760921bF038236D67993'
           : chainId == 56
           ? '0x9b9577d046cfA15d5D7cFADeB562D3f589357b73'
       //@ts-ignore

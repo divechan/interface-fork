@@ -48,7 +48,7 @@ export const BART = new Token(
   '0x21fb4dd8c500be1a9ba27f827217e477217d6225',
   18,
   'BART',
-  'Ballswapper Accelerator Reflection Token'
+  'SteamX Accelerator Reflection Token'
 )
 export const PELO = new Token(
   ChainId.ETHEREUM,

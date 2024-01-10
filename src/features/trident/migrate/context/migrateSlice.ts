@@ -7,7 +7,7 @@ import { TridentPool } from 'app/services/graph'
 import { AppState } from 'app/state'
 
 export enum MigrationSource {
-  SUSHI_V2 = 'BallSwapper v2',
+  SUSHI_V2 = 'SteamX v2',
   QUICKSWAP = 'QuickSwap',
 }
 

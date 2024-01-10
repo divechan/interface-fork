@@ -34,7 +34,7 @@ export const BART = new Token(
   '0x00c7bfc4fc822629ee60b62b9b41fa8df4d4715a',
   18,
   'BART',
-  'Ballswapper Accelerator Reflection Token'
+  'SteamX Accelerator Reflection Token'
 )
 export const MIM = new Token(
   ChainId.MATIC,

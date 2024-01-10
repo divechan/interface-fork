@@ -19,7 +19,7 @@ const MigrateLiquidity = () => {
         </Typography>
         <div className="max-w-2xl">
           <Typography className="text-high-emphesis" weight={700}>
-            {i18n._(t`Select and migrate your liquidity positions from BallSwapper v1 to the Trident AMM`)}
+            {i18n._(t`Select and migrate your liquidity positions from SteamX v1 to the Trident AMM`)}
           </Typography>
           <Typography variant="sm" className="mt-4" weight={400}>
             {i18n._(

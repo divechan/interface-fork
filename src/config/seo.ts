@@ -1,11 +1,11 @@
 const SEO = {
-  defaultTitle: 'BallSwapper',
-  titleTemplate: '%s | BallSwapper',
+  defaultTitle: 'SteamX',
+  titleTemplate: '%s | SteamX',
   description: 'Swap, yield, lend, borrow, leverage, limit, launch all on one community driven ecosystem',
   openGraph: {
     type: 'website',
     url: 'https://app.sushi.com/',
-    site_name: 'BallSwapper',
+    site_name: 'SteamX',
   },
   twitter: {
     handle: '@SushiSwap',

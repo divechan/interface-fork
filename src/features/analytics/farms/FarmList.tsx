@@ -33,7 +33,7 @@ type FarmListNameProps = {
       name: string
     }
     name: string
-    type: 'BallSwapper Farm' | 'Kashi Farm'
+    type: 'SteamX Farm' | 'Kashi Farm'
   }
 }
 

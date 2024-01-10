@@ -20,7 +20,7 @@ export const useTableConfig = (chainId: number, farms: any) => {
             token0: farm.pair.token0,
             token1: farm.pair.token1,
             name: farm.pair.symbol ?? `${farm.pair.token0.symbol}-${farm.pair.token1.symbol}`,
-            type: farm.pair.symbol ? 'Kashi Farm' : 'BallSwapper Farm',
+            type: farm.pair.symbol ? 'Kashi Farm' : 'SteamX Farm',
           },
           rewards: farm.rewards,
           liquidity: farm.tvl,

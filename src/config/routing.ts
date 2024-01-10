@@ -2,6 +2,8 @@
 import { ChainId, Token, WNATIVE } from '@sushiswap/core-sdk'
 
 import * as ARBITRUM from './tokens/arbitrum'
+import * as RAIL from './tokens/rails'
+import * as RAIL_TESTNET from './tokens/rails_testnet'
 import * as ARBITRUM_NOVA from './tokens/arbitrum-nova'
 import * as AVALANCHE from './tokens/avalanche'
 import * as BOBA_AVAX from './tokens/boba-avax'
@@ -22,6 +24,7 @@ import * as OPTIMISM from './tokens/optimism'
 import * as PALM from './tokens/palm'
 import * as TELOS from './tokens/telos'
 import * as XDAI from './tokens/xdai'
+import { RAILS, RAILS_TESTNET } from 'app/constants'
 
 type ChainTokenList = {
   readonly [chainId: number]: Token[]
@@ -60,6 +63,8 @@ const WRAPPED_NATIVE_ONLY: ChainTokenList = {
   [ChainId.MATIC_TESTNET]: [WNATIVE[ChainId.MATIC_TESTNET]],
   [ChainId.XDAI]: [WNATIVE[ChainId.XDAI]],
   [ChainId.BSC]: [WNATIVE[ChainId.BSC]],
+  [RAILS_TESTNET]: [WNATIVE[RAILS_TESTNET]],
+  [RAILS]: [WNATIVE[RAILS]],
   [ChainId.BSC_TESTNET]: [WNATIVE[ChainId.BSC_TESTNET]],
   [ChainId.ARBITRUM]: [WNATIVE[ChainId.ARBITRUM]],
   [ChainId.ARBITRUM_TESTNET]: [WNATIVE[ChainId.ARBITRUM_TESTNET]],
@@ -275,6 +280,15 @@ export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
     ARBITRUM_NOVA.WBTC,
   ],
   [ChainId.BOBA_AVAX]: [...WRAPPED_NATIVE_ONLY[ChainId.BOBA_AVAX], BOBA_AVAX.AVAX],
+  [RAILS_TESTNET]: [
+    RAIL_TESTNET.USDC,
+    RAIL_TESTNET.WETH,
+  ],
+  [RAILS]: [
+    RAIL.USDC,
+    RAIL.WETH,
+  
+  ],
 }
 
 export const ADDITIONAL_BASES: {
@@ -357,6 +371,14 @@ export const ADDITIONAL_BASES: {
 
   },
   [ChainId.AVALANCHE]: {
+    [AVALANCHE.FRAX.address]: [AVALANCHE.FXS],
+    [AVALANCHE.FXS.address]: [AVALANCHE.FRAX],
+  },
+  [RAILS_TESTNET]: {
+    [RAIL_TESTNET.USDC.address]: [RAIL_TESTNET.WETH],
+    [RAIL_TESTNET.WETH.address]: [RAIL_TESTNET.USDC],
+  },
+  [RAILS]: {
     [AVALANCHE.FRAX.address]: [AVALANCHE.FXS],
     [AVALANCHE.FXS.address]: [AVALANCHE.FRAX],
   },
@@ -705,6 +727,15 @@ export const COMMON_BASES: ChainTokenList = {
     ARBITRUM_NOVA.BRICK,
   ],
   [ChainId.BOBA_AVAX]: [...WRAPPED_NATIVE_ONLY[ChainId.BOBA_AVAX], BOBA_AVAX.AVAX],
+  [RAILS_TESTNET]: [
+    RAIL_TESTNET.USDC,
+    RAIL_TESTNET.WETH,
+  ],
+  [RAILS]: [
+    RAIL.USDC,
+    RAIL.WETH,
+  
+  ],
 }
 
 // used to construct the list of all pairs we consider by default in the frontend
@@ -868,6 +899,15 @@ export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
     ARBITRUM_NOVA.WBTC,
   ],
   [ChainId.BOBA_AVAX]: [...WRAPPED_NATIVE_ONLY[ChainId.BOBA_AVAX], BOBA_AVAX.AVAX],
+  [RAILS_TESTNET]: [
+    RAIL_TESTNET.USDC,
+    RAIL_TESTNET.WETH,
+  ],
+  [RAILS]: [
+    RAIL.USDC,
+    RAIL.WETH,
+  
+  ],
 }
 
 export const PINNED_PAIRS: { readonly [chainId: number]: [Token, Token][] } = {

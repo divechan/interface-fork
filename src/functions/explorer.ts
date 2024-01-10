@@ -1,4 +1,5 @@
 import { ChainId } from '@sushiswap/core-sdk'
+import { RAILS, RAILS_TESTNET } from 'app/constants'
 
 const explorers = {
   etherscan: (link: string, data: string, type: 'transaction' | 'token' | 'address' | 'block') => {
@@ -139,6 +140,14 @@ const chains: ChainObject = {
   },
   [ChainId.BSC_TESTNET]: {
     link: 'https://testnet.bscscan.com',
+    builder: explorers.etherscan,
+  },
+  [RAILS]: {
+    link: 'https://explore.steamexchange.io',
+    builder: explorers.etherscan,
+  },
+  [RAILS_TESTNET]: {
+    link: 'https://build.steamexchange.io',
     builder: explorers.etherscan,
   },
   [ChainId.ARBITRUM]: {

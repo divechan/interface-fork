@@ -4,6 +4,7 @@ import { ChainId } from '@sushiswap/core-sdk'
 import HeadlessUiModal from 'app/components/Modal/HeadlessUIModal'
 import Typography from 'app/components/Typography'
 import { NETWORK_ICON, NETWORK_LABEL } from 'app/config/networks'
+import { RAILS, RAILS_TESTNET } from 'app/constants'
 import { classNames } from 'app/functions'
 import { useActiveWeb3React } from 'app/services/web3'
 import { useModalOpen, useNetworkModalToggle } from 'app/state/application/hooks'
@@ -102,17 +103,28 @@ export const SUPPORTED_NETWORKS: Record<
     rpcUrls: ['https://bsc-dataseed.binance.org'],
     blockExplorerUrls: ['https://bscscan.com'],
   },
-  // [ChainId.RAIL_TESTNET]: {
-  //   chainId: '0x38',
-  //   chainName: 'RAIL TESTNET',
-  //   nativeCurrency: {
-  //     name: 'STEAMX',
-  //     symbol: 'STMX',
-  //     decimals: 18,
-  //   },
-  //   rpcUrls: ['https://testnet.steamexchange.io'],
-  //   blockExplorerUrls: ['https://bscscan.com'],
-  // },
+  [RAILS_TESTNET]: {
+    chainId: '24116',
+    chainName: 'RAIL TESTNET',
+    nativeCurrency: {
+      name: 'STEAMX',
+      symbol: 'STMX',
+      decimals: 18,
+    },
+    rpcUrls: ['https://testnet.steamexchange.io'],
+    blockExplorerUrls: ['https://build.steamexchange.io'],
+  },
+  [RAILS]: {
+    chainId: '6278',
+    chainName: 'RAILS',
+    nativeCurrency: {
+      name: 'STEAMX',
+      symbol: 'STMX',
+      decimals: 18,
+    },
+    rpcUrls: ['https://mainnet.steamexchange.io'],
+    blockExplorerUrls: ['https://explore.steamexchange.io'],
+  },
   [ChainId.MATIC]: {
     chainId: '0x89',
     chainName: 'Matic',
@@ -335,7 +347,7 @@ const NetworkModal: FC<{ switchNetwork: (targetChain: number) => void }> = ({ sw
             ChainId.ETHEREUM,
             // ChainId.ARBITRUM,
             // ChainId.ARBITRUM_NOVA,
-            ChainId.MATIC,
+            // ChainId.MATIC,
             // ChainId.RAIL_TESTNET,
             // ChainId.XDAI,
             // ChainId.FANTOM,
@@ -346,6 +358,8 @@ const NetworkModal: FC<{ switchNetwork: (targetChain: number) => void }> = ({ sw
             // ChainId.MOONBEAM,
             // ChainId.FUSE,
             ChainId.BSC,
+            RAILS,
+            RAILS_TESTNET
             // ChainId.KAVA,
             // ChainId.METIS,
             // ChainId.TELOS,

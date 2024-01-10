@@ -18,7 +18,7 @@ const ConfirmMigration = () => {
   return (
     <>
       <Head>
-        <title>{i18n._(t`Confirm Migration | BallSwapper`)}</title>
+        <title>{i18n._(t`Confirm Migration | SteamX`)}</title>
       </Head>
       <TridentHeader pattern="bg-binary" className="!gap-2">
         <div>

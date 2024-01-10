@@ -3,6 +3,7 @@ import { useLingui } from '@lingui/react'
 import { ChainId } from '@sushiswap/core-sdk'
 // @ts-ignore TYPE NEEDS FIXING
 import transakSDK from '@transak/transak-sdk'
+import { RAILS, RAILS_TESTNET } from 'app/constants'
 import { useActiveWeb3React } from 'app/services/web3'
 import { useCallback } from 'react'
 
@@ -10,12 +11,16 @@ const DEFAULT_NETWORK = {
   [ChainId.ETHEREUM]: 'ethereum',
   [ChainId.BSC]: 'bsc',
   [ChainId.MATIC]: 'matic',
+  [RAILS_TESTNET]: 'stmx',
+  [RAILS]: 'stmx',
 }
 
 const DEFAULT_CRYPTO_CURRENCY = {
   [ChainId.ETHEREUM]: 'ETH',
   [ChainId.BSC]: 'BNB',
   [ChainId.MATIC]: 'MATIC',
+  [RAILS]: 'STMX',
+  [RAILS_TESTNET]: 'STMX',
 }
 
 export default function Buy() {

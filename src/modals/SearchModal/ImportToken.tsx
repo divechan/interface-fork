@@ -35,7 +35,7 @@ export const ImportToken: FC<ImportProps> = ({ tokens, onBack }) => {
       <HeadlessUiModal.BorderedContent className="flex flex-col gap-4 divide-y divide-gray-700 !border-yellow/40">
         <Typography variant="sm" weight={700} className="text-yellow">
           {i18n._(
-            t`This token is the main Token of this Chain on BallSwapper. Do you want to trade?`
+            t`This token is the main Token of this Chain on SteamX. Do you want to trade?`
           )}
         </Typography>
         {tokens.map((token) => {

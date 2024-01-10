@@ -123,7 +123,7 @@ const AuctionCreationWizard: FC = () => {
             description={
               <Stepper.Description>
                 {i18n._(
-                  t`Optional - set aside tokens for creating a constant product pool on BallSwapper with your token and the auction currency token`
+                  t`Optional - set aside tokens for creating a constant product pool on SteamX with your token and the auction currency token`
                 )}
               </Stepper.Description>
             }

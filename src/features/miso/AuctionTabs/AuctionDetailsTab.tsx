@@ -118,11 +118,11 @@ const AuctionDetailsTab: FC<AuctionDetailsTabProps> = ({ auction, active }) => {
                   </div>
                   <div className="flex flex-col gap-1">
                     <Typography variant="xs" weight={700} className="text-white">
-                      {i18n._(t`BallSwapper`)}
+                      {i18n._(t`SteamX`)}
                     </Typography>
                     <Typography variant="xs">
                       {i18n._(
-                        t`BallSwapper tokens function similar to mintable tokens but with additional capabilities built into the token. Creators will have to assign an owner address for token functions during minting.`
+                        t`SteamX tokens function similar to mintable tokens but with additional capabilities built into the token. Creators will have to assign an owner address for token functions during minting.`
                       )}
                     </Typography>
                   </div>
@@ -132,7 +132,7 @@ const AuctionDetailsTab: FC<AuctionDetailsTabProps> = ({ auction, active }) => {
                     </Typography>
                     <Typography variant="xs">
                       {i18n._(
-                        t`Auctioneer used a custom token contract. This contract is not a template and therefore not audited by BallSwapper.`
+                        t`Auctioneer used a custom token contract. This contract is not a template and therefore not audited by SteamX.`
                       )}
                     </Typography>
                   </div>

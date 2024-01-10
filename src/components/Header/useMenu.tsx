@@ -36,7 +36,7 @@ const useMenu: UseMenu = () => {
     const menu: Menu = [ {
         key: 'Home',
         title: i18n._(t`Home`),
-        link: 'https://ballswapper.com',
+        link: 'https://SteamX.com',
       },
       {
         key: 'Ecosystem',

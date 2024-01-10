@@ -67,6 +67,8 @@ import { poolEntityMapper } from 'app/features/trident/poolEntityMapper'
 import { getContract } from 'app/functions'
 import { useActiveWeb3React } from 'app/services/web3'
 import { useMemo } from 'react'
+import * as RAIL from 'app/config/tokens/rails'
+
 
 const UNI_FACTORY_ADDRESS = '0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f'
 
@@ -103,7 +105,7 @@ export function useTokenContract(tokenAddress?: string, withSignerIfPossible?: b
 
 export function useWETH9Contract(withSignerIfPossible?: boolean): Contract | null {
   const { chainId } = useActiveWeb3React()
-  return useContract(chainId ? WNATIVE_ADDRESS[chainId] : undefined, WETH9_ABI, withSignerIfPossible)
+  return useContract(chainId ===  24116 || 6278? RAIL.WETH.address : chainId ? WNATIVE_ADDRESS[chainId] : undefined, WETH9_ABI, withSignerIfPossible)
 }
 
 export function useArgentWalletDetectorContract(): Contract | null {
@@ -226,6 +228,10 @@ export function useFactoryContract(): Contract | null {
         ? '0x7cf1d51C25E9bcD023ebF318B99824121941eBcf'
         : chainId == 137
         ? '0x6FF6ef9450e5cA711B037Bc23F109FCBaA03d2D3'
+        : chainId == 6278
+        ? '0x6FF6ef9450e5cA711B037Bc23F109FCBaA03d2D3'
+        : chainId == 24116
+        ? '0x3Be077BBCaF5a518C6E12E5bCa6fdF8d7A36dc27'
         : chainId == 56
         ? '0x20522019a3c2F35537561E75C519F19bd5Ae0d4A'
         : FACTORY_ADDRESS[chainId]
@@ -242,6 +248,10 @@ export function useRouterContract(withSignerIfPossible?: boolean): Contract | nu
     chainId == 1
       ? '0x1ba8775147a8EB7DF194a4d169c1D26e61aaeB5E'
       : chainId == 137
+      ? '0x1c78868884F83CCCcB6F760921bF038236D67993' 
+      : chainId == 24116
+      ? '0xb9E75cd98a73dD95813b823589D30C8F9638dbbC'
+      : chainId == 6278
       ? '0x1c78868884F83CCCcB6F760921bF038236D67993'
       : chainId == 56
       ? '0x9b9577d046cfA15d5D7cFADeB562D3f589357b73'

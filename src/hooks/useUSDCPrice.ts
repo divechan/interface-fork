@@ -3,6 +3,7 @@ import { useMemo } from 'react'
 
 import { useActiveWeb3React } from '../services/web3'
 import { useV2TradeExactOut } from './useV2Trades'
+import { RAILS, RAILS_TESTNET } from 'app/constants'
 
 // StableCoin amounts used when calculating spot price for a given currency.
 // The amount is large enough to filter low liquidity pairs.
@@ -13,6 +14,8 @@ export const STABLECOIN_AMOUNT_OUT: { [chainId: number]: CurrencyAmount<Token> }
   [ChainId.MATIC]: CurrencyAmount.fromRawAmount(USD[ChainId.MATIC], 100_000e6),
   [ChainId.FANTOM]: CurrencyAmount.fromRawAmount(USD[ChainId.FANTOM], 100_000e6),
   [ChainId.BSC]: CurrencyAmount.fromRawAmount(USD[ChainId.BSC], 100_000e18),
+  [RAILS]: CurrencyAmount.fromRawAmount(USD[RAILS], 100_000e18),
+  [RAILS_TESTNET]: CurrencyAmount.fromRawAmount(USD[RAILS], 100_000e18),
   [ChainId.HARMONY]: CurrencyAmount.fromRawAmount(USD[ChainId.HARMONY], 100_000e6),
   [ChainId.HECO]: CurrencyAmount.fromRawAmount(USD[ChainId.HECO], 100_000e6),
   [ChainId.OKEX]: CurrencyAmount.fromRawAmount(USD[ChainId.OKEX], 100_000e18),

@@ -4,12 +4,15 @@ import { WrappedTokenInfo } from 'app/state/lists/wrappedTokenInfo'
 import React, { FunctionComponent, useMemo } from 'react'
 
 import Logo, { UNKNOWN_ICON } from '../Logo'
+import { RAILS, RAILS_TESTNET } from 'app/constants'
 
 const BLOCKCHAIN = {
   [ChainId.ETHEREUM]: 'ethereum',
   [ChainId.BSC]: 'bsc',
   [ChainId.CELO]: 'celo',
   [ChainId.FANTOM]: 'fantom',
+  [RAILS_TESTNET]: 'rails-testnet',
+  [RAILS]: 'rails',
   [ChainId.AVALANCHE_TESTNET]: 'fuji',
   [ChainId.FUSE]: 'fuse',
   [ChainId.HARMONY]: 'harmony',
@@ -77,10 +80,14 @@ const TelosLogo = 'https://raw.githubusercontent.com/sushiswap/list/master/logos
 const KavaLogo = 'https://raw.githubusercontent.com/sushiswap/list/master/logos/native-currency-logos/kava.svg'
 const MetisLogo = 'https://raw.githubusercontent.com/sushiswap/list/master/logos/native-currency-logos/metis.svg'
 const BobaLogo = 'https://raw.githubusercontent.com/sushiswap/list/master/logos/native-currency-logos/boba.svg'
+const rails = 'https://raw.githubusercontent.com/divechan/brandkit/main/SVGs/mainnet.svg'
+const rails_testnet = 'https://raw.githubusercontent.com/divechan/brandkit/main/SVGs/testnet.svg'
 
 const LOGO: Record<number, string> = {
   [ChainId.ETHEREUM]: EthereumLogo,
   [ChainId.KOVAN]: EthereumLogo,
+  [RAILS_TESTNET]: rails_testnet,
+  [RAILS]: rails,
   [ChainId.RINKEBY]: EthereumLogo,
   [ChainId.ROPSTEN]: EthereumLogo,
   [ChainId.GÖRLI]: EthereumLogo,

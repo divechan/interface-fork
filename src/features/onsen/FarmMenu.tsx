@@ -46,7 +46,7 @@ enum FarmFilter {
   All = 'All Farms',
   Portfolio = 'Your Farms',
   Kashi = 'Kashi Farms',
-  BallSwapper = 'BallSwapper Farms',
+  SteamX = 'SteamX Farms',
   Old = 'Old Farms',
   Trident = 'Trident Farms',
 }
@@ -56,7 +56,7 @@ const filters: Record<string, FarmFilter> = {
   farm: FarmFilter.All,
   kashi: FarmFilter.Kashi,
   old: FarmFilter.Old,
-  sushi: FarmFilter.BallSwapper,
+  sushi: FarmFilter.SteamX,
   trident: FarmFilter.Trident,
 }
 
@@ -83,7 +83,7 @@ const OnsenFilter = ({ account, chainId }: { account?: string | null; chainId?: 
         chainId && [ChainId.ETHEREUM, ChainId.ARBITRUM].includes(chainId) ? (
           <MenuLink href={'/farm?filter=kashi'} label={i18n._(t`Kashi Farms`)} />
         ) : undefined,
-      [FarmFilter.BallSwapper]:
+      [FarmFilter.SteamX]:
         chainId && [ChainId.ETHEREUM, ChainId.ARBITRUM].includes(chainId) ? (
           <MenuLink href={'/farm?filter=sushi'} label={i18n._(t`SushiSwap Farms`)} />
         ) : undefined,
