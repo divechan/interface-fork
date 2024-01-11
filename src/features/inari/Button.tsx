@@ -10,7 +10,7 @@ import { useActiveWeb3React } from 'app/services/web3'
 import { useDerivedInariState, useSelectedInariStrategy } from 'app/state/inari/hooks'
 import React, { FC, useCallback, useState } from 'react'
 
-interface InariButtonProps extends ButtonProps {}
+interface InariButtonProps extends ButtonProps { }
 
 const InariButton: FC<InariButtonProps> = ({ children, ...rest }) => {
   const { i18n } = useLingui()

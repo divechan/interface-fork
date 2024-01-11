@@ -31,7 +31,7 @@ const Desktop: FC = () => {
             <div className="flex items-center justify-between gap-4 px-6">
               <div className="flex gap-4">
                 <div className="flex items-center w-6 mr-4">
-                  <Image src="https://i.imgur.com/44SEwTZ.png" alt="SteamX logo" width="24px" height="24px" />
+                  <Image src="https://raw.githubusercontent.com/divechan/brandkit/main/SVGs/railslogoonlygray.svg" alt="SteamX logo" width="65px" height="75px" />
                 </div>
                 {menu.map((node) => {
                   return <NavigationItem node={node} key={node.key} />
@@ -39,7 +39,7 @@ const Desktop: FC = () => {
               </div>
 
               <div className="flex items-center justify-end w-auto shadow select-none whitespace-nowrap">
-          <div className="flex items-center">{<Web3Network />}</div>
+                <div className="flex items-center">{<Web3Network />}</div>
 
                 {account && chainId && (
                   <Typography weight={700} variant="sm" className="px-2 py-5 font-bold">
@@ -78,7 +78,7 @@ const Desktop: FC = () => {
             </div>
           </Container>
         </nav>
-       
+
       </header>
       <div style={{ height: HEADER_HEIGHT + 48, minHeight: HEADER_HEIGHT }} />
     </>

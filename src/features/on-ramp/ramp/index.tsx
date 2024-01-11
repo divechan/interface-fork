@@ -14,8 +14,8 @@ const DEFAULT_NETWORK = {
 const DEFAULT_CRYPTO_CURRENCY = {
   [ChainId.ETHEREUM]: 'ETH',
   [ChainId.BSC]: 'BNB',
-  [ChainId.RAIL]: 'STMX',
-  [ChainId.RAIL_TESTNET]: 'STMX',
+  [ChainId.RAIL]: 'STEAMX',
+  [ChainId.RAIL_TESTNET]: 'STEAMX',
   [ChainId.MATIC]: 'MATIC',
 }
 

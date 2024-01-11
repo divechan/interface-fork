@@ -65,7 +65,7 @@ const SwapAssetPanel: FC<SwapAssetPanel> = forwardRef<HTMLInputElement, SwapAsse
         className={classNames(
           disabled ? 'pointer-events-none opacity-40' : '',
           error ? 'border-red-800 hover:border-red-500' : 'border-dark-700 hover:border-dark-600',
-          'rounded-[14px] border bg-dark-900 p-3 flex flex-col gap-4'
+          'rounded-[5px] border bg-white text-dark-800 p-3 flex flex-col gap-4'
         )}
       >
         {header({
@@ -132,7 +132,7 @@ const WalletSwitch: FC<
         variant="sm"
         weight={700}
         component="span"
-        className="flex items-center gap-1 px-2 py-1 rounded-full cursor-pointer text-high-emphesis hover:text-white hover:shadow bg-dark-800 hover:bg-dark-700"
+        className="flex items-center gap-1 px-2 py-1 rounded-[5px] cursor-pointer text-high-emphesis hover:text-white hover:shadow bg-dark-800 hover:bg-dark-700"
       >
         {spendFromWallet ? i18n._(t`Wallet`) : i18n._(t`BentoBox`)}
       </Typography>
@@ -241,8 +241,8 @@ const SwapAssetPanelHeader: FC<
     <div
       id={id}
       className={classNames(
-        hideSearchModal ? '' : 'bg-dark-800 hover:bg-dark-700 cursor-pointer',
-        'flex items-center gap-2 px-2 py-1 rounded-full shadow-md text-high-emphesis'
+        hideSearchModal ? '' : 'bg-blue-800 hover:bg-dark-700 cursor-pointer',
+        'flex items-center gap-2 px-2 py-1 rounded-[5px] shadow-md text-high-emphesis'
       )}
     >
       <CurrencyLogo currency={currency} className="!rounded-full overflow-hidden" size={20} />

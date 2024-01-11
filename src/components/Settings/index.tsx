@@ -40,25 +40,30 @@ const SettingsTab: FC<SettingsTabProps> = ({ placeholderSlippage, className, tri
       <Popover
         placement="bottom-end"
         content={
-          <div className="flex flex-col gap-3 p-3 border rounded shadow-xl bg-dark-900 w-80 border-dark-700">
+          <div className="flex flex-col gap-3 p-3 w-80" style={{
+            background: '#0c1d31', // Background color
+            borderRadius: '5px',   // Border radius
+            boxShadow: '0px 0px 20px 5px #1f4a7d', // Box shadow
+            border: '2px solid #1f4a7d', // Border
+          }}>
             <div className="flex flex-col gap-4 p-3 border rounded border-dark-800/60">
-              <Typography variant="xxs" weight={700} className="text-secondary">
+              <Typography variant="xs" weight={700} className="text-secondary">
                 {i18n._(t`Transaction Settings`)}
               </Typography>
               <TransactionSettings placeholderSlippage={placeholderSlippage} trident={trident} />
             </div>
             <div className="flex flex-col gap-3 p-3 border rounded border-dark-800/60">
-              <Typography variant="xxs" weight={700} className="text-secondary">
+              <Typography variant="xs" weight={700} className="text-secondary">
                 {i18n._(t`Interface Settings`)}
               </Typography>
               <div className="flex items-center justify-between">
                 <div className="flex items-center">
                   <Typography variant="xs" className="text-high-emphesis" weight={700}>
-                    {i18n._(t`Toggle expert mode`)}
+                    {i18n._(t`Toggle Wizard Mode`)}
                   </Typography>
                   <QuestionHelper
                     text={i18n._(
-                      t`Bypasses confirmation modals and allows high slippage trades. Use at your own risk.`
+                      t`Wizard Mode is for experienced investors only! Use at your own risk.`
                     )}
                   />
                 </div>
@@ -69,13 +74,13 @@ const SettingsTab: FC<SettingsTabProps> = ({ placeholderSlippage, className, tri
                   onChange={
                     expertMode
                       ? () => {
-                          toggleExpertMode()
-                          setShowConfirmation(false)
-                        }
+                        toggleExpertMode()
+                        setShowConfirmation(false)
+                      }
                       : () => {
-                          toggle()
-                          setShowConfirmation(true)
-                        }
+                        toggle()
+                        setShowConfirmation(true)
+                      }
                   }
                   checkedIcon={<CheckIcon className="text-dark-700" />}
                   uncheckedIcon={<CloseIcon />}
@@ -102,7 +107,7 @@ const SettingsTab: FC<SettingsTabProps> = ({ placeholderSlippage, className, tri
                 </div>
               )}
               {/* // @ts-ignore TYPE NEEDS FIXING*/}
-             
+
             </div>
           </div>
         }
@@ -110,19 +115,19 @@ const SettingsTab: FC<SettingsTabProps> = ({ placeholderSlippage, className, tri
         <div
           className={classNames(className, 'flex items-center justify-center w-10 h-10 rounded-full cursor-pointer')}
         >
-          <CogIcon className="w-[26px] h-[26px] transform rotate-90 hover:text-white" />
+          <CogIcon className="w-[26px] h-[26px] transform rotate-90 hover:text-blue-400" />
         </div>
       </Popover>
       <HeadlessUiModal.Controlled isOpen={showConfirmation} onDismiss={() => setShowConfirmation(false)} maxWidth="md">
         <div className="flex flex-col gap-4">
           <HeadlessUiModal.Header header={i18n._(t`Confirm`)} onClose={() => setShowConfirmation(false)} />
           <HeadlessUiModal.BorderedContent className="flex flex-col gap-3 !border-yellow/40">
-            <Typography variant="xs" weight={700} className="text-secondary">
+            <Typography variant="xs" weight={700} className="text-white">
               {i18n._(t`Only use this mode if you know what you are doing.`)}
             </Typography>
-            <Typography variant="sm" weight={700} className="text-yellow">
-              {i18n._(t`Expert mode turns off the confirm transaction prompt and allows high slippage trades
-                                that often result in bad rates and lost funds.`)}
+            <Typography variant="sm" weight={700} className="text-red">
+              {i18n._(t`Enabling wizard mode disables the confirmation prompt for transactions and permits high slippage
+                  trades, which can often lead to unfavorable exchange rates and potential loss of funds.`)}
             </Typography>
           </HeadlessUiModal.BorderedContent>
           <Button
@@ -134,7 +139,7 @@ const SettingsTab: FC<SettingsTabProps> = ({ placeholderSlippage, className, tri
               setShowConfirmation(false)
             }}
           >
-            {i18n._(t`Enable Expert Mode`)}
+            {i18n._(t`Enable Wizard Mode`)}
           </Button>
         </div>
       </HeadlessUiModal.Controlled>

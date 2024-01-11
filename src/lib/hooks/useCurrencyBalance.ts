@@ -27,16 +27,24 @@ export function useNativeCurrencyBalances(uncheckedAddresses?: (string | undefin
         : [],
     [uncheckedAddresses]
   )
-console.log("address",validAddressInputs)
+  console.log('address', validAddressInputs)
   const results = useSingleContractMultipleData(multicallContract, 'getEthBalance', validAddressInputs)
 
   return useMemo(
     () =>
       validAddressInputs.reduce<{ [address: string]: CurrencyAmount<Currency> }>((memo, [address], i) => {
         const value = results?.[i]?.result?.[0]
-        console.log("this",value.toString(),NATIVE[chainId ? chainId : 24116])
-        if (value && chainId)
-          memo[address] = CurrencyAmount.fromRawAmount(NATIVE[chainId ? chainId : 24116], JSBI.BigInt(value.toString()))
+
+        if (value !== undefined) {
+          console.log('this', value.toString(), NATIVE[chainId ? chainId : 24116])
+          if (chainId) {
+            memo[address] = CurrencyAmount.fromRawAmount(
+              NATIVE[chainId ? chainId : 24116],
+              JSBI.BigInt(value.toString())
+            )
+          }
+        }
+
         return memo
       }, {}),
     [validAddressInputs, chainId, results]

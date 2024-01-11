@@ -32,7 +32,7 @@ body {
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: var(--primary);
+  background: linear-gradient(to bottom, var(--gradient-from-color), var(--gradient-to-color));
   color: var(--text-primary);
 }
 
@@ -56,7 +56,7 @@ input:focus {
 }
 
 .striped-background {
-  background: repeating-linear-gradient(45deg, #161522, #161522 10px, #0d0415 10px, #0d0415 20px);
+  background: repeating-linear-gradient(45deg, #0c1d31, #0c1d31 10px, #1f4a7d 10px, #1f4a7d 20px);
 }
 
 /**::-webkit-scrollbar {*/

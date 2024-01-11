@@ -13,9 +13,15 @@ export const SwapLayoutCard: FC<{ className?: string }> = ({ children, className
   return (
     <div
       className={classNames(
-        'flex flex-col gap-3 p-2 md:p-4 pt-4 rounded-[24px] bg-dark-800 shadow-md shadow-dark-1000',
+        'flex flex-col gap-3 p-2 md:p-4 pt-4',
         className
       )}
+      style={{
+        background: '#0c1d31',  // Background color
+        borderRadius: '5px',    // Border radius
+        boxShadow: '0px 0px 20px 5px #1f4a7d',  // Box shadow
+        border: '2px solid #1f4a7d',
+      }}
     >
       {children}
     </div>
@@ -28,6 +34,7 @@ export const Layout: FC<Layout> = ({ children, id }) => {
       <Container id={id} className="py-4 md:py-12 lg:py-[120px] px-2 mx-auto" maxWidth="md">
         <DoubleGlowShadow>{children}</DoubleGlowShadow>
       </Container>
+
     </DefaultLayout>
   )
 }

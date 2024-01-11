@@ -267,7 +267,7 @@ const WalletModal: FC<WalletModal> = ({ pendingTransactions, confirmedTransactio
       ) : (
         <div className="flex flex-col w-full space-y-4">
           <HeadlessUiModal.Header
-            header={i18n._(t`Select a wallet`)}
+            header={i18n._(t`Supported Wallets`)}
             onClose={toggleWalletModal}
             {...(walletView !== WALLET_VIEWS.ACCOUNT && { onBack: handleBack })}
           />
@@ -284,16 +284,7 @@ const WalletModal: FC<WalletModal> = ({ pendingTransactions, confirmedTransactio
           ) : (
             <div className="grid grid-cols-1 gap-4 overflow-y-auto md:grid-cols-2">{options}</div>
           )}
-          <div className="flex justify-center">
-            <Typography variant="xs" className="text-secondary" component="span">
-              {i18n._(t`New to Ethereum?`)}{' '}
-              <Typography variant="xs" className="text-blue" component="span">
-                <ExternalLink href="https://ethereum.org/wallets/" color="blue">
-                  {i18n._(t`Learn more about wallets`)}
-                </ExternalLink>
-              </Typography>
-            </Typography>
-          </div>
+
         </div>
       )}
     </HeadlessUiModal.Controlled>
