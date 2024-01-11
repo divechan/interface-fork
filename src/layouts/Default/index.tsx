@@ -1,3 +1,4 @@
+import AdSpace from 'app/components/AdSpace'
 import Footer from 'app/components/Footer'
 import Header from 'app/components/Header'
 import Main from 'app/components/Main'
@@ -10,7 +11,6 @@ const Layout = ({ children }) => {
       <Header />
       <Main>{children}</Main>
       <Popups />
-
     </div>
   )
 }

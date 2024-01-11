@@ -48,8 +48,8 @@ export default function Add() {
 
   const oneCurrencyIsWETH = Boolean(
     chainId &&
-      ((currencyA && currencyEquals(currencyA, WNATIVE[chainId])) ||
-        (currencyB && currencyEquals(currencyB, WNATIVE[chainId])))
+    ((currencyA && currencyEquals(currencyA, WNATIVE[chainId])) ||
+      (currencyB && currencyEquals(currencyB, WNATIVE[chainId])))
   )
 
   const [isExpertMode] = useExpertModeManager()
@@ -158,9 +158,8 @@ export default function Add() {
 
           addTransaction(response, {
             summary: i18n._(
-              t`Add ${parsedAmounts[Field.CURRENCY_A]?.toSignificant(3)} ${
-                currencies[Field.CURRENCY_A]?.symbol
-              } and ${parsedAmounts[Field.CURRENCY_B]?.toSignificant(3)} ${currencies[Field.CURRENCY_B]?.symbol}`
+              t`Add ${parsedAmounts[Field.CURRENCY_A]?.toSignificant(3)} ${currencies[Field.CURRENCY_A]?.symbol
+                } and ${parsedAmounts[Field.CURRENCY_B]?.toSignificant(3)} ${currencies[Field.CURRENCY_B]?.symbol}`
             ),
           })
 
@@ -225,9 +224,8 @@ export default function Add() {
   )
 
   const pendingText = i18n._(
-    t`Supplying ${parsedAmounts[Field.CURRENCY_A]?.toSignificant(6)} ${
-      currencies[Field.CURRENCY_A]?.symbol
-    } and ${parsedAmounts[Field.CURRENCY_B]?.toSignificant(6)} ${currencies[Field.CURRENCY_B]?.symbol}`
+    t`Supplying ${parsedAmounts[Field.CURRENCY_A]?.toSignificant(6)} ${currencies[Field.CURRENCY_A]?.symbol
+      } and ${parsedAmounts[Field.CURRENCY_B]?.toSignificant(6)} ${currencies[Field.CURRENCY_B]?.symbol}`
   )
 
   const handleCurrencyASelect = useCallback(
@@ -379,21 +377,20 @@ export default function Add() {
         {addIsUnsupported && <UnsupportedCurrencyFooter currencies={[currencies.CURRENCY_A, currencies.CURRENCY_B]} />}
       </SwapLayoutCard>
       {noLiquidity && (
-        <Typography variant="xs" className="px-10 mt-5 text-center text-yellow">
+        <Typography variant="xs" className="px-10 mt-5 text-center text-white">
           {i18n._(
-            t`When creating a pair you are the first liquidity provider. The ratio of tokens you add will set the price of this pool. Once you are happy with the rate, click supply to review`
+            t`As the initial liquidity provider when setting up a pair, the proportion of tokens you contribute will establish the pool's price. Once you are satisfied with the pricing, you can proceed by clicking "supply" to finalize the setup.`
           )}
         </Typography>
       )}
-      <Typography variant="xs" className="px-10 mt-5 text-center text-low-emphesis">
+      <Typography variant="xs" className="px-10 mt-5 text-center text-white">
         <Typography variant="xs" weight={700} component="span">
           Tip
         </Typography>
         :{' '}
         {i18n._(
-          t`By adding liquidity you'll earn 0.25% of all trades on this pair
-                proportional to your share of the pool. Fees are added to the pool, accrue in real time and can be
-                claimed by withdrawing your liquidity.`
+          t`
+          When you provide liquidity, you will receive a 0.25% share of all trades made in this pair, based on your contribution to the pool. These fees are automatically added to the pool, accumulate in real-time, and can be claimed when you decide to withdraw your liquidity.`
         )}
       </Typography>
     </>

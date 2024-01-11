@@ -2,7 +2,7 @@ import Container from 'app/components/Container'
 import DoubleGlowShadow from 'app/components/DoubleGlowShadow'
 import { classNames } from 'app/functions'
 import React, { FC } from 'react'
-
+import AdSpace from 'app/components/AdSpace'
 import DefaultLayout from './Default'
 
 export interface Layout {
@@ -32,9 +32,8 @@ export const Layout: FC<Layout> = ({ children, id }) => {
   return (
     <DefaultLayout>
       <Container id={id} className="py-4 md:py-12 lg:py-[120px] px-2 mx-auto" maxWidth="md">
-        <DoubleGlowShadow>{children}</DoubleGlowShadow>
+        <DoubleGlowShadow>{children}<AdSpace /></DoubleGlowShadow>
       </Container>
-
     </DefaultLayout>
   )
 }
