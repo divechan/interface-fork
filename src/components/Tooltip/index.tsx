@@ -20,7 +20,7 @@ export default function Tooltip({ text, children, className, ...rest }: TooltipP
         <div
           className={classNames(
             className,
-            'w-full max-w-[228px] px-3 py-2 bg-dark-800 border border-dark-600 rounded text-xs shadow-lg text-white'
+            'w-full max-w-[228px] px-3 py-2 bg-blue-800 border border-blue-600 rounded-[5px] text-xs shadow-lg text-white'
           )}
         >
           {text}

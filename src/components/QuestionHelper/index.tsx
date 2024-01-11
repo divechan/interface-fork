@@ -13,7 +13,7 @@ const QuestionHelper: FC<{
   children?: ReactElement
   className?: string
   gap?: boolean
-}> = ({ className, children, text, icon = <InformationCircleIcon width={14} height={14} />, gap = true }) => {
+}> = ({ className, children, text, icon = <InformationCircleIcon width={17} height={17} />, gap = true }) => {
   const [show, setShow] = useState<boolean>(false)
   const [toggle, setToggle] = useToggle(false)
   const node = useRef<HTMLDivElement | null>(null)

@@ -1,4 +1,4 @@
-import { NETWORK_ICON } from 'app/config/networks'
+import { NETWORK_ICON, NETWORK_LABEL } from 'app/config/networks'
 import { switchToNetwork } from 'app/functions/network'
 import useIsWindowVisible from 'app/hooks/useIsWindowVisible'
 import usePrevious from 'app/hooks/usePrevious'
@@ -10,6 +10,7 @@ import Cookies from 'js-cookie'
 import Image from 'next/image'
 import { useRouter } from 'next/router'
 import React, { useCallback, useEffect, useState } from 'react'
+import ChevronDownIcon from '@heroicons/react/solid'
 
 function Web3Network(): JSX.Element | null {
   const { chainId, library } = useActiveWeb3React()
@@ -106,7 +107,8 @@ function Web3Network(): JSX.Element | null {
     >
       <div className="grid items-center grid-flow-col justify-center h-[36px] w-[36px] text-sm rounded pointer-events-auto auto-cols-max text-secondary">
         {/*@ts-ignore TYPE NEEDS FIXING*/}
-        <Image src={NETWORK_ICON[chainId]} alt="Switch Network" className="rounded-full" width="24px" height="24px" />
+        <Image src={NETWORK_ICON[chainId]} alt="Switch Network" className="rounded-[5px]" width="30px" height="30px" />
+        <span className="pr-10 ml-2 text-white">{NETWORK_LABEL[chainId]}</span>
       </div>
       <NetworkModel
         switchNetwork={(targetChain: number) => {

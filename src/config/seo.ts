@@ -1,6 +1,6 @@
 const SEO = {
   defaultTitle: 'Rails Network Swap',
-  titleTemplate: '%s | Rails Network Swap',
+  titleTemplate: 'Rails Network Swap | %s',
   description: 'Swap, yield, lend, borrow, leverage, limit, launch all on one community driven ecosystem',
   openGraph: {
     type: 'website',

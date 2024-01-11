@@ -82,11 +82,11 @@ const TransactionSettings: FC<TransactionSettingsProps> = ({ placeholderSlippage
               slippageError === SlippageError.INVALID_INPUT
                 ? 'border-red/60'
                 : slippageError === SlippageError.TOO_LOW || slippageError === SlippageError.TOO_HIGH
-                ? 'border-yellow/60'
-                : !slippageIsDefault
-                ? 'border-blue'
-                : 'border-dark-800',
-              'border-2 h-[36px] flex items-center px-2 rounded bg-dark-1000/40'
+                  ? 'border-yellow/60'
+                  : !slippageIsDefault
+                    ? 'border-blue'
+                    : 'border-dark-800',
+              'border-2 h-[36px] flex items-center px-2 rounded-[5px] bg-dark-1000/40'
             )}
             tabIndex={-1}
           >
@@ -138,8 +138,8 @@ const TransactionSettings: FC<TransactionSettingsProps> = ({ placeholderSlippage
               {slippageError === SlippageError.INVALID_INPUT
                 ? i18n._(t`Enter a valid slippage percentage`)
                 : slippageError === SlippageError.TOO_HIGH
-                ? i18n._(t`Your transaction may be frontrun`)
-                : i18n._(t`Your transaction may fail`)}
+                  ? i18n._(t`Your transaction may be frontrun`)
+                  : i18n._(t`Your transaction may fail`)}
             </div>
           </Typography>
         ) : null}
@@ -158,15 +158,15 @@ const TransactionSettings: FC<TransactionSettingsProps> = ({ placeholderSlippage
             <input
               className={classNames(
                 deadlineError ? 'text-red' : '',
-                'font-bold h-[36px] placeholder-low-emphesis bg-dark-1000/40 border-2 border-dark-800 rounded px-2  max-w-[100px] focus:border-blue'
+                'font-bold h-[36px] placeholder-low-emphesis bg-dark-1000/40 border-2 border-dark-800 rounded-[5px] px-2  max-w-[100px] focus:border-blue'
               )}
               placeholder={(DEFAULT_DEADLINE_FROM_NOW / 60).toString()}
               value={
                 deadlineInput.length > 0
                   ? deadlineInput
                   : deadline === DEFAULT_DEADLINE_FROM_NOW
-                  ? ''
-                  : (deadline / 60).toString()
+                    ? ''
+                    : (deadline / 60).toString()
               }
               onChange={(e) => parseCustomDeadline(e.target.value)}
               onBlur={() => {

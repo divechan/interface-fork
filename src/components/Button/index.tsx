@@ -16,10 +16,10 @@ const DIMENSIONS = {
 }
 
 const SIZE = {
-  xs: 'text-xs rounded-full',
-  sm: 'text-sm rounded-full',
-  md: 'rounded',
-  lg: 'text-lg rounded',
+  xs: 'text-xs rounded-[5px]',
+  sm: 'text-sm rounded-[5px]',
+  md: 'rounded-[5px]',
+  lg: 'text-lg rounded-[5px]',
 }
 
 const FILLED = {
@@ -30,7 +30,7 @@ const FILLED = {
   pink: 'bg-pink',
   purple: 'bg-purple',
   gradient:
-    '!bg-gradient-to-r from-blue to-pink-600 hover:from-blue/80 hover:to-pink-600/80 focus:from-blue/80 focus:to-pink-600/80 active:from-blue/70 active:to-pink-600/70 focus:border-blue-700',
+    '!bg-gradient-to-r from-blue-400 to-blue-700 hover:from-blue-600/80 hover:to-blue-700/80 focus:from-blue-700/80 focus:to-blue-600/80 active:from-blue-700/70 active:to-blue-600/70 focus:border-blue-700',
   gray: 'bg-dark-700',
 }
 
@@ -53,7 +53,7 @@ const EMPTY = {
   purple: 'text-purple',
   gray: 'text-higher-emphesis',
   gradient:
-    '!bg-gradient-to-r from-blue to-pink-600 hover:from-blue/80 hover:to-pink-600/80 focus:from-blue/80 focus:to-pink-600/80 active:from-blue/70 active:to-pink-600/70',
+    '!bg-gradient-to-r from-blue-400 to-blue-700 hover:from-blue/80 hover:to-blue-600/80 focus:from-blue/80 focus:to-blue-600/80 active:from-blue/70 active:to-blue-600/70',
 }
 
 const VARIANT = {

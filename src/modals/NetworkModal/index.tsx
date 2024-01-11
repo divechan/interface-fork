@@ -407,9 +407,11 @@ const NetworkModal: FC<{ switchNetwork: (targetChain: number) => void }> = ({ sw
                     width="32px"
                     height="32px"
                   />
-                  <Typography weight={700} className="text-high-emphesis">
-                    {NETWORK_LABEL[key]}
-                  </Typography>
+                  {NETWORK_LABEL[key] && ( // Check if NETWORK_LABEL[key] exists
+                    <Typography weight={700} className="text-high-emphesis">
+                      {NETWORK_LABEL[key]}
+                    </Typography>
+                  )}
                 </button>
               )
             })}

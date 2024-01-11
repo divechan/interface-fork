@@ -471,7 +471,7 @@ const Swap = ({ banners }: SwapProps) => {
                   disabled={
                     !isValid || approvalState !== ApprovalState.APPROVED || (priceImpactSeverity > 3 && !isExpertMode)
                   }
-                  className="rounded-[2xl] md:rounded"
+                  className="rounded-[5px] md:rounded"
                 >
                   {priceImpactSeverity > 3 && !isExpertMode
                     ? i18n._(t`Price Impact High`)
@@ -500,7 +500,7 @@ const Swap = ({ banners }: SwapProps) => {
               }}
               id="swap-button"
               disabled={!isValid || (priceImpactSeverity > 3 && !isExpertMode) || !!swapCallbackError}
-              className="rounded-2xl md:rounded"
+              className="rounded-[5px] md:rounded"
             >
               {swapInputError
                 ? swapInputError

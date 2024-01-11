@@ -82,7 +82,7 @@ const SettingsTab: FC<SettingsTabProps> = ({ placeholderSlippage, className, tri
                         setShowConfirmation(true)
                       }
                   }
-                  checkedIcon={<CheckIcon className="text-dark-700" />}
+                  checkedIcon={<CheckIcon className="text-white" />}
                   uncheckedIcon={<CloseIcon />}
                   color="gradient"
                 />
