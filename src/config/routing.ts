@@ -100,16 +100,16 @@ export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
     ETHEREUM.DAI,
     // @ts-ignore TYPE NEEDS FIXING
     ETHEREUM.USDC,
-       // @ts-ignore TYPE NEEDS FIXING
-       ETHEREUM.BART,
-          // @ts-ignore TYPE NEEDS FIXING
-          ETHEREUM.BTRS,
-            // @ts-ignore TYPE NEEDS FIXING
-            ETHEREUM.BSP,
-          // @ts-ignore TYPE NEEDS FIXING
+    // @ts-ignore TYPE NEEDS FIXING
+    ETHEREUM.BART,
+    // @ts-ignore TYPE NEEDS FIXING
+    ETHEREUM.BTRS,
+    // @ts-ignore TYPE NEEDS FIXING
+    ETHEREUM.BSP,
+    // @ts-ignore TYPE NEEDS FIXING
     ETHEREUM.BTB,
-       // @ts-ignore TYPE NEEDS FIXING
-       ETHEREUM.PELO,
+    // @ts-ignore TYPE NEEDS FIXING
+    ETHEREUM.PELO,
     // @ts-ignore TYPE NEEDS FIXING
     ETHEREUM.USDT,
     // @ts-ignore TYPE NEEDS FIXING
@@ -172,7 +172,7 @@ export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
     BSC.MIM,
     BSC.MEMELON,
     BSC.BTRS,
-    
+
     BSC.USDC,
     BSC.USDT,
     BSC.BTCB,
@@ -280,15 +280,8 @@ export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
     ARBITRUM_NOVA.WBTC,
   ],
   [ChainId.BOBA_AVAX]: [...WRAPPED_NATIVE_ONLY[ChainId.BOBA_AVAX], BOBA_AVAX.AVAX],
-  [RAILS_TESTNET]: [
-    RAIL_TESTNET.USDC,
-    RAIL_TESTNET.WETH,
-  ],
-  [RAILS]: [
-    RAIL.USDC,
-    RAIL.WETH,
-  
-  ],
+  [RAILS_TESTNET]: [RAIL_TESTNET.USDC, RAIL_TESTNET.WETH],
+  [RAILS]: [RAIL.USDC, RAIL.WETH],
 }
 
 export const ADDITIONAL_BASES: {
@@ -368,7 +361,6 @@ export const ADDITIONAL_BASES: {
     [BSC.BSP.address]: [BSC.BTB],
     [BSC.BART.address]: [BSC.FRAX],
     [BSC.BTB.address]: [BSC.FXS],
-
   },
   [ChainId.AVALANCHE]: {
     [AVALANCHE.FRAX.address]: [AVALANCHE.FXS],
@@ -408,33 +400,9 @@ export const COMMON_BASES: ChainTokenList = {
     ...WRAPPED_NATIVE_ONLY[ChainId.ETHEREUM],
     // @ts-ignore TYPE NEEDS FIXING
     // @ts-ignore TYPE NEEDS FIXING
-    ETHEREUM.WBTC,
-    // @ts-ignore TYPE NEEDS FIXING
-    ETHEREUM.PELO,
-        // @ts-ignore TYPE NEEDS FIXING
-        ETHEREUM.BTRS,
-    // @ts-ignore TYPE NEEDS FIXING
-    ETHEREUM.BTB,
-       // @ts-ignore TYPE NEEDS FIXING
-       ETHEREUM.BSP,
-    // @ts-ignore TYPE NEEDS FIXING
-    ETHEREUM.BART,
-    // @ts-ignore TYPE NEEDS FIXING
-    ETHEREUM.SPELL,
-    // @ts-ignore TYPE NEEDS FIXING
-    ETHEREUM.ICE,
-    // @ts-ignore TYPE NEEDS FIXING
+
     ETHEREUM.USDC,
     // @ts-ignore TYPE NEEDS FIXING
-    ETHEREUM.USDT,
-    // @ts-ignore TYPE NEEDS FIXING
-    ETHEREUM.DAI,
-    // @ts-ignore TYPE NEEDS FIXING
-    ETHEREUM.OHM_V2,
-    // @ts-ignore TYPE NEEDS FIXING
-    ETHEREUM.FRAX,
-    // @ts-ignore TYPE NEEDS FIXING
-    ETHEREUM.STG,
   ],
   [ChainId.MATIC]: [
     // @ts-ignore TYPE NEEDS FIXING
@@ -453,7 +421,6 @@ export const COMMON_BASES: ChainTokenList = {
     MATIC.ICE,
     // @ts-ignore TYPE NEEDS FIXING
     MATIC.USDC,
-
 
     // @ts-ignore TYPE NEEDS FIXING
     MATIC.USDT,
@@ -493,37 +460,9 @@ export const COMMON_BASES: ChainTokenList = {
     // @ts-ignore TYPE NEEDS FIXING
     BSC.WETH,
     // @ts-ignore TYPE NEEDS FIXING
-    BSC.BART,
-    // @ts-ignore TYPE NEEDS FIXING
-    BSC.BTB,
-    // @ts-ignore TYPE NEEDS FIXING
-    BSC.BTCB,
-    // @ts-ignore TYPE NEEDS FIXING
-    BSC.MIM,
-    // @ts-ignore TYPE NEEDS FIXING
-    BSC.SPELL,
-    // @ts-ignore TYPE NEEDS FIXING
-    BSC.ICE,
-    // @ts-ignore TYPE NEEDS FIXING
-    BSC.DAI,
-    // @ts-ignore TYPE NEEDS FIXING
-
-    BSC.MEMELON,
-    // @ts-ignore TYPE NEEDS FIXING
-    BSC.BTRS,
 
     // @ts-ignore TYPE NEEDS FIXING
     BSC.USDC,
-    // @ts-ignore TYPE NEEDS FIXING
-    BSC.USDT,
-    // @ts-ignore TYPE NEEDS FIXING
-    BSC.USD,
-    // @ts-ignore TYPE NEEDS FIXING
-    BSC.FRAX,
-    // @ts-ignore TYPE NEEDS FIXING
-    BSC.STG,
-    // @ts-ignore TYPE NEEDS FIXING
-    BSC.BSP,
   ],
   [ChainId.ARBITRUM]: [
     // @ts-ignore TYPE NEEDS FIXING
@@ -727,15 +666,8 @@ export const COMMON_BASES: ChainTokenList = {
     ARBITRUM_NOVA.BRICK,
   ],
   [ChainId.BOBA_AVAX]: [...WRAPPED_NATIVE_ONLY[ChainId.BOBA_AVAX], BOBA_AVAX.AVAX],
-  [RAILS_TESTNET]: [
-    RAIL_TESTNET.USDC,
-    RAIL_TESTNET.WETH,
-  ],
-  [RAILS]: [
-    RAIL.USDC,
-    RAIL.WETH,
-  
-  ],
+  [RAILS_TESTNET]: [RAIL_TESTNET.USDC, RAIL_TESTNET.WETH],
+  [RAILS]: [RAIL.USDC, RAIL.WETH],
 }
 
 // used to construct the list of all pairs we consider by default in the frontend
@@ -899,21 +831,14 @@ export const BASES_TO_TRACK_LIQUIDITY_FOR: ChainTokenList = {
     ARBITRUM_NOVA.WBTC,
   ],
   [ChainId.BOBA_AVAX]: [...WRAPPED_NATIVE_ONLY[ChainId.BOBA_AVAX], BOBA_AVAX.AVAX],
-  [RAILS_TESTNET]: [
-    RAIL_TESTNET.USDC,
-    RAIL_TESTNET.WETH,
-  ],
-  [RAILS]: [
-    RAIL.USDC,
-    RAIL.WETH,
-  
-  ],
+  [RAILS_TESTNET]: [RAIL_TESTNET.USDC, RAIL_TESTNET.WETH],
+  [RAILS]: [RAIL.USDC, RAIL.WETH],
 }
 
 export const PINNED_PAIRS: { readonly [chainId: number]: [Token, Token][] } = {
   [ChainId.ETHEREUM]: [
     // @ts-ignore TYPE NEEDS FIXING
-    [ ETHEREUM.BART, WNATIVE[ChainId.ETHEREUM]],
+    [ETHEREUM.BART, WNATIVE[ChainId.ETHEREUM]],
     [
       new Token(ChainId.ETHEREUM, '0x5d3a536E4D6DbD6114cc1Ead35777bAB948E3643', 8, 'cDAI', 'Compound Dai'),
       new Token(ChainId.ETHEREUM, '0x39AA39c021dfbaE8faC545936693aC917d5E7563', 8, 'cUSDC', 'Compound USD Coin'),
