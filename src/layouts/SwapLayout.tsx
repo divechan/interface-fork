@@ -46,19 +46,29 @@ export const SwapLayoutCard: FC<{ className?: string }> = ({ children, className
 }
 
 export const Layout: FC<Layout> = ({ children, id }) => {
+  const desktopStyles = {
+    backgroundImage: 'url(https://github.com/divechan/brandkit/blob/main/10.jpg?raw=true)',
+    backgroundSize: 'cover', // Adjust the background image property for desktop
+    opacity: 0.25, // Adjust the opacity of the background image
+    zIndex: 0, // Ensure the background is behind the card
+  };
+
   return (
     <DefaultLayout>
-
       <Container id={id} className="py-4 md:py-12 lg:py-[120px] px-2 mx-auto" maxWidth="md">
         <div style={{ position: 'relative' }}>
-          <BackgroundImage imageUrl="https://github.com/divechan/brandkit/blob/main/10.jpg?raw=true" />
+          <div
+            className="absolute top-0 left-0 w-full h-full"
+            style={window.innerWidth >= 769 ? desktopStyles : null}
+            aria-hidden="true"
+          ></div>
           <DoubleGlowShadow>{children}</DoubleGlowShadow>
         </div>
         <AdSpace />
       </Container>
     </DefaultLayout>
-  )
-}
+  );
+};
 
 type SwapLayout = (id: string) => FC
 
