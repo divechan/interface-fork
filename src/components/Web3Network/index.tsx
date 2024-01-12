@@ -11,6 +11,7 @@ import Image from 'next/image'
 import { useRouter } from 'next/router'
 import React, { useCallback, useEffect, useState } from 'react'
 import ChevronDownIcon from '@heroicons/react/solid'
+import { ChevronDown } from 'react-feather'
 
 function Web3Network(): JSX.Element | null {
   const { chainId, library } = useActiveWeb3React()
@@ -105,11 +106,14 @@ function Web3Network(): JSX.Element | null {
       className="flex items-center text-sm font-bold cursor-pointer pointer-events-auto select-none whitespace-nowrap"
       onClick={() => toggleNetworkModal()}
     >
-      <div className="grid items-center grid-flow-col justify-center h-[36px] w-[36px] text-sm rounded pointer-events-auto auto-cols-max text-white">
-        {/*@ts-ignore TYPE NEEDS FIXING*/}
+      <div className="flex items-center justify-center h-[36px] text-sm rounded pointer-events-auto">
         <Image src={NETWORK_ICON[chainId]} alt="Switch Network" className="rounded-[5px]" width="30px" height="30px" />
-        <span className="pr-40 ml-2 text-white">{NETWORK_LABEL[chainId]}</span>
+        <span className="flex items-center ml-2 text-white">
+          {NETWORK_LABEL[chainId]}
+          <ChevronDown />
+        </span>
       </div>
+
       <NetworkModel
         switchNetwork={(targetChain: number) => {
           handleChainSwitch(targetChain)
