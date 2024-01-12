@@ -8,7 +8,7 @@ function AdSpace() {
         justifyContent: 'center',
         width: '100%',
         maxHeight: '75vh',
-        paddingTop: '50px',
+        paddingTop: '25px',
         overflow: 'hidden',
     };
 
