@@ -113,7 +113,7 @@ const useMenu: UseMenu = () => {
       const tridentLiquidity = {
         key: 'liquidity',
         title: i18n._(t`Liquidity`),
-        icon: <BeakerIcon width={20} />,
+        icon: <GlobeAltIcon width={20} />,
         items: [
           {
             key: 'trident-pools',
@@ -151,7 +151,7 @@ const useMenu: UseMenu = () => {
       menu.push({
         key: 'explorers',
         title: i18n._(t`Explorers`),
-        icon: <SwitchVerticalIcon width={20} />,
+        icon: <GlobeIcon width={20} />,
         items: explorers,
       })
 
