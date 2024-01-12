@@ -105,10 +105,10 @@ function Web3Network(): JSX.Element | null {
       className="flex items-center text-sm font-bold cursor-pointer pointer-events-auto select-none whitespace-nowrap"
       onClick={() => toggleNetworkModal()}
     >
-      <div className="grid items-center grid-flow-col justify-center h-[36px] w-[36px] text-sm rounded pointer-events-auto auto-cols-max text-secondary">
+      <div className="grid items-center grid-flow-col justify-center h-[36px] w-[36px] text-sm rounded pointer-events-auto auto-cols-max text-white">
         {/*@ts-ignore TYPE NEEDS FIXING*/}
         <Image src={NETWORK_ICON[chainId]} alt="Switch Network" className="rounded-[5px]" width="30px" height="30px" />
-        <span className="pr-10 ml-2 text-white">{NETWORK_LABEL[chainId]}</span>
+        <span className="pr-40 ml-2 text-white">{NETWORK_LABEL[chainId]}</span>
       </div>
       <NetworkModel
         switchNetwork={(targetChain: number) => {

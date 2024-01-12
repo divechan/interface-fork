@@ -45,7 +45,7 @@ function Web3StatusInner() {
     return (
       <div
         id="web3-status-connected"
-        className="flex items-center gap-2 text-sm rounded-lg text-primary"
+        className="flex items-center gap-2 text-sm text-white rounded-lg"
         onClick={toggleWalletModal}
       >
         {hasPendingTransactions ? (
@@ -60,7 +60,7 @@ function Web3StatusInner() {
             <Typography
               weight={700}
               variant="sm"
-              className="px-2 py-5 font-bold rounded-full text-inherit hover:text-white"
+              className="px-2 py-5 font-bold rounded-full text-inherit hover:text-primary"
             >
               {ENSName ? ENSName.toUpperCase() : shortenAddress(account)}
             </Typography>
