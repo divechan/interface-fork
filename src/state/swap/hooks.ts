@@ -318,9 +318,9 @@ export function queryParametersToSwapState(parsedQs: ParsedQs, chainId: ChainId 
     inputCurrency = eth
     outputCurrency =
       chainId == 1
-        ? '0x750ba8b76187092B0D1E87E28daaf484d1b5273b'
+        ? '0xA0b86991c6218b36c1d19D4a2e9Eb0cE3606eB48'
         : chainId == 56
-        ? '0xA7748F52273E11C0Cb2EdFa5128385453740ce20'
+        ? '0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56'
         : chainId == 137
         ? '0x21C787C0D881Fd1b8018b6335cE18632b64f35b0'
         : '0x750ba8b76187092B0D1E87E28daaf484d1b5273b'
