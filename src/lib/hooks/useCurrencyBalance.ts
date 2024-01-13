@@ -36,7 +36,7 @@ export function useNativeCurrencyBalances(uncheckedAddresses?: (string | undefin
         const value = results?.[i]?.result?.[0]
 
         if (value !== undefined) {
-          console.log('this', value.toString(), NATIVE[chainId ? chainId : 24116])
+          console.log('this', value.toString(), NATIVE)
           if (chainId) {
             memo[address] = CurrencyAmount.fromRawAmount(
               NATIVE[chainId ? chainId : 24116],

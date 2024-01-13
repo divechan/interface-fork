@@ -14,6 +14,8 @@ const SUBDOMAIN_CHAIN_ID: { [subdomain: string]: string } = {
   [ChainSubdomain.GNOSIS]: '100',
   [ChainSubdomain.ARBITRUM]: '42161',
   [ChainSubdomain.AVALANCHE]: '43114',
+  [ChainSubdomain.RAILS]: '6278',
+  [ChainSubdomain.RAILS_TESTNET]: '24116',
   [ChainSubdomain.HECO]: '128',
   [ChainSubdomain.HARMONY]: '1666600000',
   [ChainSubdomain.OKEX]: '66',

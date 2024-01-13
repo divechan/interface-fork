@@ -3,6 +3,8 @@ export enum ChainSubdomain {
   ROPSTEN = 'ropsten',
   RINKEBY = 'rinkeby',
   GÖRLI = 'gorli',
+  RAILS_TESTNET = 'rails-testnet',
+  RAILS = 'rails',
   KOVAN = 'kovan',
   POLYGON = 'polygon',
   FANTOM = 'fantom',
