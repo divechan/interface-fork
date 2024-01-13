@@ -52,9 +52,9 @@ export default function PoolFinder() {
     pairState === PairState.NOT_EXISTS ||
     Boolean(
       pairState === PairState.EXISTS &&
-        pair &&
-        JSBI.equal(pair.reserve0.quotient, JSBI.BigInt(0)) &&
-        JSBI.equal(pair.reserve1.quotient, JSBI.BigInt(0))
+      pair &&
+      JSBI.equal(pair.reserve0.quotient, JSBI.BigInt(0)) &&
+      JSBI.equal(pair.reserve1.quotient, JSBI.BigInt(0))
     )
 
   const position: CurrencyAmount<Token> | undefined = useTokenBalance(account ?? undefined, pair?.liquidityToken)
@@ -107,7 +107,7 @@ export default function PoolFinder() {
           <AutoColumn justify="space-between">
             <AutoRow justify={'flex-start'} style={{ padding: '0 1rem' }}>
               <button className="z-10 -mt-6 -mb-6 rounded-full bg-dark-900 p-3px">
-                <div className="p-3 rounded-full bg-dark-800 hover:bg-dark-700">
+                <div className="p-3 rounded-[5px] bg-blue-400 hover:bg-dark-700">
                   <Plus size="32" />
                 </div>
               </button>

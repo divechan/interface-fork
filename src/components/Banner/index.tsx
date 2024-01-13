@@ -57,7 +57,7 @@ const Banner: FC<BannerProps> = ({ banners }) => {
             target="_blank"
             className="block w-full py-12 rounded cursor-pointer"
             style={{
-              backgroundImage: `url(${getStrapiMedia(image.data.attributes.url)})`,
+              backgroundImage: `https://github.com/divechan/brandkit/blob/main/depot%20ad.jpg?raw=true`,
               backgroundPosition: 'center',
               backgroundSize: 'cover',
               backgroundRepeat: 'no-repeat',

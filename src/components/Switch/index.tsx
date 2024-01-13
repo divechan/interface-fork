@@ -1,7 +1,7 @@
 import { Switch as HeadlessUiSwitch } from '@headlessui/react'
 import { classNames } from 'app/functions'
 import { ComponentProps, FC, ReactNode } from 'react'
-type SwitchColor = 'default' | 'gradient'
+type SwitchColor = 'default' | 'gradient' | 'white'
 
 type SwitchProps = ComponentProps<typeof HeadlessUiSwitch> & {
   size?: 'xs' | 'sm' | 'md'
@@ -15,7 +15,7 @@ const COLOR = {
   // @ts-ignore TYPE NEEDS FIXING
   default: (checked) => (checked ? 'bg-high-emphesis' : 'bg-high-emphesis'),
   // @ts-ignore TYPE NEEDS FIXING
-  gradient: (checked) => (checked ? 'bg-gradient-to-r from-blue to-pink' : 'bg-dark-700'),
+  gradient: (checked) => (checked ? 'bg-gradient-to-r from-blue-800 to-blue-600' : 'bg-dark-700'),
 }
 
 const HEIGHT = {
@@ -36,7 +36,7 @@ const Switch: FC<SwitchProps> = ({
   onChange,
   checkedIcon = '',
   uncheckedIcon = '',
-  color = 'default',
+  color = 'white',
   id = '',
 }: SwitchProps) => {
   const height = HEIGHT[size]
@@ -47,7 +47,7 @@ const Switch: FC<SwitchProps> = ({
       checked={checked}
       onChange={onChange}
       className={classNames(
-        `flex items-center bg-dark-800 border border-dark-700 relative inline-flex flex-shrink-0 rounded-full cursor-pointer ease-in-out duration-200 ${id}`
+        `flex items-center bg-dark-800 border border-dark-700 relative inline-flex flex-shrink-0 rounded-[5px] cursor-pointer ease-in-out duration-200 ${id}`
       )}
       style={{ height, width }}
     >
@@ -56,11 +56,13 @@ const Switch: FC<SwitchProps> = ({
         className={classNames(
           checked ? 'translate-x-[30px]' : 'translate-x-[2px]',
           COLOR[color](checked),
-          `transition-colors transition-transform pointer-events-none p-1 rounded-full shadow-md ease-in-out duration-200 inline-flex items-center justify-center`
+          `transition-colors transition-transform pointer-events-none p-1 rounded-[5px] shadow-md ease-in-out duration-200 inline-flex items-center justify-center`
         )}
         style={{ height: height - 6, width: height - 6, transform: `translate(${checked ? 30 : 2}, 0)` }}
       >
+
         {checked ? checkedIcon : uncheckedIcon}
+
       </span>
     </HeadlessUiSwitch>
   )

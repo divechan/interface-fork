@@ -12,8 +12,8 @@ const Kovan = 'https://raw.githubusercontent.com/sushiswap/icons/master/network/
 const Mainnet = 'https://raw.githubusercontent.com/sushiswap/icons/master/network/mainnet.jpg'
 const Matic = 'https://raw.githubusercontent.com/sushiswap/icons/master/network/polygon.jpg'
 const Moonbeam = 'https://raw.githubusercontent.com/sushiswap/icons/master/network/moonbeam.jpg'
-const rail_mainnet = 'https://i.ibb.co/8P835Pr/mainnet.jpg'
-const rail_testnet = "https://i.ibb.co/9qJXmWN/testnet.jpg"
+const rail_mainnet = 'https://raw.githubusercontent.com/divechan/brandkit/main/SVGs/mainnet.svg'
+const rail_testnet = 'https://raw.githubusercontent.com/divechan/brandkit/main/SVGs/testnet.svg'
 const OKEx = 'https://raw.githubusercontent.com/sushiswap/icons/master/network/okex.jpg'
 const Polygon = 'https://raw.githubusercontent.com/sushiswap/icons/master/network/polygon.jpg'
 const Rinkeby = 'https://raw.githubusercontent.com/sushiswap/icons/master/network/rinkeby.jpg'
@@ -42,6 +42,8 @@ export const NETWORK_ICON: Record<number, string> = {
   [ChainId.BSC_TESTNET]: Bsc,
   [ChainId.MATIC]: Polygon,
   [ChainId.MATIC_TESTNET]: Matic,
+  [RAILS_TESTNET]: rail_testnet,
+  [RAILS]: rail_mainnet,
   // [ChainId.XDAI]: xDai,
   // [ChainId.ARBITRUM]: Arbitrum,
   // [ChainId.ARBITRUM_TESTNET]: Arbitrum,

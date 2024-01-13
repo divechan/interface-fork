@@ -61,9 +61,9 @@ const HeadlessUiModal: HeadlessUiModalType<Props> = ({ children: childrenProp, t
       typeof triggerProp === 'function'
         ? triggerProp({ onClick, open, setOpen })
         : isValidElement(triggerProp)
-        // @ts-ignore
-        ? cloneElement(triggerProp, { onClick })
-        : null,
+          // @ts-ignore
+          ? cloneElement(triggerProp, { onClick })
+          : null,
     [onClick, open, triggerProp]
   )
 
@@ -144,10 +144,10 @@ const HeadlessUiModalControlled: FC<ControlledModalProps> = ({
           >
             <div
               className={classNames(
-                transparent ? '' : 'bg-dark-900 border border-dark-800',
+                transparent ? '' : 'bg-blue-900 border border-blue-700',
                 isDesktop ? MAX_WIDTH_CLASS_MAPPING[maxWidth] : '',
                 isDesktop ? `w-full` : 'w-[85vw] max-h-[85vh] overflow-y-auto mx-auto',
-                'inline-block align-bottom rounded-xl text-left overflow-hidden transform p-4'
+                'inline-block align-bottom rounded-[5px] text-left overflow-hidden transform p-4'
               )}
             >
               {children}

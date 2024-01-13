@@ -22,9 +22,9 @@ const CommonBases: FC = () => {
   return (
     <div className="flex flex-col gap-3">
       <div className="flex flex-row">
-        <Typography variant="xs" weight={700} className="flex items-center text-low-emphesis">
-          {i18n._(t`Common bases`)}
-          <QuestionHelper text="These tokens are commonly paired with other tokens." />
+        <Typography variant="xs" weight={700} className="flex items-center text-white">
+          {i18n._(t`Default Tokens`)}
+          <QuestionHelper text="These tokens are the approved default tokens on the Rails Network&reg; Swap" />
         </Typography>
       </div>
       <div className="flex flex-wrap gap-2">

@@ -64,13 +64,13 @@ export default function CurrencySelectPanel({
                   <div className="mr-1 text-lg font-bold md:text-2xl">
                     {(currency && currency.symbol && currency.symbol.length > 20
                       ? currency.symbol.slice(0, 4) +
-                        '...' +
-                        currency.symbol.slice(currency.symbol.length - 5, currency.symbol.length)
+                      '...' +
+                      currency.symbol.slice(currency.symbol.length - 5, currency.symbol.length)
                       : currency?.symbol) || (
-                      <div className="px-2 py-1 mt-1 text-xs font-medium bg-transparent border rounded-full hover:bg-primary border-low-emphesis text-secondary whitespace-nowrap">
-                        {i18n._(t`Select a token`)}
-                      </div>
-                    )}
+                        <div className="px-2 py-1 mt-1 text-xs font-medium bg-transparent border rounded-full hover:bg-primary border-low-emphesis text-secondary whitespace-nowrap">
+                          {i18n._(t`Select a token`)}
+                        </div>
+                      )}
                   </div>
                   {!disableCurrencySelect && currency && (
                     <ChevronDownIcon

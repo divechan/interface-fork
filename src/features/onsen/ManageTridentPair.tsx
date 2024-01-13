@@ -31,9 +31,8 @@ const ManageTridentPair = ({ farm }) => {
         href={`/trident/add/${isWrappedReturnNativeSymbol(
           farm.chainId,
           farm.pair.token0.id
-        )}/${isWrappedReturnNativeSymbol(farm.chainId, farm.pair.token1.id)}?fee=${farm.pair.swapFee}&twap=${
-          farm.pair.twapEnabled
-        }`}
+        )}/${isWrappedReturnNativeSymbol(farm.chainId, farm.pair.token1.id)}?fee=${farm.pair.swapFee}&twap=${farm.pair.twapEnabled
+          }`}
         className="flex items-center justify-between px-8 py-4 text-lg font-bold border rounded text-primary border-dark-700 hover:bg-dark-700"
         rel="noreferrer"
       >
@@ -44,9 +43,8 @@ const ManageTridentPair = ({ farm }) => {
         href={`/trident/remove/${isWrappedReturnNativeSymbol(
           farm.chainId,
           farm.pair.token0.id
-        )}/${isWrappedReturnNativeSymbol(farm.chainId, farm.pair.token1.id)}?fee=${farm.pair.swapFee}&twap=${
-          farm.pair.twapEnabled
-        }`}
+        )}/${isWrappedReturnNativeSymbol(farm.chainId, farm.pair.token1.id)}?fee=${farm.pair.swapFee}&twap=${farm.pair.twapEnabled
+          }`}
         className="flex items-center justify-between px-8 py-4 text-lg font-bold border rounded text-primary border-dark-700 hover:bg-dark-700"
         rel="noreferrer"
       >

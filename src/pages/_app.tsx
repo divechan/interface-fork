@@ -123,7 +123,7 @@ function MyApp({ Component, pageProps, fallback, err }) {
 
   return (
     <>
-      <Head>SteamX</Head>
+      <Head>Rails Network Swap</Head>
       <meta
         name="viewport"
         content="minimum-scale=1, initial-scale=1, width=device-width, shrink-to-fit=no, viewport-fit=cover"
@@ -148,7 +148,7 @@ function MyApp({ Component, pageProps, fallback, err }) {
           `,
         }}
       />
-      
+
       <I18nProvider i18n={i18n} forceRenderOnLocaleChange={false}>
         <Web3ReactProvider getLibrary={getLibrary}>
           {/*@ts-ignore TYPE NEEDS FIXING*/}

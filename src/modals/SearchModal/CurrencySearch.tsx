@@ -168,19 +168,7 @@ export function CurrencySearch({
           </Typography>
         )}
       </div>
-      {allowManageTokenList && (
-        <div className="flex justify-center">
-          <Button
-            size="sm"
-            id="list-token-manage-button"
-            onClick={() => setView(CurrencyModalView.manage)}
-            color="blue"
-            variant="empty"
-          >
-            {i18n._(t`Manage Token Lists`)}
-          </Button>
-        </div>
-      )}
+
     </>
   )
 }

@@ -108,7 +108,7 @@ export const SUPPORTED_NETWORKS: Record<
     chainName: 'RAIL TESTNET',
     nativeCurrency: {
       name: 'STEAMX',
-      symbol: 'STMX',
+      symbol: 'STEAMX',
       decimals: 18,
     },
     rpcUrls: ['https://testnet.steamexchange.io'],
@@ -119,7 +119,7 @@ export const SUPPORTED_NETWORKS: Record<
     chainName: 'RAILS',
     nativeCurrency: {
       name: 'STEAMX',
-      symbol: 'STMX',
+      symbol: 'STEAMX',
       decimals: 18,
     },
     rpcUrls: ['https://mainnet.steamexchange.io'],
@@ -341,7 +341,7 @@ const NetworkModal: FC<{ switchNetwork: (targetChain: number) => void }> = ({ sw
   return (
     <HeadlessUiModal.Controlled isOpen={networkModalOpen} onDismiss={toggleNetworkModal}>
       <div className="flex flex-col gap-4">
-        <HeadlessUiModal.Header header={i18n._(t`Select a network`)} onClose={toggleNetworkModal} />
+        <HeadlessUiModal.Header header={i18n._(t`Change Network`)} onClose={toggleNetworkModal} />
         <div className="grid grid-flow-row-dense grid-cols-1 gap-4 overflow-y-auto md:grid-cols-2">
           {[
             ChainId.ETHEREUM,
@@ -375,13 +375,13 @@ const NetworkModal: FC<{ switchNetwork: (targetChain: number) => void }> = ({ sw
                 return (
                   <div
                     key={i}
-                    className="bg-[rgba(0,0,0,0.2)] focus:outline-none flex items-center gap-4 w-full px-4 py-3 rounded border border-purple cursor-default"
+                    className="bg-[rgba(0,0,0,0.2)] focus:outline-none flex items-center gap-4 w-full px-4 py-3 rounded-[5px] border border-blue-400 cursor-default"
                   >
                     <Image
                       // @ts-ignore TYPE NEEDS FIXING
                       src={NETWORK_ICON[key]}
                       alt="Switch Network"
-                      className="rounded-full"
+                      className="rounded-[5px]"
                       width="32px"
                       height="32px"
                     />
@@ -396,20 +396,22 @@ const NetworkModal: FC<{ switchNetwork: (targetChain: number) => void }> = ({ sw
                   key={i}
                   onClick={() => switchNetwork(key)}
                   className={classNames(
-                    'bg-[rgba(0,0,0,0.2)] focus:outline-none flex items-center gap-4 w-full px-4 py-3 rounded border border-dark-700 hover:border-blue'
+                    'bg-[rgba(0,0,0,0.2)] focus:outline-none flex items-center gap-4 w-full px-4 py-3 rounded-[5px] border border-dark-700 hover:border-blue'
                   )}
                 >
                   {/*@ts-ignore TYPE NEEDS FIXING*/}
                   <Image
                     src={NETWORK_ICON[key]}
                     alt="Switch Network"
-                    className="rounded-full"
+                    className="rounded-[5px]"
                     width="32px"
                     height="32px"
                   />
-                  <Typography weight={700} className="text-high-emphesis">
-                    {NETWORK_LABEL[key]}
-                  </Typography>
+                  {NETWORK_LABEL[key] && ( // Check if NETWORK_LABEL[key] exists
+                    <Typography weight={700} className="text-high-emphesis">
+                      {NETWORK_LABEL[key]}
+                    </Typography>
+                  )}
                 </button>
               )
             })}

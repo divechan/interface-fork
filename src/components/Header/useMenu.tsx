@@ -33,58 +33,64 @@ const useMenu: UseMenu = () => {
   return useMemo(() => {
     if (!chainId) return []
 
-    const menu: Menu = [ {
-        key: 'Home',
-        title: i18n._(t`Home`),
-        link: 'https://SteamX.com',
+    const menu: Menu = [{
+      key: 'Home',
+      title: i18n._(t`Home`),
+      link: '/swap',
+    },
+    ]
+
+    const explorers = [
+      {
+        key: 'mainnet',
+        title: i18n._(t`Mainnet`),
+        link: 'https://explore.steamexchange.io',
       },
       {
-        key: 'Ecosystem',
-        title: i18n._(t`Ecosystem`),
-        link: 'https://www.bitball-btb.com',
+        key: 'testnet',
+        title: i18n._(t`Testnet`),
+        link: 'https://build.steamexchange.io',
       },
-      {
-        key: 'Analytics',
-        title: i18n._(t`Analytics`),
-        link: '/analytics',
-      }
     ]
 
     const trade = [
-     
       {
         key: 'swap',
-        title: i18n._(t`Swap`),
+        title: i18n._(t`Trade`),
         link: '/swap',
       },
- 
+      {
+        key: 'buy',
+        title: i18n._(t`Buy Crypto`),
+        link: '/swap',
+      },
     ]
 
     const liquidity = [
       {
         key: 'pool',
-        title: i18n._(t`Pool`),
+        title: i18n._(t`Pools`),
         link: '/pool',
       },
       {
         key: 'add-liquidity',
-        title: i18n._(t`Add`),
+        title: i18n._(t`Add Liquidity`),
         link: `/add/ETH/${SUSHI_ADDRESS[chainId]}`,
       },
-      // {
-      //   key: 'remove-liquidity',
-      //   title: i18n._(t`Remove`),
-      //   link: '/remove',
-      // },
+      {
+        key: 'remove-liquidity',
+        title: i18n._(t`Remove`),
+        link: '/remove',
+      },
       {
         key: 'migrate',
-        title: i18n._(t`Migrate`),
+        title: i18n._(t`Migrate Liquidity`),
         link: '/migrate',
         disabled: !featureEnabled(Feature.MIGRATE, chainId),
       },
       {
         key: 'import',
-        title: i18n._(t`Import`),
+        title: i18n._(t`Import Liquidity`),
         link: '/find',
       },
     ]
@@ -100,14 +106,14 @@ const useMenu: UseMenu = () => {
             title: i18n._(t`Swap`),
             link: '/swap',
           },
-       
+
         ],
       })
 
       const tridentLiquidity = {
         key: 'liquidity',
         title: i18n._(t`Liquidity`),
-        icon: <BeakerIcon width={20} />,
+        icon: <GlobeAltIcon width={20} />,
         items: [
           {
             key: 'trident-pools',
@@ -133,33 +139,40 @@ const useMenu: UseMenu = () => {
       menu.push(tridentLiquidity)
 
       if (featureEnabled(Feature.AMM, chainId)) {
-     
+
       }
     } else {
       menu.push({
         key: 'trade',
-        title: i18n._(t`Trade`),
+        title: i18n._(t`Digital Assets`),
         icon: <SwitchVerticalIcon width={20} />,
         items: trade,
       })
       menu.push({
+        key: 'explorers',
+        title: i18n._(t`Explorers`),
+        icon: <GlobeIcon width={20} />,
+        items: explorers,
+      })
+
+      menu.push({
         key: 'liquidity',
-        title: i18n._(t`Liquidity`),
+        title: i18n._(t`Manage Liquidity`),
         icon: <BeakerIcon width={20} />,
         items: liquidity.filter((item) => !item?.disabled),
       })
     }
 
-   
-
-  
 
 
 
 
-  
 
-   
+
+
+
+
+
     return menu.filter((el) => Object.keys(el).length > 0)
   }, [account, chainId, i18n])
 }

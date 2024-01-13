@@ -29,7 +29,7 @@ const Mobile: FC = () => {
           </div>
           <div className="flex items-center w-6">
             <Link href="/swap" passHref={true}>
-              <Image src="https://i.imgur.com/44SEwTZ.png" alt="SteamX logo" width="24px" height="24px" />
+              <Image src="https://raw.githubusercontent.com/divechan/brandkit/main/SVGs/railslogoonlygray.svg" alt="SteamX logo" width="65px" height="75px" />
             </Link>
           </div>
           <div className="flex items-center">{<Web3Network />}</div>
@@ -61,7 +61,7 @@ const Mobile: FC = () => {
                   unmount={false}
                 >
                   <div className="w-screen max-w-sm">
-                    <div className="flex flex-col h-full py-6 overflow-x-hidden overflow-y-scroll shadow-xl bg-dark-800">
+                    <div className="flex flex-col h-full py-6 overflow-x-hidden overflow-y-scroll bg-blue-800 shadow-xl">
                       <nav className="flex-1 pl-6" aria-label="Sidebar">
                         {menu.map((node) => {
                           return <NavigationItem node={node} key={node.key} />
@@ -76,7 +76,7 @@ const Mobile: FC = () => {
                         )}
 
                         <div className="flex items-center gap-2">
-                          <div className="flex items-center justify-center flex-grow w-auto text-sm font-bold border-2 rounded shadow cursor-pointer pointer-events-auto select-none border-dark-800 hover:border-dark-700 bg-dark-900 whitespace-nowrap">
+                          <div className="flex items-center justify-center flex-grow w-auto text-sm font-bold bg-blue-900 border-2 border-blue-800 rounded shadow cursor-pointer pointer-events-auto select-none hover:border-blue-700 whitespace-nowrap">
                             {account && chainId && userEthBalance && (
                               <Link href={`/account/${account}`} passHref={true}>
                                 <a className="hidden px-3 text-high-emphesis text-bold md:block">

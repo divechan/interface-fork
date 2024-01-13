@@ -52,7 +52,7 @@ const Swap = ({ banners }: SwapProps) => {
     useCurrency(loadedUrlParams?.inputCurrencyId),
     useCurrency(loadedUrlParams?.outputCurrencyId),
   ]
-console.log("output",loadedUrlParams?.outputCurrencyId)
+  console.log("output", loadedUrlParams?.outputCurrencyId)
   const [dismissTokenWarning, setDismissTokenWarning] = useState<boolean>(false)
   const urlLoadedTokens: Token[] = useMemo(
     () => [loadedInputCurrency, loadedOutputCurrency]?.filter((c): c is Token => c?.isToken ?? false) ?? [],
@@ -83,13 +83,13 @@ console.log("output",loadedUrlParams?.outputCurrencyId)
     () =>
       showWrap
         ? {
-            [Field.INPUT]: parsedAmount,
-            [Field.OUTPUT]: parsedAmount,
-          }
+          [Field.INPUT]: parsedAmount,
+          [Field.OUTPUT]: parsedAmount,
+        }
         : {
-            [Field.INPUT]: independentField === Field.INPUT ? parsedAmount : trade?.inputAmount,
-            [Field.OUTPUT]: independentField === Field.OUTPUT ? parsedAmount : trade?.outputAmount,
-          },
+          [Field.INPUT]: independentField === Field.INPUT ? parsedAmount : trade?.inputAmount,
+          [Field.OUTPUT]: independentField === Field.OUTPUT ? parsedAmount : trade?.outputAmount,
+        },
     [independentField, parsedAmount, showWrap, trade]
   )
 
@@ -134,7 +134,7 @@ console.log("output",loadedUrlParams?.outputCurrencyId)
     [independentField]: typedValue,
     [dependentField]: showWrap
       ? /* @ts-ignore TYPE NEEDS FIXING */
-        parsedAmounts[independentField]?.toExact() ?? ''
+      parsedAmounts[independentField]?.toExact() ?? ''
       : parsedAmounts[dependentField]?.toSignificant(6) ?? '',
   }
 
@@ -222,8 +222,8 @@ console.log("output",loadedUrlParams?.outputCurrencyId)
           recipient === null
             ? 'Swap w/o Send'
             : (recipientAddress ?? recipient) === account
-            ? 'Swap w/o Send + recipient'
-            : 'Swap w/ Send',
+              ? 'Swap w/o Send + recipient'
+              : 'Swap w/ Send',
           {
             event_category: 'Swap',
             event_label: [
@@ -342,7 +342,7 @@ console.log("output",loadedUrlParams?.outputCurrencyId)
 
   return (
     <>
-      <NextSeo title="Swap" />
+      <NextSeo title="Rails Network&reg; Swap" />
       <ConfirmSwapModal
         isOpen={showConfirm}
         trade={trade}
@@ -367,7 +367,7 @@ console.log("output",loadedUrlParams?.outputCurrencyId)
         <div className="px-2">
           <HeaderNew inputCurrency={currencies[Field.INPUT]} outputCurrency={currencies[Field.OUTPUT]} />
         </div>
-        <div className="flex flex-col gap-3">
+        <div className="flex flex-col gap-1">
           <SwapAssetPanel
             spendFromWallet={true}
             header={SwapAssetPanel.Header}
@@ -376,10 +376,10 @@ console.log("output",loadedUrlParams?.outputCurrencyId)
             onChange={handleTypeInput}
             onSelect={handleInputSelect}
           />
-          <div className="z-0 flex justify-center -mt-6 -mb-6">
+          <div className="z-0 flex justify-center mt-4 mb-4">
             <div
               role="button"
-              className="p-1.5 rounded-full bg-dark-800 border shadow-md border-dark-700 hover:border-dark-600"
+              className="p-2.5 rounded-[5px] bg-blue-700 border shadow-md border-dark-700 hover:border-dark-600"
               onClick={() => {
                 setApprovalSubmitted(false) // reset 2 step UI for approvals
                 onSwitchTokens()
@@ -434,8 +434,8 @@ console.log("output",loadedUrlParams?.outputCurrencyId)
                 (wrapType === WrapType.WRAP
                   ? i18n._(t`Wrap`)
                   : wrapType === WrapType.UNWRAP
-                  ? i18n._(t`Unwrap`)
-                  : null)}
+                    ? i18n._(t`Unwrap`)
+                    : null)}
             </Button>
           ) : showApproveFlow ? (
             <div>
@@ -471,13 +471,13 @@ console.log("output",loadedUrlParams?.outputCurrencyId)
                   disabled={
                     !isValid || approvalState !== ApprovalState.APPROVED || (priceImpactSeverity > 3 && !isExpertMode)
                   }
-                  className="rounded-2xl md:rounded"
+                  className="rounded-[5px] md:rounded"
                 >
                   {priceImpactSeverity > 3 && !isExpertMode
                     ? i18n._(t`Price Impact High`)
                     : priceImpactSeverity > 2
-                    ? i18n._(t`Swap Anyway`)
-                    : i18n._(t`Swap`)}
+                      ? i18n._(t`Swap Anyway`)
+                      : i18n._(t`Swap`)}
                 </Button>
               )}
             </div>
@@ -500,15 +500,15 @@ console.log("output",loadedUrlParams?.outputCurrencyId)
               }}
               id="swap-button"
               disabled={!isValid || (priceImpactSeverity > 3 && !isExpertMode) || !!swapCallbackError}
-              className="rounded-2xl md:rounded"
+              className="rounded-[5px] md:rounded"
             >
               {swapInputError
                 ? swapInputError
                 : priceImpactSeverity > 3 && !isExpertMode
-                ? i18n._(t`Price Impact Too High`)
-                : priceImpactSeverity > 2
-                ? i18n._(t`Swap Anyway`)
-                : i18n._(t`Swap`)}
+                  ? i18n._(t`Price Impact Too High`)
+                  : priceImpactSeverity > 2
+                    ? i18n._(t`Swap Anyway`)
+                    : i18n._(t`Swap`)}
             </Button>
           )}
           {isExpertMode && swapErrorMessage ? <SwapCallbackError error={swapErrorMessage} /> : null}

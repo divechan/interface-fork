@@ -19,8 +19,8 @@ const DEFAULT_CRYPTO_CURRENCY = {
   [ChainId.ETHEREUM]: 'ETH',
   [ChainId.BSC]: 'BNB',
   [ChainId.MATIC]: 'MATIC',
-  [RAILS]: 'STMX',
-  [RAILS_TESTNET]: 'STMX',
+  [RAILS]: 'STEAMX',
+  [RAILS_TESTNET]: 'STEAMX',
 }
 
 export default function Buy() {

@@ -32,8 +32,8 @@ export const ImportToken: FC<ImportProps> = ({ tokens, onBack }) => {
   return chainId === queryChainId ? (
     <div className="flex flex-col gap-4">
       <HeadlessUiModal.Header header={i18n._(t`Trade token`)} onClose={onDismiss} onBack={onBack} />
-      <HeadlessUiModal.BorderedContent className="flex flex-col gap-4 divide-y divide-gray-700 !border-yellow/40">
-        <Typography variant="sm" weight={700} className="text-yellow">
+      <HeadlessUiModal.BorderedContent className="flex flex-col gap-4 divide-y divide-gray-700 !border-blue-700/40">
+        <Typography variant="sm" weight={700} className="text-white">
           {i18n._(
             t`This token is the main Token of this Chain on SteamX. Do you want to trade?`
           )}

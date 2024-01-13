@@ -2,7 +2,7 @@
 // pages/_document.js
 import { Head, Html, Main, NextScript } from 'next/document'
 
-const APP_NAME = 'SteamX'
+const APP_NAME = 'Rails Network Swap'
 const APP_DESCRIPTION = 'Swap, yield, lend, borrow, leverage, limit, launch all on one community driven ecosystem'
 
 export default function Document() {
@@ -18,7 +18,7 @@ export default function Document() {
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="theme-color" content="#0993ec" />
 
- 
+
 
         <link rel="manifest" href="/manifest.json" />
         <link rel="shortcut icon" href="/favicon.ico" />
