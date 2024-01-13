@@ -185,7 +185,7 @@ const AssetInputPanel = ({
 
   let content = (
     <div className="flex flex-row gap-3 py-2.5 px-2 flex-grow items-center">
-      <div className="w-12 h-12 rounded-full">
+      <div className="w-12 h-12 rounded-[5px]">
         <Lottie animationData={selectCoinAnimation} autoplay loop />
       </div>
       {onSelect && (
@@ -198,7 +198,7 @@ const AssetInputPanel = ({
                   color="blue"
                   size="sm"
                   variant="filled"
-                  className="!rounded-full"
+                  className="!rounded-[5px]"
                   endIcon={<ChevronDownIcon width={24} height={24} />}
                 >
                   {i18n._(t`Select a Token`)}
@@ -226,7 +226,7 @@ const AssetInputPanel = ({
       >
         {currencyLogo && (
           <div>
-            <CurrencyLogo currency={currency} size={size === 'md' ? 48 : 40} className="!rounded-full" />
+            <CurrencyLogo currency={currency} size={size === 'md' ? 48 : 40} className="!rounded-[5px]" />
           </div>
         )}
         <div className="flex flex-col flex-grow">

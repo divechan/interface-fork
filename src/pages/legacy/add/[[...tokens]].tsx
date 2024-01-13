@@ -307,8 +307,8 @@ export default function Add() {
             currency={currencies[Field.CURRENCY_A]}
           />
         </div>
-        <div className="z-0 flex justify-center -mt-6 -mb-6">
-          <div className="p-1.5 rounded-full bg-dark-800 border shadow-md border-dark-700 hover:border-dark-600">
+        <div className="z-0 flex justify-center mt-6 mb-6">
+          <div className="p-1.5 rounded-[5px] bg-blue-700 border shadow-md border-blue-600 hover:border-blue-500">
             <PlusIcon width={14} className="text-high-emphesis hover:text-white" />
           </div>
         </div>
@@ -326,7 +326,7 @@ export default function Add() {
             price={price}
             noLiquidity={noLiquidity}
             poolTokenPercentage={poolTokenPercentage}
-            className="bg-dark-900"
+            className="bg-blue-900"
           />
         )}
 

@@ -245,7 +245,7 @@ const SwapAssetPanelHeader: FC<
         'flex items-center gap-2 px-2 py-1 rounded-[5px] shadow-md text-high-emphesis'
       )}
     >
-      <CurrencyLogo currency={currency} className="!rounded-full overflow-hidden" size={20} />
+      <CurrencyLogo currency={currency} className="!rounded-[5px] overflow-hidden" size={20} />
       {label && (
         <Typography variant="sm" className="!text-xl" weight={700}>
           {label}
@@ -257,7 +257,7 @@ const SwapAssetPanelHeader: FC<
       {!hideSearchModal && <ChevronDownIcon width={18} />}
     </div>
   ) : (
-    <Button color="blue" variant="filled" size="sm" id={id} className="!rounded-full !px-2 !py-0 !h-[32px] !pl-3">
+    <Button color="blue" variant="filled" size="sm" id={id} className="!rounded-[5px] !px-2 !py-0 !h-[32px] !pl-3">
       {selectLabel || i18n._(t`Select a Token`)}
       <ChevronDownIcon width={18} />
     </Button>
