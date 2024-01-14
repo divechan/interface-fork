@@ -269,7 +269,7 @@ export default function Remove() {
           <div className="ml-3 text-2xl font-medium text-high-emphesis">{currencyB?.symbol}</div>
         </div>
       </div>
-      <div className="justify-start text-sm text-secondary">
+      <div className="justify-start text-sm text-high-emphesis">
         {t`Output is estimated. If the price changes by more than ${allowedSlippage.toSignificant(
           4
         )}% your transaction will revert.`}
@@ -278,7 +278,7 @@ export default function Remove() {
   )
 
   const ModalBottom = (
-    <div className="p-6 mt-0 -m-6 bg-dark-800">
+    <div className="p-6 mt-0 -m-6 bg-blue-900">
       {pair && (
         <>
           <div className="grid gap-1">
@@ -296,12 +296,12 @@ export default function Remove() {
               </div>
             </div>
           </div>
-          <div className="h-px my-6 bg-gray-700" />
+          <div className="h-px my-6 bg-blue-900" />
         </>
       )}
       <div className="grid gap-1 pb-6">
         <div className="flex items-center justify-between">
-          <div className="text-sm text-secondary">{i18n._(t`${currencyA?.symbol}/${currencyB?.symbol} Burned`)}</div>
+          <div className="text-sm text-high-emphasis">{i18n._(t`${currencyA?.symbol}/${currencyB?.symbol} Burned`)}</div>
           <div className="text-sm font-bold justify-center items-center flex right-align pl-1.5 text-high-emphasis">
             {parsedAmounts[Field.LIQUIDITY]?.toSignificant(6)}
           </div>

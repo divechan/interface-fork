@@ -61,7 +61,7 @@ const SwapDetails: FC<SwapDetails> = ({
       {({ open }) => (
         <div
           className={classNames(
-            open ? 'bg-dark-900' : '',
+            open ? 'bg-blue-900' : '',
             'shadow-inner flex flex-col gap-2 py-2 rounded px-2 border border-dark-700 transition hover:border-dark-700',
             className
           )}
@@ -176,7 +176,7 @@ const SwapDetailsContent: FC<SwapDetails> = ({ trade, recipient, inputAmount, ou
   }, [priceImpact])
 
   return (
-    <div className="flex flex-col divide-y divide-dark-850">
+    <div className="flex flex-col divide-y divide-blue-600">
       <div className="flex flex-col gap-1 pb-2">
         <div className="flex justify-between gap-4">
           <Typography variant="xs">{i18n._(t`Expected Output`)}</Typography>
@@ -203,29 +203,29 @@ const SwapDetailsContent: FC<SwapDetails> = ({ trade, recipient, inputAmount, ou
       </div>
       <div className="flex flex-col gap-1 pt-2">
         <div className="flex justify-between gap-4">
-          <Typography variant="xs" className="text-secondary">
+          <Typography variant="xs" className="text-white">
             {i18n._(t`Minimum received after slippage`)} ({allowedSlippage.toFixed(2)}%)
           </Typography>
-          <Typography variant="xs" className="text-right text-secondary">
+          <Typography variant="xs" className="text-right text-white">
             {minReceived?.toSignificant(6)} {minReceived?.currency.symbol}
           </Typography>
         </div>
         {realizedLpFeePercent && (
           <div className="flex justify-between gap-4">
-            <Typography variant="xs" className="text-secondary">
+            <Typography variant="xs" className="text-white">
               {i18n._(t`Liquidity provider fee`)}
             </Typography>
-            <Typography variant="xs" className="text-right text-secondary">
+            <Typography variant="xs" className="text-right text-white">
               {realizedLpFeePercent.toFixed(2)}%
             </Typography>
           </div>
         )}
         {path && (
           <div className="grid grid-cols-2 gap-4">
-            <Typography variant="xs" className="text-secondary">
+            <Typography variant="xs" className="text-white">
               {i18n._(t`Route`)}
             </Typography>
-            <Typography variant="xs" className="text-right text-secondary">
+            <Typography variant="xs" className="text-right text-white">
               {path.map((el) => el.symbol).join(' > ')}
             </Typography>
           </div>

@@ -18,12 +18,12 @@ const Pool = () => {
   const { i18n } = useLingui()
   const { account } = useActiveWeb3React()
   const { loading, pairs } = useV2PairsWithLiquidity()
-  
-console.log("pairs",pairs)
+
+  console.log("pairs", pairs)
   return (
     <>
       <NextSeo title="Pool" />
-      <div className="flex items-center justify-between">
+      <div className="flex items-center justify-between p-4">
         <Typography variant="lg" className="py-6">
           Position Overview
         </Typography>
@@ -33,12 +33,12 @@ console.log("pairs",pairs)
           </Button>
         </Link>
       </div>
-      <SwapLayoutCard className="!bg-dark-900 border border-dark-800 !p-0 overflow-hidden">
+      <SwapLayoutCard className="!bg-blue-900 border border-blue-800 rounded-[5px] !p-0 !px-4 overflow-hidden m-2">
         {!account ? (
-          <Web3Connect className="w-full !bg-dark-900 bg-gradient-to-r from-pink/80 hover:from-pink to-purple/80 hover:to-purple text-white h-[38px]" />
+          <Web3Connect className="w-full !bg-blue-900 bg-gradient-to-r from-blue-800/80 hover:from-blue-600 to-blue-600/80 hover:to-blue-800 text-white h-[38px] rounded-[5px]" />
         ) : (
-          <div className="px-2 space-y-4 rounded bg-dark-900">
-            <div className="grid grid-flow-row divide-y divide-dark-800">
+          <div className="px-2 space-y-4 rounded-[5px] bg-blue-900">
+            <div className="grid grid-flow-row divide-y divide-blue-800">
               {loading ? (
                 <div className="flex items-center justify-center h-40">
                   <Loader />
@@ -60,7 +60,7 @@ console.log("pairs",pairs)
           </div>
         )}
       </SwapLayoutCard>
-      <Typography variant="xs" className="px-10 mt-5 text-center text-low-emphesis">
+      <Typography variant="xs" className="p-4 px-10 mt-5 text-center text-high-emphesis">
         {i18n._(t`Liquidity providers earn a 0.25% fee on all trades proportional to their share of
                         the pool. Fees are added to the pool, accrue in real time and can be claimed by
                         withdrawing your liquidity`)}
