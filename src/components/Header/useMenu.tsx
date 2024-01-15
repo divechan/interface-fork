@@ -8,6 +8,8 @@ import { featureEnabled } from 'app/functions'
 import { useActiveWeb3React } from 'app/services/web3'
 import { ReactNode, useMemo } from 'react'
 
+
+
 export interface MenuItemLeaf {
   key: string
   title: string
@@ -62,7 +64,7 @@ const useMenu: UseMenu = () => {
       {
         key: 'buy',
         title: i18n._(t`Buy Crypto`),
-        link: '/swap',
+        link: 'https://buy.onramper.com/?apiKey=pk_prod_01H5AXWF5H767QV1SA4Z3RRPWE',
       },
     ]
 
@@ -77,17 +79,17 @@ const useMenu: UseMenu = () => {
         title: i18n._(t`Add Liquidity`),
         link: `/add/ETH/${SUSHI_ADDRESS[chainId]}`,
       },
-      {
-        key: 'remove-liquidity',
-        title: i18n._(t`Remove`),
-        link: '/remove',
-      },
-      {
-        key: 'migrate',
-        title: i18n._(t`Migrate Liquidity`),
-        link: '/migrate',
-        disabled: !featureEnabled(Feature.MIGRATE, chainId),
-      },
+      //{
+      //  key: 'remove-liquidity',
+      //  title: i18n._(t`Remove`),
+      //  link: '/remove',
+      //},
+      //{
+      //  key: 'migrate',
+      //  title: i18n._(t`Migrate Liquidity`),
+      //  link: '/migrate',
+      //  disabled: !featureEnabled(Feature.MIGRATE, chainId),
+      //},
       {
         key: 'import',
         title: i18n._(t`Import Liquidity`),
@@ -162,16 +164,6 @@ const useMenu: UseMenu = () => {
         items: liquidity.filter((item) => !item?.disabled),
       })
     }
-
-
-
-
-
-
-
-
-
-
 
     return menu.filter((el) => Object.keys(el).length > 0)
   }, [account, chainId, i18n])
