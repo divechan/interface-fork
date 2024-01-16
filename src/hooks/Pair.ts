@@ -25,11 +25,11 @@ export class Pair {
         tokenA.chainId == 1
           ? '0x7cf1d51C25E9bcD023ebF318B99824121941eBcf'
           : tokenA.chainId == 137
-          ? '0x6FF6ef9450e5cA711B037Bc23F109FCBaA03d2D3'
+          ? '0xc844820201334B8bbfc42aCA8e0f79C6BaAF916E'
           : tokenA.chainId == 24116
           ? '0x3Be077BBCaF5a518C6E12E5bCa6fdF8d7A36dc27'
           : tokenA.chainId == 6278
-          ? '0x6FF6ef9450e5cA711B037Bc23F109FCBaA03d2D3'
+          ? '0xc844820201334B8bbfc42aCA8e0f79C6BaAF916E'
           : tokenA.chainId == 56
           ? '0x20522019a3c2F35537561E75C519F19bd5Ae0d4A'
           : FACTORY_ADDRESS[tokenA.chainId],

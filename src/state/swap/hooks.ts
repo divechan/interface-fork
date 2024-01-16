@@ -323,7 +323,7 @@ export function queryParametersToSwapState(parsedQs: ParsedQs, chainId: ChainId 
         ? '0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56'
         : chainId == 137
         ? '0x21C787C0D881Fd1b8018b6335cE18632b64f35b0'
-        : '0x750ba8b76187092B0D1E87E28daaf484d1b5273b'
+        : ''
   } else if (inputCurrency === '') {
     inputCurrency = outputCurrency === eth ? sushi : eth
   } else if (outputCurrency === '' || inputCurrency === outputCurrency) {
