@@ -151,14 +151,14 @@ export const TransactionErrorContent: FC<TransactionErrorContentProps> = ({ mess
       <HeadlessUiModal.Header header={i18n._(t`Transaction Rejected`)} onClose={onDismiss} />
       <HeadlessUiModal.BorderedContent className="flex flex-col gap-1 text-center">
         <Typography variant="lg" weight={700} className="text-pink-red" component="span">
-          {i18n._(t`Oops!`)}
+          {i18n._(t`Oh Oh!`)}
         </Typography>
         <Typography variant="sm" weight={700} className="text-primary" component="span">
           {message}
         </Typography>
       </HeadlessUiModal.BorderedContent>
       <Button color="blue" onClick={onDismiss}>
-        {i18n._(t`Dismiss`)}
+        {i18n._(t`Close`)}
       </Button>
     </div>
   )

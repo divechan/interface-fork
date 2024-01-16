@@ -225,9 +225,8 @@ export default function Remove() {
           setAttemptingTxn(false)
 
           addTransaction(response, {
-            summary: t`Remove ${parsedAmounts[Field.CURRENCY_A]?.toSignificant(3)} ${
-              currencyA?.symbol
-            } and ${parsedAmounts[Field.CURRENCY_B]?.toSignificant(3)} ${currencyB?.symbol}`,
+            summary: t`Remove ${parsedAmounts[Field.CURRENCY_A]?.toSignificant(3)} ${currencyA?.symbol
+              } and ${parsedAmounts[Field.CURRENCY_B]?.toSignificant(3)} ${currencyB?.symbol}`,
           })
 
           setTxHash(response.hash)
@@ -270,7 +269,7 @@ export default function Remove() {
           <div className="ml-3 text-2xl font-medium text-high-emphesis">{currencyB?.symbol}</div>
         </div>
       </div>
-      <div className="justify-start text-sm text-secondary">
+      <div className="justify-start text-sm text-high-emphesis">
         {t`Output is estimated. If the price changes by more than ${allowedSlippage.toSignificant(
           4
         )}% your transaction will revert.`}
@@ -279,32 +278,30 @@ export default function Remove() {
   )
 
   const ModalBottom = (
-    <div className="p-6 mt-0 -m-6 bg-dark-800">
+    <div className="p-6 mt-0 -m-6 bg-blue-900">
       {pair && (
         <>
           <div className="grid gap-1">
             <div className="flex items-center justify-between">
               <div className="text-sm text-high-emphesis">{i18n._(t`Rates`)}</div>
               <div className="text-sm font-bold justify-center items-center flex right-align pl-1.5 text-high-emphesis">
-                {`1 ${currencyA?.symbol} = ${tokenA ? pair.priceOf(tokenA).toSignificant(6) : '-'} ${
-                  currencyB?.symbol
-                }`}
+                {`1 ${currencyA?.symbol} = ${tokenA ? pair.priceOf(tokenA).toSignificant(6) : '-'} ${currencyB?.symbol
+                  }`}
               </div>
             </div>
             <div className="flex items-center justify-end">
               <div className="text-sm font-bold justify-center items-center flex right-align pl-1.5 text-high-emphesis">
-                {`1 ${currencyB?.symbol} = ${tokenB ? pair.priceOf(tokenB).toSignificant(6) : '-'} ${
-                  currencyA?.symbol
-                }`}
+                {`1 ${currencyB?.symbol} = ${tokenB ? pair.priceOf(tokenB).toSignificant(6) : '-'} ${currencyA?.symbol
+                  }`}
               </div>
             </div>
           </div>
-          <div className="h-px my-6 bg-gray-700" />
+          <div className="h-px my-6 bg-blue-900" />
         </>
       )}
       <div className="grid gap-1 pb-6">
         <div className="flex items-center justify-between">
-          <div className="text-sm text-secondary">{i18n._(t`${currencyA?.symbol}/${currencyB?.symbol} Burned`)}</div>
+          <div className="text-sm text-high-emphasis">{i18n._(t`${currencyA?.symbol}/${currencyB?.symbol} Burned`)}</div>
           <div className="text-sm font-bold justify-center items-center flex right-align pl-1.5 text-high-emphasis">
             {parsedAmounts[Field.LIQUIDITY]?.toSignificant(6)}
           </div>
@@ -394,12 +391,12 @@ export default function Remove() {
         <div className="flex flex-col gap-3">
           <div
             className={classNames(
-              inputError ? 'border-red/40 hover:border-red' : 'border-dark-700 hover:border-dark-600',
-              'flex flex-col gap-1 bg-dark-900 px-4 py-2 rounded border'
+              inputError ? 'border-red/40 hover:border-red' : 'border-blue-700 hover:border-blue-600',
+              'flex flex-col gap-1 bg-blue-900 px-4 py-2 rounded-[5px] border border-blue-700'
             )}
           >
             <Typography variant="sm" weight={700}>
-              {i18n._(t`Percent to remove`)}
+              {i18n._(t`% to remove`)}
             </Typography>
             <div className="flex items-center gap-1">
               <Typography
@@ -417,18 +414,17 @@ export default function Remove() {
               </Typography>
             </div>
           </div>
-          <div className="flex-col overflow-hidden border rounded bg-dark-900 border-dark-700">
-            <div className="flex items-center justify-between px-4 py-2 overflow-hidden bg-dark-900">
+          <div className="flex-col overflow-hidden bg-blue-900 border border-blue-700 rounded-[5px]">
+            <div className="flex items-center justify-between px-4 py-2 overflow-hidden bg-blue-900">
               <Typography variant="sm" weight={700} className="text-high-emphesis">
-                {i18n._(t`You'll receive`)}
+                {i18n._(t`Withdrawing`)}
               </Typography>
               {chainId && (oneCurrencyIsWETH || oneCurrencyIsETH) && (
                 <Typography variant="xs" weight={700}>
                   {oneCurrencyIsETH ? (
                     <Link
-                      href={`/remove/${currencyA?.isNative ? WNATIVE_ADDRESS[chainId] : currencyIdA}/${
-                        currencyB?.isNative ? WNATIVE_ADDRESS[chainId] : currencyIdB
-                      }`}
+                      href={`/remove/${currencyA?.isNative ? WNATIVE_ADDRESS[chainId] : currencyIdA}/${currencyB?.isNative ? WNATIVE_ADDRESS[chainId] : currencyIdB
+                        }`}
                     >
                       <a className="text-baseline text-blue opacity-80 hover:opacity-100 focus:opacity-100 whitespace-nowrap">
                         Receive W{NATIVE[chainId].symbol} instead
@@ -437,9 +433,8 @@ export default function Remove() {
                   ) : (
                     oneCurrencyIsWETH && (
                       <Link
-                        href={`/remove/${currencyA?.equals(WNATIVE[chainId]) ? 'ETH' : currencyIdA}/${
-                          currencyB?.equals(WNATIVE[chainId]) ? 'ETH' : currencyIdB
-                        }`}
+                        href={`/remove/${currencyA?.equals(WNATIVE[chainId]) ? 'ETH' : currencyIdA}/${currencyB?.equals(WNATIVE[chainId]) ? 'ETH' : currencyIdB
+                          }`}
                       >
                         <a className="text-baseline text-blue opacity-80 hover:opacity-100 whitespace-nowrap">
                           Receive {NATIVE[chainId].symbol} instead

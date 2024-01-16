@@ -42,7 +42,7 @@ export const ImportToken: FC<ImportProps> = ({ tokens, onBack }) => {
           return (
             <div key={'import' + token.address} className=".token-warning-container flex flex-col gap-4 pt-4">
               <div className="flex items-center gap-3">
-                <CurrencyLogo currency={token} size={48} className="!rounded-full overflow-hidden" />
+                <CurrencyLogo currency={token} size={48} className="!rounded-[5px] overflow-hidden" />
                 <div className="flex flex-col">
                   <div className="flex items-center gap-2">
                     <Typography variant="lg" weight={700}>

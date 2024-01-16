@@ -41,7 +41,7 @@ const AssetSelect = (props: AssetSelectProps) => {
   )
 }
 
-interface AssetSelectPanelProps extends AssetSelectProps {}
+interface AssetSelectPanelProps extends AssetSelectProps { }
 
 const AssetSelectPanel: FC<AssetSelectPanelProps> = ({ value, onSelect, currencies }) => {
   const { i18n } = useLingui()
@@ -58,7 +58,7 @@ const AssetSelectPanel: FC<AssetSelectPanelProps> = ({ value, onSelect, currenci
           color="blue"
           size="sm"
           variant="filled"
-          className="!rounded-full"
+          className="!rounded-[5px]"
           endIcon={<ChevronDownIcon width={24} height={24} />}
         >
           {i18n._(t`Select a Token`)}

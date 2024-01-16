@@ -22,42 +22,40 @@ export function ConfirmAddModalBottom({
 }) {
   const { i18n } = useLingui()
   return (
-    <div className="p-6 mt-0 -m-6 rounded bg-dark-800">
+    <div className="p-6 mt-0 -m-6 bg-blue-900 rounded">
       <div className="grid gap-1">
         <div className="flex items-center justify-between">
-          <div className="text-sm text-high-emphesis">{i18n._(t`Rates`)}</div>
+          <div className="text-sm text-high-emphesis">{i18n._(t`Set Rates`)}</div>
           <div className="text-sm font-bold justify-center items-center flex right-align pl-1.5 text-high-emphesis">
-            {`1 ${parsedAmounts[Field.CURRENCY_A]?.currency.symbol} = ${price?.toSignificant(4)} ${
-              parsedAmounts[Field.CURRENCY_B]?.currency.symbol
-            }`}
+            {`1 ${parsedAmounts[Field.CURRENCY_A]?.currency.symbol} = ${price?.toSignificant(4)} ${parsedAmounts[Field.CURRENCY_B]?.currency.symbol
+              }`}
           </div>
         </div>
         <div className="flex items-center justify-end">
           <div className="text-sm font-bold justify-center items-center flex right-align pl-1.5 text-high-emphesis">
-            {`1 ${parsedAmounts[Field.CURRENCY_B]?.currency.symbol} = ${price?.invert()?.toSignificant(4)} ${
-              parsedAmounts[Field.CURRENCY_A]?.currency.symbol
-            }`}
+            {`1 ${parsedAmounts[Field.CURRENCY_B]?.currency.symbol} = ${price?.invert()?.toSignificant(4)} ${parsedAmounts[Field.CURRENCY_A]?.currency.symbol
+              }`}
           </div>
         </div>
       </div>
-      <div className="h-px my-6 bg-gray-700" />
+      <div className="h-px my-6 bg-blue-700" />
       <div className="grid gap-1 pb-6">
         <div className="flex items-center justify-between">
-          <div className="text-sm text-secondary">{i18n._(t`${currencies[Field.CURRENCY_A]?.symbol} Deposited`)}</div>
+          <div className="text-sm text-high-emphesis">{i18n._(t`${currencies[Field.CURRENCY_A]?.symbol} Depositing`)}</div>
           <div className="text-sm font-bold justify-center items-center flex right-align pl-1.5 text-high-emphesis">
             <div>{parsedAmounts[Field.CURRENCY_A]?.toSignificant(6)}</div>
             <span className="ml-1">{parsedAmounts[Field.CURRENCY_A]?.currency.symbol}</span>
           </div>
         </div>
         <div className="flex items-center justify-between">
-          <div className="text-sm text-secondary">{i18n._(t`${currencies[Field.CURRENCY_B]?.symbol} Deposited`)}</div>
+          <div className="text-sm text-high-emphesis">{i18n._(t`${currencies[Field.CURRENCY_B]?.symbol} Depositing`)}</div>
           <div className="text-sm font-bold justify-center items-center flex right-align pl-1.5 text-high-emphesis">
             <div>{parsedAmounts[Field.CURRENCY_B]?.toSignificant(6)}</div>
             <span className="ml-1">{parsedAmounts[Field.CURRENCY_B]?.currency.symbol}</span>
           </div>
         </div>
         <div className="flex items-center justify-between">
-          <div className="text-sm text-secondary">{i18n._(t`Share of Pool:`)}</div>
+          <div className="text-sm text-high-emphesis">{i18n._(t`% share of Pool:`)}</div>
           <div className="text-sm font-bold justify-center items-center flex right-align pl-1.5 text-high-emphesis">
             {noLiquidity ? '100' : poolTokenPercentage?.toSignificant(4)}%
           </div>

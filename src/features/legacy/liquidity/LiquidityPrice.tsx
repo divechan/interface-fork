@@ -26,12 +26,12 @@ const LiquidityPrice: FC<LiquidityPriceProps> = ({
   return (
     <div
       className={classNames(
-        'flex flex-col gap-2 px-3 py-2 rounded border border-dark-700 bg-dark-900 shadow-inner',
+        'flex flex-col gap-2 px-3 py-2 rounded border border-blue-700 bg-blue-900 shadow-inner',
         className
       )}
     >
       <div className="flex justify-between gap-4">
-        <Typography variant="xs">Rate</Typography>
+        <Typography variant="xs">Set Rate</Typography>
         <div>
           <TradePrice
             inputCurrency={currencies[Field.CURRENCY_A]}
@@ -43,7 +43,7 @@ const LiquidityPrice: FC<LiquidityPriceProps> = ({
         </div>
       </div>
       <div className="flex justify-between gap-4">
-        <Typography variant="xs">Share of pool</Typography>
+        <Typography variant="xs">% Share of pool</Typography>
         <Typography variant="xs" className="text-right">
           {noLiquidity && price
             ? '100'
