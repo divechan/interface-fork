@@ -173,7 +173,7 @@ export function useMulticall2Contract() {
     chainId == 24116
       ? '0xc532c0A65A1d8a040df1a6C4319F60Cb2782C791'
       : chainId == 6278
-      ? '0xc532c0A65A1d8a040df1a6C4319F60Cb2782C791'
+      ? '0x6AeEa8935f8b6A3ca0a1C3fc376d288C5B9b0A22'
       : chainId
       ? MULTICALL2_ADDRESS[chainId]
       : undefined,
