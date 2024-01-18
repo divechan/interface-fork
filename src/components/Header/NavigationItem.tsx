@@ -84,13 +84,13 @@ export const NavigationItem: FC<NavigationItem> = ({ node }) => {
                   )}
                 >
                   {(node as MenuItemNode).items.map((leaf) => (
-                    <Link key={leaf.key} href={leaf.link}>
-                      <a>
+                    <Link key={leaf.key} href={leaf.link} target="_blank">
+                      <a target={leaf.title === "Mainnet" || leaf.title == "Testnet" || leaf.title == "Buy Crypto" ? "_blank": ''}>
                         <Typography
                           variant="sm"
                           weight={700}
                           onClick={() => {
-                            router.push(leaf.link).then(() => buttonRef?.current?.click())
+                             router.push(leaf.link).then(() => buttonRef?.current?.click())
                           }}
                           className="relative px-3 py-2 m-1 rounded-lg hover:cursor-pointer hover:text-white hover:bg-white/10"
                         >
