@@ -84,21 +84,28 @@ export const NavigationItem: FC<NavigationItem> = ({ node }) => {
                   )}
                 >
                   {(node as MenuItemNode).items.map((leaf) => (
-                    <Link key={leaf.key} href={leaf.link} target="_blank">
-                      <a target={leaf.title === "Mainnet" || leaf.title == "Testnet" || leaf.title == "Buy Crypto" ? "_blank": ''}>
-                        <Typography
-                          variant="sm"
-                          weight={700}
-                          onClick={() => {
-                             router.push(leaf.link).then(() => buttonRef?.current?.click())
-                          }}
-                          className="relative px-3 py-2 m-1 rounded-lg hover:cursor-pointer hover:text-white hover:bg-white/10"
-                        >
-                          {leaf.title}
-                        </Typography>
-                      </a>
-                    </Link>
+                    <a
+                      key={leaf.key}
+                      href={leaf.link}
+                      target={leaf.title === "Mainnet" || leaf.title === "Testnet" || leaf.title === "Buy Crypto" ? "_blank" : '_self'}
+                      rel={leaf.title === "Mainnet" || leaf.title === "Testnet" || leaf.title === "Buy Crypto" ? "noopener noreferrer" : ''}
+                    >
+                      <Typography
+                        variant="sm"
+                        weight={700}
+                        onClick={(e) => {
+                          if (leaf.title !== "Mainnet" && leaf.title !== "Testnet" && leaf.title !== "Buy Crypto") {
+                            e.preventDefault(); // Prevent the default navigation behavior for other links
+                            router.push(leaf.link).then(() => buttonRef?.current?.click());
+                          }
+                        }}
+                        className="relative px-3 py-2 m-1 rounded-lg hover:cursor-pointer hover:text-white hover:bg-white/10"
+                      >
+                        {leaf.title}
+                      </Typography>
+                    </a>
                   ))}
+
                 </div>
               </Popover.Panel>
             </Transition>
