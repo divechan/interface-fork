@@ -347,7 +347,7 @@ const NetworkModal: FC<{ switchNetwork: (targetChain: number) => void }> = ({ sw
             ChainId.ETHEREUM,
             // ChainId.ARBITRUM,
             // ChainId.ARBITRUM_NOVA,
-            // ChainId.MATIC,
+            ChainId.MATIC,
             // ChainId.RAIL_TESTNET,
             // ChainId.XDAI,
             // ChainId.FANTOM,
@@ -357,7 +357,7 @@ const NetworkModal: FC<{ switchNetwork: (targetChain: number) => void }> = ({ sw
             // ChainId.OPTIMISM,
             // ChainId.MOONBEAM,
             // ChainId.FUSE,
-            ChainId.BSC,
+            // ChainId.BSC,
             RAILS,
             RAILS_TESTNET
             // ChainId.KAVA,
