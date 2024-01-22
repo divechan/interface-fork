@@ -59,11 +59,7 @@ export const getServerSideProps: GetServerSideProps<any> = async ({ query, res }
 
   return {
     props: {
-      fallback: {
-        [`/api/analytics/bentobox/${query.chainId}`]: await getAnalyticsBentobox({
-          chainId: Number(query.chainId),
-        }),
-      },
+    
     },
   }
 }

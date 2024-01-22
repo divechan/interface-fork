@@ -168,9 +168,7 @@ export const getServerSideProps: GetServerSideProps<any> = async ({ res }) => {
 
   return {
     props: {
-      fallback: {
-        ['/api/analytics/xsushi']: await getAnalyticsXsushi(),
-      },
+     
     },
   }
 }

@@ -54,12 +54,7 @@ export const getServerSideProps: GetServerSideProps<any> = async ({ query, res }
 
   return {
     props: {
-      fallback: {
-        [`/api/analytics/pairs/${query.chainId}`]: await getAnalyticsPairs({
-          chainId: Number(query.chainId),
-          first: 500,
-        }),
-      },
+     
     },
   }
 }

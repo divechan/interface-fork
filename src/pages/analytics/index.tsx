@@ -108,18 +108,7 @@ export const getServerSideProps: GetServerSideProps<any> = async ({ query, res }
 
   return {
     props: {
-      fallback: {
-        [`/api/analytics/dashboard/${query.chainId}`]: await getAnalyticsDashboard({
-          chainId: Number(query.chainId),
-        }),
-        [`/api/analytics/bentobox/${query.chainId}`]: await getAnalyticsBentobox({
-          chainId: Number(query.chainId),
-        }),
-        [`/api/analytics/pairs/${query.chainId}`]: await getAnalyticsPairs({
-          chainId: Number(query.chainId),
-          first: 10,
-        }),
-      },
+    
     },
   }
 }

@@ -119,16 +119,16 @@ const nextConfig = {
         destination: '/account',
         permanent: true,
       },
-      {
-        source: '/analytics/dashboard',
-        destination: '/analytics',
-        permanent: true,
-      },
-      {
-        source: '/analytics/pairs/:path*',
-        destination: '/analytics/pools/:path*',
-        permanent: true,
-      },
+      // {
+      //   source: '/analytics/dashboard',
+      //   destination: '/analytics',
+      //   permanent: true,
+      // },
+      // {
+      //   source: '/analytics/pairs/:path*',
+      //   destination: '/analytics/pools/:path*',
+      //   permanent: true,
+      // },
     ]
   },
   async rewrites() {
@@ -167,11 +167,11 @@ const nextConfig = {
       },
     ]
   },
-  i18n: {
-    localeDetection: true,
-    locales,
-    defaultLocale: sourceLocale,
-  },
+  // i18n: {
+  //   localeDetection: true,
+  //   locales,
+  //   defaultLocale: sourceLocale,
+  // },
   // serverRuntimeConfig: {},
   publicRuntimeConfig: {
     breakpoints: screens,

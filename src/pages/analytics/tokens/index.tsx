@@ -42,12 +42,7 @@ export const getServerSideProps: GetServerSideProps<any> = async ({ query, res }
 
   return {
     props: {
-      fallback: {
-        [`/api/analytics/tokens/${query.chainId}`]: await getAnalyticsTokens({
-          chainId: Number(query.chainId),
-          first: 500,
-        }),
-      },
+     
     },
   }
 }
