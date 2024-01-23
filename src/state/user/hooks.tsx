@@ -181,7 +181,7 @@ export function computePairAddress({
   return getCreate2Address(
     factoryAddress,
     keccak256(['bytes'], [pack(['address', 'address'], [token0.address, token1.address])]),
-    token0.chainId == 1 ? "0x284105c50b630ba152d66c7cc0721c3729f56026a8d71617578311e869c253bf" : token0.chainId == 56 ? "0x75df2c56877e32c6cf5b6bae86b4df78f14dcc4566ead8468f91d83b7838b279" : tokenA.chainId == 137 ? "0x75df2c56877e32c6cf5b6bae86b4df78f14dcc4566ead8468f91d83b7838b279" : token0.chainId == 6278 ? "0x68621122d5a2d88173b4685b8a130c8edf6af1711c629d20fc360e4512b3a347" : token0.chainId == 24116 ? "0x362eb84d228e4a995a27aa4ff1f7def659c8c7acb13d1fa2e9d059d4151b65a4" : "0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303"
+    token0.chainId == 1 ? "0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f" : token0.chainId == 56 ? "0x75df2c56877e32c6cf5b6bae86b4df78f14dcc4566ead8468f91d83b7838b279" : tokenA.chainId == 137 ? "0x75df2c56877e32c6cf5b6bae86b4df78f14dcc4566ead8468f91d83b7838b279" : token0.chainId == 6278 ? "0x68621122d5a2d88173b4685b8a130c8edf6af1711c629d20fc360e4512b3a347" : token0.chainId == 24116 ? "0x362eb84d228e4a995a27aa4ff1f7def659c8c7acb13d1fa2e9d059d4151b65a4" : "0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303"
   )
 }
 export function toV2LiquidityToken([tokenA, tokenB]: [Token, Token]): Token {
@@ -191,7 +191,7 @@ export function toV2LiquidityToken([tokenA, tokenB]: [Token, Token]): Token {
   console.log("pairs ", tokenA.chainId, tokenB.name, tokenA.name, computePairAddress({
     factoryAddress:
       tokenA.chainId == 1
-        ? '0x7cf1d51C25E9bcD023ebF318B99824121941eBcf'
+        ? '0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f'
         : tokenA.chainId == 137
           ? '0xc844820201334B8bbfc42aCA8e0f79C6BaAF916E'
           : tokenA.chainId == 24116
@@ -209,7 +209,7 @@ export function toV2LiquidityToken([tokenA, tokenB]: [Token, Token]): Token {
     computePairAddress({
       factoryAddress:
         tokenA.chainId == 1
-          ? '0x7cf1d51C25E9bcD023ebF318B99824121941eBcf'
+          ? '0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f'
           : tokenA.chainId == 137
             ? '0xc844820201334B8bbfc42aCA8e0f79C6BaAF916E'
             : tokenA.chainId == 24116

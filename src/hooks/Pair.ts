@@ -23,7 +23,7 @@ export class Pair {
     return computePairAddress({
       factoryAddress:
         tokenA.chainId == 1
-          ? '0x7cf1d51C25E9bcD023ebF318B99824121941eBcf'
+          ? '0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f'
           : tokenA.chainId == 137
           ? '0xc844820201334B8bbfc42aCA8e0f79C6BaAF916E'
           : tokenA.chainId == 24116
