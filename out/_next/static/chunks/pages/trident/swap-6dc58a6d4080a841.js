@@ -1,1 +1,0 @@
-(self.webpackChunk_N_E=self.webpackChunk_N_E||[]).push([[88],{96729:function(n,_,u){(window.__NEXT_P=window.__NEXT_P||[]).push(["/trident/swap",function(){return u(97698)}])}},function(n){n.O(0,[3482,8306,8529,2749,1641,129,9294,1286,7230,3389,9658,9469,6688,3935,210,5710,7030,2589,1831,7698,9774,2888,179],(function(){return _=96729,n(n.s=_);var _}));var _=n.O();_N_E=_}]);

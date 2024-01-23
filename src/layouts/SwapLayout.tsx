@@ -9,11 +9,7 @@ import Background from 'app/features/analytics/Background'
 export interface Layout {
   id: string
 }
-<<<<<<< HEAD
 //@ts-ignore
-=======
-
->>>>>>> 765f29248995a2f8273500ee7a463fa6f73de47e
 export const BackgroundImage: FC<BackgroundImageProps> = ({ imageUrl }) => {
   return (
     <div
@@ -63,10 +59,7 @@ export const Layout: FC<Layout> = ({ children, id }) => {
         <div style={{ position: 'relative' }}>
           <div
             className="absolute top-0 left-0 w-full h-full"
-<<<<<<< HEAD
             //@ts-ignore
-=======
->>>>>>> 765f29248995a2f8273500ee7a463fa6f73de47e
             style={window.innerWidth >= 769 ? desktopStyles : null}
             aria-hidden="true"
           ></div>
