@@ -59,11 +59,19 @@ const SettingsTab: FC<SettingsTabProps> = ({ placeholderSlippage, className, tri
               <div className="flex items-center justify-between">
                 <div className="flex items-center">
                   <Typography variant="xs" className="text-high-emphesis" weight={700}>
+<<<<<<< HEAD
                     {i18n._(t`Toggle Wizard Mode`)}
                   </Typography>
                   <QuestionHelper
                     text={i18n._(
                       t`Wizard Mode is for experienced investors only! Use at your own risk.`
+=======
+                    {i18n._(t`Wizard Mode + Proxy Swap`)}
+                  </Typography>
+                  <QuestionHelper
+                    text={i18n._(
+                      t`Wizard Mode is for experienced investors only! Use at your own risk. Wizard mode enabled Proxy Swaps.`
+>>>>>>> 765f29248995a2f8273500ee7a463fa6f73de47e
                     )}
                   />
                 </div>
@@ -127,7 +135,11 @@ const SettingsTab: FC<SettingsTabProps> = ({ placeholderSlippage, className, tri
             </Typography>
             <Typography variant="sm" weight={700} className="text-red">
               {i18n._(t`Enabling wizard mode disables the confirmation prompt for transactions and permits high slippage
+<<<<<<< HEAD
                   trades, which can often lead to unfavorable exchange rates and potential loss of funds.`)}
+=======
+                  trades, which can often lead to unfavorable exchange rates and potential loss of funds. Wizard mode enables Proxy Swap.`)}
+>>>>>>> 765f29248995a2f8273500ee7a463fa6f73de47e
             </Typography>
           </HeadlessUiModal.BorderedContent>
           <Button

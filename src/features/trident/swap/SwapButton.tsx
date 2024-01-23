@@ -58,7 +58,10 @@ const SwapButton: FC<SwapButton> = ({ onClick, spendFromWallet = true }) => {
 
   const handleClick = useCallback(() => {
     if (!trade || !priceImpact || !confirmPriceImpactWithoutFee(priceImpact)) return
+<<<<<<< HEAD
     //@ts-ignore
+=======
+>>>>>>> 765f29248995a2f8273500ee7a463fa6f73de47e
     onClick(trade)
     dispatch(setTridentSwapState({ ...tridentSwapState, showReview: true }))
   }, [dispatch, onClick, priceImpact, trade, tridentSwapState])
