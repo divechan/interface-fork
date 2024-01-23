@@ -88,24 +88,24 @@ function MyApp({ Component, pageProps, fallback, err }) {
     // @ts-ignore TYPE NEEDS FIXING
     async function load(locale) {
       // @ts-ignore TYPE NEEDS FIXING
-      i18n.loadLocaleData(locale, { plurals: plurals[locale.split('_')[0]] })
+      // i18n.loadLocaleData(locale, { plurals: plurals[locale.split('_')[0]] })
 
       try {
         // Load messages from AWS, use q session param to get latest version from cache
-        const res = await fetch(
-          `https://raw.githubusercontent.com/sushiswap/translations/master/sushiswap/${locale}.json`
-        )
-        const remoteMessages = await res.json()
+        // const res = await fetch(
+        //   `https://raw.githubusercontent.com/sushiswap/translations/master/sushiswap/${locale}.json`
+        // )
+        // const remoteMessages = await res.json()
 
-        const messages = remoteLoader({ messages: remoteMessages, format: 'minimal' })
-        i18n.load(locale, messages)
+        // const messages = remoteLoader({ messages: remoteMessages, format: 'minimal' })
+        // i18n.load(locale, messages)
       } catch {
         // Load fallback messages
-        const { messages } = await import(`@lingui/loader!./../../locale/${locale}.json?raw-lingui`)
-        i18n.load(locale, messages)
+        // const { messages } = await import(`@lingui/loader!./../../locale/${locale}.json?raw-lingui`)
+        // i18n.load(locale, messages)
       }
 
-      i18n.activate(locale)
+      // i18n.activate(locale)
     }
 
     load(locale)
