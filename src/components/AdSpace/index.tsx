@@ -15,11 +15,7 @@ function AdSpace() {
     const adsStyles = {
         maxWidth: '100%',
         height: 'auto',
-<<<<<<< HEAD
         // textAlign: 'center',
-=======
-        textAlign: 'center',
->>>>>>> 765f29248995a2f8273500ee7a463fa6f73de47e
     };
 
     const imageStyles = {
@@ -31,25 +27,15 @@ function AdSpace() {
     };
 
     return (
-<<<<<<< HEAD
     //@ts-ignore
         <div style={containerStyles}>
             {/* //@ts-ignore */}
-=======
-        <div style={containerStyles}>
->>>>>>> 765f29248995a2f8273500ee7a463fa6f73de47e
             <div style={adsStyles}>
                 {/* Advertisement Links */}
                 {/* Change the link for the image and the website link it targets */}
                 <a href="https://depot.steamexchange.io" target="_blank" rel="noopener noreferrer" style={imageLinkStyles}>
-<<<<<<< HEAD
                     <image
                         href="https://github.com/divechan/brandkit/blob/main/depot%20ad.jpg?raw=true"
-=======
-                    <img
-                        src="https://github.com/divechan/brandkit/blob/main/depot%20ad.jpg?raw=true"
-                        alt="Ad 1"
->>>>>>> 765f29248995a2f8273500ee7a463fa6f73de47e
                         style={imageStyles}
                     />
                 </a>

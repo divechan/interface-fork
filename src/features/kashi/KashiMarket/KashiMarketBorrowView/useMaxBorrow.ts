@@ -21,10 +21,7 @@ type UseMaxBorrow = (x: UseMaxBorrowPayload) => {
   trade?: LegacyTrade<Currency, Currency, TradeType.EXACT_INPUT>
 }
 
-<<<<<<< HEAD
 //@ts-ignore
-=======
->>>>>>> 765f29248995a2f8273500ee7a463fa6f73de47e
 export const useMaxBorrow: UseMaxBorrow = ({ leveraged, collateralAmount, borrowAmount, market }) => {
   const trade = useV2TradeExactIn(borrowAmount, collateralAmount?.currency, { maxHops: 3 })
   const allowedSlippage = useAppSelector(selectSlippage)

@@ -1,8 +1,5 @@
 import { BeakerIcon, GlobeIcon, SwitchVerticalIcon, TrendingUpIcon } from '@heroicons/react/outline'
-<<<<<<< HEAD
 import { GlobeAltIcon } from '@heroicons/react/solid'
-=======
->>>>>>> 765f29248995a2f8273500ee7a463fa6f73de47e
 import { t } from '@lingui/macro'
 import { useLingui } from '@lingui/react'
 import { ChainId, SUSHI_ADDRESS } from '@sushiswap/core-sdk'
@@ -41,11 +38,7 @@ const useMenu: UseMenu = () => {
 
     const menu: Menu = [{
       key: 'Home',
-<<<<<<< HEAD
       title: i18n._(t`Home`),
-=======
-      title: i18n._(t`Swap`),
->>>>>>> 765f29248995a2f8273500ee7a463fa6f73de47e
       link: '/swap',
     },
     ]
@@ -65,7 +58,6 @@ const useMenu: UseMenu = () => {
 
     const trade = [
       {
-<<<<<<< HEAD
         key: 'swap',
         title: i18n._(t`Trade`),
         link: '/swap',
@@ -73,10 +65,6 @@ const useMenu: UseMenu = () => {
       {
         key: 'buy',
         title: i18n._(t`Buy Crypto`),
-=======
-        key: 'buy',
-        title: i18n._(t`Onramper`),
->>>>>>> 765f29248995a2f8273500ee7a463fa6f73de47e
         link: 'https://buy.onramper.com/?apiKey=pk_prod_01H5AXWF5H767QV1SA4Z3RRPWE',
       },
     ]
@@ -157,16 +145,12 @@ const useMenu: UseMenu = () => {
 
       }
     } else {
-<<<<<<< HEAD
       menu.push({
         key: 'trade',
         title: i18n._(t`Digital Assets`),
         icon: <SwitchVerticalIcon width={20} />,
         items: trade,
       })
-=======
-
->>>>>>> 765f29248995a2f8273500ee7a463fa6f73de47e
       menu.push({
         key: 'explorers',
         title: i18n._(t`Explorers`),
@@ -178,20 +162,9 @@ const useMenu: UseMenu = () => {
         key: 'liquidity',
         title: i18n._(t`Manage Liquidity`),
         icon: <BeakerIcon width={20} />,
-<<<<<<< HEAD
         //@ts-ignore
         items: liquidity.filter((item) => !item?.disabled),
       })
-=======
-        items: liquidity.filter((item) => !item?.disabled),
-      })
-      menu.push({
-        key: 'trade',
-        title: i18n._(t`Buy Crypto`),
-        icon: <SwitchVerticalIcon width={20} />,
-        items: trade,
-      })
->>>>>>> 765f29248995a2f8273500ee7a463fa6f73de47e
     }
 
     return menu.filter((el) => Object.keys(el).length > 0)
