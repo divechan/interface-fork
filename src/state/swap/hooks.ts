@@ -49,7 +49,7 @@ export function useSwapActionHandlers(): {
   const { chainId } = useActiveWeb3React()
   const router = useRouter()
 
-  const inputCurrencyId = router.query.inputCurrency || 'ETH'
+  const inputCurrencyId = router.query.inputCurrency || 'STMX'
   const outputCurrencyId = 'USDC'
 
   const onCurrencySelection = useCallback(
