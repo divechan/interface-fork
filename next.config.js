@@ -64,71 +64,12 @@ const nextConfig = {
         destination: '/swap',
         permanent: true,
       },
-      // {
-      //   source: '/swap/:path*',
-      //   destination: 'https://www.sushi.com/swap',
-      //   permanent: true,
-      // },
+
       {
         source: '/home',
-        destination: 'https://www.sushi.com/swap',
+        destination: 'https://www.steamexchange.io',
         permanent: true,
       },
-      // {
-      //   source: '/farm/:path*',
-      //   destination: 'https://www.sushi.com/earn',
-      //   permanent: true,
-      // },
-      {
-        source: '/farms/special',
-        destination: 'https://www.sushi.com/earn',
-        permanent: true,
-      },
-      {
-        source: '/onsen/:path*',
-        destination: 'https://www.sushi.com/earn',
-        permanent: true,
-      },
-      {
-        source: '/farms/:path*',
-        destination: 'https://www.sushi.com/earn',
-        permanent: true,
-      },
-      {
-        source: '/stake',
-        destination: 'https://www.sushi.com/earn',
-        permanent: true,
-      },
-      {
-        source: '/borrow',
-        destination: '/kashi',
-        permanent: true,
-      },
-      {
-        source: '/lend',
-        destination: '/kashi',
-        permanent: true,
-      },
-      {
-        source: '/inari',
-        destination: '/tools/inari',
-        permanent: true,
-      },
-      {
-        source: '/bento/balances',
-        destination: '/account',
-        permanent: true,
-      },
-      // {
-      //   source: '/analytics/dashboard',
-      //   destination: '/analytics',
-      //   permanent: true,
-      // },
-      // {
-      //   source: '/analytics/pairs/:path*',
-      //   destination: '/analytics/pools/:path*',
-      //   permanent: true,
-      // },
     ]
   },
   async rewrites() {
