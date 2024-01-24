@@ -515,7 +515,7 @@ const Swap = ({ banners }: SwapProps) => {
           {swapIsUnsupported ? <UnsupportedCurrencyFooter currencies={[currencies.INPUT, currencies.OUTPUT]} /> : null}
         </div>
       </SwapLayoutCard>
-      <Banner banners={banners} />
+
     </>
   )
 }

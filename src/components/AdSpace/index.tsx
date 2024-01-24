@@ -27,15 +27,16 @@ function AdSpace() {
     };
 
     return (
-    //@ts-ignore
+        //@ts-ignore
         <div style={containerStyles}>
             {/* //@ts-ignore */}
             <div style={adsStyles}>
                 {/* Advertisement Links */}
                 {/* Change the link for the image and the website link it targets */}
                 <a href="https://depot.steamexchange.io" target="_blank" rel="noopener noreferrer" style={imageLinkStyles}>
-                    <image
-                        href="https://github.com/divechan/brandkit/blob/main/depot%20ad.jpg?raw=true"
+                    <img
+                        src="https://github.com/divechan/brandkit/blob/main/depot%20ad.jpg?raw=true"
+                        alt="Advertisement"
                         style={imageStyles}
                     />
                 </a>

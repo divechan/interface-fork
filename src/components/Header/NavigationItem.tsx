@@ -77,29 +77,29 @@ export const NavigationItem: FC<NavigationItem> = ({ node }) => {
               <Popover.Panel className="z-10 w-full absolute w-40 translate-y-[-8px] translate-x-[-8px]">
                 <div
                   className={classNames(
-                    'shadow-md shadow-black/40 border border-dark-700 rounded overflow-hidden',
+                    'shadow-md shadow-blue-700/40 border border-blue-700 rounded-[5px] overflow-hidden',
                     !touchDevice
                       ? "backdrop-blur-fallback before:z-[-1] before:rounded before:absolute before:w-full before:h-full before:content-[''] before:backdrop-blur-[20px] bg-white bg-opacity-[0.02]"
-                      : 'bg-dark-800 inset-0'
+                      : 'bg-blue-800 inset-0'
                   )}
                 >
                   {(node as MenuItemNode).items.map((leaf) => (
                     <a
                       key={leaf.key}
                       href={leaf.link}
-                      target={leaf.title === "Mainnet" || leaf.title === "Testnet" || leaf.title === "Buy Crypto" ? "_blank" : '_self'}
-                      rel={leaf.title === "Mainnet" || leaf.title === "Testnet" || leaf.title === "Buy Crypto" ? "noopener noreferrer" : ''}
+                      target={leaf.title === "Mainnet" || leaf.title === "Testnet" || leaf.title === "Onramper" ? "_blank" : '_self'}
+                      rel={leaf.title === "Mainnet" || leaf.title === "Testnet" || leaf.title === "Onramper" ? "noopener noreferrer" : ''}
                     >
                       <Typography
                         variant="sm"
                         weight={700}
                         onClick={(e) => {
-                          if (leaf.title !== "Mainnet" && leaf.title !== "Testnet" && leaf.title !== "Buy Crypto") {
+                          if (leaf.title !== "Mainnet" && leaf.title !== "Testnet" && leaf.title !== "Onramper") {
                             e.preventDefault(); // Prevent the default navigation behavior for other links
                             router.push(leaf.link).then(() => buttonRef?.current?.click());
                           }
                         }}
-                        className="relative px-3 py-2 m-1 rounded-lg hover:cursor-pointer hover:text-white hover:bg-white/10"
+                        className="relative px-3 py-2 m-1 rounded-[5px] hover:cursor-pointer hover:text-white hover:bg-blue-700/30"
                       >
                         {leaf.title}
                       </Typography>
