@@ -108,7 +108,7 @@ export const TransactionSubmittedContent: FC<TransactionSubmittedContentProps> =
       {currencyToAdd && isAddTokenSupported && (
         <Button color="blue" onClick={!success ? addToken : onDismiss}>
           <Typography variant="sm" weight={700}>
-            {!success ? i18n._(t`Add ${currencyToAdd.symbol} to ${providerDisplayName}`) : i18n._(t`Dismiss`)}
+            {!success ? `Add ${currencyToAdd.symbol} to ${providerDisplayName}` : `Dismiss`}
           </Typography>
         </Button>
       )}
