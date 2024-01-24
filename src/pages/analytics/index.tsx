@@ -101,14 +101,4 @@ function _Analytics(): JSX.Element {
   )
 }
 
-export const getServerSideProps: GetServerSideProps<any> = async ({ query, res }) => {
-  if (typeof query.chainId !== 'string') return { props: { fallback: {} } }
 
-  res.setHeader('Cache-Control', 'public, s-maxage=60, stale-while-revalidate=300')
-
-  return {
-    props: {
-    
-    },
-  }
-}

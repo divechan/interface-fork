@@ -163,12 +163,3 @@ function _XSushi() {
   )
 }
 
-export const getServerSideProps: GetServerSideProps<any> = async ({ res }) => {
-  res.setHeader('Cache-Control', 'public, s-maxage=300, stale-while-revalidate=600')
-
-  return {
-    props: {
-     
-    },
-  }
-}

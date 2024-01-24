@@ -35,4 +35,5 @@ const Swap = ({ banners }: SwapProps) => {
 }
 
 Swap.Layout = SwapLayout('swap-page')
+// Remove the export statement for Swap component
 export default Swap
