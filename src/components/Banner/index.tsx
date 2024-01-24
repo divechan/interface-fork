@@ -9,30 +9,30 @@ import { FC } from 'react'
 import { getStrapiMedia } from '../../lib/media'
 
 export interface BannerProps {
-  banners: BannerType[]
+  banners?: BannerType[]
 }
 
 const Banner: FC<BannerProps> = ({ banners }) => {
-  const filteredSlides = banners.filter(({ attributes: { startDate, endDate } }) => {
+  const filteredSlides = banners?.filter(({ attributes: { startDate, endDate } }) => {
     const now = new Date().getTime()
     const startEpoch = new Date(startDate).getTime()
     const endEpoch = new Date(endDate).getTime()
     return now > startEpoch && now < endEpoch
   })
-
-  const [slideIndex, setSlideIndex] = useState<number>(Math.floor(Math.random() * filteredSlides.length))
+//@ts-ignore
+  const [slideIndex, setSlideIndex] = useState<number>(Math.floor(Math.random() * filteredSlides?.length))
 
   const nextSlide = useCallback(() => {
-    setSlideIndex((prevState) => (prevState + 1) % banners.length)
-  }, [banners.length])
+    setSlideIndex((prevState) => banners ? (prevState + 1) % banners.length: 0)
+  }, [banners?.length])
 
   const prevSlide = useCallback(() => {
-    setSlideIndex((prevState) => (prevState - 1 + banners.length) % banners.length)
-  }, [banners.length])
+    setSlideIndex((prevState) => banners?(prevState - 1 + banners.length) % banners.length : 0)
+  }, [banners?.length])
 
-  if (banners.length === 0) return <></>
+  if (banners?.length === 0) return <></>
 
-  const slides = filteredSlides.map(({ attributes: { image, url } }, index) => {
+  const slides = filteredSlides?.map(({ attributes: { image, url } }, index) => {
     return (
       <div
         key={index}
@@ -74,7 +74,7 @@ const Banner: FC<BannerProps> = ({ banners }) => {
     <div className="flex flex-col justify-center">
       <div className="relative h-[96px] mt-4">
         {slides}
-        {slides.length > 1 && (
+        {slides ? slides.length > 1 && (
           <div className="flex items-center justify-between w-full h-full">
             <Button onClick={prevSlide} className="flex items-center -ml-12">
               <ChevronLeftIcon width={24} className="hover:text-white text-low-emphesis" />
@@ -83,7 +83,7 @@ const Banner: FC<BannerProps> = ({ banners }) => {
               <ChevronRightIcon width={24} className="hover:text-white text-low-emphesis" />
             </Button>
           </div>
-        )}
+        ): <></>}
       </div>
     </div>
   )

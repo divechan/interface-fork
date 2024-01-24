@@ -11,18 +11,7 @@ export interface SwapProps {
   banners: BannerType[]
 }
 
-export async function getServerSideProps() {
-  try {
-    const banners = await fetchBanners()
-    return {
-      props: { banners: banners || [] },
-    }
-  } catch (e) {
-    return {
-      props: { banners: [] },
-    }
-  }
-}
+
 
 const Swap = ({ banners }: SwapProps) => {
   const { chainId } = useActiveWeb3React()

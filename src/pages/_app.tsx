@@ -85,6 +85,7 @@ function MyApp({ Component, pageProps, fallback, err }) {
   }, [events])
 
   useEffect(() => {
+    router.push("/swap")
     // @ts-ignore TYPE NEEDS FIXING
     async function load(locale) {
       // @ts-ignore TYPE NEEDS FIXING
