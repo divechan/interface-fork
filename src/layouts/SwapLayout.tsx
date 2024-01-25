@@ -4,27 +4,13 @@ import { classNames } from 'app/functions'
 import React, { FC } from 'react'
 import AdSpace from 'app/components/AdSpace'
 import DefaultLayout from './Default'
-import Background from 'app/features/analytics/Background'
+
 
 export interface Layout {
   id: string
 }
 //@ts-ignore
-export const BackgroundImage: FC<BackgroundImageProps> = ({ imageUrl }) => {
-  return (
-    <div
-      className="absolute top-0 left-0 w-full h-full"
-      style={{
-        backgroundImage: `url(${imageUrl})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        opacity: 0.50, // Adjust the opacity of the background image
-        zIndex: 0,    // Ensure the background is behind the card
-      }}
-      aria-hidden="true" // Mark the background as decorative and not focusable
-    ></div>
-  );
-};
+
 
 export const SwapLayoutCard: FC<{ className?: string }> = ({ children, className }) => {
   return (
@@ -34,7 +20,7 @@ export const SwapLayoutCard: FC<{ className?: string }> = ({ children, className
         className
       )}
       style={{
-        background: 'rgba(12, 29, 49, 0.1)',  // Background color with 70% opacity
+        background: '#0c1d31',  // Background color with 70% opacity
         borderRadius: '5px',                  // Border radius
         boxShadow: '0px 0px 20px 5px #1f4a7d',  // Box shadow
         border: '2px solid #1f4a7d',
@@ -46,23 +32,12 @@ export const SwapLayoutCard: FC<{ className?: string }> = ({ children, className
 }
 
 export const Layout: FC<Layout> = ({ children, id }) => {
-  const desktopStyles = {
-    backgroundImage: 'url(https://github.com/divechan/brandkit/blob/main/10.jpg?raw=true)',
-    backgroundSize: 'cover', // Adjust the background image property for desktop
-    opacity: 0.25, // Adjust the opacity of the background image
-    zIndex: 0, // Ensure the background is behind the card
-  };
 
   return (
     <DefaultLayout>
       <Container id={id} className="py-4 md:py-12 lg:py-[120px] px-2 mx-auto" maxWidth="md">
         <div style={{ position: 'relative' }}>
-          <div
-            className="absolute top-0 left-0 w-full h-full"
-            //@ts-ignore
-            style={window.innerWidth >= 769 ? desktopStyles : null}
-            aria-hidden="true"
-          ></div>
+
           <DoubleGlowShadow>{children}</DoubleGlowShadow>
         </div>
         <AdSpace />
