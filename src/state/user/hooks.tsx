@@ -181,7 +181,7 @@ export function computePairAddress({
   return getCreate2Address(
     factoryAddress,
     keccak256(['bytes'], [pack(['address', 'address'], [token0.address, token1.address])]),
-    token0.chainId == 1 ? "0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f" : token0.chainId == 56 ? "0x75df2c56877e32c6cf5b6bae86b4df78f14dcc4566ead8468f91d83b7838b279" : tokenA.chainId == 137 ? "0x75df2c56877e32c6cf5b6bae86b4df78f14dcc4566ead8468f91d83b7838b279" : token0.chainId == 6278 ? "0x68621122d5a2d88173b4685b8a130c8edf6af1711c629d20fc360e4512b3a347" : token0.chainId == 24116 ? "0x362eb84d228e4a995a27aa4ff1f7def659c8c7acb13d1fa2e9d059d4151b65a4" : "0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303"
+    token0.chainId == 1 ? "0x96e8ac4277198ff8b6f785478aa9a39f403cb768dd02cbee326c3e7da348845f" : token0.chainId == 56 ? "0x75df2c56877e32c6cf5b6bae86b4df78f14dcc4566ead8468f91d83b7838b279" : tokenA.chainId == 137 ? "0x75df2c56877e32c6cf5b6bae86b4df78f14dcc4566ead8468f91d83b7838b279" : token0.chainId == 6278 ? "0x620428dad21926ae5ed451241c9695f4b327ccda3a18a7722907fb52e06bc1a7" : token0.chainId == 24116 ? "0x362eb84d228e4a995a27aa4ff1f7def659c8c7acb13d1fa2e9d059d4151b65a4" : "0xe18a34eb0e04b04f7a0ac29a6e80748dca96319b42c54d679cb821dca90c6303"
   )
 }
 export function toV2LiquidityToken([tokenA, tokenB]: [Token, Token]): Token {
