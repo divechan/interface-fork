@@ -68,7 +68,7 @@ const AccountDetails: FC<AccountDetailsProps> = ({
         <HeadlessUiModal.BorderedContent className="flex flex-col gap-3">
           <div className="flex items-center justify-between">
             {connectorName}
-            {connector !== injected && !(connector instanceof WalletLinkConnector) && (
+            {!(connector instanceof WalletLinkConnector) && (
               <Button variant="outlined" color="blue" size="xs" onClick={deactivate}>
                 {i18n._(t`Disconnect`)}
               </Button>
