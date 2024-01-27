@@ -49,7 +49,7 @@ export function useSwapActionHandlers(): {
   const { chainId } = useActiveWeb3React()
   const router = useRouter()
 
-  const inputCurrencyId = router.query.inputCurrency || 'STMX'
+  const inputCurrencyId = router.query.inputCurrency || 'STEAMX'
   const outputCurrencyId = 'USDC'
 
   const onCurrencySelection = useCallback(
@@ -322,7 +322,7 @@ export function queryParametersToSwapState(parsedQs: ParsedQs, chainId: ChainId 
         : chainId == 56
         ? '0xe9e7CEA3DedcA5984780Bafc599bD69ADd087D56'
         : chainId == 137
-        ? '0x21C787C0D881Fd1b8018b6335cE18632b64f35b0'
+        ? '0x2791Bca1f2de4661ED88A30C99A7a9449Aa84174'
         : ''
   } else if (inputCurrency === '') {
     inputCurrency = outputCurrency === eth ? sushi : eth

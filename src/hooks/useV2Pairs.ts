@@ -35,11 +35,11 @@ export function useV2Pairs(currencies: [Currency | undefined, Currency | undefin
                   tokenA.chainId == 1
                     ? '0x5C69bEe701ef814a2B6a3EDD4B1652CB9cc5aA6f'
                     : tokenA.chainId == 137
-                    ? '0xc844820201334B8bbfc42aCA8e0f79C6BaAF916E'
+                    ? '0xAdD2FC2189dA02E4122E6D734094bF1474516AD0'
                     : tokenA.chainId == 24116
                     ? '0x3Be077BBCaF5a518C6E12E5bCa6fdF8d7A36dc27'
                     : tokenA.chainId == 6278
-                    ? '0xc844820201334B8bbfc42aCA8e0f79C6BaAF916E'
+                    ? '0xAdD2FC2189dA02E4122E6D734094bF1474516AD0'
                     : tokenA.chainId == 56
                     ? '0x20522019a3c2F35537561E75C519F19bd5Ae0d4A'
                     : FACTORY_ADDRESS[tokenA.chainId],
