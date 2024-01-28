@@ -223,7 +223,7 @@ export function toV2LiquidityToken([tokenA, tokenB]: [Token, Token]): Token {
       tokenB,
     }),
     18,
-    'STEAMXLP',
+    'STMXLP',
     'Steamx LP Token'
   )
 }
