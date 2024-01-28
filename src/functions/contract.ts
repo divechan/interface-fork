@@ -36,7 +36,7 @@ export function getRouterAddress(chainId?: ChainId & typeof RAILS & typeof RAILS
     : chainId == 137
     ? '0x652fe694E94FA129bc96930171EeE2333B44F38d'
     : chainId == 24116
-    ? '0xb9E75cd98a73dD95813b823589D30C8F9638dbbC'
+    ? '0x7FfFe547160D6668BD7335860ff2a85fB33dE327'
     : chainId == 6278
     ? '0x652fe694E94FA129bc96930171EeE2333B44F38d'
     : chainId == 56

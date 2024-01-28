@@ -171,7 +171,7 @@ export function useMulticall2Contract() {
   const { chainId } = useActiveWeb3React()
   return useContract(
     chainId == 24116
-      ? '0xc532c0A65A1d8a040df1a6C4319F60Cb2782C791'
+      ? '0x652fe694E94FA129bc96930171EeE2333B44F38d'
       : chainId == 6278
       ? '0x72A34115BC568e9d8d0c71e277B19e75015b3e88'
       : chainId
@@ -187,7 +187,7 @@ const MULTICALL_ADDRESS = {
   [ChainId.ROPSTEN]: '0x1F98415757620B543A52E61c46B32eB19261F984',
   [ChainId.RINKEBY]: '0x1F98415757620B543A52E61c46B32eB19261F984',
   [RAILS]: '0xA5c093be68a66Ee0Ce836DC09d54bfd927C751f9',
-  [RAILS_TESTNET]: '0xF004afF5F55129051A63A5E192221aEDe0EEAF6F',
+  [RAILS_TESTNET]: '0xA5c093be68a66Ee0Ce836DC09d54bfd927C751f9',
   [ChainId.GÖRLI]: '0x1F98415757620B543A52E61c46B32eB19261F984',
   [ChainId.KOVAN]: '0x1F98415757620B543A52E61c46B32eB19261F984',
   [ChainId.MATIC]: '0x1F98415757620B543A52E61c46B32eB19261F984',
@@ -247,7 +247,7 @@ export function useFactoryContract(): Contract | null {
         : chainId == 6278
         ? '0xc844820201334B8bbfc42aCA8e0f79C6BaAF916E'
         : chainId == 24116
-        ? '0x3Be077BBCaF5a518C6E12E5bCa6fdF8d7A36dc27'
+        ? '0xAdD2FC2189dA02E4122E6D734094bF1474516AD0'
         : chainId == 56
         ? '0x20522019a3c2F35537561E75C519F19bd5Ae0d4A'
         : FACTORY_ADDRESS[chainId]
@@ -266,7 +266,7 @@ export function useRouterContract(withSignerIfPossible?: boolean): Contract | nu
       : chainId == 137
       ? '0x652fe694E94FA129bc96930171EeE2333B44F38d'
       : chainId == 24116
-      ? '0xb9E75cd98a73dD95813b823589D30C8F9638dbbC'
+      ? '0x7FfFe547160D6668BD7335860ff2a85fB33dE327'
       : chainId == 6278
       ? '0x652fe694E94FA129bc96930171EeE2333B44F38d'
       : chainId == 56

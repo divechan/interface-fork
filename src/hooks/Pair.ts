@@ -27,7 +27,7 @@ export class Pair {
           : tokenA.chainId == 137
           ? '0xAdD2FC2189dA02E4122E6D734094bF1474516AD0'
           : tokenA.chainId == 24116
-          ? '0x3Be077BBCaF5a518C6E12E5bCa6fdF8d7A36dc27'
+          ? '0xAdD2FC2189dA02E4122E6D734094bF1474516AD0'
           : tokenA.chainId == 6278
           ? '0xAdD2FC2189dA02E4122E6D734094bF1474516AD0'
           : tokenA.chainId == 56
