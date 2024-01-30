@@ -114,7 +114,7 @@ export function useApproveCallbackFromTrade(
           : chainId == 137
           ? '0x652fe694E94FA129bc96930171EeE2333B44F38d'
           : chainId == 24116
-          ? '0x7FfFe547160D6668BD7335860ff2a85fB33dE327'
+          ? '0x4a8aEa2f42b2980E43CEbdBC81ae52eF30B9E480'
           : chainId == 6278
           ? '0x652fe694E94FA129bc96930171EeE2333B44F38d'
           : chainId == 56

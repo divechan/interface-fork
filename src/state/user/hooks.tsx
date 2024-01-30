@@ -195,9 +195,9 @@ export function toV2LiquidityToken([tokenA, tokenB]: [Token, Token]): Token {
         : tokenA.chainId == 137
           ? '0xc844820201334B8bbfc42aCA8e0f79C6BaAF916E'
           : tokenA.chainId == 24116
-            ? '0xAdD2FC2189dA02E4122E6D734094bF1474516AD0'
+            ? '0x2aE71B58e1de4A60fdb8DAC0681b94Ba72eCDdBc'
             : tokenA.chainId == 6278
-              ? '0xc844820201334B8bbfc42aCA8e0f79C6BaAF916E'
+              ? '0xAdD2FC2189dA02E4122E6D734094bF1474516AD0'
               : tokenA.chainId == 56
                 ? '0x20522019a3c2F35537561E75C519F19bd5Ae0d4A'
                 : FACTORY_ADDRESS[tokenA.chainId],
@@ -213,9 +213,9 @@ export function toV2LiquidityToken([tokenA, tokenB]: [Token, Token]): Token {
           : tokenA.chainId == 137
             ? '0xc844820201334B8bbfc42aCA8e0f79C6BaAF916E'
             : tokenA.chainId == 24116
-              ? '0xAdD2FC2189dA02E4122E6D734094bF1474516AD0'
+              ? '0x2aE71B58e1de4A60fdb8DAC0681b94Ba72eCDdBc'
               : tokenA.chainId == 6278
-                ? '0xc844820201334B8bbfc42aCA8e0f79C6BaAF916E'
+                ? '0xAdD2FC2189dA02E4122E6D734094bF1474516AD0'
                 : tokenA.chainId == 56
                   ? '0x20522019a3c2F35537561E75C519F19bd5Ae0d4A'
                   : FACTORY_ADDRESS[tokenA.chainId],
