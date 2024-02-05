@@ -13,6 +13,7 @@ export function useInactiveListener(suppress = false) {
 
   useEffect(() => {
     const ethereum = window.ethereum as EthereumProvider | undefined
+    console.log("reactivate1")
 
     if (ethereum && ethereum.on && !active && !error && !suppress) {
       const handleChainChanged = () => {

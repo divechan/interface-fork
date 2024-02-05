@@ -15,7 +15,7 @@ export const Web3ReactManager = ({ children }: { children: JSX.Element }) => {
   const { active: networkActive, error: networkError, activate: activateNetwork } = useWeb3React(NetworkContextName)
 
   // try to eagerly connect to an injected provider, if it exists and has granted access already
-  const triedEager = useEagerConnect()
+  const triedEager = false
 
   // after eagerly trying injected, if the network connect ever isn't active or in an error state, activate itd
   useEffect(() => {
@@ -30,7 +30,7 @@ export const Web3ReactManager = ({ children }: { children: JSX.Element }) => {
   }, [triedEager, networkActive, networkError, activateNetwork, active])
 
   // when there's no account connected, react to logins (broadly speaking) on the injected provider, if it exists
-  useInactiveListener(!triedEager)
+  // useInactiveListener(!triedEager)
 
   // on page load, do nothing until we've tried to connect to the injected connector
   if (!triedEager) {

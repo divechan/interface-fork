@@ -21,6 +21,7 @@ import { WalletConnectConnector } from 'web3-react-walletconnect-connector'
 
 import Option from './Option'
 import PendingView from './PendingView'
+import { useActiveWeb3React } from 'app/services/web3'
 
 enum WALLET_VIEWS {
   OPTIONS,
@@ -35,7 +36,7 @@ interface WalletModal {
 }
 
 const WalletModal: FC<WalletModal> = ({ pendingTransactions, confirmedTransactions, ENSName }) => {
-  const { active, account, connector, activate, error, deactivate } = useWeb3React()
+  const { active, account, connector, activate,deactivate, error } = useActiveWeb3React()
   const { i18n } = useLingui()
   const [walletView, setWalletView] = useState(WALLET_VIEWS.ACCOUNT)
   const [pendingWallet, setPendingWallet] = useState<{ connector?: AbstractConnector; id: string }>()
@@ -52,7 +53,7 @@ const WalletModal: FC<WalletModal> = ({ pendingTransactions, confirmedTransactio
   const defaultChainId = cookieChainId ? Number(cookieChainId) : 6278
   // close on connection, when logged out before
   useEffect(() => {
-    if (account && !previousAccount && walletModalOpen) toggleWalletModal()
+    // if (account && !previousAccount && walletModalOpen) toggleWalletModal()
   }, [account, previousAccount, toggleWalletModal, walletModalOpen])
 
   // always reset to account view
@@ -83,16 +84,20 @@ const WalletModal: FC<WalletModal> = ({ pendingTransactions, confirmedTransactio
     setWalletView(WALLET_VIEWS.ACCOUNT)
   }, [])
 
-  const handleDeactivate = useCallback(() => {
-    deactivate()
-    setWalletView(WALLET_VIEWS.ACCOUNT)
-  }, [deactivate])
+  const handleDeactivate=async() => {
+
+    if (connector) {
+     deactivate();
+    }
+    const localChainId = localStorage.getItem('localChainId');
+    setWalletView(WALLET_VIEWS.OPTIONS)
+  }
 
   const tryActivation = useCallback(
     async (connector: (() => Promise<AbstractConnector>) | AbstractConnector | undefined, id: string) => {
       let name = ''
       let conn = typeof connector === 'function' ? await connector() : connector
-
+console.log("reactivate")
       Object.keys(SUPPORTED_WALLETS).map((key) => {
         if (connector === SUPPORTED_WALLETS[key].connector) {
           return (name = SUPPORTED_WALLETS[key].name)
@@ -292,3 +297,7 @@ const WalletModal: FC<WalletModal> = ({ pendingTransactions, confirmedTransactio
 }
 
 export default WalletModal
+function callback() {
+  throw new Error('Function not implemented.')
+}
+

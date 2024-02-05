@@ -35,14 +35,22 @@ const AccountDetails: FC<AccountDetailsProps> = ({
   openOptions,
 }) => {
   const { i18n } = useLingui()
-  const { chainId, account, connector, deactivate, library } = useActiveWeb3React()
+  const { chainId, account, connector,deactivate, library } = useActiveWeb3React()
   const dispatch = useAppDispatch()
 
   const isMetaMask = useMemo(() => {
     const { ethereum } = window
     return !!(ethereum && ethereum.isMetaMask)
   }, [])
+  const handleDeactivate = async () => {
 
+    if (connector) {
+      console.log("this is ")
+      deactivate();
+    }
+    const localChainId = localStorage.getItem('localChainId');
+    // setWalletView(WALLET_VIEWS.OPTIONS)
+  }
   const connectorName = useMemo(() => {
     const name = Object.keys(SUPPORTED_WALLETS)
       .filter(
@@ -69,7 +77,7 @@ const AccountDetails: FC<AccountDetailsProps> = ({
           <div className="flex items-center justify-between">
             {connectorName}
             {!(connector instanceof WalletLinkConnector) && (
-              <Button variant="outlined" color="blue" size="xs" onClick={deactivate}>
+              <Button variant="outlined" color="blue" size="xs" onClick={handleDeactivate}>
                 {i18n._(t`Disconnect`)}
               </Button>
             )}
@@ -147,3 +155,7 @@ const AccountDetails: FC<AccountDetailsProps> = ({
 }
 
 export default AccountDetails
+function setWalletView(OPTIONS: any) {
+  throw new Error('Function not implemented.')
+}
+
