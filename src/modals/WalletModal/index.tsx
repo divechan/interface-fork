@@ -103,6 +103,21 @@ console.log("reactivate")
           return (name = SUPPORTED_WALLETS[key].name)
         }
       })
+      // if(name){
+      //   console.log("tihs is")
+      //   injected.isAuthorized().then((isAuthorized) => {
+      //     if (isAuthorized) {
+      //       activate(injected, undefined, true).catch(() => {
+      //       })
+      //     } else {
+      //       if (isMobile && window.ethereum) {
+      //         activate(injected, undefined, true).catch(() => {
+      //         })
+      //       } else {
+      //       }
+      //     }
+      //   })
+      // }
 
       console.debug('Attempting activation of', name)
 
@@ -257,7 +272,7 @@ console.log("reactivate")
                 : i18n._(t`Error connecting. Try refreshing the page.`)}
             </Typography>
           </HeadlessUiModal.BorderedContent>
-          <Button color="red" onClick={handleDeactivate}>
+          <Button color="red" onClick={deactivate}>
             {i18n._(t`Disconnect`)}
           </Button>
         </div>

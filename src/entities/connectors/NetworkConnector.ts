@@ -117,7 +117,7 @@ class MiniRpcProvider implements AsyncSendable {
       }
     }
   }
-  
+
   public readonly sendAsync = (
     request: {
       jsonrpc: '2.0'
@@ -196,12 +196,6 @@ export class NetworkConnector extends AbstractConnector {
 
   //@ts-ignore
   public deactivate() {
-    this.emitUpdate({
-      chainId:undefined,
-      account: null,
-      provider: null,
-    })
-    return  this.deactivate()
   }
 
   /**

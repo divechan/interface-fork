@@ -77,7 +77,7 @@ const AccountDetails: FC<AccountDetailsProps> = ({
           <div className="flex items-center justify-between">
             {connectorName}
             {!(connector instanceof WalletLinkConnector) && (
-              <Button variant="outlined" color="blue" size="xs" onClick={handleDeactivate}>
+              <Button variant="outlined" color="blue" size="xs" onClick={deactivate}>
                 {i18n._(t`Disconnect`)}
               </Button>
             )}
