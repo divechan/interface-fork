@@ -31,7 +31,7 @@ const ArbitrumNova = 'https://raw.githubusercontent.com/sushiswap/icons/master/n
 const BobaAvax = 'https://raw.githubusercontent.com/sushiswap/list/master/logos/network-logos/boba-avax.jpg'
 
 export const NETWORK_ICON: Record<number, string> = {
-  [ChainId.ETHEREUM]: Mainnet,
+  // [ChainId.ETHEREUM]: Mainnet,
   // [ChainId.ROPSTEN]: Ropsten,
   // [ChainId.RINKEBY]: Rinkeby,
   // [ChainId.GÖRLI]: Goerli,
@@ -40,7 +40,7 @@ export const NETWORK_ICON: Record<number, string> = {
   // [ChainId.FANTOM_TESTNET]: Fantom,
   [ChainId.BSC]: Bsc,
   [ChainId.BSC_TESTNET]: Bsc,
-  [ChainId.MATIC]: Polygon,
+  // [ChainId.MATIC]: Polygon,
   [ChainId.MATIC_TESTNET]: Matic,
   [ChainId.RAIL_TESTNET]: rail_testnet,
   [ChainId.RAIL]: rail_mainnet,
@@ -70,14 +70,14 @@ export const NETWORK_ICON: Record<number, string> = {
 }
 
 export const NETWORK_LABEL: Record<number, string> = {
-  [ChainId.ETHEREUM]: 'Ethereum',
+  // [ChainId.ETHEREUM]: 'Ethereum',
   // [ChainId.RINKEBY]: 'Rinkeby',
   // [ChainId.ROPSTEN]: 'Ropsten',
   // [ChainId.GÖRLI]: 'Görli',
   // [ChainId.KOVAN]: 'Kovan',
   // [ChainId.FANTOM]: 'Fantom',
   // [ChainId.FANTOM_TESTNET]: 'Fantom Testnet',
-  [ChainId.MATIC]: 'Polygon',
+  // [ChainId.MATIC]: 'Polygon',
   [ChainId.MATIC_TESTNET]: 'Polygon Testnet',
   // [ChainId.XDAI]: 'Gnosis',
   // [ChainId.ARBITRUM]: 'Arbitrum',
