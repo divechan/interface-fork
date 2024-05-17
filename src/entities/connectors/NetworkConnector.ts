@@ -196,7 +196,6 @@ export class NetworkConnector extends AbstractConnector {
 
   //@ts-ignore
   public deactivate() {
-    return  this.deactivate()
   }
 
   /**
