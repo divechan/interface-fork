@@ -36,7 +36,11 @@ export function getRouterAddress(chainId?: ChainId & typeof RAILS & typeof RAILS
     : chainId == 137
     ? '0x652fe694E94FA129bc96930171EeE2333B44F38d'
     : chainId == 24116
+<<<<<<< Updated upstream
     ? '0xb9E75cd98a73dD95813b823589D30C8F9638dbbC'
+=======
+    ? '0x86CD8d8c42532d86D0f707d6664aC0aCF27262bd'
+>>>>>>> Stashed changes
     : chainId == 6278
     ? '0x652fe694E94FA129bc96930171EeE2333B44F38d'
     : chainId == 56

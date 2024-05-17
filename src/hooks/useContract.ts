@@ -187,7 +187,11 @@ const MULTICALL_ADDRESS = {
   [ChainId.ROPSTEN]: '0x1F98415757620B543A52E61c46B32eB19261F984',
   [ChainId.RINKEBY]: '0x1F98415757620B543A52E61c46B32eB19261F984',
   [RAILS]: '0xA5c093be68a66Ee0Ce836DC09d54bfd927C751f9',
+<<<<<<< Updated upstream
   [RAILS_TESTNET]: '0xF004afF5F55129051A63A5E192221aEDe0EEAF6F',
+=======
+  [RAILS_TESTNET]: '0x36D18a0da42bE536dA396AA2D2c896555c49974e',
+>>>>>>> Stashed changes
   [ChainId.GÖRLI]: '0x1F98415757620B543A52E61c46B32eB19261F984',
   [ChainId.KOVAN]: '0x1F98415757620B543A52E61c46B32eB19261F984',
   [ChainId.MATIC]: '0x1F98415757620B543A52E61c46B32eB19261F984',
@@ -247,7 +251,11 @@ export function useFactoryContract(): Contract | null {
         : chainId == 6278
         ? '0xc844820201334B8bbfc42aCA8e0f79C6BaAF916E'
         : chainId == 24116
+<<<<<<< Updated upstream
         ? '0x3Be077BBCaF5a518C6E12E5bCa6fdF8d7A36dc27'
+=======
+        ? '0x927e7313bb54d949B4Bb2071dD0510ab69C9EE5A'
+>>>>>>> Stashed changes
         : chainId == 56
         ? '0x20522019a3c2F35537561E75C519F19bd5Ae0d4A'
         : FACTORY_ADDRESS[chainId]
@@ -266,7 +274,11 @@ export function useRouterContract(withSignerIfPossible?: boolean): Contract | nu
       : chainId == 137
       ? '0x652fe694E94FA129bc96930171EeE2333B44F38d'
       : chainId == 24116
+<<<<<<< Updated upstream
       ? '0xb9E75cd98a73dD95813b823589D30C8F9638dbbC'
+=======
+      ? '0x86CD8d8c42532d86D0f707d6664aC0aCF27262bd'
+>>>>>>> Stashed changes
       : chainId == 6278
       ? '0x652fe694E94FA129bc96930171EeE2333B44F38d'
       : chainId == 56
