@@ -253,6 +253,10 @@
     "showDetails": true
   },
   "dependencies": {
+    "@hyperlane-xyz/sdk": "^3.11.1",
+    "@moralisweb3/common-evm-utils": "^2.26.1",
+    "alchemy-sdk": "^3.3.1",
+    "moralis": "^2.26.1",
     "multiformats": "^11.0.2",
     "next-language-detector": "^1.0.2",
     "next-locales": "^0.2.2"

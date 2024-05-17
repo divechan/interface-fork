@@ -9,8 +9,6 @@ import { featureEnabled } from 'app/functions'
 import { useActiveWeb3React } from 'app/services/web3'
 import { ReactNode, useMemo } from 'react'
 
-
-
 export interface MenuItemLeaf {
   key: string
   title: string
@@ -41,7 +39,11 @@ const useMenu: UseMenu = () => {
       title: i18n._(t`Swap`),
       link: '/swap',
     },
-    ]
+    {
+      key: 'cross-chain',
+      title: i18n._(t`CrossRail`),
+      link: '/crossswap',
+    }]
 
     const explorers = [
       {
@@ -75,17 +77,6 @@ const useMenu: UseMenu = () => {
         title: i18n._(t`Add Liquidity`),
         link: `/add/ETH/${SUSHI_ADDRESS[chainId]}`,
       },
-      //{
-      //  key: 'remove-liquidity',
-      //  title: i18n._(t`Remove`),
-      //  link: '/remove',
-      //},
-      //{
-      //  key: 'migrate',
-      //  title: i18n._(t`Migrate Liquidity`),
-      //  link: '/migrate',
-      //  disabled: !featureEnabled(Feature.MIGRATE, chainId),
-      //},
       {
         key: 'import',
         title: i18n._(t`Import Liquidity`),
